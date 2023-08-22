@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "indiamun-main-website"
-  }
+    "default": "indiamun-main-website",
+    "staging": "indiamun-main-website-e3160"
+  },
+  "targets": {},
+  "etags": {}
 }

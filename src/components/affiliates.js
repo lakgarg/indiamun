@@ -300,6 +300,36 @@ export default function Affiliates() {
     <h1 className='aff1'>Why affiliate?</h1>
     <img src="why affiliate.webp" width="100%"></img>
     
+    <h1 className='aff1'>Testimonials</h1>
+
+    <div className='youtube_gal'>
+        <div className='youtube_gal_cards'>
+            <p className='perk-head1'><b>Mr Ovais Sarmad,<br></br>
+            Former Deputy Executive Secretary</b><br></br>
+            United Nations Framework Convention on Climate Change<br></br>(UNFCCC)</p>
+            <iframe className='youtube_gal_iframe'
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/7Gd9WZu6C0g"
+            title="Video 1"
+        >
+        </iframe>
+        </div>
+       <div className='youtube_gal_cards'>
+           <p className='perk-head1'><b>Mr Suresh Prabhu,<br></br>
+            Parliamentarian, Minister and Chancellor</b><br></br>
+            Prime Minister’s Sherpa for G20 Summit (2014 - 2015)<br></br>(Government of India)</p>
+            <iframe className='youtube_gal_iframe'
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/SmSo3SY_S1o" 
+            title="Video 2"
+             >
+              </iframe>
+       </div>
+    </div>
+
+
     <h1 className='aff1'>How to get affiliated</h1>
     <p className='af-content'>At India MUN, we firmly believe in moving beyond mere activism and encouraging tangible action to address pressing environmental challenges. Your affiliation with us signifies your dedication to fostering a culture of environmental consciousness within your campus and among your students.</p>
 
