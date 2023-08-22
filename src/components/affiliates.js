@@ -247,18 +247,10 @@ export default function Affiliates() {
     </div>
     <Navbar/>
     <h1 className='aff'>AFFILIATIONS OPEN</h1>
-    <div className="my-container">
-      <div className="left-container">
-        <div className="upper-text" /* style={{textAlign:'left',color:'dark-blue'}} */>Global Schools for<br></br>Climate Action.</div>
-        <div className="lower-text">Building India's largest youth network for climate action.</div>
-        <div className="right-text">AFFILIATE YOUR SCHOOL TODAY </div>
-      </div>
-      <div className="right-text-container">
-        <img src='1.webp' width='90%'></img>
-        <div className="button-container">
-          {/* <button className="right-button"><a href='/affiliates' style={{textDecoration:'none',color:'white'}}>Learn More</a></button> */}
-        </div>
-      </div>
+    
+    <img className='mobile_photo' src='m4.webp' width='100%'></img>
+    <div className='program_mun_content4'>
+            <img src="title image dex.webp" width='100%'alt=""/>
     </div>
     
     <div className='img_gallery'>
@@ -274,9 +266,13 @@ export default function Affiliates() {
     <p className='am-content'>India MUN secretariat is committed to providing our affiliated schools with extensive support and resources, including trainings for teachers and students, and ongoing guidance throughout the program's journey. Our engaging, interactive, and impactful programs create a unique and transformative experience for students.</p>
     <p className='am-content'>Seize this unparalleled opportunity to empower your students, inspire communities, and lead the charge. Together, let's embark on a rewarding journey of climate action, crafting a world that thrives and prospers for generations to come</p>
 
-    <img src="banner.webp" width="100%"></img>
+    <img className='mobile_photo' src="M2.webp" width="100%"></img>
 
-    <div className='img_main_div'>
+    <div className='program_mun_content4'>
+            <img src="partners des.webp" width='100%' alt=""/>
+    </div>
+
+    {/* <div className='img_main_div'>
       <div className='img_main_div1'>
         <img src={img1} />
         <img src={img2} />
@@ -295,10 +291,14 @@ export default function Affiliates() {
         <img src={img11} />
         <img src={img12} />
       </div>
-    </div>
+    </div> */}
 
     <h1 className='aff1'>Why affiliate?</h1>
-    <img src="why affiliate.webp" width="100%"></img>
+    <img className='mobile_photo' src="m1.webp" width="100%"></img>
+    <div className='program_mun_content4'>
+            <img src="why affiliate.webp" alt=""/>
+    </div>
+    
     
     <h1 className='aff1'>Testimonials</h1>
 
@@ -456,7 +456,11 @@ undertaken by schools and colleges. We understand that true change emerges from 
 beyond in championing environmental sustainability</p>
 <p className='am-content'> Once your institution becomes a part of our esteemed network through affiliation, you have the opportunity to participate in our Accreditation Program, . This program is designed to acknowledge the remarkable contributions made by schools and colleges towards creating a greener and more sustainable future. By engaging in a range of climate-related activities, integrating environmental education, and fostering student involvement, your Program. This program is designed to acknowledge the remarkable contributions made by schools and colleges towards creating a greener and more Once your institution becomes a part of our esteemed network through affiliation, you have the opportunity to participate in our Accreditation institution can earn accolades that mirror your commitment to positive change.</p>
 
-<img src="gsca all.png" width="100%"></img>
+<img className='mobile_photo' src="m3.webp" width="100%"></img>
+<div className='program_mun_content4'>
+            <img src="gsca all.png" alt=""/>
+</div>
+
 
 <p className='am-content'>The Accreditation Program operates on a merit-based scoring system, with institutions evaluated based on specific criteria tailored by India MUN.
 Schools and colleges that excel in their climate action initiatives will be honored with plaques, with varying tiers of recognition including Platinum, Gold,
