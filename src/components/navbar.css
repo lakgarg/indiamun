@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand');
+.nav_class{
+    background-color: rgb(37, 37, 36); 
+    margin-bottom: 10px;
+}
+.nav_items{
+    text-decoration: none;
+    color: white;
+    font-family: 'Quicksand';
+    margin-right: 30px;
+    font-weight: 900;
+    font-size: 20px;
+}
+.nav_items:active{
+    color:white;
+}
+.nav_items:hover{
+    color: white;
+}
+#nav_custom{
+    color: white;
+}
+.big_nav{
+    display: flex;
+    justify-content:space-between;
+    margin: auto;
+}
+
+@media (max-width: 900px) {
+.nav_items{
+    margin-right: 0;
+    margin-left: 0;
+    font-size: 10px;
+}
+.big_nav{
+    margin: auto;
+}
+
+}

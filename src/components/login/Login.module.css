@@ -1,0 +1,54 @@
+
+
+/* .login-form {
+    max-width: 360px;
+    margin: 60px auto;
+    padding: 20px;
+    box-shadow: 10px 10px 10px 10px rgb(229, 226, 226);
+    background-color: white;
+    
+  } */
+  /* body{
+    background-color: aquamarine;
+  } */
+  /* .login-form label {
+    display: block;
+    margin: 30px auto;
+  }
+  .login-form span {
+    display: block;
+    margin-bottom: 6px;
+  }
+  .login-form input {
+    padding: 8px 6px;
+    font-size: 1em;
+    color: #777;
+    width: 100%;
+  } */
+
+.container_login{
+  height: 100vh;
+  background-image: linear-gradient(
+    to right,
+    #cfd8dc 0%,
+    #607d8b 100%,
+    #b0bec5 100%
+  );
+}
+.login_but{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 160px;
+  width: 50%;
+  margin: 100px auto auto auto;
+  /* background-color: rgb(106, 255, 0); */
+  background-image: url('../pictures/climate_accelerator.jpg');
+  background-size: cover;
+  box-shadow: 10px 10px 10px 2px rgb(109, 109, 109);
+}
+
+
+
+
+  

@@ -1,0 +1,827 @@
+.participate{
+    display: flex;
+    padding: 20px;
+  }
+  .participate-item{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+  }
+  .participate-item img{
+    width: 18vw;
+    height: auto;
+    padding-bottom: 10px;
+  }
+  @keyframes flicker
+{
+  20% {color: rgba(255, 0, 0, 0.8)}
+  40% {color: rgba(0, 255, 0, 0.8);}
+  60% {color: rgba(0, 0, 255, 0.8);}
+  80% {color: rgba(255, 165, 0, 0.8);}
+  100% {color: rgb(200, 0, 255);}
+
+}
+.reg_parti{
+  animation: flicker 0.6s infinite;
+  background-color: white!important;
+  border: 2px solid rgb(0, 120, 225)!important;
+}
+  .participate-item button{
+    border-radius: 20px;
+    background-color: rgb(0, 120, 225);
+    border: none;
+    padding: 5px;
+    width: 100%;
+    color: white;
+    align-items: center;
+    cursor: default;
+    margin-bottom: 3px;
+  }
+  .participate-item i{
+    cursor: pointer;
+  }
+  .Participate-head{
+    font-size: 35px;
+    text-align: center;
+    color: rgb(159, 75, 149); 
+  }
+  .india{
+    text-align: center;
+    font-size: 60px;
+    margin-top: -20px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+  }
+  .mod{
+    text-align: center;
+    font-size: 20px;
+    margin-top: -10px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+  }
+  .year{
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    
+  }
+  .imagesection{
+    /* background-image: url('./images/newimages/login\ deks\ .webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; */
+    /* height: 930px; */
+    position: relative;
+  }
+  .imagesection .custom-button{
+    position: absolute;
+    top: 47%;
+    right: 10%;
+    width: 15%;
+    padding: 7px;
+    /* padding-right: 15px;
+    padding-left: 15px; */
+    border: none;
+    font-weight: 700;
+    border-radius: 10px;
+    background-color: white;
+    /* background-color: rgb(0, 120, 225); */
+    color: black;
+    font-size: 16px;
+    border: 0.5px solid black;
+  }
+  .imagesection .custom-button1{
+    position: absolute;
+    top: 42%;
+    right: 10%;
+    width: 15%;
+    padding: 7px;
+    font-weight: 700;
+    border-radius: 10px;
+    background-color: white;
+    /* background-color: rgb(0, 120, 225); */
+    color: black;
+    font-size: 20px;
+    text-align: left;
+  }
+  .imagesection .custom-button2{
+    position: absolute;
+    top: 32%;
+    right: 10%;
+    width: 15%;
+    padding: 7px;
+    font-weight: 700;
+    border-radius: 10px;
+    background-color: white;
+    /* background-color: rgb(0, 120, 225); */
+    color: black;
+    font-size: 20px;
+    text-align: left;
+  }
+  .imagesection .custom-button3{
+    position: absolute;
+    top: 37%;
+    right: 10%;
+    width: 15%;
+    padding: 7px;
+    /* padding-right: 15px;
+    padding-left: 15px; */
+    border: none;
+    font-weight: 700;
+    border-radius: 10px;
+    background-color: white;
+    /* background-color: rgb(0, 120, 225); */
+    color: black;
+    font-size: 16px;
+    border: 0.5px solid black;
+  }
+  .custom-button:hover{
+      background-color: rgb(64, 157, 244);
+      color: white;
+      cursor: pointer;
+  }
+  .custom-button3:hover{
+    background-color: rgb(64, 157, 244);
+      color: white;
+      cursor: pointer;
+  }
+  .head-am1{
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    color: rgb(43, 143, 66);
+  }
+  .part_d{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 15px;
+  }
+  .part_d p{
+    font-size: 25px;
+    color: rgb(61, 133, 214);
+  }
+  
+  .date-and-timeline{
+    text-align: left;
+  font-size: 30px;
+  padding-left: 40px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  color: rgb(40 ,148 ,86);
+  }
+  .ul-type{
+    text-align: left;
+    padding-left: 4px;
+    margin-left: 40px;
+    border-left: 2px solid black;
+    padding-top: 3px;
+    padding-bottom: 5px;
+    font-weight: 600;
+  }
+  .ul-type li::marker{
+      content: "•";
+      font-size: 25px;
+      font-weight: bolder;
+  }
+  
+  .am-content{
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 17px;
+    font-weight: 600;
+    text-align: justify;
+  }
+  .am-who{
+    color: rgb(55, 127, 200);
+    font-weight: 600;
+  }
+  
+  .intro-mod{
+    text-align: left;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    padding-left: 40px;
+    color: rgb(76, 144, 211);
+  }
+  .topics{
+    text-align: left;
+    padding-left: 60px;
+    font-weight: 600;
+    padding-right: 60px;
+  }
+  .topics li{
+    text-align: justify;
+  }
+  .img-cer{
+    /* padding-left: 40px; */
+    /* padding-right: 40px; */
+  }
+  .certificate{
+    display: flex;
+    justify-content: space-around;
+  }
+  .certificate img{
+    height: 250px;
+    width: 100%;
+  }
+  .con-cer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* padding-left: 60px; */
+  }
+  .con-cer button{
+    padding: 5px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border: none;
+    font-weight: 700;
+    border-radius: 10px;
+    background-color: rgb(0, 120, 225);
+    color: #fff;
+  }
+  .con-cer div{
+    font-size: 22px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .ylp-main{
+    background-color: rgb(235, 233, 233);
+    /* margin-right: -5px; */
+  }
+  .ylp{
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .ylp button{
+    padding: 5px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border: none;
+    font-weight: 700;
+    border-radius: 10px;
+    background-color: rgb(235, 233, 233);
+    color: black;
+  }
+  .ylp div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .ylp span{
+    font-size: 40px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .ylp-pic{
+    display: flex;
+    padding: 25px;
+  }
+  .ylp-left img{
+    width: 90%;
+    height: 400px;
+  }
+  .ylp-right img{
+    width: 100%;
+    height: 400px;
+  }
+  .ylp-school-pic{
+    padding: 20px;
+  }
+  
+  .ylp-school-img img{
+    width: 100%;
+    height: auto;
+  }
+  
+  .cli-hack{
+    margin-top: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .cli-hack span{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+  }
+  .cli-hack button{
+    padding: 5px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border: none;
+    font-weight: 700;
+    border-radius: 10px;
+    background-color: rgb(37, 37, 36);
+    color: #fff;
+  }
+  .coming_soon{
+    padding: 5px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border: none;
+    font-weight: 700;
+    border-radius: 10px;
+    background-color: rgb(37, 37, 36);
+    color: #fff;
+  }
+  .prev-ev{
+    text-align: center;
+    font-size: 35px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    color: black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  
+  }
+  .eve_img1{
+    display: none;
+  }
+.insta-feed{
+  display: flex;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+.insta-feed1{
+  width: 25%;
+  padding: 20px;
+ 
+}
+.bda_cli{
+  background-color: rgb(37, 37, 36);
+  color: white;
+  padding-top: 5px;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+.climate-hackathon{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.cli1{
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+  justify-content: center;
+  align-items: center;
+}
+.cli1 img{
+  height: 300px;
+  width: 300px;
+  padding: 10px;
+}
+.cli1 div{
+  padding: 3px;
+}
+.cli1 h3{
+  text-align: left;
+}
+.cli2{
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+}
+.cli2 div{
+  display: flex;
+  flex-direction: row;
+}
+.cli2 img{
+  height: 240px;
+  width: auto;
+  padding: 5px;
+}
+.cli2 p{
+  text-align: justify;
+}
+.cli3{
+  width: 33%;
+}
+.cli3 img{
+  height: 510px;
+  width: auto;
+}
+
+.IYFA{
+  text-align: left;
+  font-size: 30px;
+  padding-left: 40px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  color: rgb(40 ,148 ,86);
+}
+.young-for{
+  padding-left: 40px;
+  padding-right: 40px;
+  font-size: 17px;
+  text-align: justify;
+  text-align: left;
+  font-weight: 600;
+}
+.com-IYFA{
+  color: rgb(17, 128, 224) ;
+  padding-top: 20px;
+  font-size: 17px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.model_img{
+ 
+  height: 120px;
+ margin-bottom: 30px;
+}
+.youth_full{
+  background-color: rgb(235, 233, 233);
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+.youth_got_talent{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 40px;
+  padding-right: 40px;
+  align-items: center;
+}
+.youth_got_talent h1{
+  font-weight: 500;
+}
+.youth_got_talent p{
+  font-size: 20px;
+  font-weight: 700;
+}
+.youth_p{
+  text-align: justify;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-weight: 500;
+  font-size: 18px;
+}
+.youth_img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 40px;
+  padding-left: 40px;
+  margin-bottom: 40px;
+}
+.youth_img img{
+  width: 50%;
+  height: auto;
+}
+.cli-conf{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 40px;
+  padding-right: 40px;
+  gap:20px;
+}
+.cli-conf1{
+  display: flex;
+  flex-direction: column;
+}
+.cli-conf1 p{
+  text-align: justify;
+}
+.cli-conf1 img{
+  width: 100%;
+  height: auto;
+}
+.cli-conf2 img{
+  width: 95%;
+  height: auto;
+}
+.live_prog{
+  background-color: rgb(15, 15, 15);
+  padding: 10px 10px 10px 20px;
+  margin-top: 20px;
+}
+.live_prog h1{
+  text-align: left;
+  color: white;
+}
+
+
+
+
+
+/* ipad */
+
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px){
+    .imagesection{
+      /* height: 550px; */
+    }
+    .imagesection .custom-button{
+        position: absolute;
+        top: 50%;
+        right: 7%;
+        width: 20%;
+        padding: 2px;
+        /* padding-right: 15px;
+        padding-left: 15px; */
+        border: none;
+        font-weight: 700;
+        border-radius: 10px;
+        background-color: white;
+        /* background-color: rgb(0, 120, 225); */
+        color: black;
+        font-size: 12px;
+        border: 0.5px solid black;
+      }
+
+    .imagesection .custom-button1{
+      font-size: 15px;
+      top:44%;
+      right: 7%;
+      width: 20%;
+
+  }
+  .imagesection .custom-button2{
+    font-size: 10px;
+    top:32%;
+    right: 7%;
+    width: 20%;
+
+}
+.imagesection .custom-button3{
+  font-size: 10px;
+  top:37%;
+  right: 7%;
+  width: 20%;
+  padding: 2px;
+
+}
+      
+
+      .certificate img{
+        height: 200px;
+      }
+      .ylp span{
+        font-size: 32px;
+      }
+      .ylp-left img{
+        width: 60vw;
+        height: 300px;
+      }
+      .ylp-right img{
+        width: 30vw;
+        height: 300px;
+      }
+      /* .ylp-school-pic img{
+        width: 95vw;
+        height: 240px;
+      } */
+      .cli-hack{
+        margin-top: 30px;
+        padding: 10px;
+      }
+      .eve-img{
+        margin-left: 20px;
+        margin-right: 20px;
+        height: 520px;
+        width: auto;
+      }
+      /* .insta-feed{
+        flex-direction: column;
+      } */
+      .insta-feed1{
+        width: 50%;
+      }
+      .climate-hackathon{
+        display: flex;
+        flex-direction: column;
+      }
+      .cli1{
+        width: 100%;
+      }
+      .cli2{
+        width: 100%;
+      }
+      .cli2 p{
+        padding: 20px;
+      }
+      .cli2 img{
+        width: 400px;
+        height: 400px;
+       padding: 10px;
+      }
+      .cli3{
+        width: 100%;
+      }
+      .cli3 img{
+        
+        height: 1050px;
+      }
+    }
+
+
+    /* phone */
+    @media (max-width: 768px){
+        .imagesection{
+          /* background-image: url('./images/newimages/login\ mobile.webp');
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          height: 500px; */
+        }
+        .imagesection .img_sec_l{
+          content: url('./images/newimages/login\ mobile.webp');
+        }
+        .participate{
+          flex-wrap: wrap;
+        }
+        .participate-item{
+          width: 50%;
+          /* padding: 20px; */
+        }
+        .participate-item img{
+          width: 100%;
+        }
+        .Participate-head{
+            font-size: 20px;
+            text-align: center;
+            color: rgb(159, 75, 149); 
+          }
+          .participate{
+              padding: 0;
+          }
+          .imagesection .custom-button{
+              font-size: 10px;
+              top:67%;
+              right: 6%;
+              width: 40%;
+
+          }
+          .imagesection .custom-button1{
+            font-size: 10px;
+            top:62%;
+            right: 6%;
+            width: 40%;
+
+        }
+        .imagesection .custom-button2{
+          font-size: 10px;
+          top:48%;
+          right: 6%;
+          width: 40%;
+
+      }
+      .imagesection .custom-button3{
+        font-size: 10px;
+        top:53%;
+        right: 6%;
+        width: 40%;
+
+    }
+          .head-am1{
+            font-size: 25px;
+          }
+          .part_d p{
+            font-size: 10px;
+          }
+          .con-mind{
+            font-size: 12px;
+          }
+          .certificate{
+            padding: 20px;
+          }
+          .certificate img{
+            height: 100px;
+            padding-right: 10px;
+          }
+          .con-cer{
+            /* padding-left: 0; */
+          }
+          .con-cer div{
+            font-size: 10px;
+          }
+          .ylp span{
+            font-size: 20px;
+          }
+          .ylp-sec{
+            font-size: 15px;
+          }
+          .ylp button{
+            font-size: 15px;
+          }
+          .ylp-left img{
+            width: 100%;
+            height: 130px;
+          }
+          .ylp-right img{
+            width: 100%;
+            height: 140px;
+          }
+          .ylp-school-pic img{
+            width: 100%;
+            height: auto;
+          }
+          .ylp-main{
+            margin-top: 10px;
+            /* margin-right: -50px; */
+          }
+          .cli-hack{
+            padding-right: 0px;
+          }
+          .cli-hack span{
+            font-size: 20px;
+          }
+          .cli-hack button{
+            font-size: 10px;
+          }
+          .cli-hack{
+            margin-top: 30px;
+          }
+         .eve_img{
+           display: none;
+         }
+         .eve_img1{
+           display: block;
+         }
+          .prev-ev{
+            font-size: 25px;
+            padding-left: 25px;
+          }
+          .ul-type{
+            /* margin-left: 10px; */
+           word-wrap: break-word;
+          }
+          .ylp{
+            padding: 10px;
+          }
+          .ylp div button{
+            font-size: 10px;
+          }
+        .ylp div{
+          flex-direction: column;
+          padding: 10px;
+        }
+        .insta-feed{
+          flex-direction: column;
+        }
+        .climate-hackathon{
+          flex-direction: column;
+        }
+        .cli1{
+          width: 100%;
+        }
+        .cli2{
+          width: 100%;
+          padding: 10px;
+        }
+        .cli2 img{
+          width:185px;
+          height: 185px;
+          padding: 10px;
+          
+        }
+        .cli2 p{
+          padding: 10px;
+        }
+         .cli3{
+           width: 100%;
+         }
+         .cli3 img{
+           height: 500px;
+         }
+         .participate-item button{
+           font-size: 10PX;
+         }
+         .youth_img{
+           flex-direction: column;
+           
+         }
+         .youth_img img{
+           width: 100%;
+           padding-bottom: 20px;
+         }
+         .youth_got_talent h1{
+           font-size: 20px;
+           font-weight: 800;
+         }
+         .youth_got_talent p{
+           font-size: 16px;
+         }
+         .cli-conf{
+           flex-direction: column;
+         }
+         .cli-conf2 img{
+           width: 100%;
+         }
+        }

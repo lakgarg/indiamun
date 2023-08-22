@@ -1,0 +1,123 @@
+.headname span{
+    background: rgb(45,181,252);
+    background: linear-gradient(90deg, rgba(45,181,252,1) 0%, rgba(158,174,236,1) 50%, rgba(255,164,215,1) 100%);
+    padding: 5px 60px;
+    border-radius: 30px;
+}
+.headname1 span{
+    background: rgb(77,189,132);
+    background: linear-gradient(90deg, rgba(77,189,132,1) 0%, rgba(143,208,117,1) 50%, rgba(200,226,100,1) 100%); 
+    padding: 5px 60px;
+    border-radius: 30px;
+}
+.headname1{
+    text-align: center;
+   font-size: 30px;
+}
+.headname{
+   text-align: center;
+   font-size: 30px;
+}
+.img_main_div{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+.img_main_div1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px;
+}
+.img_main_div2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 30px;
+}
+.img_main_div3{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.img_main_div1 img{
+    width: auto;
+    height: 100px;
+}
+.img_main_div2 img{
+    width: auto;
+    height: 100px;
+}
+.img_main_div3 img{
+    width: auto;
+    height: 140px;
+}
+
+
+@media (max-width: 768px){
+
+.headname{
+    font-size: 15px;
+}
+.headname1{
+    font-size: 15px;
+}
+.img_main_div{
+    padding: 0px;
+}
+.img_main_div1{
+    padding:10px;
+}
+.img_main_div2{
+    
+    padding: 10px;
+}
+.img_main_div3{
+    padding: 10px;
+}
+.img_main_div1 img{
+    width: auto;
+    height: 35px;
+}
+.img_main_div2 img{
+    width: auto;
+    height: 35px;
+}
+.img_main_div3 img{
+    width: auto;
+    height: 35px;
+}
+
+
+}
+
+
+
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px){
+    .img_main_div1{
+        padding:10px;
+    }
+    .img_main_div2{
+        
+        padding: 10px;
+    }
+    .img_main_div3{
+        padding: 10px;
+    }
+    .img_main_div1 img{
+        width: auto;
+        height: 50px;
+    }
+    .img_main_div2 img{
+        width: auto;
+        height: 50px;
+    }
+    .img_main_div3 img{
+        width: auto;
+        height: 50px;
+    }
+    
+
+
+}

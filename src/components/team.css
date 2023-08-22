@@ -1,0 +1,60 @@
+.card-row{
+    display: flex;
+  }
+body{
+    font-family: 'Quicksand';
+}
+.img-card{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+  .card-name{
+    padding-top: 15px;
+    font-size: 20px;
+    text-align: center;
+    color: rgb(16, 154, 181);
+    font-weight: 600;
+  }
+  .card-des{
+    text-align: center;
+    font-weight: 400;
+  }
+  .card-item{
+    align-items: center;
+    width: 25%;
+    padding: 30px;
+  }
+  .card-item img{
+    height: 250px;
+    width: 250px;
+    border-radius: 10px;
+  }
+
+
+  @media (max-width: 768px) {
+
+  .card-item{
+    width: 50%;
+    height: auto;
+  }
+  .card-item img{
+    width: 125px;
+    height: 125px;
+  }
+    
+    }
+
+
+
+
+
+    /* ipad */
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+        .card-item img{
+            width: 150px;
+            height: 150px;
+        }
+
+
+    }
