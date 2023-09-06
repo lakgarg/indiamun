@@ -1,301 +1,328 @@
-.Aff-p{
-    /* display: flex;
+.Aff-p {
+	/* display: flex;
     justify-content: space-between;
     padding: 10px 30px 10px 30px; */
-    /* padding-right: 40px;
+	/* padding-right: 40px;
     padding-left: 40px; */
-  }
-  .Aff-button{
-    padding: 5px;
-    padding-right: 15px;
-    padding-left: 15px;
-    border: none;
-    font-weight: 700;
-    border-radius: 10px;
-    background-color: rgb(0, 120, 225);
-    color: #fff;
-  }
+}
+.Aff-button {
+	padding: 5px;
+	padding-right: 15px;
+	padding-left: 15px;
+	border: none;
+	font-weight: 700;
+	border-radius: 10px;
+	background-color: rgb(0, 120, 225);
+	color: #fff;
+}
 
-  .aff-new-prog{
-    display: flex;
-    padding-right: 35px;
-    padding-left: 35px;
-    justify-content: space-between;
-  }
+.Aff-button:hover {
+  background-color: rgb(0, 47, 66);
+  transition-duration: 450ms;
+  transition-delay: 75ms;
+}
 
-  .head-af{
-    font-size: 35px;
-    text-align: center;
-    padding-top: 15px;
-    font-family: 'Quicksand', sans-serif;
-  }
-  .af-content{
-    padding-left: 160px;
-    padding-right: 160px;
-    font-size: 17px;
-    text-align: center;
-  }
-  .af-content a{
-    text-decoration: none;
-  }
+.aff-new-prog {
+	display: flex;
+	padding-right: 35px;
+	padding-left: 35px;
+	justify-content: space-between;
+}
 
+.head-af {
+	font-size: 35px;
+	text-align: center;
+	padding-top: 15px;
+	font-family: "Quicksand", sans-serif;
+}
+.af-content {
+	padding-left: 160px;
+	padding-right: 160px;
+	font-size: 17px;
+	text-align: center;
+}
+.af-content a {
+	text-decoration: none;
+}
 
+.school-form {
+	margin: 40px;
+	padding: 40px;
+	border: 0.6px dotted black;
+}
 
+.school-form-head {
+	font-size: 30px;
+	font-family: "Quicksand", sans-serif;
+	font-weight: 600;
+	text-align: left;
+}
 
+.school-form-items {
+	display: flex;
+	flex-wrap: wrap;
+}
 
-  .school-form{
-    margin: 40px;
-    padding: 40px;
-    border: 0.6px dotted black;
-  }
-  .school-form-head{
-    font-size: 30px;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 600;
-    text-align: left;
-  }
-  .school-form-items{
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .school-items{
-    width: 50%;
-    padding: 10px;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 600;
-    position: relative;
-    text-align: left;
-    align-items: center;
-    justify-content: space-between;
-    display: flex;
-  }
-  .school-items input{
-    position: absolute;
-    right: 40px;
-    width: 45%;
-  }
-  
-  .up-dec-button{
-    width: 10%;
-    padding: 0 15px 0 15px;
-    /* padding-right: 15px;
+.school-items-form {
+	width: 90%;
+	padding: 10px;
+	font-family: "Quicksand", sans-serif;
+	font-weight: 600;
+	position: relative;
+	text-align: left;
+	align-items: center;
+	justify-content: space-between;
+	display: flex;
+}
+.school-items-form input {
+	position: absolute;
+	border: 1px solid rgb(26, 26, 26);
+	right: 40px;
+	width: 45%;
+}
+
+.up-dec-button {
+	width: 10%;
+	padding: 5px 15px 5px 15px;
+	/* padding-right: 15px;
     padding-left: 15px; */
-    border: none;
-    font-weight: 700;
-    border-radius: 15px;
-    background-color: rgb(0, 120, 225);
-    color: #fff;
-    
-  }
-  .pay-btn{
-    padding: 5px;
-    /* padding-right: 15px;
+	border: none;
+	font-weight: 700;
+	border-radius: 15px;
+	text-align: center;
+	background-color: rgb(0, 120, 225);
+	color: #fff;
+}
+
+.up-dec-button:hover {
+  background-color: rgb(0, 47, 66);
+  transition-duration: 450ms;
+  transition-delay: 75ms;
+}
+
+.pay-btn {
+	padding: 5px 15px 5px 15px;
+	/* padding-right: 15px;
     padding-left: 15px; */
-    border: none;
-    font-weight: 700;
-    border-radius: 10px;
-    background-color: rgb(0, 47, 66);
-    color: #fff;
-  }
-  .btn-common{
-    margin: 10px;
-    display: flex;
-    justify-content: space-between;
-  }
- .last_buttons{
-   display: flex;
-   justify-content: space-between;
-   padding-top: 30px;
- }
-
-
- .error {
-  color: red;
-  background: pink;
-  border: 1px solid red;
-  border-radius: 4px;
-  padding: 8px;
-  margin: 10px 0;
-}
-.after-submit{
-  width: 50%;
-  display: none;
-  border: 0.7px solid black;
-  border-radius: 20px;
-  padding: 20px;
-  margin-bottom: 20px;
-}
-.after-submit button{
- background-color: rgb(0, 120, 225);
- border: none;
- border-radius: 20px;
- color: white;
- padding: 5px 10px 5px 10px;
- font-weight: 700;
+	border: none;
+	font-weight: 700;
+	border-radius: 10px;
+	background-color: rgb(0, 47, 66);
+	color: #fff;
 }
 
-
-.perk-benefit{
-  padding-right: 30px;
-  padding-left: 30px;
-  padding-bottom: 30px;
-  /* display: flex; */
-  justify-content: space-between;
-}
-.perk-benefit span{
-  font-size: 30px;
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 600;
-  color: rgb(35, 116, 162);
-}
-.perk-benefit button{
-  padding: 5px;
-  padding-right: 15px;
-  padding-left: 15px;
-  border: none;
-  font-weight: 700;
-  border-radius: 10px;
-  background-color: rgb(47, 136, 214);
-  color: #fff;
-}
-.com-perk-eli{
-  padding-right: 30px;
-  padding-left: 30px;
-}
-.com-perk-eli p{
-  text-align: left;
-  font-weight: 600;
-}
-.com-perk-eli li{
-  text-align: left;
-  font-weight: 600;
-}
-.perk-head{
-  color: rgb(17, 128, 224) ;
-  font-weight: 600;
-}
-.perk-head1{
-  color: rgb(0, 0, 0) ;
-  font-weight: 600;
-}
-.eli-criteria{
-  padding: 30px;
-  font-size: 30px;
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 600;
-  color: rgb(40 ,148 ,86);
-  text-align: left;
-}
-.eli-head{
-  color: rgb(27, 161, 85);
-  font-weight: 600;
-}
-.last_check{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  border: 0.6px dotted black;
-  margin-top: 10px;
-  border-radius: 20px;
-}
-.last_check div{
- padding: 10px;
-}
-.last_check p{
-  text-align: justify;
-  padding: 10px;
-  font-weight: 600;
+.pay-btn:hover {
+  background-color: rgb(0, 120, 225);
+  transition-duration: 450ms;
+  transition-delay: 75ms;
 }
 
+.btn-common {
+	margin: 10px;
+	display: flex;
+	justify-content: space-between;
+}
+.last_buttons {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 30px;
+}
 
+.error {
+	color: red;
+	background: pink;
+	border: 1px solid red;
+	border-radius: 4px;
+	padding: 8px;
+	margin: 10px 0;
+}
+.after-submit {
+	width: 50%;
+	display: none;
+	border: 0.7px solid black;
+	border-radius: 20px;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+.after-submit button {
+	background-color: rgb(0, 120, 225);
+	border: none;
+	border-radius: 20px;
+	color: white;
+	padding: 5px 10px 5px 10px;
+	font-weight: 700;
+}
 
+.perk-benefit {
+	padding-right: 30px;
+	padding-left: 30px;
+	padding-bottom: 30px;
+	/* display: flex; */
+	justify-content: space-between;
+}
+.perk-benefit span {
+	font-size: 30px;
+	font-family: "Quicksand", sans-serif;
+	font-weight: 600;
+	color: rgb(35, 116, 162);
+}
+.perk-benefit button {
+	padding: 5px;
+	padding-right: 15px;
+	padding-left: 15px;
+	border: none;
+	font-weight: 700;
+	border-radius: 10px;
+	background-color: rgb(47, 136, 214);
+	color: #fff;
+}
+.com-perk-eli {
+	padding-right: 30px;
+	padding-left: 30px;
+}
+.com-perk-eli p {
+	text-align: left;
+	font-weight: 600;
+}
+.com-perk-eli li {
+	text-align: left;
+	font-weight: 600;
+}
+.perk-head {
+	color: rgb(17, 128, 224);
+	font-weight: 600;
+}
+.perk-head1 {
+	color: rgb(0, 0, 0);
+	font-weight: 600;
+}
+.eli-criteria {
+	padding: 30px;
+	font-size: 30px;
+	font-family: "Quicksand", sans-serif;
+	font-weight: 600;
+	color: rgb(40, 148, 86);
+	text-align: left;
+}
+.eli-head {
+	color: rgb(27, 161, 85);
+	font-weight: 600;
+}
+.last_check {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	border: 0.6px dotted black;
+	margin-top: 10px;
+	border-radius: 20px;
+}
+.last_check_box input {
+	padding: 40px;
+}
+.last_check div {
+	padding: 10px;
+}
+.last_check p {
+	text-align: justify;
+	padding: 10px;
+	font-weight: 600;
+}
 
+.collapse-buttons {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
 
+@media (max-width: 768px) {
+	.school-items-form {
+		width: 100%;
+		font-size: 10px;
+		padding: 7px;
+	}
+	.school-form {
+		margin: 20px;
+		padding: 20px;
+	}
+	.up-dec-button {
+		font-size: 12px;
+	}
+	.pay-btn {
+		font-size: 12px;
+	}
+	.school-items-form input {
+		right: 0px;
+		width: 40%;
+	}
+	.up-dec-button {
+		width: 30%;
+	}
+	.last_buttons {
+		padding-top: 13px;
+	}
+	.aff-new-prog {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.perk-benefit span {
+		font-size: 25px;
+	}
+	.perk-benefit button {
+		font-size: 20px;
+		width: 90%;
+	}
+	.last_check {
+		padding: 5px;
+	}
+	.last_check div {
+		padding: 3px;
+	}
+	.last_check p {
+		font-size: 8px;
+		padding: 4px;
+	}
+}
 
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+	.Aff-button {
+		font-size: 15px;
+	}
 
+	.school-items-form {
+		width: 100%;
+		font-size: 13px;
+		padding: 10px;
+	}
 
+	.school-items-form input {
+    right: 0px;
+    width: 60%;
+	}
 
+	.up-dec-button {
+		width: 30%;
+	}
+}
 
-  @media (max-width: 768px){
-    .school-items{
-      width: 100%;
-      font-size: 10px;
-      padding: 7px;
-    }
-    .school-form{
-      margin: 20px;
-      padding: 20px;
-    }
-    .up-dec-button{
-      font-size: 12px;
-    }
-    .pay-btn{
-      font-size: 12px;
-    }
-    .school-items input{
-      right: 0px;
-      width: 40%;
-    }
-    .up-dec-button{
-      width: 20%;
-    }
-    .last_buttons{
-      padding-top: 13px;
-    }
-    .aff-new-prog{
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding-left: 0;
-      padding-right: 0;
-    }
-    .perk-benefit span{
-      font-size: 25px;
-    }
-    .perk-benefit button{
-      font-size: 20px;
-      width: 90%;
-    }
-    .last_check{
-      padding: 5px;
-    }
-    .last_check div{
-      padding: 3px;
-    }
-    .last_check p{
-      font-size: 8px;
-      padding: 4px;
-    }
-  }
-  
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px){
-    .Aff-button{
-      font-size: 15px;
-    }
-
-    .school-items{
-      font-size: 13px;
-      padding: 10px;
-    }
-    .school-items input{
-      right: 0px;
-      width: 40%;
-    }
-  }
-  @media (max-width: 768px){
-    .Aff-p{
-      font-size: 15px;
-    }
-    .Aff-button{
-      /* padding-right: 5px;
+@media (max-width: 768px) {
+	.Aff-p {
+		font-size: 15px;
+	}
+	.Aff-button {
+		/* padding-right: 5px;
       padding-left: 5px;
       font-size: 15px; */
-      width: 350px;
-    }
-    .af-content{
-      padding-left: 40px;
-      padding-right: 40px;
-      font-size: 15px;
-    }
-  }
+		width: 350px;
+	}
+	.af-content {
+		padding-left: 40px;
+		padding-right: 40px;
+		font-size: 15px;
+	}
+}

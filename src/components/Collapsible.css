@@ -1,0 +1,39 @@
+.main-container {
+  margin: 20px;
+}
+
+.Aff-button {
+	padding: 5px;
+	padding-right: 15px;
+	padding-left: 15px;
+	border: none;
+  font-size: 20px;
+	font-weight: 700;
+	border-radius: 10px;
+	background-color: rgb(0, 120, 225);
+	color: #fff;
+}
+
+.Aff-button:hover {
+  background-color: rgb(0, 47, 66);
+  transition-duration: 450ms;
+  transition-delay: 75ms;
+}
+
+.content {
+	/* border: 1px solid rgb(128, 123, 123); */
+	padding: 0.5rem;
+	/* border-radius: 5px; */
+  background-image: none;
+}
+
+.content-parent {
+	height: 0px;
+	overflow: hidden;
+	transition: height ease 0.9s;
+}
+
+.content-show {
+	height: 80vh;
+}
+

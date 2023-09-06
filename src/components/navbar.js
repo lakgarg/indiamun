@@ -20,7 +20,7 @@ const Navigation = () => {
               className='nav_items'
               id="nav_custom"
             >
-              <NavDropdown.Item href="/affiliates">Affiliates</NavDropdown.Item>
+              <NavDropdown.Item href="/affiliates">Affiliate</NavDropdown.Item>
               <NavDropdown.Item target="_blank" href="https://docs.google.com/forms/d/1b0eHt7na2wlxRoL43oCgaG01jSG_XwV64pFI1ULxPWc/viewform?edit_requested=true">
                 Volunteer
               </NavDropdown.Item>
