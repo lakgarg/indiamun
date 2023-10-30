@@ -1,223 +1,210 @@
-.ab{
-    font-size: 45px;
-    padding: 30px;
-    color:rgb(50, 92, 155)
+.ab {
+	font-size: 45px;
+	padding: 30px;
+	color: rgb(50, 92, 155);
 }
-.ap{
-    font-size: 16px;
-    font-weight: 700;
-    padding: 0 100px;
-    margin-bottom: 40px;
+.ap {
+	font-size: 16px;
+	font-weight: 700;
+	padding: 0 100px;
+	margin-bottom: 40px;
+	text-align: justify;
 }
-.read p{
-    padding: 20px 60px 20px 60px;
-    text-align: justify;
-    font-weight: 700;
-    font-size: 20px;
-    color: white;
-    background-color:rgb(6, 33, 50);
+.read p {
+	padding: 20px 60px 20px 60px;
+	text-align: justify;
+	font-weight: 700;
+	font-size: 20px;
+	color: white;
+	background-color: rgb(6, 33, 50);
 }
-.more{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 30px;
+.more {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	padding: 30px;
 }
-.mored img{
-    height: 112px;
+.mored img {
+	height: 112px;
 }
-.mored h4{
-    padding: 16px 0 10px 0;
-    font-size: 30px;
-    font-weight: 800;
+.mored h4 {
+	padding: 16px 0 10px 0;
+	font-size: 30px;
+	font-weight: 800;
 }
-.mored p{
-    font-size: 16px;
-    font-weight: 700;
+.mored p {
+	font-size: 16px;
+	font-weight: 700;
 }
-.sus-eco{
-    background-color:rgb(236, 245, 245);
-    padding-right: 65px;
-    padding-left: 65px;
-    padding-top: 40px;
-    padding-bottom: 50px;
-    
-  }
-  .sus-eco h1{
-    text-align: center;
-    font-weight: 700;
-    padding-bottom: 80px;
-    font-family: 'Anton';
-    
-  }
-  .sus-eco p{
-    font-size: 20px;
-    text-align: left;
-    font-weight: 600;
-    padding-bottom: 15px;
-  }
-  .scrolling-div {
-    position: relative;
-    overflow: auto;
-    height: 300px; /* Adjust the height as needed */
-  }
-  
-  .content {
-    background-image: url('./images/About/pexels-mikhail-nilov-7475711-1-1-scaled.webp');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    position: relative;
-    z-index: 1;
-    padding: 20px; /* Adjust the padding as needed */
-    height: 300px;
-  }
-  
-  .content::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: inherit;
-    z-index: -1;
-  }
-  .voice{
-      margin-top: 40px;
-      padding: 20px;
-      
-  }
-  .voice p{
-      font-size: 20px;
-      padding: 60px;
-    background-color: rgb(242, 242, 242);
-    font-weight: 700;
-  }
-  .bid_i p{
-    font-size: 50px;
-   word-spacing: 25px;
-  }
-  .bid_i img{
-      width: 100%;
-      height: auto;
-  }
-  .bid_i{
-      margin-top: 40px;
-      margin-bottom: 40px;
-  }
+.text-bold {
+  font-size: 40px;
+	margin-bottom: 10px;
+}
+.sus-eco {
+	background-color: rgb(236, 245, 245);
+	padding-right: 65px;
+	padding-left: 65px;
+	padding-top: 40px;
+	padding-bottom: 50px;
+}
+.sus-eco h1 {
+	text-align: center;
+	font-weight: 700;
+	padding-bottom: 80px;
+	font-family: "Anton";
+}
+.sus-eco p {
+	font-size: 20px;
+	text-align: left;
+	font-weight: 600;
+	padding-bottom: 15px;
+}
+.scrolling-div {
+	position: relative;
+	overflow: auto;
+	height: 300px; /* Adjust the height as needed */
+}
 
-  .wh-youth-div {
-    padding-left: 45vw;
-    background-image: url('./images/About/aboutus1.webp');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 600px;
-    padding-right: 40px;
-  }
-  .wh-youth-div h1{
-    text-align: center;
-    color: white;
-    padding-top: 50px;
-    padding-bottom: 30px;
-  }
-  .wh-youth-div p{
-    color: white;
-    font-size: 20px;
-    padding-bottom: 20px;
-    text-align: justify;
-  }
+.content {
+	background-image: url("./images/About/pexels-mikhail-nilov-7475711-1-1-scaled.webp");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	position: relative;
+	z-index: 1;
+	padding: 20px; /* Adjust the padding as needed */
+	height: 300px;
+}
 
+.content::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: inherit;
+	z-index: -1;
+}
+.voice {
+	padding: 0 20px;
+}
+.voice p {
+	font-size: 20px;
+	padding: 60px;
+	background-color: rgb(242, 242, 242);
+	font-weight: 700;
+}
+.bid_i p {
+	font-size: 50px;
+	word-spacing: 25px;
+}
+.bid_i img {
+	width: 100%;
+	height: auto;
+}
+.bid_i {
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
 
+.wh-youth-div {
+	padding-left: 45vw;
+	background-image: url("./images/About/aboutus1.webp");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 600px;
+	padding-right: 40px;
+}
+.wh-youth-div h1 {
+	text-align: center;
+	color: white;
+	padding-top: 50px;
+	padding-bottom: 30px;
+}
+.wh-youth-div p {
+	color: white;
+	font-size: 20px;
+	padding-bottom: 20px;
+	text-align: justify;
+}
 
-  @media (max-width: 768px){
-      .ab{
-          font-size: 25px;
-          padding: 5px;
-      }
-      .ap{
-          font-size: 10px;
-          padding: 5px;
-      }
-      .read p{
-          font-size: 12px;
-          padding: 20px 30px 20px 30px;
-      }
-      .mored img{
-          height: 50px;
-      }
-      .mored h4{
-          font-size: 15px;
-      }
-      .mored p{
-          font-size: 10px;
-      }
-      .sus-eco{
-          padding-bottom: 10px;
-          padding: 10px 20px 10px 20px;
-      }
-      .sus-eco h1{
-          padding-bottom: 15px;
-          font-size: 20px;
-      }
-      .sus-eco p{
-          font-size: 12px;
-      }
-      .img_end img{
-          height: 90px;
-      }
-      .content{
-          background-image: url('./images/About/mobile.webp');
-          background-size: cover;
-          background-repeat: no-repeat;
-          background-position: center;
-      }
-      .bid_i p{
-          font-size: 20px;
-          word-spacing: 10px;
-      }
-    .wh-youth-div h1{
-      font-size: 25px;
-    }
-    .wh-youth-div p{
-      font-size: 10px;
-    }
-    .wh-youth-div{
-      background-image: url('./images/About/about-us-half.webp');
-      padding-left: 40px;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      height: 400px;
-    }
-  }
+@media (max-width: 768px) {
+	.ab {
+		font-size: 25px;
+		padding: 5px;
+	}
+	.ap {
+		font-size: 18px;
+		padding: 5px;
+	}
+	.read p {
+		font-size: 12px;
+		padding: 20px 30px 20px 30px;
+	}
+	.mored img {
+		height: 50px;
+	}
+	.mored h4 {
+		font-size: 15px;
+	}
+	.mored p {
+		font-size: 10px;
+	}
+	.sus-eco {
+		padding-bottom: 10px;
+		padding: 10px 20px 10px 20px;
+	}
+	.sus-eco h1 {
+		padding-bottom: 15px;
+		font-size: 20px;
+	}
+	.sus-eco p {
+		font-size: 12px;
+	}
+	.img_end img {
+		height: 90px;
+	}
+	.content {
+		background-image: url("./images/About/mobile.webp");
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	.bid_i p {
+		font-size: 20px;
+		word-spacing: 10px;
+	}
+	.wh-youth-div h1 {
+		font-size: 25px;
+	}
+	.wh-youth-div p {
+		font-size: 10px;
+	}
+	.wh-youth-div {
+		background-image: url("./images/About/about-us-half.webp");
+		padding-left: 40px;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		height: 400px;
+	}
+}
 
-
-
-
-
-
-
-
-
-
-
-
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px){
-    .wh-youth-div h1{
-      font-size: 25px;
-      padding-bottom: 5px;
-    }
-    .wh-youth-div p{
-      font-size: 15px;
-      padding-bottom: 2px;
-    }
-    .wh-youth-div{
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      height: 400px;
-      
-    }
-  }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+	.wh-youth-div h1 {
+		font-size: 25px;
+		padding-bottom: 5px;
+	}
+	.wh-youth-div p {
+		font-size: 15px;
+		padding-bottom: 2px;
+	}
+	.wh-youth-div {
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		height: 400px;
+	}
+}

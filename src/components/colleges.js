@@ -16,7 +16,7 @@ import Footer from './footer'
 
 export default function Collges() {
 
-    const { login, error, isPending,signInWithGoogle } = useLogin()
+    const { login, error, isPending,signInWithGoogle } = useLogin() 
     const history = useNavigate()
     const {user} = useAuthContext()
 

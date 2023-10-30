@@ -1,0 +1,149 @@
+.testimonial-container {
+  max-width: 100%;
+	display: flex;
+	height: auto !important;
+	justify-content: center;
+	padding-top: 60px;
+	padding-right: 30px;
+	padding-left: 30px;
+	padding-bottom: 60px;
+	gap: 100px;
+}
+.testimonial-main-div {
+	width: 500px;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+.yt_video {
+	aspect-ratio: 16/9;
+	width: 300px;
+}
+
+.image {
+	width: 20%;
+}
+
+.image img {
+	width: 90%;
+	border-radius: 50%;
+}
+
+.testimonial-person-details {
+	display: flex;
+	margin-top: 15px;
+}
+
+.main-info {
+	margin-left: 10px;
+	display: flex;
+	flex-direction: column;
+	text-align: start;
+	font-weight: 900;
+}
+
+.main-info h5 {
+	margin-bottom: 0;
+	font-weight: 900;
+}
+
+.testimonial-name {
+	font-size: 15px;
+}
+
+.testimonial-position {
+	font-size: 15px;
+}
+
+.testimonial-authority {
+	font-size: 15px;
+}
+
+.testimonial-mainSource {
+	font-weight: 400;
+	color: #1875d1;
+	font-size: 18px;
+	font-family: "Quicksand";
+	font-weight: 900;
+}
+
+@media (max-width: 768px) {
+  .testimonial-container {
+    max-width: 99%;
+    height: auto !important;
+    flex-direction: column;
+  }
+
+	.testimonial-main-div {
+		width: 85vw;
+		height: 300px;
+		margin-bottom: 30px;
+	}
+
+	.yt_video {
+		width: 100%;
+		height: 200px;
+	}
+
+	.image {
+		width: 20%;
+	}
+
+	.testimonial-person-details {
+		display: flex;
+		margin-top: 5px;
+	}
+
+	.testimonial-name,
+  .testimonial-authority,
+  .testimonial-position,
+	.testimonial-mainSource {
+		font-size: 12px;
+	}
+
+	.testimonial-mainSource {
+		font-size: 14px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+	.testimonial-container {
+    max-width: 99%;
+    height: auto !important;
+		align-items: center;
+    flex-direction: column;
+  }
+
+	.testimonial-main-div {
+		width: 75vw;
+		height: auto;
+		margin-bottom: 30px;
+	}
+
+	.yt_video {
+		width: 100%;
+		height: 300px;
+	}
+
+	.image {
+		width: 15%;
+	}
+
+	.testimonial-person-details {
+		display: flex;
+		margin-top: 15px;
+	}
+
+  .testimonial-name,
+  .testimonial-authority,
+  .testimonial-position,
+	.testimonial-mainSource {
+		font-size: 20px;
+	}
+
+	.testimonial-mainSource {
+		font-size: 23px;
+	}
+}

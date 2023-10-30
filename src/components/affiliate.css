@@ -17,9 +17,9 @@
 }
 
 .Aff-button:hover {
-  background-color: rgb(0, 47, 66);
-  transition-duration: 450ms;
-  transition-delay: 75ms;
+	background-color: rgb(0, 47, 66);
+	transition-duration: 450ms;
+	transition-delay: 75ms;
 }
 
 .aff-new-prog {
@@ -38,8 +38,9 @@
 .af-content {
 	padding-left: 160px;
 	padding-right: 160px;
-	font-size: 17px;
+	font-size: 25px;
 	text-align: center;
+	font-weight: 900;
 }
 .af-content a {
 	text-decoration: none;
@@ -95,9 +96,9 @@
 }
 
 .up-dec-button:hover {
-  background-color: rgb(0, 47, 66);
-  transition-duration: 450ms;
-  transition-delay: 75ms;
+	background-color: rgb(0, 47, 66);
+	transition-duration: 450ms;
+	transition-delay: 75ms;
 }
 
 .pay-btn {
@@ -112,9 +113,9 @@
 }
 
 .pay-btn:hover {
-  background-color: rgb(0, 120, 225);
-  transition-duration: 450ms;
-  transition-delay: 75ms;
+	background-color: rgb(0, 120, 225);
+	transition-duration: 450ms;
+	transition-delay: 75ms;
 }
 
 .btn-common {
@@ -153,6 +154,46 @@
 	font-weight: 700;
 }
 
+
+
+
+.why-affiliate-container {
+	width: 99vw;
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-gap: 20px;
+	gap: 20px;
+	justify-items: center;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	grid-row-gap: 50px;
+}
+.aff-benifit-container {
+	width: 200px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex-wrap: wrap;
+	/* text-align: start; */
+}
+.aff-benifit-container img{
+	width: 180px;
+	margin-bottom: 10px;
+	/* text-align: center; */
+}
+.aff-benifit-container-title {
+	font-weight: bolder;
+	color: #1875d1;
+	font-size: 20px;
+	margin-top: 10px;
+	font-family: "Quicksand";
+	margin-bottom: 25px;
+}
+.aff-benifit-container-p {
+	font-size: 15px;
+	font-weight: 600;
+	/* text-align: start; */
+}
 .perk-benefit {
 	padding-right: 30px;
 	padding-left: 30px;
@@ -238,6 +279,37 @@
 }
 
 @media (max-width: 768px) {
+	.why-affiliate-container {
+		max-width: 100%;
+		margin-top: 20px;
+		grid-row-gap: 20px;
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.aff-benifit-container {
+		width: 200px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		flex-wrap: wrap;
+		text-align: center;
+	}
+	.aff-benifit-container img {
+		width: 90px;
+		/* margin-bottom: 10px; */
+	}
+	.aff-benifit-container-title {
+		font-weight: bolder;
+		color: #1875d1;
+		font-size: 15px;
+		margin-top: 10px;
+		font-family: "Quicksand";
+		margin-bottom: 15px;
+	}
+	.aff-benifit-container-p {
+		font-size: 12px;
+		font-weight: 600;
+		/* text-align: start; */
+	}
 	.school-items-form {
 		width: 100%;
 		font-size: 10px;
@@ -287,30 +359,6 @@
 		font-size: 8px;
 		padding: 4px;
 	}
-}
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-	.Aff-button {
-		font-size: 15px;
-	}
-
-	.school-items-form {
-		width: 100%;
-		font-size: 13px;
-		padding: 10px;
-	}
-
-	.school-items-form input {
-    right: 0px;
-    width: 60%;
-	}
-
-	.up-dec-button {
-		width: 30%;
-	}
-}
-
-@media (max-width: 768px) {
 	.Aff-p {
 		font-size: 15px;
 	}
@@ -326,3 +374,56 @@
 		font-size: 15px;
 	}
 }
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+	.Aff-button {
+		font-size: 15px;
+	}
+
+	.why-affiliate-container {
+		max-width: 100%;
+		margin-top: 20px;
+		grid-row-gap: 20px;
+		grid-template-columns: repeat(4, 1fr);
+	}
+	.aff-benifit-container {
+		width: 150px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		flex-wrap: wrap;
+		text-align: center;
+	}
+	.aff-benifit-container img {
+		width: 90px;
+	}
+	.aff-benifit-container-title {
+		font-weight: bolder;
+		color: #1875d1;
+		font-size: 15px;
+		margin-top: 10px;
+		font-family: "Quicksand";
+		margin-bottom: 15px;
+	}
+	.aff-benifit-container-p {
+		font-size: 12px;
+		font-weight: 600;
+		/* text-align: start; */
+	}
+
+	.school-items-form {
+		width: 100%;
+		font-size: 13px;
+		padding: 10px;
+	}
+
+	.school-items-form input {
+		right: 0px;
+		width: 60%;
+	}
+
+	.up-dec-button {
+		width: 30%;
+	}
+}
+

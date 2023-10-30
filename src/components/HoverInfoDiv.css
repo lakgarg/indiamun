@@ -1,0 +1,99 @@
+.hover-container {
+  position: relative;
+  width: 350px;
+  height: 200px;
+  background: #fff;
+  margin: 0 20px;
+  border-radius: 2px;
+  transition: 0.5s;
+  cursor: pointer;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 3px solid black;
+  border-radius: 14px;
+}
+
+/* .hover-container.hovered {
+  background: #86ff3b;
+  box-shadow: 0 0 0 4px #333, 0 0 0 4px #333;
+  border: none;
+} */
+
+.main-heading {
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.hover-container.hovered .main-heading {
+  font-weight: bold; 
+  transition: all ease-in;
+  transition-delay: 75ms;
+}
+
+.tooltip-content {
+  position: absolute;
+  top: 100%; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  width: 350px;
+  background: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  pointer-events: none;
+  border: 2px solid black;
+}
+
+.hover-container.hovered .tooltip-content {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(-50%) translateY(10px);
+  z-index: 10;
+}
+
+.tooltip-content h2 {
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .why-affiliate-container {
+    grid-template-columns: repeat(1, 1fr); 
+  }
+  .hover-container {
+    width: 220px;
+    height: 100px;
+  }
+  .main-heading {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* .aff-benifit-container {
+		width: 300px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+  .why-affiliate-container {
+    grid-template-columns: repeat(2, 1fr); 
+  } */
+  .hover-container {
+    width: 320px;
+    height: 200px;
+  }
+  .main-heading {
+    font-size: 30px;
+  }
+}

@@ -14,8 +14,9 @@ const Navigation = () => {
             <Nav.Link className='nav_items' href='/about'>About Us</Nav.Link>
             <Nav.Link className='nav_items' href='/partners'>Partners</Nav.Link>
             <Nav.Link className='nav_items' href='/participate'>India MUN Programs</Nav.Link> 
+            <Nav.Link className='nav_items' href='/affiliates'>Affiliate</Nav.Link> 
             {/* <Nav.Link className='nav_items' href='/affiliates'>Affiliates</Nav.Link> */}
-            <NavDropdown
+            {/* <NavDropdown
               title="Join Us"
               className='nav_items'
               id="nav_custom"
@@ -25,7 +26,7 @@ const Navigation = () => {
                 Volunteer
               </NavDropdown.Item>
               <NavDropdown.Item href="https://docs.google.com/forms/d/e/1FAIpQLSdnrPXx2RwyPpiD4gyLD7VKQb-fzs1H8ahkrWYyamj7nK8jTA/viewform" target={'_blank'}>Partner</NavDropdown.Item>
-            </NavDropdown>
+            </NavDropdown> */}
             <Nav.Link className='nav_items' href="https://buzzonearth.com/" target={'_blank'} style={{color:'white'}}>Blog</Nav.Link>
             <Nav.Link className='nav_items' href='/team'>The Team</Nav.Link>
             <NavDropdown

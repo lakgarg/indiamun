@@ -4,25 +4,25 @@ import 'firebase/compat/auth'
 import 'firebase/compat/storage'
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDyNdtVjoU9-fyup9ySIW1s9OS3cO8UbLo",
-  authDomain: "indiamun-main-website.firebaseapp.com",
-  projectId: "indiamun-main-website",
-  storageBucket: "indiamun-main-website.appspot.com",
-  messagingSenderId: "416875930617",
-  appId: "1:416875930617:web:4ff37adedec9bdb85dd328",
-  measurementId: "G-VHVCC070PW"
+  apiKey: "AIzaSyDxZ9WrtDJBrttHro_ePQVicA9GiwTNwAA",
+  authDomain: "indiamun-main-website-e3160.firebaseapp.com",
+  databaseURL: "https://indiamun-main-website-e3160-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "indiamun-main-website-e3160",
+  storageBucket: "indiamun-main-website-e3160.appspot.com",
+  messagingSenderId: "829117383904",
+  appId: "1:829117383904:web:318e1030625b92b7bdbc85",
+  measurementId: "G-M4KSQ1KGD6"
 };
 
-  firebase.initializeApp(firebaseConfig)
+firebase.initializeApp(firebaseConfig)
 
+const firebaseT = firebase.auth;
 
-  const firebaseT=firebase.auth;
+const projectFirestore = firebase.firestore()
+const projectAuth = firebase.auth()
+const projectStorage = firebase.storage()
 
-  const projectFirestore = firebase.firestore()
-  const projectAuth =firebase.auth()
-  const projectStorage = firebase.storage()
+// timestamp
+const timestamp = firebase.firestore.Timestamp
 
-  // timestamp
-  const timestamp = firebase.firestore.Timestamp
-
-  export {projectFirestore,projectAuth,projectStorage,timestamp,firebaseT}
+export { projectFirestore, projectAuth, projectStorage, timestamp, firebaseT }

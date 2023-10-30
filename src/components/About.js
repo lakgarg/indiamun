@@ -22,11 +22,35 @@ export default function About() {
       </div>
       <Navbar />
       <h2 className='ab'>ABOUT US</h2>
-      <p className='ap'>India MUN was launched on October 24, 2020 on international UN Day, in sync with the UN decade of action from 2020 to 2030. To support
-        the goals set by UNFCCC and UNEP, India MUN seeks to enable the largest youth constituency of the world to transform into a dynamic
-        network of future sustainability leaders.</p>
+      <p className='ap'><span className='text-bold'>About India MUN</span><br />
+
+        Welcome to India MUN, where youth leadership meets climate action. Launched on October 24, 2020, on International UN Day, our initiative is in perfect sync with the UN Decade of Action from 2020 to 2030. At India MUN, we are on a mission to support the goals set by the United Nations Framework Convention on Climate Change (UNFCCC) and the United Nations Environment Programme (UNEP). We believe in harnessing the collective power of the largest youth constituency in the world to transform them into a dynamic network of future sustainability leaders.
+        <br /><br />
+
+        <span className='text-bold'>Our Vision</span>
+        <br />
+        India MUN is a joint initiative of Gaia The Earth Foundation and BuzzOnEarth Youth. We proudly partner with the UN Decade on Ecosystem Restoration, a collaborative effort between UNEP and UNFCCC. As the eminent global institution dedicated to uniting and empowering young students for climate action, we are pioneering change in India's educational landscape.
+        <br /><br />
+
+        <span className='text-bold'>Our Unique Offering</span>
+        <br />
+        India MUN is not just another Model United Nations; we are the country's first climate-themed MUN. Our platform is designed to immerse student delegates in the United Nations' crucial efforts to mitigate climate change. Here, they don't just discuss global challenges; they actively contribute to solutions.
+        <br /><br />
+
+        <span className='text-bold'>Transforming Activism into Action</span>
+        <br />
+        We are firm believers in transforming activism into action. Our climate-positive programs, competitions, and events are carefully curated to empower students – our future sustainability leaders. We provide a space where they can brainstorm innovative climate actions and connect with like-minded peers who share their passion for our planet.
+        <br /><br />
+        <span className='text-bold'>Join the Climate Action Movement</span>
+        <br />
+        At India MUN, we invite you to join the climate action movement. Together, we can drive positive change, build a sustainable future, and inspire generations to come. We believe that every student has the potential to be a catalyst for change, and we are here to support and empower them on this transformative journey.
+        <br /><br />
+        <span className='text-bold'>Our Commitment</span>
+        <br />
+        Our commitment to fostering climate leadership, facilitating collaboration, and driving meaningful action is unwavering. As we move forward in the UN Decade of Action, we are excited to embark on this transformative journey with you.
+      </p>
       <div className='read'>
-        <p>A joint initiative of Gaia The Earth Foundation and BuzzOnEarth, India MUN is the country’s first climate themed MUN, which provides a platform where student delegates follow, analyse and contribute to, the United Nations’ effort to mitigate climate change. Its climate-positive programs, competitions and events help transform activism into action by enabling students – our future sustainability leaders, to brainstorm positive climate actions and network with peers who care equally for the planet.</p>
+        <p>Join us today and be a part of India MUN, where young minds shape the future of our planet. Together, we can make a world of difference.</p>
       </div>
       <div className='more'>
         <div className='mored'>
@@ -50,20 +74,19 @@ export default function About() {
           <p>India's Youth for Climate</p>
         </div>
       </div>
-      <div className='sus-eco'>
+      {/* <div className='sus-eco'>
         <h1>Embedding the Youth into the Sustainability Ecosystem</h1>
         <p>India MUN seeks to increase awareness on Sustainable Development Goals (SDGs) and fosters students’ innate creativity and passion for finding innovative solutions to climate change in particular.</p>
         <p>Through simulated interactions and competitions, students and delegates will grow personally, socially, and academically, opening their eyes to the environmental, social, and governance challenges in India, and by extension, the entire world.</p>
         <p>Specifically, India MUN will provide students with the inspiration, networks, and tools for turning their passion into action at the community level.</p>
-      </div>
-      <div className="scrolling-div">
+      </div> */}
+      {/* <div className="scrolling-div">
         <div className="content">
-          {/* Your content goes here */}
         </div>
-      </div>
-      <div className='voice'>
+      </div> */}
+      {/* <div className='voice'>
         <p><span><i class="fa-solid fa-quote-left fa-lg"></i></span> We need your voice, your support, and your active involvement for a climate-resilient India. Let us help you share your ideas for climate action to the world.</p>
-      </div>
+      </div> */}
       <div className='wh-youth'>
         <div className='wh-youth-div'>
           <h1>WHAT CAN YOU(TH) DO?</h1>
