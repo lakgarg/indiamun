@@ -30,6 +30,7 @@ import img9 from './images/logos strip 2/11.png'
 import img10 from './images/logos strip 2/10.png'
 import img11 from './images/logos strip 2/3.png'
 import img12 from './images/logos strip 2/5.png'
+import qr_code from './images/affiliate/QR.webp'
 import Student1 from './images/INDIAMUN/students 1.webp'
 import Student2 from './images/INDIAMUN/students 2.webp'
 import Student3 from './images/INDIAMUN/students 3.webp'
@@ -184,35 +185,35 @@ export default function Affiliates() {
   const handleFilechange1 = async (e) => {
     setPaymentscreenshot(null);
     setDoc_error(null); // Clear any previous error messages
-  
+
     const selected = e.target.files[0];
-  
+
     // Check if a file is selected
     if (!selected) {
       setDoc_error('Please select a file');
       return;
     }
-  
+
     // Check file type (allow images and PDFs)
     if (!selected.type.includes('image/') && !selected.type.includes('application/pdf')) {
       setDoc_error('Selected file must be an image (JPEG, PNG) or a PDF');
       return;
     }
-  
+
     // Check file size (must be less than 200KB)
     // if (selected.size > 200000) {
     //   setDoc_error('File size must be less than 200KB');
     //   return;
     // }
-  
+
     try {
       // Upload the selected file to Firebase Storage
       const storageRef = projectStorage.ref();
       const fileRef = storageRef.child(selected.name);
-  
+
       // Set up an event listener for progress updates
       const uploadTask = fileRef.put(selected);
-  
+
       uploadTask.on(
         'state_changed',
         (snapshot) => {
@@ -228,7 +229,7 @@ export default function Affiliates() {
         () => {
           // Upload completed successfully
           console.log('File uploaded successfully');
-  
+
           // Get the download URL for the uploaded file
           fileRef.getDownloadURL().then((url) => {
             console.log('File URL:', url);
@@ -242,9 +243,9 @@ export default function Affiliates() {
       setDoc_error('An unexpected error occurred. Please try again.');
     }
   };
-  
-  
-  
+
+
+
 
   useEffect(() => {
     if (response.success) {
@@ -253,7 +254,7 @@ export default function Affiliates() {
     }
   }, [response.success])
 
-  const handleSubmit = async(e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const db = projectFirestore;
@@ -314,6 +315,10 @@ export default function Affiliates() {
     let submit_but = document.querySelector('.after-submit')
     form_data.style.display = "none";
     submit_but.style.display = "inline-block"
+  }
+
+  const handleImccClick = () => {
+    window.open('https://docs.google.com/document/d/1A7RgrMLhdHADVefDAlgRkNrvQKuKjccc-IscoPE5Nm8/edit?usp=sharing', '_blank');
   }
 
   // const [paymentError, setPaymentError] = useState(null);
@@ -635,6 +640,78 @@ export default function Affiliates() {
               your affiliation and contribute to the climate action movement.</p>
           </div>
         </Collapsible>
+
+        <Collapsible label="Click here for IMCC Guidelines">
+          <div className="icc-main">
+
+
+            <h1 className='aff'>IMCC (India MUN Climate Club) Formation Guidelines</h1>
+
+            <div className="imcc-content">
+              <p>
+                <b>Club Name: </b> School name_IMCC <br /><br />
+
+                <b>Objective: </b> The IMCC aims to empower students to take meaningful action on climate change, engage in environmental initiatives, and support the goals of the UN Decade on Climate Action.<br /><br />
+
+                <b>1) Leadership Structure:</b> <br /><br />
+
+                President: 1<br />
+                Vice President: 1<br />
+                Treasurer: 1<br />
+                Event Organizing Team<br />
+                Outreach & Content Team<br /><br />
+
+                Members:<br />
+                Minimum: 5 students<br />
+                Maximum- 50 students (for larger schools, you can consider expanding the membership)<br /><br />
+
+
+                <b>2) Faculty Coordinators:</b><br />
+
+                Each school should have two faculty coordinators who will provide guidance and support to the IMCC. These coordinators will play a crucial role in facilitating the club's activities and ensuring that it aligns with the school's values and environmental objectives.<br /><br />
+
+                <b>3) Meetings:</b><br />
+                Regular meetings should be held at least twice a month to ensure club activities run smoothly and members are actively engaged.<br /><br />
+
+                <b>4) Club Activities:</b><br />
+                The IMCC should undertake a variety of activities to promote climate action, including:<br /><br />
+
+                - Educational Workshops and Seminars<br />
+                - Clean-Up Drives<br />
+                - Fundraising for Environmental Projects<br />
+                - Awareness Campaigns<br />
+                - Participation in India MUN's Climate Action Programs<br />
+                - Collaboration with Other Schools and Environmental Organizations<br /><br />
+
+
+                <b>5) Climate Pledge:</b><br />
+                All IMCC members should sign the Climate Pledge for the "UN Decade on Climate Action."<br /><br />
+
+                <b>6) Annual Reporting:</b><br />
+                The club should create an annual report recording all activities and achievements and submit that to the faculty coordinators.<br /><br />
+
+                <b>7) Communication:</b><br />
+                Create a dedicated online platform or group for efficient communication among members, such as a group chat, email list, or social media page.<br /><br />
+
+                <b>8) Community Engagement:</b><br />
+                Encourage IMCC members to actively engage with the local community and look for opportunities to collaborate with other schools, environmental organizations, and community groups.<br /><br />
+
+                <b>9) India MUN Support:</b><br />
+                India MUN will provide support to all affiliated schools by providing access to <br />
+                - Resources and toolkits<br />
+                - India MUN programs <br />
+                - Mentors<br />
+                - Industry expertise <br /><br />
+
+                <b>10) Monitoring and Recognition:</b><br />
+                India MUN will monitor the progress and impact of IMCCs and recognize outstanding achievements through awards, certificates, and other forms of recognition like Accreditation.<br /></p>
+
+            </div>
+          </div>
+
+        </Collapsible>
+
+        {/* <button className='Aff-button imcc-btn' onClick={handleImccClick}>IMCC Guidelines</button> */}
       </div>
 
       {/* <p className='eli-criteria'>Eligibility Criteria</p>
@@ -674,6 +751,27 @@ export default function Affiliates() {
             <div className='school-items-form'>Coordinator 2 Contact Email Id: <input type='text' value={cordi2_conatctEmail} onChange={(e) => setCordi2_contactEmail(e.target.value)} required id="email-info-2"></input></div>
             <div className='school-items-form'>Coordinator 1 Contact Number: <input type='text' value={cordi1_conatctNo} onChange={(e) => setCordi1_contactNo(e.target.value)} required id="contact-info-1"></input></div>
             <div className='school-items-form'>Coordinator 2 Contact Number: <input type='text' value={cordi2_conatctNo} onChange={(e) => setCordi2_contactNo(e.target.value)} required id="contact-info-2"></input></div>
+            <div className="additional-info-p">
+              <p>Schools that affiliate before <span>Dec 15th, 2023</span> can avail an <span>40% off</span> on Affiliation Fee as Sponsorship from our Vision Partner- Amirta Vishwavidya Peetham.</p>
+            </div>
+            <div className="additional-info-div">
+              <div className="left-text-payment">
+                <p className='ltp-1'>Affiliation Fee - <i><strike>INR 15000</strike></i></p>
+                <p className='ltp-2'><i>INR 9000</i></p>  
+                <p className='ltp-3'><i>Early Bird Discount</i></p>
+              </div>
+              <div className="right-img-qr">
+                <img src={qr_code} alt="qr_code" />
+              </div>
+            </div>
+            <div className="razorpay_pay">
+              <p className="rp-1">Scan the QR code above</p>
+              <p className="rp-2">or</p>
+              <div className="razorpay-btn">
+                <p className="rp-3">Pay Through</p>
+                <button>Razorpay</button>
+              </div>
+            </div>
 
 
           </div>
@@ -716,7 +814,7 @@ export default function Affiliates() {
 
 
       <h1 className='aff1'>India MUN Accreditation</h1>
-      <div className="lower-text1">Going LIVE on 24 Oct, 2023 India MUN day</div>
+      {/* <div className="lower-text1">Going LIVE on 24 Oct, 2023 India MUN day</div> */}
       <p className='am-content'>Building upon the foundation of our affiliation process, this program aims to recognize and celebrate the exceptional climate action initiatives
         undertaken by schools and colleges. We understand that true change emerges from dedicated efforts, and we want to honor those who go above and
         beyond in championing environmental sustainability</p>
@@ -774,7 +872,7 @@ export default function Affiliates() {
           - Highlight the institutional support and allocation of resources for climate action initiatives.</p><br></br>
       </div>
 
-      <div className="lower-text1">Going LIVE on 24 Oct, 2023 India MUN day</div>
+      {/* <div className="lower-text1">Going LIVE on 24 Oct, 2023 India MUN day</div> */}
 
       <p className='founding'>FOUNDING PARTNERS</p>
       <p>India MUN is a joint initiative of <b ><a style={{ color: '#0076ba', textDecoration: 'none' }} href='https://buzzonearth.com/'>BuzzOnEarth</a></b>  and <b><a style={{ color: '#0076ba', textDecoration: 'none' }} href='https://gaiatheearthfoundation.org/'>Gaia The Earth Foundation</a></b>, the organizations that are committed to<br></br> sustainability and regeneration</p>

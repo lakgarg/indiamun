@@ -36,12 +36,18 @@ import png11 from './images/logos strip 2/11.png'
 import png12 from './images/logos strip 2/12.png'
 import buzzi from './images/logos strip/buzzon copy.webp'
 import giaa from './images/logos strip/gaia copy.webp'
+import plaque from './images/INDIAMUN/plaque.png'
 import forestam from './images/About/Forrest-right.webp'
 import Footer from './footer'
+import Aff1 from '../components/images/affiliate/Ovais Sarmad.png'
+import Aff2 from '../components/images/affiliate/Suresh prabhu.png'
+import Aff3 from '../components/images/affiliate/Ramananramnathan.png'
+import Aff4 from '../components/images/affiliate/Jagdish seth.png'
 
 import { useNavigate } from 'react-router-dom';
 import { useLogin } from './hooks/useLogin'
 import { useAuthContext } from './hooks/useAuthContext'
+import Testimonial from './Testimonial'
 
 
 const slides = ['DO YOU WANT TO LIVE AND WORK IN A MORE SUSTAINABLE WORLD?', 'DO YOU WANT TO PROTECT AND NURTURE YOUR ENVIRONMENT?', 'DO YOU WONDER WHAT YOU AS AN INDIVIDUAL CAN DO?'];
@@ -140,36 +146,39 @@ export default function Home() {
 
       <div className="about">
         <h1 className="habout">ABOUT INDIA MUN </h1>
-        <p className="pabout">India MUN, a collaborative endeavor by Gaia The Earth Foundation and BuzzOnEarth Youth, is a pioneering global institution committed to uniting and empowering young students for climate action. We proudly serve as the official partner of the UN Decade on Ecosystem Restoration, a groundbreaking initiative jointly spearheaded by UNEP and UNFCCC. <br />At its core, India MUN is the vanguard of climate-conscious education. As the trailblazing platform for India's first climate-themed Model United Nations (MUN), we provide a unique space where student delegates actively engage with and contribute to the United Nations' crucial mission of mitigating climate change.</p>
+        <p className="pabout">India MUN, a collaborative endeavor by Gaia The Earth Foundation and BuzzOnEarth Youth, is a pioneering global institution committed to  uniting and empowering young students for climate action. We proudly serve as the official partner of the UN Decade on Ecosystem Restoration, a groundbreaking initiative jointly spearheaded by UNEP and UNFCCC. <br /> <br />
+        At its core, India MUN is the vanguard of climate-conscious education. We believe in harnessing the collective power of the largest youth constituency in the world to transform them into a dynamic network of future sustainability leaders.
+        </p>
         <div className="fabout">A forum for future sustainability leaders</div>
       </div>
 
-      <h1 className='aff'>AFFILIATIONS OPEN</h1>
-      <div className="my-container">
-        <div className="left-container">
-          <div className="upper-text">Global Schools for Climate Action.</div>
-          <div className="lower-text">Young Minds creating a world where ecosystems are restored, and communities thrive.</div>
-        </div>
-        <div className="right-text-container">
-          <div className="right-text">AFFILIATE YOUR SCHOOL TODAY </div>
-          <div className="button-container">
-            <button className="right-button"><a href='/affiliates' style={{ textDecoration: 'none', color: 'white' }}>Learn More</a></button>
+      {/* <h1 className='aff'>AFFILIATIONS OPEN</h1> */}
+      <div className="custom-bg">
+        <div className="my-container">
+          <div className="left-container">
+            <div className="upper-text">Global Schools for Climate Action.</div>
+            <div className="lower-text-home">Building India's largest youth network for climate action.</div>
+            <div className="right-text">AFFILIATE YOUR SCHOOL TODAY!</div>
+          </div>
+          <div className="right-text-container">
+            <img className='right-img-plaque' src={plaque} alt="plaque" />
           </div>
         </div>
+        <div className='img_gallery'>
+          {/* <img className='gallery' src={aff_left} alt="" />
+          <img className='gallery' src={aff_right} alt="" /> */}
+          <img className='gallery' src={Student1} alt="Student1" />
+          <img className='gallery' src={Student2} alt="Student2" />
+          <img className='gallery' src={Student3} alt="Student3" />
+          <img className='gallery' src={Student4} alt="Student4" />
+        </div>
+        <button className="right-button"><a href='/affiliates' style={{ textDecoration: 'none', color: 'white' }}>Learn More</a></button>
       </div>
-      <div className='img_gallery'>
-        {/* <img className='gallery' src={aff_left} alt="" />
-        <img className='gallery' src={aff_right} alt="" /> */}
-        <img className='gallery' src={Student1} alt="Student1" />
-        <img className='gallery' src={Student2} alt="Student2" />
-        <img className='gallery' src={Student3} alt="Student3" />
-        <img className='gallery' src={Student4} alt="Student4" />
-      </div>
 
 
 
 
-      <h1 className='head-am'>INDIA'S YOUNG FOREST AMBASSADOR</h1>
+      {/* <h1 className='head-am'>INDIA'S YOUNG FOREST AMBASSADOR</h1>
       <p className='con-mind'>Connecting young minds with nature & helping them develop self-awareness, creativity, resilience, collaboration, and environmental stewardship.</p>
       <div className='forest-am'>
         <div className='for-left part'>
@@ -184,14 +193,15 @@ export default function Home() {
             <a><button onClick={handleSignIN} >Colleges</button></a>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className="con">
         <div className='con_div'>
           <h1 className="h-con underline-small">INDIA MUN ANNUAL CONFERENCE </h1>
         </div>
-
-        <p className="p-con">India’s first Model United Nations conference on Climate is a challenging and competitive platform for students to debate and analyse some of the world’s most pressing climate problems. As delegates representing different countries and agencies, students will gain practical insight into the challenges and opportunities posed by the urgent need for more sustainable growth models.</p>
+        <div className="p-con-div">
+          <p className="p-con">India’s first Model United Nations conference on Climate is a challenging and competitive platform for students to debate and analyse some of the world’s most pressing climate problems. As delegates representing different countries and agencies, students will gain practical insight into the challenges and opportunities posed by the urgent need for more sustainable growth models.</p>
+        </div>
         <div className="f-con">[December 21-24, 2023]</div>
       </div>
 
@@ -241,7 +251,7 @@ export default function Home() {
 
       <p className='h-con1'>INDIA MUN PROGRAMS</p>
       <img className='mobile_photo' src={program_mobile_photo} alt="" />
-      <p className="pabout">Our climate-positive programs, competitions, and events form the cornerstone of our mission to convert activism into tangible action. By participating in India MUN, students - the future stewards of sustainability - have the opportunity to brainstorm innovative climate solutions and connect with like-minded peers who share a deep commitment to our planet. Join us in shaping a sustainable future, where every voice matters, and every action counts.</p>
+      {/* <p className="pabout">Our climate-positive programs, competitions, and events form the cornerstone of our mission to convert activism into tangible action. By participating in India MUN, students - the future stewards of sustainability - have the opportunity to brainstorm innovative climate solutions and connect with like-minded peers who share a deep commitment to our planet. Join us in shaping a sustainable future, where every voice matters, and every action counts.</p> */}
 
 
       <div className='program_mun'>
@@ -339,9 +349,10 @@ export default function Home() {
         </Carousel>
 
       </div>
+
       <div className="image-card">
         <div className="text-container">
-          <p><span>Join </span>to combat climate change.</p>
+          <p><span>Join </span>to Combat climate change.</p>
           <p><span>Create </span>solutions to solve problems that affect the environment.</p>
           <p><span>Network </span>connect with like-minded friends who care about the planet.</p>
           <p><span>Become </span>a  future sustainability leader. </p>
@@ -350,6 +361,7 @@ export default function Home() {
           <img src={girl} alt="Nature" />
         </div>
       </div>
+
       <h2 className='h-col'>COLLABORATE</h2>
       <p className='p-col'>“Partnerships for a sustainable future”</p>
       {/* <div className='col-new'>
@@ -478,7 +490,7 @@ export default function Home() {
             <button className='right-button'><a style={{ textDecoration: 'none', color: 'white' }} href='https://www.deccanherald.com/sunday-herald/sh-top-stories/climate-change-what-will-wake-us-up-1045709.html' target={'_blank'}>Read More</a></button>
 
           </div>
-          <div className='news_td'>
+          {/* <div className='news_td'>
             <p className='news_p'>
               <b>Students, are you passionate about climate action? Check out the India MUN and all the sessions it has in store for you</b></p>
             <p className='news_pc'>India MUN is being helmed by Gayatri Chauhan, who studied at Indian Institute of Technology, Roorkee. She has been a passionate climate activist for a few years now
@@ -491,7 +503,7 @@ export default function Home() {
             <p className='news_pc'>To enable India’s youth of over 356 million and counting to drive the biggest sustainability agenda for a climate-resilient world, our country’s very first pan India Model United Nations (India MUN) is rolling out an extensive 4-day virtual event for students placed across the nation in December. Focusing on climate action-based agenda to sensitize the youth around climate crisis, the programme is backed by the UNFCCC, UNEP, CBSE board, universities, and corporates.
             </p>
             <button className='right-button' style={{ marginBottom: '20px' }}><a style={{ textDecoration: 'none', color: 'white' }} href='https://indiaeducationdiary.in/india-model-united-nations-set-to-unite-the-youth-towards-climate-action/' target={'_blank'}>Read More</a></button>
-          </div>
+          </div> */}
 
         </div>
         <div className='events'>
@@ -518,7 +530,7 @@ export default function Home() {
       </div>
       <img style={{ width: '100%', height: 'auto', marginBottom: '40px' }} src={end_img} alt="" />
       <div className='margin-button'>
-        <button className='right-button2'><a style={{ textDecoration: 'none', color: 'white', }} href='/affiliates' >Affiliate your School</a></button>
+        <button className='right-button2'><a style={{ textDecoration: 'none', color: 'white', }} href='/affiliates' >AFFILIATE YOUR SCHOOL TODAY!!</a></button>
       </div>
       {/* <div className='regi'>
         <h1 className="habout">BECOME INDIA'S YOUNG FOREST AMBASSADOR</h1>
@@ -535,6 +547,18 @@ export default function Home() {
           </div>
         </div>
       </div> */}
+
+
+      <h1 className='aff1-home'>TESTIMONIALS</h1>
+      <div className='testimonial-container'>
+        <Testimonial videoSRC="https://www.youtube.com/embed/SmSo3SY_S1o?si=ANaFT09_Oco4hqMZ" videoTitle="Video 1" imageSRC={Aff1} imageTitle="council1" name="Mr Ovais Sarmad," position="Former Deputy Executive Secretary" authority="United Nations Framework Convention on Climate Change" mainSource="(UNFCCC)" />
+
+        <Testimonial videoSRC="https://www.youtube.com/embed/iuQaLltyGvw?si=KOazN7bfoU0aBcii" videoTitle="Video 2" imageSRC={Aff2} imageTitle="council1" name="Mr Suresh Prabhu," position="Parliamentarian, Minister and Chancellor" authority="Prime Minister’s Sherpa for G20 Summit (2014 - 2015)" mainSource="(Government of India)" />
+
+        <Testimonial videoSRC="https://www.youtube.com/embed/dYVbuY-rpE4?si=bftb6cnl3OcJxO9_" videoTitle="Video 2" imageSRC={Aff3} imageTitle="council1" name="Mr. Ramanan Ramanathan," position="Former ( First ) Mission Director" authority="Atal Innovation Mission" mainSource="(AIM)" />
+
+        <Testimonial videoSRC="https://www.youtube.com/embed/Od42_mD5Kv8?si=1yfKI-9GInU74gP2" videoTitle="Video 2" imageSRC={Aff4} imageTitle="council1" name="Dr. Jagdish N. Seth," position="Padma Bhushan Awardee 2020" authority="Charles H. Kellstadt Professor of Marketing" mainSource="(Government of India)" />
+      </div>
 
 
 

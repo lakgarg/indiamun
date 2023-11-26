@@ -92,46 +92,46 @@ export default function Events() {
 
 
 
-  useEffect(() => {
-    // Check if enrollment status exists in local storage
-    // const storedEnrollmentStatus = localStorage.getItem('enrollmentStatus');
+  // useEffect(() => {
+  //   // Check if enrollment status exists in local storage
+  //   // const storedEnrollmentStatus = localStorage.getItem('enrollmentStatus');
 
-    // if (storedEnrollmentStatus) {
-    //   setSubmitted(JSON.parse(storedEnrollmentStatus));
-    // }
+  //   // if (storedEnrollmentStatus) {
+  //   //   setSubmitted(JSON.parse(storedEnrollmentStatus));
+  //   // }
 
-    // Retrieve enrollment status from Firestore
-    projectFirestore.collection('student_enrollment_young_forest_ambassdor').get().then((doc) => {
-      // if (doc.exists) {
-      //   const uid = doc.uid;
-      //   setSubmitted(true);
-      //   console.log('Document uid:', uid);
-      //   console.log("i entered this block")
-      // }
-      // else{
-      //   console.log("doesnt exist")
-      // }
-      if (doc.empty) {
-        console.log("no data found")
-        setSubmitted(false)
-      }
-      else {
-        doc.docs.forEach(doc => {
-          if ((doc.data().uid) === projectAuth.currentUser.uid) {
-            setSubmitted(true)
-            // nav_to('/event/modules')
-            return
-          }
-          // console.log((doc.data().uid))
-          // console.log(projectAuth.currentUser.uid)
-        })
-      }
-      // console.log(doc)
-    })
-      .catch((error) => {
-        console.error('Error retrieving enrollment status:', error);
-      });
-  }, []);
+  //   // Retrieve enrollment status from Firestore
+  //   projectFirestore.collection('student_enrollment_young_forest_ambassdor').get().then((doc) => {
+  //     // if (doc.exists) {
+  //     //   const uid = doc.uid;
+  //     //   setSubmitted(true);
+  //     //   console.log('Document uid:', uid);
+  //     //   console.log("i entered this block")
+  //     // }
+  //     // else{
+  //     //   console.log("doesnt exist")
+  //     // }
+  //     if (doc.empty) {
+  //       console.log("no data found")
+  //       setSubmitted(false)
+  //     }
+  //     else {
+  //       doc.docs.forEach(doc => {
+  //         if ((doc.data().uid) === projectAuth.currentUser.uid) {
+  //           setSubmitted(true)
+  //           // nav_to('/event/modules')
+  //           return
+  //         }
+  //         // console.log((doc.data().uid))
+  //         // console.log(projectAuth.currentUser.uid)
+  //       })
+  //     }
+  //     // console.log(doc)
+  //   })
+  //     .catch((error) => {
+  //       console.error('Error retrieving enrollment status:', error);
+  //     });
+  // }, []);
 
 
 
@@ -171,8 +171,8 @@ export default function Events() {
         <h2>INDIA’S YOUTH FOR CLIMATE ACTION</h2>
         <img className='right_img' src={right_img} alt="" />
       </div>
-      {/* <Navbar/> */}
-      <div className='log-nav'>
+      <Navbar/>
+      {/* <div className='log-nav'>
         <div className='log-nav1'>
           <img src={user.photoURL} />
           <h4>hello, {user.displayName}</h4>
@@ -180,7 +180,7 @@ export default function Events() {
         <div className='log-nav2'>
           <button onClick={logout}>Logout</button>
         </div>
-      </div>
+      </div> */}
 
 
 

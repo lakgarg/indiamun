@@ -1,12 +1,16 @@
 .headname span{
-    background: rgb(45,181,252);
-    background: linear-gradient(90deg, rgba(45,181,252,1) 0%, rgba(158,174,236,1) 50%, rgba(255,164,215,1) 100%);
+    /* background: rgb(45,181,252); */
+    background-color: rgb(37, 37, 36);
+    color: white;
+    /* background: linear-gradient(90deg, rgba(45,181,252,1) 0%, rgba(158,174,236,1) 50%, rgba(255,164,215,1) 100%); */
     padding: 5px 60px;
     border-radius: 30px;
 }
 .headname1 span{
-    background: rgb(77,189,132);
-    background: linear-gradient(90deg, rgba(77,189,132,1) 0%, rgba(143,208,117,1) 50%, rgba(200,226,100,1) 100%); 
+    /* background: rgb(77,189,132);
+    background: linear-gradient(90deg, rgba(77,189,132,1) 0%, rgba(143,208,117,1) 50%, rgba(200,226,100,1) 100%);  */
+    background-color: rgb(37, 37, 36);
+    color: white;
     padding: 5px 60px;
     border-radius: 30px;
 }

@@ -28,6 +28,8 @@ import step2 from './images/newimages/step 2.webp'
 import conf from './images/newimages/conf left.webp'
 import confr from './images/newimages/conf right.webp'
 import login_phot from './images/newimages/login\ deks\ .webp'
+import syca from './images/affiliate/start your climate action(desk).webp'
+import sycaMobile from './images/affiliate/start your climate action(mobile).webp'
 
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react'
@@ -81,28 +83,28 @@ export default function Participate() {
       <div className='participate'>
         <div className='participate-item'>
           <img src={p1}></img>
-          <button className='main-button'>Season 2 Coming Soon</button>
-          <p>Jump to event details <i onClick={() => handleClick1(targetRef1)} class="fa-solid fa-circle-chevron-right"></i></p>
+          <button onClick={() => handleClick1(targetRef1)}>IYFA Season 1</button>
+          <p>Live Now</p>
         </div>
         <div className='participate-item'>
           <img src={p2}></img>
-          <button>Coming Soon</button>
-          <p>Jump to event details <i onClick={() => handleClick1(targetRef2)} class="fa-solid fa-circle-chevron-right"></i></p>
+          <button onClick={() => handleClick1(targetRef2)}>Registrations Opening on</button>
+          <p>1st Dec, 2023</p>
         </div>
         <div className='participate-item'>
           <img src={p3}></img>
-          <button>Dec 21-24,2023</button>
-          <p>Jump to event details <i onClick={() => handleClick1(targetRef3)} class="fa-solid fa-circle-chevron-right"></i></p>
+          <button onClick={() => handleClick1(targetRef3)}>(April 24th, 2024)</button>
+          <p>Annual Conference 2024</p>
         </div>
         <div className='participate-item'>
           <img src={p4}></img>
-          <button>Registrations Closed(Colleges)</button>
-          <p>Jump to event details <i onClick={() => handleClick1(targetRef4)} class="fa-solid fa-circle-chevron-right"></i></p>
+          <button onClick={() => handleClick1(targetRef4)}>Season 1 Concluded</button>
+          <p>Season 2 Coming Soon</p>
         </div>
         <div className='participate-item'>
           <img src={p5}></img>
-          <button>Coming Soon</button>
-          <p>Jump to event details <i onClick={() => handleClick1(targetRef5)} class="fa-solid fa-circle-chevron-right"></i></p>
+          <button onClick={() => handleClick1(targetRef5)}>Reel Making Competition</button>
+          <p>Live Now</p>
         </div>
       </div>
       <p className='Participate-head'>The Next Generation of Leaders</p>
@@ -112,23 +114,24 @@ export default function Participate() {
       <img className='model_img' src={model_img} />
 
 
+      <div className="img-syca">
+        <img src={syca} alt="syca" />
+      </div>
 
-
-      <div className='imagesection'>
+      {/* <div className='imagesection'> */}
         {/* <button>Apply now</button> */}
-        <img className='img_sec_l' style={{ width: '100%', height: 'auto' }} src={login_phot} />
-        <p className='custom-button1'>college Students</p>
+        {/* <img className='img_sec_l' style={{ width: '100%', height: 'auto' }} src={login_phot} /> */}
+        {/* <p className='custom-button1'>college Students</p>
         <button onClick={handleSignIN} className='custom-button'><img style={{ width: '30px', height: '30px' }} src={google_photo} />  Sign in with Google</button>
         <p className='custom-button2'>School Students</p>
-        <a href='/schools'><button className='custom-button3'><img style={{ width: '30px', height: '30px' }} src={google_photo} />  Sign in with Google</button></a>
-      </div>
+        <a href='/schools'><button className='custom-button3'><img style={{ width: '30px', height: '30px' }} src={google_photo} />  Sign in with Google</button></a> */}
+      {/* </div> */}
 
 
-      <div className='part_d'>
-        <h1 className='head-am1' ref={targetRef1}>INDIA'S YOUNG FOREST AMBASSADOR</h1>
-        <p>( Season 2 Coming Soon )</p>
+      <div className='part_d_fa'>
+        <h1 className='head-am1_fa' ref={targetRef1}>INDIA'S YOUNG FOREST AMBASSADOR</h1>
+        <p className='con-mind'>Connecting young minds with nature & helping them develop self-awareness, creativity, resilience, collaboration, and environmental stewardship.</p>
       </div>
-      <p className='con-mind'>Connecting young minds with nature & helping them develop self-awareness, creativity, resilience, collaboration, and environmental stewardship.</p>
       <div className='forest-am'>
         <div className='for-left part'>
           <a href='https://gaiatheearthfoundation.org/' target={'_blank'}><button>SEE OUR WORK AREA</button></a>
@@ -136,10 +139,10 @@ export default function Participate() {
         <div className='for-right part'>
           <p>Given the need to restore our degraded lands and forest ecosystems India needs to build a youth-led initiative to fund on ground regenerative action that will have enormous ecological and social impact. </p>
           <img src={forestam} ></img>
-          <div className='reg_school_clg'>
-            <span>Season 2 Coming Soon</span>
-            <a href='/schools'><button >Schools</button></a>
-            <a><button onClick={handleSignIN} >Colleges</button></a>
+          <div className='reg_school_clg_fa'>
+            <span>Season 1 Live</span>
+            <a href='/schools'><button >Learn More</button></a>
+            {/* <a><button onClick={handleSignIN} >Colleges</button></a> */}
           </div>
         </div>
       </div>
@@ -231,7 +234,7 @@ Get ready to unleash your fundraising potential and become a passionate advocate
           <span>YOUTH LEADERSHIP PROGRAM</span>
           <div>
             {/* <button>Coming Soon</button> */}
-            <span>Coming Soon</span>
+            {/* <span>Coming Soon</span> */}
           </div>
         </div>
         <p className='am-content ylp-sec'>An immersive experiential program curated by industry leaders to help you groom your own leadership style and be the best version of yourself. This course helps unleash the leader in you and prepare you with the necessary life skills to excel in your chosen field.</p>
@@ -239,12 +242,16 @@ Get ready to unleash your fundraising potential and become a passionate advocate
           <div className='ylp-left'><img src={ylpleft}></img></div>
           <div className='ylp-right'><img src={ylpright}></img></div>
         </div>
+        <div className="reg-info">
+          <h2>Registrations Opening on 1st Dec, 2023</h2>
+          <button>Learn More</button>
+        </div>
       </div>
       {/* <div className='ylp-school-pic'> */}
       <div className='ylp-school-img'><img src={ylpbelow}></img></div>
       {/* </div> */}
       <div className='bda_cli'>
-        <p className='cli-hack' ref={targetRef4}><span>CLIMATE HACKATHON</span><button>Coming Soon</button></p>
+        <p className='cli-hack' ref={targetRef4}><span>CLIMATE HACKATHON</span><button>(Season 1 Concluded)</button></p>
         <div className='climate-hackathon'>
           <div className='cli1'>
             <img src={cli_hack} alt="" />
@@ -283,6 +290,10 @@ Get ready to unleash your fundraising potential and become a passionate advocate
         <img src={step1} alt="" />
         <img src={step2} alt="" />
       </div>
+      <div className="reg-info">
+        <h2>Reel Making (Reel it in!!) Competition live</h2>
+        <button>Learn More</button>
+      </div>
 
 
 
@@ -300,6 +311,10 @@ Get ready to unleash your fundraising potential and become a passionate advocate
           <div className='cli-conf2'>
             <img src={confr} />
           </div>
+        </div>
+        <div className="reg-info">
+          <h2>India MUN Climate Conference 2024 (Annual Event)</h2>
+          <button>Learn More</button>
         </div>
       </div>
 

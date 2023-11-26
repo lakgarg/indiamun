@@ -37,7 +37,8 @@ function App() {
             <Route path='/schools' element={<Schools/>}/>
             <Route path='/event/modules' element={<Modules />}/>
             <Route path='donor' element={<Donor />}/>
-           {user && <Route path='/events' element={<Events/>}/>} 
+            <Route path='/events' element={<Events/>}/>
+           {/* {user && <Route path='/events' element={<Events/>}/>}  */}
            {user && <Route path='/eventSchools' element={<EventsSchools/>}/>}
            {user && <Route path='/donorSubs' element={<DonorSubs/>}/>}
       </Routes>

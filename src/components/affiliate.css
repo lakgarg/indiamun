@@ -64,6 +64,111 @@
 	flex-wrap: wrap;
 }
 
+.additional-info-p {
+	width: 100%;
+	text-align: start;
+	font-size: 25px;
+	margin-left: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.additional-info-p p{
+	width: 100%;
+	margin-bottom: 0;
+	font-weight: 500;
+}
+
+.additional-info-p span{
+	margin-bottom: 0;
+	font-weight: 900;
+}
+
+.additional-info-div {
+	margin-top: 20px;
+	width: 100%;
+	display: flex;
+	/* align-items: start;
+	justify-content: start; */
+	text-align: start;
+	margin-left: 10px;
+}
+
+.left-text-payment {
+	width: 70%;
+	font-size: 21px;
+}
+
+.ltp-1 {
+	font-weight: 900;
+	margin-bottom: 0px;
+}
+
+.ltp-2 {
+	font-weight: 900;
+	color: #1875d1;
+	font-size: 25px;
+}
+.ltp-3 {
+	font-weight: 900;
+}
+
+.right-img-qr {
+	width: 30%;
+}
+
+.right-img-qr img{
+	width: 100%;
+}
+
+.razorpay_pay {
+	display: flex;
+	flex-direction: column;
+}
+
+.rp-1 {
+	margin-bottom: 0;	
+	font-size: 25px;
+}
+.rp-2 {
+	margin-bottom: 0;	
+	font-size: 25px;
+}
+
+.razorpay-btn {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.rp-3 {
+	font-weight: 900;
+	font-size: 28px;
+	margin-right: 10px;
+	margin-bottom: 0;
+}
+
+.razorpay-btn button {
+	width: 150px;
+	padding: 0;
+	/* padding-right: 15px;
+    padding-left: 15px; */
+	border: none;
+	font-size: 25px;
+	font-weight: 700;
+	border-radius: 15px;
+	text-align: center;
+	background-color: rgb(0, 47, 66);
+	color: #fff;
+}
+
+.razorpay-btn button:hover {
+	background-color: rgb(0, 120, 225);
+	transition-duration: 450ms;
+	transition-delay: 75ms;
+}
+
+
 .school-items-form {
 	width: 90%;
 	padding: 10px;
@@ -74,6 +179,7 @@
 	align-items: center;
 	justify-content: space-between;
 	display: flex;
+	font-size: 20px;
 }
 .school-items-form input {
 	position: absolute;
@@ -154,9 +260,6 @@
 	font-weight: 700;
 }
 
-
-
-
 .why-affiliate-container {
 	width: 99vw;
 	display: grid;
@@ -169,14 +272,19 @@
 	grid-row-gap: 50px;
 }
 .aff-benifit-container {
-	width: 200px;
+	/* height: 700px; */
+	width: 210px;
+	padding-left: 10px;
+	padding-right: 10px;
 	display: flex;
+	border: 1px solid black;
+	border-radius: 20px;
 	flex-direction: column;
 	align-items: center;
 	flex-wrap: wrap;
 	/* text-align: start; */
 }
-.aff-benifit-container img{
+.aff-benifit-container img {
 	width: 180px;
 	margin-bottom: 10px;
 	/* text-align: center; */
@@ -278,6 +386,19 @@
 	align-items: center;
 }
 
+.imcc-btn {
+	margin: 20px;
+}
+
+.icc-main {
+	text-align: left;
+	width: 70vw;
+}
+
+.imcc-main-content p span {
+	font-weight: 900;
+}
+
 @media (max-width: 768px) {
 	.why-affiliate-container {
 		max-width: 100%;
@@ -319,6 +440,7 @@
 		margin: 20px;
 		padding: 20px;
 	}
+
 	.up-dec-button {
 		font-size: 12px;
 	}
@@ -426,4 +548,3 @@
 		width: 30%;
 	}
 }
-

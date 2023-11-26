@@ -37,7 +37,7 @@ export const useLogout = () => {
         setIsPending(false)
       }
     }
-    navigate('/')
+    // navigate('/')
   }
 
   useEffect(() => {
