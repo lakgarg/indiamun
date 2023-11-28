@@ -40,8 +40,8 @@ const Navigation = () => {
 
   return (
     <>
-      <Navbar collapseOnSelect expand='sm' className='nav_class'>
-        <Container >
+      <Navbar collapseOnSelect expand='sm' className='nav_class' style={{paddingRight:'0px',paddingLeft:'0px'}}>
+        <Container style={{margin:'0px'}}>
           <Navbar.Toggle aria-controls='responsive-navbar-nav' />
           <Navbar.Collapse id='responsive-navbar-nav'>
             <Nav className='big_nav'>
@@ -62,6 +62,7 @@ const Navigation = () => {
                 <Nav.Link className='nav_items' href='/participate'>India MUN Programs</Nav.Link>
                 <Nav.Link className='nav_items' href='/affiliates'>Affiliate Now</Nav.Link>
                 <Nav.Link className='nav_items' href='/partners'>Partners and Affilates</Nav.Link>
+                <Nav.Link className='nav_items' href='/conference'>India MUN Climate Conference</Nav.Link>
                 <Nav.Link className='nav_items' href="https://buzzonearth.com/" target={'_blank'} style={{ color: 'white' }}>Blog</Nav.Link>
                 {/* <Nav.Link className='nav_items' href='/team'>The Team</Nav.Link> */}
                 {/* <NavDropdown

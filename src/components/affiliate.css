@@ -154,7 +154,7 @@
 	/* padding-right: 15px;
     padding-left: 15px; */
 	border: none;
-	font-size: 25px;
+	font-size: 20px;
 	font-weight: 700;
 	border-radius: 15px;
 	text-align: center;
@@ -405,6 +405,40 @@
 		margin-top: 20px;
 		grid-row-gap: 20px;
 		grid-template-columns: repeat(2, 1fr);
+	}
+	.additional-info-p {
+		font-size: 20px;
+	}
+	.additional-info-div {
+		flex-direction: column;
+	}
+	.right-img-qr {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.right-img-qr img{
+		width: 80%;
+	}
+	.razorpay_pay {
+		display: flex;
+		flex-direction: column;
+		text-align: left;
+	}
+	.rp-1 {
+		margin-bottom: 0;	
+		font-size: 20px;
+	}
+	.rp-2 {
+		margin-bottom: 0;	
+		font-size: 20px;
+	}
+	.rp-3 {
+		font-weight: 900;
+		font-size: 20px;
+		margin-right: 10px;
+		margin-bottom: 0;
 	}
 	.aff-benifit-container {
 		width: 200px;

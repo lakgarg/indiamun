@@ -17,6 +17,8 @@ import EventsSchools from './components/schoolsEvents';
 import Modules from './components/modules';
 import Donor from './components/donor';
 import DonorSubs from './components/donorSubs';
+import Ylpa from './components/ylpa';
+import Conference from './components/conference';
 const cors = require('cors')({ origin: true });
 
 
@@ -38,6 +40,8 @@ function App() {
             <Route path='/event/modules' element={<Modules />}/>
             <Route path='donor' element={<Donor />}/>
             <Route path='/events' element={<Events/>}/>
+            <Route path='/ylpa' element={<Ylpa/>}/>
+            <Route path='/conference' element={<Conference/>}/>
            {/* {user && <Route path='/events' element={<Events/>}/>}  */}
            {user && <Route path='/eventSchools' element={<EventsSchools/>}/>}
            {user && <Route path='/donorSubs' element={<DonorSubs/>}/>}

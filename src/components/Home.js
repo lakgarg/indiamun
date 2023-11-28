@@ -153,8 +153,14 @@ export default function Home() {
       </div>
 
       {/* <h1 className='aff'>AFFILIATIONS OPEN</h1> */}
+      <h1 className='aff-black'>AFFILIATE YOUR SCHOOL TODAY</h1>
+
+      <img className='mobile_photo' src='GSCA mobile.webp' width='100%'></img>
+      <div className='program_mun_content4'>
+        <img src="GSCA.webp" width='100%' alt="" />
+      </div>
       <div className="custom-bg">
-        <div className="my-container">
+        {/* <div className="my-container">
           <div className="left-container">
             <div className="upper-text">Global Schools for Climate Action.</div>
             <div className="lower-text-home">Building India's largest youth network for climate action.</div>
@@ -163,7 +169,7 @@ export default function Home() {
           <div className="right-text-container">
             <img className='right-img-plaque' src={plaque} alt="plaque" />
           </div>
-        </div>
+        </div> */}
         <div className='img_gallery'>
           {/* <img className='gallery' src={aff_left} alt="" />
           <img className='gallery' src={aff_right} alt="" /> */}
@@ -202,7 +208,7 @@ export default function Home() {
         <div className="p-con-div">
           <p className="p-con">India’s first Model United Nations conference on Climate is a challenging and competitive platform for students to debate and analyse some of the world’s most pressing climate problems. As delegates representing different countries and agencies, students will gain practical insight into the challenges and opportunities posed by the urgent need for more sustainable growth models.</p>
         </div>
-        <div className="f-con">[December 21-24, 2023]</div>
+        <div className="f-con"><button className="right-button"><a href='/conference' style={{ textDecoration: 'none', color: 'white' }}>Learn More</a></button></div>
       </div>
 
 
@@ -259,37 +265,36 @@ export default function Home() {
           <img style={{ width: "100%", height: 'auto' }} src={program_photo} alt="" />
         </div>
         <div className='program_mun_content2'>
-          <div>
+          <div className='ylp-homepage'>
             <h3>YOUTH LEADERSHIP PROGRAM</h3>
             {/* <button className='right-button'>Coming Soon</button> */}
-            <span>(Coming Soon)</span>
+            <span>Registrations Opening on December 1, 2023</span>
+            <div className='button_div_climate'>
+              <div className='button_div_climate1'> 
+                <a href='/ylpa'><button className='ylp-homepage-btn right-button'>Learn More</button></a>
+              </div>
+            </div>
             {/* <p style={{padding:'5px',color:'rgb(190, 49, 174)'}}>July 2023</p> */}
           </div>
           <div className='cli_phone'>
             <h3>INDIA'S YOUNG FOREST AMBASSADOR</h3>
-            <p className='reg_open'>Season 2 Coming Soon</p>
+            <p className='reg_open'>IYFA Season 1 LIVE NOW!</p>
             <div className='button_div_climate'>
-              <div className='button_div_climate1'>
-                {/* <p>SCHOOLS</p> */}
-                <a href='/schools'><button className='right-button'>Schools</button></a>
+              <div className='button_div_climate1'> 
+                <a href='/events'><button className='right-button'>Learn More</button></a>
               </div>
-              <div className='button_div_climate2'>
-                {/* <p>COLLEGES</p> */}
-                <a><button onClick={handleSignIN} className='right-button'><a style={{ textDecoration: 'none', color: 'white' }}>Colleges</a></button></a>
-              </div>
-
             </div>
           </div>
           <div>
             <h3>CLIMATE HACKATHON</h3>
             <div className='button_div_climate'>
-              <div className='button_div_climate1'>
-                <p>Season 2</p>
-                <span>(Coming Soon)</span>
+              <div className='climate-hack-container button_div_climate1'>
+                <p className='climate-hack-p-1'>Season 2</p>
+                <span className='climate-hack-span'>(Coming Soon)</span>
               </div>
               <div className='button_div_climate2'>
-                <p>Season 1</p>
-                <button className='right-button'><a style={{ textDecoration: 'none', color: 'white' }} href='https://www.instagram.com/p/Cr0xk4OP1Om/' target={'_blank'}>View Results</a></button>
+                <p className='climate-hack-p'>Season 1</p>
+                <button className='climate-hack-button right-button'><a style={{ textDecoration: 'none', color: 'white' }} href='https://www.instagram.com/p/Cr0xk4OP1Om/' target={'_blank'}>View Results</a></button>
               </div>
 
             </div>
@@ -352,7 +357,7 @@ export default function Home() {
 
       <div className="image-card">
         <div className="text-container">
-          <p><span>Join </span>to Combat climate change.</p>
+          <p><span>Join </span>to Combatf climate change.</p>
           <p><span>Create </span>solutions to solve problems that affect the environment.</p>
           <p><span>Network </span>connect with like-minded friends who care about the planet.</p>
           <p><span>Become </span>a  future sustainability leader. </p>
@@ -404,9 +409,9 @@ export default function Home() {
           </div>
           {dropcol1 &&
             <div>
-              <p>INDIA'S YOUNG FOREST AMBASSADOR</p>
-              <a href='/schools'><button>Schools</button></a>
-              <button onClick={handleSignIN}>Colleges</button>
+              <p>INDIA MUN PROGRAMS</p>
+              <a href='/events' target='_blank'><button>IYFA</button></a>
+              <a href='/ylpa' target='_blank'><button>YLP</button></a>
             </div>
           }
         </div>
@@ -553,11 +558,11 @@ export default function Home() {
       <div className='testimonial-container'>
         <Testimonial videoSRC="https://www.youtube.com/embed/SmSo3SY_S1o?si=ANaFT09_Oco4hqMZ" videoTitle="Video 1" imageSRC={Aff1} imageTitle="council1" name="Mr Ovais Sarmad," position="Former Deputy Executive Secretary" authority="United Nations Framework Convention on Climate Change" mainSource="(UNFCCC)" />
 
-        <Testimonial videoSRC="https://www.youtube.com/embed/iuQaLltyGvw?si=KOazN7bfoU0aBcii" videoTitle="Video 2" imageSRC={Aff2} imageTitle="council1" name="Mr Suresh Prabhu," position="Parliamentarian, Minister and Chancellor" authority="Prime Minister’s Sherpa for G20 Summit (2014 - 2015)" mainSource="(Government of India)" />
+        <Testimonial videoSRC="https://www.youtube.com/embed/iuQaLltyGvw?si=KOazN7bfoU0aBcii" videoTitle="Video 2" imageSRC={Aff2} imageTitle="council1" name="Mr Suresh Prabhu," position="Parliamentarian, Minister and Chancellor" authority="Prime Minister’s Sherpa for G20 Summit (2014 - 2015)" mainSource="" />
 
         <Testimonial videoSRC="https://www.youtube.com/embed/dYVbuY-rpE4?si=bftb6cnl3OcJxO9_" videoTitle="Video 2" imageSRC={Aff3} imageTitle="council1" name="Mr. Ramanan Ramanathan," position="Former ( First ) Mission Director" authority="Atal Innovation Mission" mainSource="(AIM)" />
 
-        <Testimonial videoSRC="https://www.youtube.com/embed/Od42_mD5Kv8?si=1yfKI-9GInU74gP2" videoTitle="Video 2" imageSRC={Aff4} imageTitle="council1" name="Dr. Jagdish N. Seth," position="Padma Bhushan Awardee 2020" authority="Charles H. Kellstadt Professor of Marketing" mainSource="(Government of India)" />
+        <Testimonial videoSRC="https://www.youtube.com/embed/Od42_mD5Kv8?si=1yfKI-9GInU74gP2" videoTitle="Video 2" imageSRC={Aff4} imageTitle="council1" name="Dr. Jagdish N. Seth," position="Padma Bhushan Awardee 2020" authority="Charles H. Kellstadt Professor of Marketing" mainSource="" />
       </div>
 
 

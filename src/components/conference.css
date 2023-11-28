@@ -1,0 +1,45 @@
+.conference-hero {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.indiamun-logo {
+  width: 10%;
+}
+.conference-heading {
+  font-weight: 900;
+}
+.conference-p {
+  font-size: 20px;
+  margin: 0 30px 0 30px;
+}
+
+.registrations-line {
+  color: dodgerblue;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-size: 35px;
+  font-weight: 900;
+	margin: 20px 0 0 0;
+}
+
+.conference-invitation {
+  text-align: center;
+  margin: 20px 20px 0 20px;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.indiamun-2021-recap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.indiamun-2021-recap img {
+  width: 100%;
+}

@@ -7,12 +7,16 @@
 	font-size: 16px;
 	font-weight: 700;
 	padding: 0 100px;
+	margin-left: 10px;
+	margin-right: 10px;
 	margin-bottom: 40px;
 	text-align: justify;
+	display: flex;
+	flex-direction: column;
 }
 .read p {
 	padding: 20px 60px 20px 60px;
-	text-align: justify;
+	text-align: center;
 	font-weight: 700;
 	font-size: 20px;
 	color: white;
@@ -39,6 +43,8 @@
 .text-bold {
   font-size: 40px;
 	margin-bottom: 10px;
+	align-self: center;
+	justify-self: center;
 }
 .sus-eco {
 	background-color: rgb(236, 245, 245);

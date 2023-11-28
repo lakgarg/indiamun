@@ -21,36 +21,33 @@ export default function About() {
         <img className='right_img' src={right_img} alt="" />
       </div>
       <Navbar />
-      <h2 className='ab'>ABOUT US</h2>
-      <p className='ap'><span className='text-bold'>About India MUN</span><br />
+      <h2 className='ab'>ABOUT INDIA MUN</h2>
+      <p className='ap'><br />
 
-        Welcome to India MUN, where youth leadership meets climate action. Launched on October 24, 2020, on International UN Day, our initiative is in perfect sync with the UN Decade of Action from 2020 to 2030. At India MUN, we are on a mission to support the goals set by the United Nations Framework Convention on Climate Change (UNFCCC) and the United Nations Environment Programme (UNEP). We believe in harnessing the collective power of the largest youth constituency in the world to transform them into a dynamic network of future sustainability leaders.
-        <br /><br />
-
-        <span className='text-bold'>Our Vision</span>
-        <br />
-        India MUN is a joint initiative of Gaia The Earth Foundation and BuzzOnEarth Youth. We proudly partner with the UN Decade on Ecosystem Restoration, a collaborative effort between UNEP and UNFCCC. As the eminent global institution dedicated to uniting and empowering young students for climate action, we are pioneering change in India's educational landscape.
+        Welcome to India MUN, a movement dedicated to uniting and empowering the world's largest youth constituency. It’s a place where every voice matters, and every action counts.
         <br /><br />
 
-        <span className='text-bold'>Our Unique Offering</span>
+        <span className='text-bold ab'>MISSION</span>
         <br />
-        India MUN is not just another Model United Nations; we are the country's first climate-themed MUN. Our platform is designed to immerse student delegates in the United Nations' crucial efforts to mitigate climate change. Here, they don't just discuss global challenges; they actively contribute to solutions.
+        At the core of India MUN is a mission to transform young minds into dynamic sustainability leaders. We go beyond activism, offering climate-positive programs that empower students to be catalysts for real-world change.
         <br /><br />
 
-        <span className='text-bold'>Transforming Activism into Action</span>
+        <span className='text-bold ab'>VISION</span>
         <br />
-        We are firm believers in transforming activism into action. Our climate-positive programs, competitions, and events are carefully curated to empower students – our future sustainability leaders. We provide a space where they can brainstorm innovative climate actions and connect with like-minded peers who share their passion for our planet.
+        India MUN envisions a world where every student becomes a powerful force for positive change. Aligned with the UN Decade Climate Action and Ecosystem Restoration, we redefine education to empower youth as architects of a sustainable future.
         <br /><br />
-        <span className='text-bold'>Join the Climate Action Movement</span>
+
+        <span className='text-bold ab'>VALUES</span>
         <br />
-        At India MUN, we invite you to join the climate action movement. Together, we can drive positive change, build a sustainable future, and inspire generations to come. We believe that every student has the potential to be a catalyst for change, and we are here to support and empower them on this transformative journey.
-        <br /><br />
-        <span className='text-bold'>Our Commitment</span>
-        <br />
-        Our commitment to fostering climate leadership, facilitating collaboration, and driving meaningful action is unwavering. As we move forward in the UN Decade of Action, we are excited to embark on this transformative journey with you.
+        <p className="values-text">Youth Empowerment: Placing the empowerment of young individuals at the forefront, encouraging leadership, innovation, and proactive engagement in climate action.</p>
+        <p className="values-text">Sustainability Commitment: Integrating sustainable practices into all aspects of our work, fostering environmental responsibility, and promoting a culture of eco-consciousness.</p>
+        <p className="values-text">Global Collaboration: Prioritizing partnerships and collaborations on a global scale, creating a diverse and inclusive network dedicated to addressing climate challenges collectively.</p>
+        <p className="values-text">Integrity and Transparency: Upholding the highest ethical standards, ensuring transparency in organizational activities, and fostering trust within the community.</p>
+        <p className="values-text">Educational Excellence: Striving for excellence in climate education, providing impactful learning experiences that equip individuals with the knowledge and skills needed for effective climate action.</p>
+        <p className="values-text">Innovation and Adaptability: Encouraging innovative solutions and an adaptive mindset to address evolving challenges in the realm of climate change.</p>
       </p>
       <div className='read'>
-        <p>Join us today and be a part of India MUN, where young minds shape the future of our planet. Together, we can make a world of difference.</p>
+        <p>Join us in creating a legacy of positive change!</p>
       </div>
       <div className='more'>
         <div className='mored'>

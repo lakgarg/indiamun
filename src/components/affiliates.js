@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-// import Razorpay from 'razorpay'
+import Razorpay from 'razorpay'
 import Navbar from './navbar'
 import left_img from './images/INDIAMUN/logo left.webp'
 import right_img from './images/INDIAMUN/logo right.webp'
@@ -258,7 +258,7 @@ export default function Affiliates() {
     e.preventDefault();
 
     const db = projectFirestore;
-    const collectionRef = db.collection('affiliate_your_school');
+    const collectionRef = db.collection('affiliate_your_school_form');
 
     // Create an object with the data to send to Firestore
     const data = {
@@ -323,46 +323,45 @@ export default function Affiliates() {
 
   // const [paymentError, setPaymentError] = useState(null);
 
-  // const handlePayment = async () => {
-  //   const razorpay = new Razorpay({
-  //     key_id: 'rzp_test_a7Khb1IXh1hjJH',
-  //     key_secret: '86XaH14MecQFTtaSuwgzYHk1',
-  //   });
+  const handlePayment = async () => {
+    const razorpay = new Razorpay({
+      key_id: 'rzp_test_a7Khb1IXh1hjJH',
+      key_secret: '86XaH14MecQFTtaSuwgzYHk1',
+    });
 
-  //   const options = {
-  //     key: 'rzp_test_a7Khb1IXh1hjJH',
-  //     amount: '400000',
-  //     currency: "INR",
-  //     name: "INDIA MUN",
-  //     description: "Tutorial of RazorPay",
-  //     image: "http://localhost:3000/static/media/logo%20left.548aa3eb.webp",
-  //     order_id: order.id,
-  //     callback_url: "http://localhost:3000/",
-  //     prefill: {
-  //       name: "Gaurav Kumar",
-  //       email: "gaurav.kumar@example.com",
-  //       contact: "9999999999"
-  //     },
-  //     notes: {
-  //       "address": "Razorpay Corporate Office"
-  //     },
-  //     theme: {
-  //       "color": "#121212"
-  //     }
-  //   };
+    const options = {
+      key: 'rzp_test_a7Khb1IXh1hjJH',
+      amount: '400000',
+      currency: "INR",
+      name: "INDIA MUN",
+      description: "Tutorial of RazorPay",
+      image: "http://localhost:3000/static/media/logo%20left.548aa3eb.webp",
+      callback_url: "http://localhost:3000/",
+      prefill: {
+        name: "Gaurav Kumar",
+        email: "gaurav.kumar@example.com",
+        contact: "9999999999"
+      },
+      notes: {
+        "address": "Razorpay Corporate Office"
+      },
+      theme: {
+        "color": "#121212"
+      }
+    };
 
-  //   try {
-  //     const response = await razorpay.createPaymentOrder(options);
-  //     // Handle success
-  //     console.log(response);
-  //   } catch (error) {
-  //     // Handle error
-  //     console.log(error);
-  //   }
+    try {
+      const response = await razorpay.createPaymentOrder(options);
+      // Handle success
+      console.log(response);
+    } catch (error) {
+      // Handle error
+      console.log(error);
+    }
 
-  //   const razorpayCheckout = new window.Razorpay(options);
-  //   razorpayCheckout.open();
-  // };
+    const razorpayCheckout = new window.Razorpay(options);
+    razorpayCheckout.open();
+  };
 
 
   return (
@@ -430,7 +429,7 @@ export default function Affiliates() {
       {/* <img className='mobile_photo' src="m1.webp" width="100%"></img> */}
       {/* <div className='program_mun_content4'>
         <img src="why affiliate.webp" alt="" />
-      </div> */}
+      </div> */}  
       {/* <div className="why-affiliate-container">
         <HoverInfoDiv mainHeading="A Powerful Platform for India's Youth" hoverTextContent="India MUN (Model United Nations) is a dynamic organization dedicated to uniting and empowering India's youth to take meaningful action against the pressing challenge of climate change. As an esteemed platform for students, we provide an unparalleled opportunity for young minds to engage, discuss, and shape the future of our planet." />
         <HoverInfoDiv mainHeading="Fostering Leadership and Diplomacy" hoverTextContent="By affiliating with India MUN, schools and colleges enable their students to develop vital leadership and diplomacy skills. Through MUN simulations, students learn the art of negotiation, critical thinking, public speaking, and problem-solving, all of which are essential traits for effective climate advocates and change-makers." />
@@ -585,11 +584,11 @@ export default function Affiliates() {
       <div className='testimonial-container'>
         <Testimonial videoSRC="https://www.youtube.com/embed/SmSo3SY_S1o?si=ANaFT09_Oco4hqMZ" videoTitle="Video 1" imageSRC={Aff1} imageTitle="council1" name="Mr Ovais Sarmad," position="Former Deputy Executive Secretary" authority="United Nations Framework Convention on Climate Change" mainSource="(UNFCCC)" />
 
-        <Testimonial videoSRC="https://www.youtube.com/embed/iuQaLltyGvw?si=KOazN7bfoU0aBcii" videoTitle="Video 2" imageSRC={Aff2} imageTitle="council1" name="Mr Suresh Prabhu," position="Parliamentarian, Minister and Chancellor" authority="Prime Minister’s Sherpa for G20 Summit (2014 - 2015)" mainSource="(Government of India)" />
+        <Testimonial videoSRC="https://www.youtube.com/embed/iuQaLltyGvw?si=KOazN7bfoU0aBcii" videoTitle="Video 2" imageSRC={Aff2} imageTitle="council1" name="Mr Suresh Prabhu," position="Parliamentarian, Minister and Chancellor" authority="Prime Minister’s Sherpa for G20 Summit (2014 - 2015)" mainSource="" />
 
         <Testimonial videoSRC="https://www.youtube.com/embed/dYVbuY-rpE4?si=bftb6cnl3OcJxO9_" videoTitle="Video 2" imageSRC={Aff3} imageTitle="council1" name="Mr. Ramanan Ramanathan," position="Former ( First ) Mission Director" authority="Atal Innovation Mission" mainSource="(AIM)" />
 
-        <Testimonial videoSRC="https://www.youtube.com/embed/Od42_mD5Kv8?si=1yfKI-9GInU74gP2" videoTitle="Video 2" imageSRC={Aff4} imageTitle="council1" name="Dr. Jagdish N. Seth," position="Padma Bhushan Awardee 2020" authority="Charles H. Kellstadt Professor of Marketing" mainSource="(Government of India)" />
+        <Testimonial videoSRC="https://www.youtube.com/embed/Od42_mD5Kv8?si=1yfKI-9GInU74gP2" videoTitle="Video 2" imageSRC={Aff4} imageTitle="council1" name="Dr. Jagdish N. Seth," position="Padma Bhushan Awardee 2020" authority="Charles H. Kellstadt Professor of Marketing" mainSource="" />
       </div>
 
       <h1 className='aff1'>How to get affiliated</h1>
@@ -752,7 +751,7 @@ export default function Affiliates() {
             <div className='school-items-form'>Coordinator 1 Contact Number: <input type='text' value={cordi1_conatctNo} onChange={(e) => setCordi1_contactNo(e.target.value)} required id="contact-info-1"></input></div>
             <div className='school-items-form'>Coordinator 2 Contact Number: <input type='text' value={cordi2_conatctNo} onChange={(e) => setCordi2_contactNo(e.target.value)} required id="contact-info-2"></input></div>
             <div className="additional-info-p">
-              <p>Schools that affiliate before <span>Dec 15th, 2023</span> can avail an <span>40% off</span> on Affiliation Fee as Sponsorship from our Vision Partner- Amirta Vishwavidya Peetham.</p>
+              <p><i>Schools that affiliate before <span>Dec 15th, 2023</span> can avail an <span>40% off</span> on Affiliation Fee as Sponsorship from our Vision Partner- Amirta Vishwavidya Peetham.</i></p>
             </div>
             <div className="additional-info-div">
               <div className="left-text-payment">
@@ -769,7 +768,7 @@ export default function Affiliates() {
               <p className="rp-2">or</p>
               <div className="razorpay-btn">
                 <p className="rp-3">Pay Through</p>
-                <button>Razorpay</button>
+                <a href='https://rzp.io/l/NXXx802YA' target={'_blank'}><button type="button" className='pay-btn'><i>Razorpay</i></button></a>
               </div>
             </div>
 
@@ -782,10 +781,7 @@ export default function Affiliates() {
           <div className='school-form-ahead'>
             <div className='school-items-form'>Upload Payment Screenshot<input type="file" required onChange={handleFilechange1} /></div>
           </div>
-          <div className='last_buttons'>
-            <a href='https://rzp.io/l/NXXx802YA' target={'_blank'}><button type="button" className='pay-btn'>Payment</button></a>
-            <button type='submit' className='up-dec-button'>Submit</button>
-          </div>
+          
           <div className='last_check'>
             <div className='last_check_box'>
               <input type='checkbox' required />
@@ -794,6 +790,9 @@ export default function Affiliates() {
               <div />
               I hereby declare our school's firm commitment to actively participate in India's fight against climate change by affiliating with India MUN. We understand the urgency and importance of addressing this global challenge and believe in the power of collective action to create a sustainable future.
             </p>
+          </div>
+          <div className='last_buttons'>
+            <button type='submit' className='up-dec-button'>Submit</button>
           </div>
         </form>
       </div>

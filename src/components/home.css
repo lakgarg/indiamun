@@ -6,16 +6,22 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 25px;
+	padding: 40px 25px;
 }
-.top_comp img {
-	height: 80px;
-	width: 220px;
+.left_img {
+	height: 100px;
+	width: 250px;
+	object-fit: contain;
+}
+.right_img {
+	height: 90px;
+	width: 230px;
+	object-fit: contain;
 }
 .top_comp h2 {
 	font-family: "Quicksand";
 	margin-top: 24px;
-	font-weight: 900;
+	font-weight: 400;
 	letter-spacing: 0.5px;
 	line-height: 0.5px;
 }
@@ -60,6 +66,7 @@ body {
 .custom-bg {
 	width: 100vw;
 	background: #231e21 !important;
+	padding-top: 30px;
 	/* background: white !important; */
 }
 .img_gallery {
@@ -67,6 +74,7 @@ body {
 	justify-content: center;
 	flex-wrap: wrap;
 	align-items: center;
+	padding-bottom: 10px;
 }
 .gallery {
 	height: 270px;
@@ -108,12 +116,15 @@ body {
 	font-size: small;
 	color: white;
 }
+.ylp-homepage-btn {
+	margin-top: 10px !important;
+}
 .about {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-image: url("./images/INDIAMUN/youth\ back.webp");
+	/* background-image: url("./images/INDIAMUN/youth\ back.webp"); */
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -153,8 +164,7 @@ body {
 	/* justify-content: space-between; */
 	/* align-items: center; */
 	/* background-color: #231e21; */
-	padding: 10px;
-	padding-top: 80px;
+	padding: 10px 10px 0px 10px;
 	box-sizing: border-box;
 }
 
@@ -210,7 +220,7 @@ body {
 }
 
 .right-img-plaque {
-	width: 120%;
+	width: 110%;
 }
 
 .right-text {
@@ -238,7 +248,7 @@ body {
 	background-color: rgb(0, 120, 225);
 	color: #fff;
 	margin-top: 20px;
-	margin-bottom: 20px;
+	margin-bottom: 40px;
 }
 .left-container {
 	padding-left: 60px;
@@ -358,6 +368,15 @@ body {
 	width: 23%;
 }
 
+.button_div_climate2 {
+	display: flex;
+	flex-direction: column;
+}
+
+.button_div_climate2 p {
+	margin-top: 30px;
+}
+
 .p-con {
 	text-align: center;
 	font-weight: bolder;
@@ -403,11 +422,13 @@ body {
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
-	min-width: 100vw;
+	/* min-width: 100vw; */
+	overflow-x: hidden !important;
 	margin: 0 auto;
+	width: 100%;
 	transition: box-shadow 0.3s ease-in-out;
-	border: 2px solid #ddd;
-	margin: 10px;
+	/* border: 2px solid #ddd; */
+	margin: 10px 0 10px 0;
 	background-color: #231e21;
 	padding-top: 10px;
 	padding-bottom: 10px;
@@ -497,7 +518,7 @@ body {
 .news {
 	width: 60%;
 	background-color: rgb(217, 217, 217);
-	padding-left: 30px;	
+	padding-left: 30px;
 }
 .news img {
 	width: 50%;
@@ -532,6 +553,31 @@ body {
 	width: 15%;
 	margin-left: 30px;
 }
+
+.climate-hack-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: start !important;
+	margin-top: 0 !important;
+}
+
+.climate-hack-p {
+	margin-bottom: 19px !important;
+	margin-top: 0 !important;
+}
+.climate-hack-p-1 {
+	margin-bottom: 19px !important;
+	margin-top: 0 !important;
+}
+
+.climate-hack-button {
+	margin-top: 0 !important;
+}
+
+.climate-hack-span {
+	margin-top: 0 !important;
+}
+
 .events {
 	width: 40%;
 	background-color: black;
@@ -1027,25 +1073,25 @@ body {
 
 @media screen and (max-width: 1200px) {
 	.image-card {
-		max-width: 700px;
+		width: 100%;
 	}
 }
 
 @media screen and (max-width: 992px) {
-	
 	.image-card {
 		justify-content: flex-start;
 		text-align: center;
-		max-width: 100%;
+		/* width: 85vw;
+		min-width: none; */
 	}
 
-	.youtube_gal {
+	/* .youtube_gal {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		height: 1350px;
-	}
+	} */
 
 	.text-container {
 		width: 100%;
@@ -1065,6 +1111,57 @@ body {
 	.right_img {
 		display: none;
 	}
+
+	.ylp-homepage span{
+		display: flex;
+		line-height: 1;
+	}
+
+	.reg_open {
+		display: flex;
+		line-height: 1;
+	}
+
+	.news_t {
+		text-align: center !important;
+		margin-right: 70px;
+	}
+
+	.events_t	 {
+		margin-right: 30px;
+	}
+
+	.reg_school_clg_fa {
+		margin-top: 20px !important;
+	}
+
+	.reg_school_clg_fa span {
+		margin-right: 20px;
+		font-size: 15px !important;
+	}
+
+	.my-container {
+		flex-direction: column-reverse;		
+		justify-content: center;
+	}
+	.left-container{
+		width: 100%;
+	}
+	.right-text-container {
+		width: 90%;
+	}
+	.right-text {
+		font-size: 20px !important	;
+	}
+
+	.climate-hack-p-1 {
+		margin-bottom: 13px !important;
+	}
+
+	/* .climate-hack-p:first-child {
+		margin-bottom: 10px !important;
+	} */
+
 	.top_comp .left_img {
 		height: 40px;
 		width: 110px;
@@ -1123,7 +1220,7 @@ body {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		height: 1350px;
+		height: 1000px;
 	}
 	.youtube_gal_cards {
 		width: 95%;
@@ -1135,9 +1232,10 @@ body {
 		font-size: 10px;
 	}
 	.image-card {
-		justify-content: flex-start;
+		/* justify-content: flex-start; */
+		flex-direction: column-reverse;
 		text-align: center;
-		max-width: 100%;
+		width: 100%;
 	}
 	.text-container span {
 		font-size: 22px;
@@ -1146,7 +1244,7 @@ body {
 		font-size: 10px;
 	}
 	.image-container {
-		width: 60%;
+		width: 80%;
 		height: auto;
 	}
 	.mobile_photo {
@@ -1170,6 +1268,9 @@ body {
 	}
 	.program_mun_content2 div {
 		margin: 3px;
+	}
+	.program_mun_content2 div span {
+		font-size: 10px;
 	}
 	.program_mun_content3 {
 		width: 100%;
@@ -1379,7 +1480,7 @@ body {
 	.program_mun_content2 {
 		width: 100%;
 		flex-direction: row;
-		padding-left: 100px;
+		padding-left: 1px;
 	}
 	.program_mun_content2 div {
 		margin: 0px 20px;

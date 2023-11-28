@@ -7,9 +7,10 @@
 	text-decoration: none;
 	color: white;
 	font-family: "Quicksand";
-	margin-right: 20px;
+	margin-right: 0px;
 	font-weight: 900;
 	font-size: 18px;
+	padding-right: 0px;
 }
 .nav_items:active {
 	color: white;
@@ -51,11 +52,13 @@
 }
 .left {
 	display: flex;
-	width: 70%;
+	justify-content: space-around;
+	align-items: flex-start;
+	width: 80vw;
 	/* justify-content: space-around; */
 }
 .right {
-	width: 30%;
+	width: 20vw;
 }
 @media (max-width: 900px) {
 	.nav_items {

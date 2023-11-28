@@ -31,7 +31,7 @@ import login_phot from './images/newimages/login\ deks\ .webp'
 import syca from './images/affiliate/start your climate action(desk).webp'
 import sycaMobile from './images/affiliate/start your climate action(mobile).webp'
 
-import { useNavigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 import { useState } from 'react'
 import { useLogin } from './hooks/useLogin'
 import { useAuthContext } from './hooks/useAuthContext'
@@ -69,6 +69,7 @@ export default function Participate() {
 
 
 
+
   return (
     <>
 
@@ -83,22 +84,22 @@ export default function Participate() {
       <div className='participate'>
         <div className='participate-item'>
           <img src={p1}></img>
-          <button onClick={() => handleClick1(targetRef1)}>IYFA Season 1</button>
+          <a href='/events'><button>IYFA Season 1</button></a>
           <p>Live Now</p>
         </div>
         <div className='participate-item'>
           <img src={p2}></img>
-          <button onClick={() => handleClick1(targetRef2)}>Registrations Opening on</button>
+          <a href='/ylpa'><button >Registrations Opening on</button></a>
           <p>1st Dec, 2023</p>
         </div>
         <div className='participate-item'>
           <img src={p3}></img>
-          <button onClick={() => handleClick1(targetRef3)}>(April 24th, 2024)</button>
+          <a href='/conference'><button >(April 24th, 2024)</button></a>
           <p>Annual Conference 2024</p>
         </div>
         <div className='participate-item'>
           <img src={p4}></img>
-          <button onClick={() => handleClick1(targetRef4)}>Season 1 Concluded</button>
+          <a target='_blank' href='https://buzzonearth-climatehackathon.in/'><button>Season 1 Concluded</button></a>
           <p>Season 2 Coming Soon</p>
         </div>
         <div className='participate-item'>
@@ -119,9 +120,9 @@ export default function Participate() {
       </div>
 
       {/* <div className='imagesection'> */}
-        {/* <button>Apply now</button> */}
-        {/* <img className='img_sec_l' style={{ width: '100%', height: 'auto' }} src={login_phot} /> */}
-        {/* <p className='custom-button1'>college Students</p>
+      {/* <button>Apply now</button> */}
+      {/* <img className='img_sec_l' style={{ width: '100%', height: 'auto' }} src={login_phot} /> */}
+      {/* <p className='custom-button1'>college Students</p>
         <button onClick={handleSignIN} className='custom-button'><img style={{ width: '30px', height: '30px' }} src={google_photo} />  Sign in with Google</button>
         <p className='custom-button2'>School Students</p>
         <a href='/schools'><button className='custom-button3'><img style={{ width: '30px', height: '30px' }} src={google_photo} />  Sign in with Google</button></a> */}
@@ -141,7 +142,7 @@ export default function Participate() {
           <img src={forestam} ></img>
           <div className='reg_school_clg_fa'>
             <span>Season 1 Live</span>
-            <a href='/schools'><button >Learn More</button></a>
+            <a href='/events'><button className='lm-btn'>Learn More</button></a>
             {/* <a><button onClick={handleSignIN} >Colleges</button></a> */}
           </div>
         </div>
@@ -257,9 +258,9 @@ Get ready to unleash your fundraising potential and become a passionate advocate
             <img src={cli_hack} alt="" />
             <h3>CLIMATE HACKATHON</h3>
             <div className='button_div_climate'>
-              <div className='button_div_climate1'>
-                <p>Season 2</p>
-                <button className='coming_soon'>Coming Soon</button>
+              <div className='climate-hack-container-part button_div_climate1'>
+                <p className='climate-hack-p-part'>Season 2</p>
+                <button className='climate-hack-btn-part coming_soon'>Coming Soon</button>
               </div>
               <div className='button_div_climate2'>
                 <p>Season 1</p>
@@ -269,7 +270,7 @@ Get ready to unleash your fundraising potential and become a passionate advocate
           </div>
           <div className='cli2'>
             <p>BuzzOnEarth YOUTH India Hackathon -2023 welcomes participation from SCHOOLS and COLLEGES from all across the country to find solutions to some of the most pressing climate and sustainability issues that Indian businesses and communities face. The solutions can be combinations of tech products, policy evaluations, market models, business plans, new designs and product innovations. Give wings to your creativity and ideas and develop innovative solutions that can be deployed. This is an Open Innovation Student category in which students can give ideas against the pre-defined Problem Statements across themes.</p>
-            <div>
+            <div className='climate-hack-imgs'>
               <img src={first_prize} />
               <img src={sec_prize} />
             </div>
@@ -283,7 +284,7 @@ Get ready to unleash your fundraising potential and become a passionate advocate
 
       <div className='youth_got_talent' ref={targetRef5}>
         <h1>STEP UP YOUTH'S GOT TALENT</h1>
-        <p>(Coming Soon)</p>
+        {/* <p>(Coming Soon)</p> */}
       </div>
       <p className='youth_p'>Step Up Youth's Got Talent is an initiative to bridge the gap between awareness and action. The programme focuses on the holistic development of the students, inculcating in them various skills ranging from graphic designing and video editing to public speaking and management. Insightful work done by any student shall be featured on our websites and social media handles. Learners of the programme will also be given the opportunity for cash prizes and various awards.</p>
       <div className='youth_img'>
@@ -333,7 +334,7 @@ Get ready to unleash your fundraising potential and become a passionate advocate
 
 
 
-      <div className='insta-feed'>
+      {/* <div className='insta-feed'>
 
         <div className='insta-feed1'>
           <blockquote className="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CIr2R9vrhUf/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA%3D%3D" data-instgrm-version={14} style={{ background: '#FFF', border: 0, borderRadius: 3, boxShadow: '0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)', margin: 1, maxWidth: 300, minWidth: 326, width: 'calc(100% - 2px)' }}>
@@ -548,7 +549,7 @@ Get ready to unleash your fundraising potential and become a passionate advocate
 </div> */}
 
 
-        <div className='insta-feed1'>
+      {/* <div className='insta-feed1'>
           <blockquote className="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Ca2Jj0Zt9SZ/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA%3D%3D" data-instgrm-version={14} style={{ background: '#FFF', border: 0, borderRadius: 3, boxShadow: '0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)', margin: 1, maxWidth: 300, minWidth: 326, padding: 0, width: 'calc(100% - 2px)', height: '532px' }}>
             <div style={{ padding: 16 }}>
               <a href="https://www.instagram.com/p/Ca2Jj0Zt9SZ/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA%3D%3D" style={{ background: '#FFFFFF', lineHeight: 0, padding: '0 0', textAlign: 'center', textDecoration: 'none', width: '100%' }} target="_blank">
@@ -599,8 +600,8 @@ Get ready to unleash your fundraising potential and become a passionate advocate
               <p style={{ color: '#c9c8cd', fontFamily: 'Arial,sans-serif', fontSize: 14, lineHeight: 17, marginBottom: 0, marginTop: 8, overflow: 'hidden', padding: '8px 0 7px', textAlign: 'center', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}><a href="https://www.instagram.com/p/CIr2R9vrhUf/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA%3D%3D" style={{ color: '#c9c8cd', fontFamily: 'Arial,sans-serif', fontSize: 14, fontStyle: 'normal', fontWeight: 'normal', lineHeight: 17, textDecoration: 'none' }} target="_blank">A post shared by BuzzOnEarth Media (@buzzonearth)</a></p>
             </div>
           </blockquote>
-        </div>
-      </div>
+        </div> */}
+      {/* </div> */}
 
       {/* <div className='footer'>
         <h3 style={{textAlign:'center',color:'white'}}>INDIA MUN</h3>

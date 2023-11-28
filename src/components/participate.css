@@ -40,8 +40,11 @@
 	background-color: white !important;
 	border: 2px solid rgb(0, 120, 225) !important;
 }
+.participate-item a {
+	width: 100%;
+}
 .participate-item button {
-	border-radius: 5px;
+	border-radius: 10px;
 	background-color: rgb(0, 120, 225);
 	border: none;
 	padding: 5px;
@@ -80,25 +83,25 @@
 	font-weight: 600;
 }
 .reg-info {
-  display: flex;
-  width: 100%;
+	display: flex;
+	width: 100%;
 	max-width: 100%;
-  height: 80px;
-  justify-content: start;
-  align-items: center;
-  margin-left: 80px;
+	height: 80px;
+	justify-content: start;
+	align-items: center;
+	margin-left: 80px;
 }
 .reg-info h2 {
-  margin-bottom: 0px !important;
-  color: rgb(19, 106, 17);
-  font-size: 23px;
-  font-weight: bolder;
-  margin-right: 20px;
+	margin-bottom: 0px !important;
+	color: rgb(19, 106, 17);
+	font-size: 23px;
+	font-weight: bolder;
+	margin-right: 20px;
 }
 .reg-info button {
-  border-radius: 5px;
+	border-radius: 5px;
 	background-color: rgb(0, 120, 225);
-  font-weight: bolder;
+	font-weight: bolder;
 	border: none;
 	padding: 5px;
 	width: 150px;
@@ -110,7 +113,7 @@
 .img-syca {
 	width: 100%;
 }
-.img-syca img{
+.img-syca img {
 	width: 100%;
 }
 .imagesection {
@@ -233,6 +236,10 @@
 	font-family: "Quicksand", sans-serif;
 	font-weight: 600;
 	color: rgb(40, 148, 86);
+}
+
+.lm-btn {
+	margin-top: 5px !important;
 }
 .ul-type {
 	text-align: left;
@@ -383,9 +390,17 @@
 	border: none;
 	font-weight: 700;
 	border-radius: 10px;
-  font-size: 35px;
+	font-size: 35px;
 	background-color: rgb(37, 37, 36);
 	color: #fff;
+}
+.climate-hack-container-part {
+	display: flex !important;
+	flex-direction: column;
+}
+.climate-hack-p-part {
+	margin-bottom: 13px !important;
+	margin-top: 30px;
 }
 .coming_soon {
 	padding: 5px;
@@ -519,6 +534,7 @@
 	font-weight: 500;
 }
 .youth_got_talent p {
+	color: white;
 	font-size: 20px;
 	font-weight: 700;
 }
@@ -690,11 +706,39 @@
 	.imagesection .img_sec_l {
 		content: url("./images/newimages/login\ mobile.webp");
 	}
-	.img-syca img{
+	.img-syca img {
 		content: url("./images/affiliate/start\ your\ climate\ action\(mobile\).webp");
 	}
 	.participate {
 		flex-wrap: wrap;
+	}
+	.climate-hack-imgs {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.reg-info {
+		width: 89vw;
+		height: 80px;
+		margin-left: 20px;
+	}
+	.reg-info h2 {
+		font-size: 13px;
+		margin-right: 10px;
+	}
+	.reg-info button {
+		padding: 1px;
+		width: 100px;
+		margin-bottom: 3px;
+	}
+	.climate-hack-container-part {
+		display: flex !important;
+		flex-direction: column;
+		
+	}
+	.climate-hack-p-part {
+		margin-bottom: 13px !important;
+		margin-top: 30px;
 	}
 	.participate-item {
 		width: 50%;
@@ -738,8 +782,20 @@
 	.head-am1 {
 		font-size: 25px;
 	}
+	.head-am1_fa {
+		font-size: 20px;
+	}
 	.part_d p {
 		font-size: 10px;
+	}
+	.part_d_fa p {
+		font-size: 15px;
+		padding-left: 20px;
+		text-align: left;
+		margin-right: 25px;
+	}
+	.part_d_fa {
+		padding-left: 20px;
 	}
 	.con-mind {
 		font-size: 12px;
