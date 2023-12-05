@@ -1,612 +1,598 @@
-.log-nav{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    background-color: rgb(37, 37, 36);
+.log-nav {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+	background-color: rgb(37, 37, 36);
 }
-.log-nav1{
-    display: flex;
-    padding: 5px;
-    justify-content: center;
-    align-items: center;
+.log-nav1 {
+	display: flex;
+	padding: 5px;
+	justify-content: center;
+	align-items: center;
 }
-.log-nav1 img{
-    /* display: flex; */
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    padding: 3px;
-    /* align-items: center;
+.log-nav1 img {
+	/* display: flex; */
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	padding: 3px;
+	/* align-items: center;
     justify-content: center; */
 }
-.log-nav1 h4{
-    font-size: 30px;
-    text-align: center;
-    color: #fff;
+.log-nav1 h4 {
+	font-size: 30px;
+	text-align: center;
+	color: #fff;
 }
-.log-nav2 button{
-    width: 100%;
-    padding: 10px;
-   border: none;
-   font-weight: 700;
-   border-radius: 10px;
-   background-color: rgb(0, 120, 225);
-   color: #fff;
+.log-nav2 button {
+	width: 100%;
+	padding: 10px;
+	border: none;
+	font-weight: 700;
+	border-radius: 10px;
+	background-color: rgb(0, 120, 225);
+	color: #fff;
 }
-
-
 
 /* modal */
 .modal {
-    position: fixed;
-    top: 0%;
-    left: 30%;
-    width: 50%;
-    height: 100%;
-    /* background-color: rgba(0, 0, 0, 0.5); */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .model_div{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-  .model_div button{
-    border: none;
-    background: none;
-    /* margin-left: 20px; */
-  }
- .model_div_mob{
-   display: none;
- }
-  
-  .modal-content {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 4px;
-  }
-  
-  h2 {
-    margin-top: 0;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .form-row {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    width: 100%;
-  }
-  
-  .form-row label {
-    /* display: table;
+	position: fixed;
+	top: 0%;
+	left: 30%;
+	width: 50%;
+	height: 100%;
+	/* background-color: rgba(0, 0, 0, 0.5); */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.model_div {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+.model_div button {
+	border: none;
+	background: none;
+	/* margin-left: 20px; */
+}
+.model_div_mob {
+	display: none;
+}
+
+.modal-content {
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 4px;
+}
+
+h2 {
+	margin-top: 0;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+}
+
+.form-row {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+	width: 100%;
+}
+
+.form-row label {
+	/* display: table;
     align-items: center; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-  }
-  
-  .form-row label span {
-      font-size: 20px;
-    margin-right: 10px;
-  }
-  
-  input {
-    padding: 5px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    /* display: table-column; */
-    width: 90%;
-  }
-  
-  .submit_event{
-    padding: 10px 20px;
-    background-color: #4caf50;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 90%;
-  }
-  .submit-div{
-    padding-top: 10px;
-    align-items: center;
-  }
-  
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
 
+.form-row label span {
+	font-size: 20px;
+	margin-right: 10px;
+}
 
+input {
+	padding: 5px;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+	/* display: table-column; */
+	width: 90%;
+}
 
-  .enroll-main{
-    display: flex;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 15px;
-    background-color: rgb(135, 181, 64);
-    border-radius: 5px;
-    align-items: center;
-  }
-  .enroll-div{
-    display: flex;
-    width: 25%;
-    flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
-    margin: auto;
-    align-items: center;
-    color: white;
-  }
-  .enroll-status{
-    padding-bottom: 20px;
-    font-size: 16px;
-    font-weight: 600;
-  }
-  .enroll-free{
-    font-size: 35px;
-    font-weight: 700;
-    color: white;
-  }
-  .enroll-main button{
-    padding: 5px;
-    padding-right: 10px;
-    padding-left: 10px;
-    border: none;
-    font-weight: 700;
-    border-radius: 15px;
-    background-color: black;
-    margin-top: 10px;
-    color: #fff;
-    font-size: 17px;
-    width: 100%;
-  }
-  .com-perk-eli2{
-    padding-right: 40px;
-    padding-left: 40px;
-    text-align: left;
+.submit_event {
+	padding: 10px 20px;
+	background-color: #4caf50;
+	color: #fff;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	width: 90%;
+}
+.submit-div {
+	padding-top: 10px;
+	align-items: center;
+}
 
-  }
-  .com-perk-eli2 p{
-    font-weight: 600;
-    text-align: justify;
-  }
-  .Be-india{
-    padding-left: 40px;
-    padding-right: 40px;
-    font-size: 23px;
-    text-align: justify;
-    
-  }
-  .perk-head{
-    font-size: 20px;
-    font-weight: 600;
-  }
+.enroll-main {
+	display: flex;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 15px;
+	background-color: rgb(135, 181, 64);
+	border-radius: 5px;
+	align-items: center;
+}
+.enroll-div {
+	display: flex;
+	width: 25%;
+	flex-direction: column;
+	margin-left: auto;
+	margin-right: auto;
+	margin: auto;
+	align-items: center;
+	color: white;
+}
+.enroll-status {
+	padding-bottom: 20px;
+	font-size: 16px;
+	font-weight: 600;
+}
+.enroll-free {
+	font-size: 35px;
+	font-weight: 700;
+	color: white;
+}
+.enroll-main button {
+	padding: 5px;
+	padding-right: 10px;
+	padding-left: 10px;
+	border: none;
+	font-weight: 700;
+	border-radius: 15px;
+	background-color: black;
+	margin-top: 10px;
+	color: #fff;
+	font-size: 17px;
+	width: 100%;
+}
+.com-perk-eli2 {
+	padding-right: 40px;
+	padding-left: 40px;
+	text-align: left;
+}
+.com-perk-eli2 p {
+	font-weight: 600;
+	text-align: justify;
+}
+.Be-india {
+	padding-left: 40px;
+	padding-right: 40px;
+	font-size: 23px;
+	text-align: justify;
+}
+.perk-head {
+	font-size: 20px;
+	font-weight: 600;
+}
 
-  .info-strip{
-    margin-top:20px;
-  }
-  .overview{
-    padding-right: 30px;
-    padding-left: 30px;
-    padding-bottom: 30px;
-    padding-top: 25px;
-    border-bottom: 3px solid black;
-  }
-  .overview h1{
-    font-family: anton;
-    padding: 20px;
-  }
-  .overview p{
-    padding-left: 40px;
-    padding-right: 40px;
-    font-size: 17px;
-    font-weight: 600;
-  }
-  .high-head{
-    font-family: anton;
-    padding: 20px;
-    padding-bottom: 10px;
-  }
-  .pro-heig{
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .pro-item{
-    padding: 20px;
-    width: 33%;
-  }
-  .pro-head{
-    text-align: center;
-    font-size: 30px;
-    font-weight: 600;
-  }
-  .pro-des{
-    text-align: center;
-    font-size: 15px;
-    font-weight: 600;
-  }
-  .am-go{
-    display: flex;
-    justify-content: space-evenly;
-    padding-bottom: 20px;
-    border-bottom: 2px solid black;
-  }
-  .key-ler{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 30px;
-    padding-bottom: 40px;
-    border-bottom: 2px solid black;
-  }
-  .key-item{
-    padding-top: 10px;
-    display: flex;
-    margin: 10px;
-    width:28%;
-    background-color: rgb(5, 141, 214);
-    align-items: center;
-    justify-content: center;
-    border: 2px solid rgb(5, 141, 214);
-    border-radius: 5px;
-  }
-  .key-item p{
-    font-size: 24px;
-    color: white;
-    font-weight: 600;
-  }
-  .sub-mod{
-    font-weight: 600;
-    font-size: 18px;
-    margin-top: -20px;
-    padding-bottom: 20px;
-    text-transform: uppercase;
-  }
-  .intro-am{
-    text-align: left;
-    padding-right: 40px;
-    padding-left: 40px;
-    font-size: 25px;
-    color: rgb(28, 139, 229);
-    font-weight: 600;
-  }
-  .mod_item_div{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-right: 40px;
-    padding-left: 40px;
-  }
-  .mod-item{
-    text-align: left;
-    
-    /* padding-right: 40px;
+.info-strip {
+	margin-top: 20px;
+}
+.overview {
+	padding-right: 30px;
+	padding-left: 30px;
+	padding-bottom: 30px;
+	padding-top: 25px;
+	border-bottom: 3px solid black;
+}
+.overview h1 {
+	font-family: anton;
+	padding: 20px;
+}
+.overview p {
+	padding-left: 40px;
+	padding-right: 40px;
+	font-size: 17px;
+	font-weight: 600;
+}
+.high-head {
+	font-family: anton;
+	padding: 20px;
+	padding-bottom: 10px;
+}
+.pro-heig {
+	display: flex;
+	flex-wrap: wrap;
+}
+.pro-item {
+	padding: 20px;
+	width: 33%;
+}
+.pro-head {
+	text-align: center;
+	font-size: 30px;
+	font-weight: 600;
+}
+.pro-des {
+	text-align: center;
+	font-size: 15px;
+	font-weight: 600;
+}
+.am-go {
+	display: flex;
+	justify-content: space-evenly;
+	padding-bottom: 20px;
+	border-bottom: 2px solid black;
+}
+.key-ler {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	padding: 30px;
+	padding-bottom: 40px;
+	border-bottom: 2px solid black;
+}
+.key-item {
+	padding-top: 10px;
+	display: flex;
+	margin: 10px;
+	width: 28%;
+	background-color: rgb(5, 141, 214);
+	align-items: center;
+	justify-content: center;
+	border: 2px solid rgb(5, 141, 214);
+	border-radius: 5px;
+}
+.key-item p {
+	font-size: 24px;
+	color: white;
+	font-weight: 600;
+}
+.sub-mod {
+	font-weight: 600;
+	font-size: 18px;
+	margin-top: -20px;
+	padding-bottom: 20px;
+	text-transform: uppercase;
+}
+.intro-am {
+	text-align: left;
+	padding-right: 40px;
+	padding-left: 40px;
+	font-size: 25px;
+	color: rgb(28, 139, 229);
+	font-weight: 600;
+}
+.mod_item_div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-right: 40px;
+	padding-left: 40px;
+}
+.mod-item {
+	text-align: left;
+
+	/* padding-right: 40px;
     padding-left: 40px; */
-    padding-bottom: 5px;
-    border-bottom: 1px solid black;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-   
-  }
-  .mod-item1{
-    width: 100%;
-    text-align: justify;
-    font-size: 17px;
-    font-weight: 550;
-    /* max-height: 0;
+	padding-bottom: 5px;
+	border-bottom: 1px solid black;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.mod-item1 {
+	width: 100%;
+	text-align: justify;
+	font-size: 17px;
+	font-weight: 550;
+	/* max-height: 0;
     opacity: 0;
     overflow: hidden;
     transition: max-height 1s ease-in-out, opacity 1s ease-in-out; */
-  }
-  /* .mod-item1 .show{
+}
+/* .mod-item1 .show{
     max-height: 1000px !important; 
     opacity: 1 !important;
   } */
-  .mod-item span{
-    font-size: 22px;
-    font-weight: 700;
-  }
-  .mod_item_div1{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items:flex-start;
-  }
-  .t-main{
-    padding-left: 40px;
-    padding-right: 40px;
-    margin-bottom: 30px;
-  }
-  .t-note{
-    margin: 0;
-    text-align: left;
-    font-style: italic;
-    font-weight: 600;
-  }
- .mod-item_new{
-  text-align: left;
-    
-  /* padding-right: 40px;
-  padding-left: 40px; */
-  padding-top: 5px;
-  border-top: 1px solid black;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
- }
- .mod-item_new span{
-  font-size: 22px;
-    font-weight: 700;
- }
+.mod-item span {
+	font-size: 22px;
+	font-weight: 700;
+}
+.mod_item_div1 {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+.t-main {
+	padding-left: 40px;
+	padding-right: 40px;
+	margin-bottom: 30px;
+}
+.t-note {
+	margin: 0;
+	text-align: left;
+	font-style: italic;
+	font-weight: 600;
+}
+.mod-item_new {
+	text-align: left;
 
- .main-cer{
-  display: flex;
+	/* padding-right: 40px;
+  padding-left: 40px; */
+	padding-top: 5px;
+	border-top: 1px solid black;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
-.right-cer{
-  width: 50%;
-  padding: 40px;
+.mod-item_new span {
+	font-size: 22px;
+	font-weight: 700;
 }
-.left-cer{
-  padding: 40px;
-  width: 50%;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
+
+.main-cer {
+	display: flex;
 }
-.left-cer p{
-  text-align: left;
-  font-size: 18px;
-  font-weight: 600;
+.right-cer {
+	width: 50%;
+	padding: 40px;
 }
-.last-strip{
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
-  padding-right: 40px;
-  padding-left: 40px;
-  margin-bottom: 20px;
+.left-cer {
+	padding: 40px;
+	width: 50%;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
 }
-.last-strip span{
-  font-size: 28px;
+.left-cer p {
+	text-align: left;
+	font-size: 18px;
+	font-weight: 600;
 }
-.nor-but{
-  margin-right: 20px;
-  margin-left: 20px;
-  font-size: 20px;
-  background-color: rgb(0, 120, 225);
-  color: white;
-  border: none;
-  font-weight: 600;
-  padding-right: 20px;
-  padding-left: 20px;
-  border-radius: 5px;
+.last-strip {
+	margin-top: 20px;
+	display: flex;
+	justify-content: space-between;
+	padding-right: 40px;
+	padding-left: 40px;
+	margin-bottom: 20px;
 }
-.big-enroll{
-  font-size: 30px;
-  background-color: rgb(0, 120, 225);
-  color: white;
-  border: none;
-  font-weight: 600;
-  padding-right: 30px;
-  padding-left: 30px;
-  border-radius: 8px;
-  margin-left: 3px;
+.last-strip span {
+	font-size: 28px;
+}
+.nor-but {
+	margin-right: 20px;
+	margin-left: 20px;
+	font-size: 20px;
+	background-color: rgb(0, 120, 225);
+	color: white;
+	border: none;
+	font-weight: 600;
+	padding-right: 20px;
+	padding-left: 20px;
+	border-radius: 5px;
+}
+.big-enroll {
+	font-size: 30px;
+	background-color: rgb(0, 120, 225);
+	color: white;
+	border: none;
+	font-weight: 600;
+	padding-right: 30px;
+	padding-left: 30px;
+	border-radius: 8px;
+	margin-left: 3px;
 }
 
 .main-button {
-  background-color: rgb(0, 120, 225);
-  border: 0;
-  padding: 7px 25px;
-  /* font-size: 20px; */
-  border-radius: 3px;
-  cursor: pointer;
-  color: white;
-  position: relative;
-  border-radius: 10px;
+	background-color: rgb(0, 120, 225);
+	border: 0;
+	padding: 7px 25px;
+	/* font-size: 20px; */
+	border-radius: 3px;
+	cursor: pointer;
+	color: white;
+	position: relative;
+	border-radius: 10px;
 }
 .main-button:after {
-  background-color: rgb(0, 120, 225);
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 3px;
-  -webkit-animation-name: blink;
-          animation-name: blink;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  animation-direction: alternate-reverse;
-  -webkit-animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
-          animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+	background-color: rgb(0, 120, 225);
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 3px;
+	-webkit-animation-name: blink;
+	animation-name: blink;
+	-webkit-animation-duration: 0.5s;
+	animation-duration: 0.5s;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	animation-direction: alternate-reverse;
+	-webkit-animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+	animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 @-webkit-keyframes blink {
-  0% {
-    transform: scale3d(1, 1, 1);
-    opacity: 0.8;
-  }
-  100% {
-    transform: scale3d(1.1, 1.3, 1.1);
-    opacity: 0;
-  }
+	0% {
+		transform: scale3d(1, 1, 1);
+		opacity: 0.8;
+	}
+	100% {
+		transform: scale3d(1.1, 1.3, 1.1);
+		opacity: 0;
+	}
 }
 
 @keyframes blink {
-  0% {
-    transform: scale3d(1, 1, 1);
-    opacity: 0.8;
-  }
-  100% {
-    transform: scale3d(1.1, 1.3, 1.1);
-    opacity: 0;
-  }
+	0% {
+		transform: scale3d(1, 1, 1);
+		opacity: 0.8;
+	}
+	100% {
+		transform: scale3d(1.1, 1.3, 1.1);
+		opacity: 0;
+	}
 }
 
+@media (max-width: 768px) {
+	.log-nav1 h4 {
+		font-size: 12px;
+		margin-top: 4px;
+	}
+	.log-nav1 img {
+		height: 30px;
+		width: 30px;
+	}
+	.log-nav2 {
+		padding: 10px;
+	}
+	.log-nav2 button {
+		padding: 5px;
+	}
+	.modal {
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+	.enroll-main {
+		padding: 5px;
+		width: 93%;
+	}
+	.enroll-main button {
+		margin-top: -8px;
+		font-size: 12px;
+		width: 100%;
+	}
+	.enroll-free {
+		font-synthesis: 10px;
+	}
+	.Be-india {
+		font-size: 20px;
+	}
+	.info-strip img {
+		content: url(./images/mun/phone\ strip.webp);
+	}
+	.overview h1 {
+		font-size: 30px;
+	}
+	.overview p {
+		padding-right: 20px;
+		padding-left: 20px;
+	}
+	.pro-item {
+		width: 50%;
+	}
+	.pro-head {
+		font-size: 25px;
+	}
+	.pro-des {
+		font-size: 15px;
+	}
+	.key-ler {
+		padding: 10px;
+	}
+	.key-item {
+		width: 40%;
+	}
+	.key-item p {
+		font-size: 15px;
+	}
+	.mod-item span {
+		font-size: 18px;
+	}
+	.mod-item_new span {
+		font-size: 18px;
+	}
+	.sub-mod {
+		font-size: 14px;
+	}
+	.main-cer {
+		flex-direction: column-reverse;
+	}
+	.right-cer {
+		width: 100%;
+	}
+	.left-cer {
+		width: 100%;
+		padding-top: 0px;
+	}
+	.last-strip {
+		justify-content: space-evenly;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.last-strip span {
+		font-size: 15px;
+	}
+	.nor-but {
+		font-size: 9px;
+		margin-right: 2px;
+		margin-left: 2px;
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+	.big-enroll {
+		font-size: 10px;
+		padding-right: 20px;
+		padding-left: 20px;
+		margin-bottom: 3px;
+	}
+	.movile {
+		display: flex;
+		flex-direction: column;
+	}
+	.form-row label {
+		display: flex;
+		flex-direction: column;
+		width: 95%;
+		justify-content: center;
+		align-self: center;
+	}
+	.form-row label span {
+		font-size: 14px;
+	}
+	.form-row label input {
+		width: 100%;
+	}
+	.model_div_mob {
+		display: flex;
+	}
+	.submit_event {
+		width: 100%;
+	}
+}
 
-
-  @media (max-width: 768px) {
-
-    .log-nav1 h4{
-        font-size: 12px;
-        margin-top: 4px;
-    }
-    .log-nav1 img{
-        height: 30px;
-        width: 30px;
-    }
-    .log-nav2{
-        padding: 10px;
-    }
-    .log-nav2 button{
-        padding: 5px;
-    }
-    .modal{
-        width: 100%;
-        height: 100%;
-        top:0;
-        left: 0;
-    }
-    .enroll-main{
-      padding: 5px;
-      width: 93%;
-    }
-    .enroll-main button{
-      margin-top: -8px;
-      font-size: 12px;
-      width: 100%;
-  
-    }
-    .enroll-free{
-      font-synthesis: 10px;
-    }
-    .Be-india{
-      font-size: 20px;
-    }
-    .info-strip img{
-      content: url(./images/mun/phone\ strip.webp);
-    }
-    .overview h1{
-      font-size: 30px;
-    }
-    .overview p{
-      padding-right: 20px;
-      padding-left: 20px;
-    }
-    .pro-item{
-      width: 50%;
-    }
-    .pro-head{
-      font-size: 25px;
-    }
-    .pro-des{
-      font-size: 15px;
-    }
-    .key-ler{
-      padding: 10px;
-    }
-    .key-item{
-      width: 40%;
-    }
-    .key-item p{
-      font-size: 15px;
-    }
-    .mod-item span{
-      font-size: 18px;
-    }
-    .mod-item_new span{
-      font-size: 18px;
-    }
-    .sub-mod{
-      font-size: 14px;
-    }
-    .main-cer{
-      flex-direction: column-reverse;
-    }
-    .right-cer{
-      width: 100%;
-    }
-    .left-cer{
-      width: 100%;
-      padding-top: 0px;
-    }
-    .last-strip{
-      justify-content: space-evenly;
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-    .last-strip span{
-      font-size: 15px;
-    }
-    .nor-but{
-      font-size: 9px;
-      margin-right: 2px;
-      margin-left: 2px;
-      padding-right: 10px;
-      padding-left: 10px;
-    }
-    .big-enroll{
-      font-size: 10px;
-      padding-right: 20px;
-      padding-left: 20px;
-      margin-bottom: 3px;
-    }
-    .movile{
-      display: flex;
-      flex-direction: column;
-    }
-    .form-row label{
-      display: flex;
-      flex-direction: column;
-      width: 95%;
-      justify-content: center;
-      align-self: center;
-    }
-    .form-row label span{
-      font-size: 14px;
-    }
-    .form-row label input{
-      width: 100%;
-    }
-    .model_div_mob{
-      display: flex;
-    }
-    .submit_event{
-      width: 100%;
-    }
-  }
-
-
-
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px){
-  .enroll-main{
-    padding: 5px;
-  }
-  .enroll-main button{
-    font-size: 13px;
-    width: 120%;
-  }
-  .key-item p{
-    font-size: 23px;;
-  }
-  .info-strip{
-    height: 150px;
-  }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+	.enroll-main {
+		padding: 5px;
+	}
+	.enroll-main button {
+		font-size: 13px;
+		width: 120%;
+	}
+	.key-item p {
+		font-size: 23px;
+	}
+	.info-strip {
+		height: 150px;
+	}
 }

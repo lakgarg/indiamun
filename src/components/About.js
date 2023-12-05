@@ -51,22 +51,22 @@ export default function About() {
       </div>
       <div className='more'>
         <div className='mored'>
-          <img src={oct} />
+          <img src={oct} alt='oct' />
           <h4>October 24</h4>
           <p>India MUN Launch Day</p>
         </div>
         <div className='mored'>
-          <img src={target} />
+          <img src={target} alt='target' />
           <h4>Goals</h4>
           <p>Set by UNFCCC and UNEP</p>
         </div>
         <div className='mored'>
-          <img src={focus} />
+          <img src={focus} alt='focus' />
           <h4>Focusing</h4>
           <p>On Climate Change</p>
         </div>
         <div className='mored'>
-          <img src={unit} />
+          <img src={unit} alt='unit' />
           <h4>Uniting</h4>
           <p>India's Youth for Climate</p>
         </div>
@@ -94,7 +94,7 @@ export default function About() {
       </div>
       <div className='bid_i'>
         <p>THINK ACT COLLABORATE LEAD CHANGE</p>
-        <img src={end_img_about} />
+        <img src={end_img_about} alt='end_img_about' />
       </div>
       <p className='founding'>FOUNDING PARTNERS</p>
       <p>India MUN is a joint initiative of <b ><a style={{ color: '#0076ba', textDecoration: 'none' }} href='https://buzzonearth.com/' target={'_blank'}>BuzzOnEarth</a></b>  and <b><a style={{ color: '#0076ba', textDecoration: 'none' }} href='https://gaiatheearthfoundation.org/' target={'_blank'}>Gaia The Earth Foundation</a></b>, the organizations that are committed to<br></br> sustainability and regeneration</p>

@@ -17,12 +17,60 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig)
 
 const firebaseT = firebase.auth;
-
+const firebaseAuth = firebase.auth()
+// const firebaseDatabase = firebase.getDatabase(firebase.initializeApp(firebaseConfig))
 const projectFirestore = firebase.firestore()
 const projectAuth = firebase.auth()
 const projectStorage = firebase.storage()
 
+const usersCollection = projectFirestore.collection('users');
+
+// Function to store user information in Firestore
+const storeUserInfo = async (uid, displayName, email) => {
+  try {
+    // Use the "users" collection and the user's UID as the document ID
+    await usersCollection.doc(uid).set({
+      UID: uid,
+      displayName: displayName,
+      email: email
+    });
+    console.log('User information stored successfully in Firestore');
+  } catch (error) {
+    console.error('Error storing user information in Firestore:', error);
+    // You might want to handle the error appropriately, e.g., show an error message to the user
+  }
+};
+
+const registeredUsersIYFA = projectFirestore.collection('iyfa-registered-users');
+
+// Function to store user information in Firestore
+const storeRegisteredUsersIYFAInfo = async (uid, displayName, email) => {
+  try {
+    // Use the "users" collection and the user's UID as the document ID
+    await registeredUsersIYFA.doc(uid).set({
+      UID: uid,
+      displayName: displayName,
+      email: email
+    });
+    console.log('User information stored successfully in Firestore');
+  } catch (error) {
+    console.error('Error storing user information in Firestore:', error);
+    // You might want to handle the error appropriately, e.g., show an error message to the user
+  }
+};
+
+
 // timestamp
 const timestamp = firebase.firestore.Timestamp
 
-export { projectFirestore, projectAuth, projectStorage, timestamp, firebaseT }
+export { 
+  projectFirestore, 
+  projectAuth, 
+  projectStorage, 
+  timestamp, 
+  firebaseT, 
+  usersCollection, 
+  storeUserInfo, 
+  firebaseAuth, 
+  storeRegisteredUsersIYFAInfo 
+}

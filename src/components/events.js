@@ -9,7 +9,7 @@ import { useFirestore } from './hooks/useFirestore'
 import { useLogout } from './hooks/useLogout'
 import './events.css'
 import Footer from './footer'
-import { projectAuth, projectFirestore } from './firebase/config'
+import { projectAuth, projectFirestore, storeRegisteredUsersIYFAInfo } from './firebase/config'
 import { useParams } from 'react-router-dom'
 import infostrip from './images/mun/strip desk.webp'
 import tempcertificate from './images/newimages/template Certificate.webp'
@@ -20,9 +20,17 @@ import pic3 from './images/pics/3.webp'
 import pic4 from './images/pics/5.webp'
 import pic5 from './images/pics/4.webp'
 import prakritidp from './images/pics/pc.webp'
+import { firebaseAuth, firebaseT, storeUserInfo } from './firebase/config';
+import { useLogin } from './hooks/useLogin';
+import Razorpay from 'razorpay'
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/firestore'
+import 'firebase/compat/auth'
+import 'firebase/compat/storage'
 
 export default function Events() {
   const { user } = useAuthContext()
+  const { login, signInWithGoogle } = useLogin()
   const [mod, setMod] = useState(false)
   const { logout } = useLogout()
   const { id } = useParams()
@@ -31,7 +39,7 @@ export default function Events() {
   const [inputValue, setInputValue] = useState('');
 
   // firestore me ye data add
-  const { addDocument, response } = useFirestore('student_enrollment_young_forest_ambassdor')
+  const { addDocument, response } = useFirestore('iyfa-registered-users')
 
 
   // modal ke content
@@ -90,6 +98,132 @@ export default function Events() {
     setMod4(false);
   }
 
+  function generateOrderId() {
+    // Use a prefix (optional) and add a timestamp to make the order ID more unique
+    const prefix = 'ORD';
+    const timestamp = Date.now();
+
+    // Generate a random number or use another unique identifier (such as user ID)
+    const uniqueId = Math.floor(Math.random() * 1000000);
+
+    // Combine all parts to create the final order ID
+    const orderId = `${prefix}_${timestamp}_${uniqueId}`;
+
+    return orderId;
+  }
+
+  const [paymentError, setPaymentError] = useState(null);
+
+
+  const razorpay = new Razorpay({
+    key_id: 'rzp_live_H30xpgmxzhTAaN',
+    key_secret: 'RNg0ePo0yxJC42Gbk6LHGCZs',
+  });
+
+  const [orderId, setOrderId] = useState(null);
+  const [paymentId, setPaymentId] = useState(null);
+
+  const handlePayment = async () => {
+    try {
+      const razorpayKey = 'rzp_live_H30xpgmxzhTAaN';
+
+      // Initialize Razorpay on the client side
+      const options = {
+        key: razorpayKey,
+        amount: 100, // Amount in paise
+        currency: 'INR',
+        order_id: orderId,
+        name: 'INDIA MUN',
+        description: 'IYFA Course',
+        callback_url: "https://indiamun.org/after_payment",
+        prefill: {
+          name: "", 
+          email: "",  
+          contact: ""
+        },
+        notes: {
+          address: 'Razorpay Corporate Office',
+        },
+        theme: {
+          color: '#121212',
+        },
+      };
+
+      const rzp = new window.Razorpay(options);
+      rzp.open();
+      
+    } catch (error) {
+      console.error('Error handling payment:', error);
+    }
+  };
+
+  const userlogin = async (e) => {
+    try {
+      await signInWithGoogle();
+  
+      // Listen for changes in the authentication state
+      firebaseAuth.onAuthStateChanged((user) => {
+        if (user) {
+          // Access user information
+          const { uid, displayName, email } = user;
+  
+          // Store user information in Firestore
+          storeUserInfo(uid, displayName, email);
+  
+          // Now you can do other actions after sign-in and data storage
+          // For example, you can navigate to a different page using React Router
+          // history.push('/events');
+        } else {
+          console.log('User not found!');
+        }
+      });
+  
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const handleClick = async () => {
+    if (!user) {
+      try {
+        await signInWithGoogle();
+
+        // Listen for changes in the authentication state
+        firebaseAuth.onAuthStateChanged((user) => {
+          if (user) {
+            // Access user information
+            const { uid, displayName, email } = user;
+
+            // Store user information in Firestore
+            storeRegisteredUsersIYFAInfo(uid, displayName, email);
+
+            // history.push('/events');
+          } else {
+            console.log('User not found!');
+          }
+        });
+      } catch (err) {
+        console.log(err);
+      }
+      try {
+        userlogin()
+        handlePayment()
+      } catch (error) {
+        console.log(error);
+      }
+    } else {
+      try {
+        userlogin()
+        handlePayment()
+      } catch (error) {
+        console.log(error);
+      }
+
+    }
+
+  }
+  
+
 
 
   // useEffect(() => {
@@ -144,7 +278,7 @@ export default function Events() {
 
     // Do something with the form data
     addDocument({
-      uid: user.uid,
+      // uid: user.uid,
       Student_Name: st_name,
       College_name: sch_name,
       Year_of_study: classS,
@@ -152,7 +286,7 @@ export default function Events() {
       City: city,
       Phone_No: phone,
       Email: emailS,
-      Program_of_study: program_of_study
+      Program_of_study: "IYFA",
     }).then(() => {
       setSubmitted(true)
       // localStorage.setItem('enrollmentStatus', JSON.stringify(true));
@@ -171,7 +305,8 @@ export default function Events() {
         <h2>INDIA’S YOUTH FOR CLIMATE ACTION</h2>
         <img className='right_img' src={right_img} alt="" />
       </div>
-      <Navbar/>
+
+      <Navbar />
       {/* <div className='log-nav'>
         <div className='log-nav1'>
           <img src={user.photoURL} />
@@ -223,7 +358,7 @@ export default function Events() {
 
 
 
-      <div className='enroll-main'>
+      {/* <div className='enroll-main'>
         <div className='enroll-div first-enroll'>
           <div className='enroll-status'>Current Status</div>
           {!submitted && <button onClick={() => setMod(!mod)}>Enroll NOW</button>}
@@ -236,7 +371,7 @@ export default function Events() {
         <div>
           {submitted && <a href='/event/modules'><button>Go to Course</button></a>}
         </div>
-      </div>
+      </div> */}
       {/* <p className='date-and-timeline'>Dates And Timelines :</p>
 <ul className='ul-type'>
   <li>Registrations Open - 24th May 2023 | 12:00 PM</li>
@@ -573,9 +708,10 @@ Explore fundraising techniques, engage donors and sponsors, and emphasise forest
               <button className='nor-but'>IYFA FAQs</button>
             </a>
           </div>
-        </span>{!submitted && <button className='big-enroll main-button' onClick={() => setMod(!mod)}>Enroll NOW</button>}
-        {submitted && <span><button className='big-enroll main-button' disabled onClick={() => setMod(!mod)}>Enrolled</button><a href='/event/modules'><button className='big-enroll main-button'>Go to Course</button></a></span>}
-
+        </span>
+        {!submitted && <button className='big-enroll main-button' onClick={() => setMod(!mod)}>Enroll NOW</button>}
+        {submitted && <button className='big-enroll main-button' onClick={handleClick}>Payment</button>}
+        {/* {submitted && <span><button className='big-enroll main-button' disabled onClick={() => setMod(!mod)}>Enrolled</button><a href='/event/modules'><button className='big-enroll main-button'>Go to Course</button></a></span>} */}
       </div>
 
 
@@ -622,17 +758,6 @@ Explore fundraising techniques, engage donors and sponsors, and emphasise forest
                     required
                     value={sch_name}
                     onChange={(e) => setSchname(e.target.value)}
-                  />
-                </label>
-              </div>
-              <div className='form-row'>
-                <label>
-                  <span>Program of Study:</span>
-                  <input
-                    type="text"
-                    required
-                    value={program_of_study}
-                    onChange={(e) => setprogram_of_study(e.target.value)}
                   />
                 </label>
               </div>
@@ -697,13 +822,6 @@ Explore fundraising techniques, engage donors and sponsors, and emphasise forest
             </form>
           </div>
         </div>
-
-
-
-
-
-
-
       }
 
 

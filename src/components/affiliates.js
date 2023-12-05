@@ -3,13 +3,13 @@ import Razorpay from 'razorpay'
 import Navbar from './navbar'
 import left_img from './images/INDIAMUN/logo left.webp'
 import right_img from './images/INDIAMUN/logo right.webp'
-import aff_left from './images/INDIAMUN/affi left.webp'
-import aff_right from './images/INDIAMUN/affi right.webp'
+// import aff_left from './images/INDIAMUN/affi left.webp'
+// import aff_right from './images/INDIAMUN/affi right.webp'
 import buzzi from './images/logos strip/buzzon copy.webp'
 import giaa from './images/logos strip/gaia copy.webp'
 import './affiliate.css'
 import { useFirestore } from './hooks/useFirestore'
-import firebase from 'firebase/app';
+// import firebase from 'firebase/app';
 import 'firebase/firestore';
 import { projectFirestore, projectStorage } from "./firebase/config";
 import Footer from './footer';
@@ -18,18 +18,18 @@ import Aff1 from '../components/images/affiliate/Ovais Sarmad.png'
 import Aff2 from '../components/images/affiliate/Suresh prabhu.png'
 import Aff3 from '../components/images/affiliate/Ramananramnathan.png'
 import Aff4 from '../components/images/affiliate/Jagdish seth.png'
-import img1 from './images/logos strip 2/2.png'
-import img2 from './images/logos strip 2/6.png'
-import img3 from './images/logos strip 2/7.png'
-import img4 from './images/logos strip 2/8.png'
-import img5 from './images/logos strip 2/9.png'
-import img6 from './images/logos strip 2/1.png'
-import img7 from './images/logos strip 2/12.png'
-import img8 from './images/logos strip 2/4.png'
-import img9 from './images/logos strip 2/11.png'
-import img10 from './images/logos strip 2/10.png'
-import img11 from './images/logos strip 2/3.png'
-import img12 from './images/logos strip 2/5.png'
+// import img1 from './images/logos strip 2/2.png'
+// import img2 from './images/logos strip 2/6.png'
+// import img3 from './images/logos strip 2/7.png'
+// import img4 from './images/logos strip 2/8.png'
+// import img5 from './images/logos strip 2/9.png'
+// import img6 from './images/logos strip 2/1.png'
+// import img7 from './images/logos strip 2/12.png'
+// import img8 from './images/logos strip 2/4.png'
+// import img9 from './images/logos strip 2/11.png'
+// import img10 from './images/logos strip 2/10.png'
+// import img11 from './images/logos strip 2/3.png'
+// import img12 from './images/logos strip 2/5.png'
 import qr_code from './images/affiliate/QR.webp'
 import Student1 from './images/INDIAMUN/students 1.webp'
 import Student2 from './images/INDIAMUN/students 2.webp'
@@ -61,10 +61,11 @@ import car5 from '../components/images/affiliate/5.png'
 import car6 from '../components/images/affiliate/6.png'
 import car7 from '../components/images/affiliate/7.png'
 import car8 from '../components/images/affiliate/8.png'
-import IMCC from '../components/images/affiliate/IMCC.webp'
-import council1 from './images/mun/council-1.webp'
+import axios from 'axios';
+// import IMCC from '../components/images/affiliate/IMCC.webp'
+// import council1 from './images/mun/council-1.webp'
 import Collapsible from './Collapsible.js';
-import HoverInfoDiv from './HoverInfoDiv';
+// import HoverInfoDiv from './HoverInfoDiv';
 import Testimonial from './Testimonial';
 import Carousel from 'react-grid-carousel';
 
@@ -317,57 +318,98 @@ export default function Affiliates() {
     submit_but.style.display = "inline-block"
   }
 
-  const handleImccClick = () => {
-    window.open('https://docs.google.com/document/d/1A7RgrMLhdHADVefDAlgRkNrvQKuKjccc-IscoPE5Nm8/edit?usp=sharing', '_blank');
-  }
+  // const handleImccClick = () => {
+  //   window.open('https://docs.google.com/document/d/1A7RgrMLhdHADVefDAlgRkNrvQKuKjccc-IscoPE5Nm8/edit?usp=sharing', '_blank');
+  // }
+
+
+  // const [orderId, setOrderId] = useState(null);
+  // const [paymentId, setPaymentId] = useState(null);
+
+  // const handlePayment1 = async () => {
+  //   try {
+
+  //     const razorpayKey = 'rzp_live_H30xpgmxzhTAaN';
+      
+  //     // Initialize Razorpay on the client side
+  //     const options = {
+  //       key: razorpayKey,
+  //       amount: 100, // Amount in paise
+  //       currency: 'INR',
+  //       // order_id: orderId,
+  //       name: 'INDIA MUN',
+  //       callback_url: "https://indiamun.org/",
+  //       description: 'IYFA Course',
+  //       handler: function (response) {
+  //         setPaymentId(response.razorpay_payment_id);
+  //         // Handle payment success, update order status on your server, etc.
+  //       },
+  //       prefill: {},
+  //       notes: {
+  //         address: 'Customer Address',
+  //       },
+  //       theme: {
+  //         color: '#F37254',
+  //       },
+  //     };
+
+  //     const rzp = new window.Razorpay(options);
+  //     rzp.open();
+  //   } catch (error) {
+  //     console.error('Error handling payment:', error);
+  //   }
+  // };
 
   // const [paymentError, setPaymentError] = useState(null);
 
-  const handlePayment = async () => {
-    const razorpay = new Razorpay({
-      key_id: 'rzp_test_a7Khb1IXh1hjJH',
-      key_secret: '86XaH14MecQFTtaSuwgzYHk1',
-    });
+  // const handlePayment = async () => {
+  //   const razorpay = new Razorpay({
+  //     key_id: 'rzp_live_H30xpgmxzhTAaN',  
+  //     key_secret: 'RNg0ePo0yxJC42Gbk6LHGCZs',
+  //   });
 
-    const options = {
-      key: 'rzp_test_a7Khb1IXh1hjJH',
-      amount: '400000',
-      currency: "INR",
-      name: "INDIA MUN",
-      description: "Tutorial of RazorPay",
-      image: "http://localhost:3000/static/media/logo%20left.548aa3eb.webp",
-      callback_url: "http://localhost:3000/",
-      prefill: {
-        name: "Gaurav Kumar",
-        email: "gaurav.kumar@example.com",
-        contact: "9999999999"
-      },
-      notes: {
-        "address": "Razorpay Corporate Office"
-      },
-      theme: {
-        "color": "#121212"
-      }
-    };
+  //   const options = {
+  //     key: 'rzp_live_H30xpgmxzhTAaN',
+  //     amount: '100',
+  //     currency: "INR",
+  //     name: "INDIA MUN",
+  //     description: "Tutorial of RazorPay",
+  //     image: "https://indiamun.org/static/media/logo%20left.548aa3eb.webp",
+  //     callback_url: "https://indiamun.org/",  // This URL is where Razorpay will redirect the user after the payment is completed or canceled. It's the endpoint where Razorpay will send the payment response.
+  //     prefill: {
+  //       name: "", 
+  //       email: "",  
+  //       contact: ""
+  //     },
+  //     order_id: "",
+  //     notes: {
+  //       "address": "Razorpay Corporate Office"
+  //     },
+  //     theme: {
+  //       "color": "#121212"
+  //     }
+  //   };
 
-    try {
-      const response = await razorpay.createPaymentOrder(options);
-      // Handle success
-      console.log(response);
-    } catch (error) {
-      // Handle error
-      console.log(error);
-    }
+  //   try {
+  //     const response = await razorpay.createPaymentOrder(options);
+  //     // Handle success
+  //     console.log(response);
+  //   } catch (error) {
+  //     // Handle error
+  //     console.log(error);
+  //   }
 
-    const razorpayCheckout = new window.Razorpay(options);
-    razorpayCheckout.open();
-  };
+  //   const razorpayCheckout = new window.Razorpay(options);
+  //   razorpayCheckout.open();
+  // };
+  
 
 
   return (
     <div>
-      {/* <button onClick={handlePayment}>Pay Now</button>
+      {/* <button onClick={handlePayment1}>Pay Now</button>
       {paymentError && <p>{paymentError}</p>} */}
+      {/* iyfa, ylp,  */}
       <div className='top_comp'>
         <a href='/'><img className='left_img' src={left_img} alt="" /></a>
         <h2>INDIA’S YOUTH FOR CLIMATE ACTION</h2>
@@ -376,7 +418,7 @@ export default function Affiliates() {
       <Navbar />
       <h1 className='aff-black'>AFFILIATE YOUR SCHOOL TODAY</h1>
 
-      <img className='mobile_photo' src='GSCA mobile.webp' width='100%'></img>
+      <img className='mobile_photo' src='GSCA mobile.webp' width='100%' alt='mobile_photo'></img>
       <div className='program_mun_content4'>
         <img src="GSCA.webp" width='100%' alt="" />
       </div>
@@ -398,7 +440,7 @@ export default function Affiliates() {
       <p className='am-content'>Seize this unparalleled opportunity to empower your students, inspire communities, and lead the charge. Together, let's embark on a rewarding journey of climate action, crafting a world that thrives and prospers for generations to come</p>
       <div className='perk-benefit'><a href='https://drive.google.com/file/d/1_kA23RmVVRLbnqns22LLZAC-b9PZwi7N/view?usp=sharing' target={'_blank'}><button>Download Brochure</button></a></div>
 
-      <img className='mobile_photo' src="M2.webp" width="100%"></img>
+      <img className='mobile_photo' src="M2.webp" width="100%" alt='mobile_photo' />
 
       <div className='program_mun_content4'>
         <img src="partners des.webp" alt="" />
@@ -554,28 +596,28 @@ export default function Affiliates() {
       <div className='img-slide-car'>
         <Carousel cols={4} rows={1} gap={0} loop showDots={true} autoplay={2000}>
           <Carousel.Item>
-            <img width="80%" src={car1} />
+            <img width="80%" src={car1} alt="car"/>
           </Carousel.Item>
           <Carousel.Item>
-            <img width="80%" src={car2} />
+            <img width="80%" src={car2} alt="car"/>
           </Carousel.Item>
           <Carousel.Item>
-            <img width="80%" src={car3} />
+            <img width="80%" src={car3} alt="car"/>
           </Carousel.Item>
           <Carousel.Item>
-            <img width="80%" src={car4} />
+            <img width="80%" src={car4} alt="car"/>
           </Carousel.Item>
           <Carousel.Item>
-            <img width="80%" src={car5} />
+            <img width="80%" src={car5} alt="car"/>
           </Carousel.Item>
           <Carousel.Item>
-            <img width="80%" src={car6} />
+            <img width="80%" src={car6} alt="car"/>
           </Carousel.Item>
           <Carousel.Item>
-            <img width="80%" src={car7} />
+            <img width="80%" src={car7} alt="car"/>
           </Carousel.Item>
           <Carousel.Item>
-            <img width="80%" src={car8} />
+            <img width="80%" src={car8} alt="car"/>
           </Carousel.Item>
         </Carousel>
       </div>
@@ -819,7 +861,7 @@ export default function Affiliates() {
         beyond in championing environmental sustainability</p>
       <p className='am-content'> Once your institution becomes a part of our esteemed network through affiliation, you have the opportunity to participate in our Accreditation Program, . This program is designed to acknowledge the remarkable contributions made by schools and colleges towards creating a greener and more sustainable future. By engaging in a range of climate-related activities, integrating environmental education, and fostering student involvement, your Program. This program is designed to acknowledge the remarkable contributions made by schools and colleges towards creating a greener and more Once your institution becomes a part of our esteemed network through affiliation, you have the opportunity to participate in our Accreditation institution can earn accolades that mirror your commitment to positive change.</p>
 
-      <img className='mobile_photo' src="m3.webp" width="100%"></img>
+      <img className='mobile_photo' src="m3.webp" alt='m3.webp' width="100%"></img>
       <div className='program_mun_content4'>
         <img src="gsca all.png" alt="" />
       </div>

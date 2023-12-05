@@ -5,7 +5,7 @@ import Navbar from './navbar'
 import model_img from './images/participate/india mun text.webp'
 import forestam from './images/About/Forrest-right.webp'
 import google_photo from './images/participate/google.svg'
-import login_phot from './images/newimages/login\ deks\ .webp'
+import login_phot from './images/newimages/login deks .webp'
 
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
@@ -88,7 +88,7 @@ export default function Schools() {
         </div>
         <div className='for-right part'>
           <p>Given the need to restore our degraded lands and forest ecosystems India needs to build a youth-led initiative to fund on ground regenerative action that will have enormous ecological and social impact. </p>
-          <img src={forestam} ></img>
+          <img src={forestam} />
           <button className='main-button' onClick={handleSignIN}>Learn More</button>
         </div>
       </div>

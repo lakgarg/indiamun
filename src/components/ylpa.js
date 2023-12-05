@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
+import Razorpay from 'razorpay'
 import Navbar from './navbar'
 import left_img from './images/INDIAMUN/logo left.webp'
 import right_img from './images/INDIAMUN/logo right.webp'
-import forestam from './images/About/Forrest-right.webp'
-import banner from './images/participate/badge.webp'
+// import forestam from './images/About/Forrest-right.webp'
+// import banner from './images/participate/badge.webp'
 import { useAuthContext } from './hooks/useAuthContext'
 import { useFirestore } from './hooks/useFirestore'
 import { useLogout } from './hooks/useLogout'
@@ -11,17 +12,17 @@ import './events.css'
 import Footer from './footer'
 import { projectAuth, projectFirestore } from './firebase/config'
 import { useParams } from 'react-router-dom'
-import infostrip from './images/mun/strip desk.webp'
-import tempcertificate from './images/newimages/template Certificate.webp'
+// import infostrip from './images/mun/strip desk.webp'
+// import tempcertificate from './images/newimages/template Certificate.webp'
 import { useNavigate } from 'react-router-dom';
-import pic1 from './images/pics/1.webp'
-import pic2 from './images/pics/2.webp'
-import pic3 from './images/pics/3.webp'
-import pic4 from './images/pics/5.webp'
-import pic5 from './images/pics/4.webp'
-import prakritidp from './images/pics/pc.webp'
+// import pic1 from './images/pics/1.webp'
+// import pic2 from './images/pics/2.webp'
+// import pic3 from './images/pics/3.webp'
+// import pic4 from './images/pics/5.webp'
+// import pic5 from './images/pics/4.webp'
+// import prakritidp from './images/pics/pc.webp'
 
-import hero from './images/ylp/YLP image 1 desk.png'
+// import hero from './images/ylp/YLP image 1 desk.png'
 import hero2 from './images/ylp/image2 desk.png'
 
 export default function Ylpa() {
@@ -177,9 +178,50 @@ export default function Ylpa() {
       // localStorage.setItem('enrollmentStatus', JSON.stringify(true));
     })
 
-
     setMod(!mod)
 
+  };
+
+  const [paymentError, setPaymentError] = useState(null);
+
+  const handlePayment = async () => {
+    const razorpay = new Razorpay({
+      key_id: 'rzp_test_a7Khb1IXh1hjJH',
+      key_secret: '86XaH14MecQFTtaSuwgzYHk1',
+    });
+
+    const options = {
+      key: 'rzp_test_a7Khb1IXh1hjJH',
+      amount: '400000',
+      currency: "INR",
+      name: "INDIA MUN",
+      description: "Tutorial of RazorPay",
+      image: "http://localhost:3000/static/media/logo%20left.548aa3eb.webp",
+      callback_url: "http://localhost:3000/",
+      prefill: {
+        name: "Gaurav Kumar",
+        email: "gaurav.kumar@example.com",
+        contact: "9999999999"
+      },
+      notes: {
+        "address": "Razorpay Corporate Office"
+      },
+      theme: {
+        "color": "#121212"
+      }
+    };
+
+    try {
+      const response = await razorpay.createPaymentOrder(options);
+      // Handle success
+      console.log(response);
+    } catch (error) {
+      // Handle error
+      console.log(error);
+    }
+
+    const razorpayCheckout = new window.Razorpay(options);
+    razorpayCheckout.open();
   };
 
 
@@ -749,7 +791,7 @@ Explore fundraising techniques, engage donors and sponsors, and emphasise forest
 
       <div className="am-go"></div>
       <div className="ending-ylp">
-        <p><i>Registrations Opening on 1st Dec, 2023</i></p>
+        <p><i>Registrations Opening on 6th Dec, 2023</i></p>
       </div>
 
 

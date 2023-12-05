@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import ReactDOM from 'react-dom'
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import NavDropdown from 'react-bootstrap/NavDropdown';
@@ -6,9 +6,10 @@ import { useLogin } from './hooks/useLogin';
 import { useNavigate } from 'react-router-dom';
 import { useAuthContext } from './hooks/useAuthContext'
 import { useLogout } from './hooks/useLogout'
-
 import './navbar.css'
-import { projectAuth } from './firebase/config';
+import { firebaseAuth, firebaseT, storeUserInfo } from './firebase/config';
+
+
 const Navigation = () => {
 
   const { login, signInWithGoogle } = useLogin()
@@ -16,17 +17,45 @@ const Navigation = () => {
   const history = useNavigate()
   const { user } = useAuthContext()
 
+
+  // const handleClick = async (e) => {
+  //   try {
+  //     await signInWithGoogle();
+  //     // history('/events')
+  
+  //     console.log(user)
+
+  //   } catch (err) {
+  //     console.log(err)
+  //   }
+  // }
+
   const handleClick = async (e) => {
     try {
       await signInWithGoogle();
-      // history('/events')
-
-      console.log(user)
-
+  
+      // Listen for changes in the authentication state
+      firebaseAuth.onAuthStateChanged((user) => {
+        if (user) {
+          // Access user information
+          const { uid, displayName, email } = user;
+  
+          // Store user information in Firestore
+          storeUserInfo(uid, displayName, email);
+  
+          // Now you can do other actions after sign-in and data storage
+          // For example, you can navigate to a different page using React Router
+          // history.push('/events');
+        } else {
+          console.log('User not found!');
+        }
+      });
+  
     } catch (err) {
-      console.log(err)
+      console.log(err);
     }
-  }
+  };
+  
 
   const handleLogout = async () => {
     try {
@@ -40,8 +69,8 @@ const Navigation = () => {
 
   return (
     <>
-      <Navbar collapseOnSelect expand='sm' className='nav_class' style={{paddingRight:'0px',paddingLeft:'0px'}}>
-        <Container style={{margin:'0px'}}>
+      <Navbar collapseOnSelect expand='sm' className='nav_class' style={{ paddingRight: '0px', paddingLeft: '0px' }}>
+        <Container style={{ margin: '0px' }}>
           <Navbar.Toggle aria-controls='responsive-navbar-nav' />
           <Navbar.Collapse id='responsive-navbar-nav'>
             <Nav className='big_nav'>
@@ -102,7 +131,7 @@ const Navigation = () => {
                 {/* <Nav.Link className='nav_items' href='/donor'>Donor</Nav.Link>  */}
               </div>
               <div className="right">
-              {user ? (
+                {user ? (
                   // If user is authenticated, show user's name, profile picture, and logout button
                   <div className='user_main'>
                     <Nav.Link className='nav_items user_pic_container'>

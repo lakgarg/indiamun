@@ -118,7 +118,7 @@ export default function Home() {
         <img className='right_img' src={right_img} alt="" />
       </div>
       <Navbar />
-      <div class="activism">
+      <div className="activism">
         <h1>FROM ACTIVISM TO ACTION</h1>
         <p className='nur'>Nurturing future sustainability leaders</p>
         <div className='roller'>
@@ -127,7 +127,7 @@ export default function Home() {
           <button onClick={handleNext} style={{ background: 'none', border: 'none', color: 'white' }}><i class="fa-solid fa-chevron-right"></i></button>
         </div>
 
-        <div class="join-ind">
+        <div className="join-ind">
           <p>JOIN INDIA MUN</p>
           {/* <button class="join-but"><a href='/affiliates' style={{textDecoration:'none',color:'white'}}>Affiliate Your School</a></button> */}
         </div>

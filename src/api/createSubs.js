@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {useAuthContext} from '../components/hooks/useAuthContext'
 import { useFirestore } from '../components/hooks/useFirestore';
-import Razorpay from 'razorpay'
+// import Razorpay from 'razorpay'
 
 
 const MyComponent = () => {

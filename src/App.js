@@ -19,6 +19,7 @@ import Donor from './components/donor';
 import DonorSubs from './components/donorSubs';
 import Ylpa from './components/ylpa';
 import Conference from './components/conference';
+import After_payment from './components/After_payment';
 const cors = require('cors')({ origin: true });
 
 
@@ -42,6 +43,7 @@ function App() {
             <Route path='/events' element={<Events/>}/>
             <Route path='/ylpa' element={<Ylpa/>}/>
             <Route path='/conference' element={<Conference/>}/>
+            <Route path='/after_payment' element={<After_payment/>}/>
            {/* {user && <Route path='/events' element={<Events/>}/>}  */}
            {user && <Route path='/eventSchools' element={<EventsSchools/>}/>}
            {user && <Route path='/donorSubs' element={<DonorSubs/>}/>}

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { projectAuth,firebaseT } from '../firebase/config'
 import { useAuthContext } from './useAuthContext'
-import  {useNavigate}  from 'react-router-dom';
+// import  {useNavigate}  from 'react-router-dom';
 
 
 
@@ -10,7 +10,7 @@ export const useLogin = () => {
   const [error, setError] = useState(null)
   const [isPending, setIsPending] = useState(false)
   const { dispatch } = useAuthContext()
-  const history = useNavigate()
+  // const history = useNavigate()
 
   const login = async (email,password) => {
     setError(null)

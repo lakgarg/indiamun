@@ -5,7 +5,7 @@ import Navbar from './navbar'
 import model_img from './images/participate/india mun text.webp'
 import forestam from './images/About/Forrest-right.webp'
 import google_photo from './images/participate/google.svg'
-import login_phot from './images/newimages/login\ deks\ .webp'
+import login_phot from './images/newimages/login deks .webp'
 
 
 import  {useNavigate}  from 'react-router-dom';
