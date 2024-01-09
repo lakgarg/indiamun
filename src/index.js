@@ -10,10 +10,8 @@ import { createPlan, createSubs } from './api/api1';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
-  {/* <React.StrictMode> */}
   <UserAuthContextProvider>
     <App createPlan={createPlan} createSubs={createSubs}/>
-  {/* </React.StrictMode> */}
   </UserAuthContextProvider>
   </BrowserRouter>
 );
