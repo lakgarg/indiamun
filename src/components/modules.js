@@ -142,7 +142,7 @@ export default function Modules() {
 
 
         <p className='iyfa-head'>INDIA'S YOUNG FOREST AMBASSADOR</p>
-            <p className='iya-next'>(PROGRAMME MODULES)</p>
+            <p className='iya-next'>(PROGRAM MODULES)</p>
             <p className='iyfa-top'>Introduction Module: India's Young Forest Ambassador Program</p>
             <div className='am-iyfa'><p>We are thrilled to have you join us on this transformative journey of becoming environmental leaders and catalysts for change. This introduction module will provide you with an overview of the program, its objectives, and the incredible opportunities that lie ahead.</p></div>
             <p className='sub-head'>Sub Module 1: Embracing the Forests</p>

@@ -134,13 +134,13 @@ const Navigation = () => {
                 {user ? (
                   // If user is authenticated, show user's name, profile picture, and logout button
                   <div className='user_main'>
-                    <Nav.Link className='nav_items user_pic_container'>
+                    {/* <Nav.Link className='nav_items user_pic_container'>
                       <img
                         src={user.photoURL}
                         alt='Profile'
                         className='user_pic'
                       />
-                    </Nav.Link>
+                    </Nav.Link> */}
                     <Nav.Link className='nav_items'>{user.displayName}</Nav.Link>
                     <button className='logout_btn' onClick={handleLogout}>
                       Logout

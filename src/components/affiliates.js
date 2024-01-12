@@ -330,7 +330,7 @@ export default function Affiliates() {
   //   try {
 
   //     const razorpayKey = 'rzp_live_H30xpgmxzhTAaN';
-      
+
   //     // Initialize Razorpay on the client side
   //     const options = {
   //       key: razorpayKey,
@@ -402,7 +402,7 @@ export default function Affiliates() {
   //   const razorpayCheckout = new window.Razorpay(options);
   //   razorpayCheckout.open();
   // };
-  
+
 
 
   return (
@@ -471,7 +471,7 @@ export default function Affiliates() {
       {/* <img className='mobile_photo' src="m1.webp" width="100%"></img> */}
       {/* <div className='program_mun_content4'>
         <img src="why affiliate.webp" alt="" />
-      </div> */}  
+      </div> */}
       {/* <div className="why-affiliate-container">
         <HoverInfoDiv mainHeading="A Powerful Platform for India's Youth" hoverTextContent="India MUN (Model United Nations) is a dynamic organization dedicated to uniting and empowering India's youth to take meaningful action against the pressing challenge of climate change. As an esteemed platform for students, we provide an unparalleled opportunity for young minds to engage, discuss, and shape the future of our planet." />
         <HoverInfoDiv mainHeading="Fostering Leadership and Diplomacy" hoverTextContent="By affiliating with India MUN, schools and colleges enable their students to develop vital leadership and diplomacy skills. Through MUN simulations, students learn the art of negotiation, critical thinking, public speaking, and problem-solving, all of which are essential traits for effective climate advocates and change-makers." />
@@ -596,28 +596,28 @@ export default function Affiliates() {
       <div className='img-slide-car'>
         <Carousel cols={4} rows={1} gap={0} loop showDots={true} autoplay={2000}>
           <Carousel.Item>
-            <img width="80%" src={car1} alt="car"/>
+            <img width="80%" src={car1} alt="car" />
           </Carousel.Item>
           <Carousel.Item>
-            <img width="80%" src={car2} alt="car"/>
+            <img width="80%" src={car2} alt="car" />
           </Carousel.Item>
           <Carousel.Item>
-            <img width="80%" src={car3} alt="car"/>
+            <img width="80%" src={car3} alt="car" />
           </Carousel.Item>
           <Carousel.Item>
-            <img width="80%" src={car4} alt="car"/>
+            <img width="80%" src={car4} alt="car" />
           </Carousel.Item>
           <Carousel.Item>
-            <img width="80%" src={car5} alt="car"/>
+            <img width="80%" src={car5} alt="car" />
           </Carousel.Item>
           <Carousel.Item>
-            <img width="80%" src={car6} alt="car"/>
+            <img width="80%" src={car6} alt="car" />
           </Carousel.Item>
           <Carousel.Item>
-            <img width="80%" src={car7} alt="car"/>
+            <img width="80%" src={car7} alt="car" />
           </Carousel.Item>
           <Carousel.Item>
-            <img width="80%" src={car8} alt="car"/>
+            <img width="80%" src={car8} alt="car" />
           </Carousel.Item>
         </Carousel>
       </div>
@@ -798,7 +798,7 @@ export default function Affiliates() {
             <div className="additional-info-div">
               <div className="left-text-payment">
                 <p className='ltp-1'>Affiliation Fee - <i><strike>INR 15000</strike></i></p>
-                <p className='ltp-2'><i>INR 9000</i></p>  
+                <p className='ltp-2'><i>INR 9000</i></p>
                 <p className='ltp-3'><i>Early Bird Discount</i></p>
               </div>
               <div className="right-img-qr">
@@ -823,7 +823,7 @@ export default function Affiliates() {
           <div className='school-form-ahead'>
             <div className='school-items-form'>Upload Payment Screenshot<input type="file" required onChange={handleFilechange1} /></div>
           </div>
-          
+
           <div className='last_check'>
             <div className='last_check_box'>
               <input type='checkbox' required />

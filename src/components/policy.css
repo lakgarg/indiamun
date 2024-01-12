@@ -1,0 +1,35 @@
+.main-policy-container {
+  margin-top: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.policy-title {
+  /* margin-top: 40px;
+  text-align: left;
+  color: black;
+  font-weight: 800; */
+}
+
+.policy-text {
+  margin-top: 30px;
+  text-align: left;
+  color: black;
+  font-weight: 600;
+}
+
+.policy-content {
+  margin-top: 30px;
+  text-align: left;
+  color: black;
+  font-weight: 600;
+  margin-left: 20px;
+  margin-bottom: 90px;
+}
+
+.policy-sub-heading {
+  font-size: 20px;
+  text-align: left;
+  color: black;
+  font-weight: 800;
+}

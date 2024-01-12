@@ -59,6 +59,42 @@ const storeRegisteredUsersIYFAInfo = async (uid, displayName, email) => {
   }
 };
 
+const registeredUsersYLP = projectFirestore.collection('ylp-registered-users');
+
+// Function to store user information in Firestore
+const storeRegisteredUsersYLPInfo = async (uid, displayName, email) => {
+  try {
+    // Use the "users" collection and the user's UID as the document ID
+    await registeredUsersYLP.doc(uid).set({
+      UID: uid,
+      displayName: displayName,
+      email: email
+    });
+    console.log('User information stored successfully in Firestore');
+  } catch (error) {
+    console.error('Error storing user information in Firestore:', error);
+    // You might want to handle the error appropriately, e.g., show an error message to the user
+  }
+};
+
+const registeredUsersIMCC = projectFirestore.collection('imcc-registered-users');
+
+// Function to store user information in Firestore
+const storeRegisteredUsersIMCCInfo = async (uid, displayName, email) => {
+  try {
+    // Use the "users" collection and the user's UID as the document ID
+    await registeredUsersIMCC.doc(uid).set({
+      UID: uid,
+      displayName: displayName,
+      email: email
+    });
+    console.log('User information stored successfully in Firestore');
+  } catch (error) {
+    console.error('Error storing user information in Firestore:', error);
+    // You might want to handle the error appropriately, e.g., show an error message to the user
+  }
+};
+
 
 // timestamp
 const timestamp = firebase.firestore.Timestamp
@@ -72,5 +108,7 @@ export {
   usersCollection, 
   storeUserInfo, 
   firebaseAuth, 
-  storeRegisteredUsersIYFAInfo 
+  storeRegisteredUsersIYFAInfo,
+  storeRegisteredUsersYLPInfo,
+  storeRegisteredUsersIMCCInfo
 }

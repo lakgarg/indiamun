@@ -1,5 +1,6 @@
 import React from 'react'
 import './team.css'
+import council0 from './images/mun/Mr Ovais Sarmad, Deputy Executive Secretary United Nations Framework Convention on Climate Change (UFCCC).png'
 import council1 from './images/mun/council-1.webp'
 import council2 from './images/mun/council-2.webp'
 import council3 from './images/mun/council-3.webp'
@@ -41,6 +42,12 @@ export default function Team() {
 
       <h1 style={{ fontSize: '40px', textAlign: 'center', fontWeight: '550', }}>Governing Council</h1>
       <div className='img-card'>
+        <div className='card-item'>
+          <img src={council0} ></img>
+          <p className='card-name'> Mr Ovais Sarmad</p>
+          <p className='card-des'>Former Deputy Executive Secretary <br /> United Nations Framework Convention on Climate Change
+(UFCCC)</p>
+        </div>
         <div className='card-item'>
           <img src={council1} ></img>
           <p className='card-name'> Hon’ble Mr. Suresh Prabhu</p>
@@ -117,7 +124,7 @@ export default function Team() {
         <div className='card-item'>
           <img src={org5} ></img>
           <p className='card-name'>Mohit</p>
-          <p className='card-des'>Programme Associate</p>
+          <p className='card-des'>Program Associate</p>
         </div>
         <div className='card-item'>
           <img src={org7} ></img>

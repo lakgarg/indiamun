@@ -3,6 +3,19 @@
 	padding: 30px;
 	color: rgb(50, 92, 155);
 }
+.main-about-imgs {
+	width: 100vw;
+}
+.main-about-imgs img {
+	width: 100%;
+}
+/* Styles for desktop view */
+.desktop-img {
+  display: block;
+}
+.mobile-img {
+	display: none;
+}
 .ap {
 	font-size: 16px;
 	font-weight: 700;
@@ -22,6 +35,70 @@
 	color: white;
 	background-color: rgb(6, 33, 50);
 }
+
+.about-values {
+	display: flex;
+	flex-direction: column;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	padding: 0 110px;
+}
+
+.about-values-title-container {
+	text-align: right;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 30px;
+	/* position: relative; */
+}
+
+.about-values-title {
+	font-weight: 900;
+	margin-bottom: 10px;
+}
+
+.about-values-title-underline {
+	align-self: flex-end;
+	width: 200px;
+	height: 2px;
+	background-color: #000;
+	margin-top: 2px;
+}
+
+.about-values-points-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.about-values-point {
+	display: flex;
+	width: 100%;
+}
+
+.about-values-icon {
+	width: 60px;
+	display: flex;
+	flex-shrink: 0;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+
+.about-values-icon p {
+	font-size: 40px;
+}
+
+.about-values-text {
+	text-align: justify;
+	padding-left: 20px;
+	display: flex;
+	font-size: 19px;
+}
+
+.about-values-text span {
+	font-weight: 900;
+}
+
 .more {
 	display: flex;
 	flex-direction: row;
@@ -41,7 +118,7 @@
 	font-weight: 700;
 }
 .text-bold {
-  font-size: 40px;
+	font-size: 40px;
 	margin-bottom: 10px;
 	align-self: center;
 	justify-self: center;
@@ -141,9 +218,42 @@
 		font-size: 25px;
 		padding: 5px;
 	}
+	.mobile-img {
+    display: block;
+  }
+
+  .desktop-img {
+    display: none;
+  }
 	.ap {
 		font-size: 18px;
 		padding: 5px;
+	}
+	.about-values {
+		padding: 0 15px;
+	}
+	
+	.about-values-title-underline {
+		width: 160px;
+	}
+	
+	.about-values-icon {
+		width: 40px;
+		align-items: start;
+	}
+	
+	.about-values-icon p {
+		font-size: 32px;
+	}
+	
+	.about-values-text {
+		text-align: left;
+		padding-left: 10px;
+		font-size: 15px;
+	}
+	
+	.about-values-text span {
+		font-weight: 900;
 	}
 	.read p {
 		font-size: 12px;
@@ -199,6 +309,12 @@
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+	.about-values {
+		padding: 0 90px;
+	}
+	.about-values-text {
+		font-size: 16px;
+	}
 	.wh-youth-div h1 {
 		font-size: 25px;
 		padding-bottom: 5px;

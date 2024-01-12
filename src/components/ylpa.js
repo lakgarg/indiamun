@@ -1,29 +1,20 @@
 import React, { useState, useEffect } from 'react'
-import Razorpay from 'razorpay'
 import Navbar from './navbar'
 import left_img from './images/INDIAMUN/logo left.webp'
 import right_img from './images/INDIAMUN/logo right.webp'
-// import forestam from './images/About/Forrest-right.webp'
-// import banner from './images/participate/badge.webp'
 import { useAuthContext } from './hooks/useAuthContext'
 import { useFirestore } from './hooks/useFirestore'
 import { useLogout } from './hooks/useLogout'
 import './events.css'
+import './ylpa.css'
 import Footer from './footer'
-import { projectAuth, projectFirestore } from './firebase/config'
 import { useParams } from 'react-router-dom'
-// import infostrip from './images/mun/strip desk.webp'
-// import tempcertificate from './images/newimages/template Certificate.webp'
+import tempcertificate from './images/ylp/YLP certificate (1).webp'
 import { useNavigate } from 'react-router-dom';
-// import pic1 from './images/pics/1.webp'
-// import pic2 from './images/pics/2.webp'
-// import pic3 from './images/pics/3.webp'
-// import pic4 from './images/pics/5.webp'
-// import pic5 from './images/pics/4.webp'
-// import prakritidp from './images/pics/pc.webp'
-
-// import hero from './images/ylp/YLP image 1 desk.png'
-import hero2 from './images/ylp/image2 desk.png'
+import hero from './images/ylp/YLP image 1 desk.webp'
+import hero2 from './images/ylp/YLP desk banner.webp'
+import { useLogin } from './hooks/useLogin';
+import { firebaseAuth, storeRegisteredUsersIYFAInfo, storeRegisteredUsersYLPInfo } from './firebase/config'
 
 export default function Ylpa() {
   const { user } = useAuthContext()
@@ -31,6 +22,7 @@ export default function Ylpa() {
   const { logout } = useLogout()
   const { id } = useParams()
   const nav_to = useNavigate();
+  const { login, signInWithGoogle } = useLogin()
 
   const [inputValue, setInputValue] = useState('');
 
@@ -49,6 +41,55 @@ export default function Ylpa() {
   const [submitted, setSubmitted] = useState(false)
   const [program_of_study, setprogram_of_study] = useState('')
 
+  const goToRazorpayPayment = () => {
+    const url = 'https://rzp.io/l/9muDtY9C';
+
+    // Open the URL in a new tab
+    window.open(url, '_blank');
+  }
+
+  const handleClick = async () => {
+    if (!user) {
+      try {
+        await signInWithGoogle();
+
+        // Listen for changes in the authentication state
+        firebaseAuth.onAuthStateChanged((user) => {
+          if (user) {
+            // Access user information
+            const { uid, displayName, email } = user;
+
+            // Store user information in Firestore
+            storeRegisteredUsersYLPInfo(uid, displayName, email);
+
+            // history.push('/events');
+          } else {
+            console.log('User not found!');
+          }
+        });
+      } catch (err) {
+        console.log(err);
+      }
+      try {
+        // userlogin()
+        goToRazorpayPayment()
+      } catch (error) {
+        console.log(error);
+      }
+    } else {
+      try {
+        // userlogin()
+        const { uid, displayName, email } = user;
+        storeRegisteredUsersYLPInfo(uid, displayName, email);
+        goToRazorpayPayment()
+      } catch (error) {
+        console.log(error);
+      }
+
+    }
+
+  }
+
 
 
   // module show
@@ -59,99 +100,151 @@ export default function Ylpa() {
   const [mod5, setMod5] = useState(false);
   const [mod6, setMod6] = useState(false);
   const [mod7, setMod7] = useState(false);
+  const [mod8, setMod8] = useState(false);
+  const [mod9, setMod9] = useState(false);
 
   const handlemodule1 = () => {
     setMod1(!mod1);
     setMod2(false);
     setMod3(false);
     setMod4(false);
-    setMod5(false)
+    setMod5(false);
+    setMod6(false);
+    setMod7(false);
+    setMod8(false);
+    setMod9(false);
   }
   const handlemodule2 = () => {
+    setMod1(false);
     setMod2(!mod2);
     setMod3(false);
     setMod4(false);
     setMod5(false);
-    setMod1(false);
+    setMod6(false);
+    setMod7(false);
+    setMod8(false);
+    setMod9(false);
   }
   const handlemodule3 = () => {
+    setMod1(false);
+    setMod2(false);
     setMod3(!mod3);
     setMod4(false);
     setMod5(false);
-    setMod1(false);
-    setMod2(false);
+    setMod6(false);
+    setMod7(false);
+    setMod8(false);
+    setMod9(false);
   }
   const handlemodule4 = () => {
+    setMod1(false);
+    setMod2(false);
+    setMod3(false);
     setMod4(!mod4);
     setMod5(false);
-    setMod1(false);
-    setMod2(false);
-    setMod3(false);
+    setMod6(false);
+    setMod7(false);
+    setMod8(false);
+    setMod9(false);
   }
   const handlemodule5 = () => {
-    setMod5(!mod5);
     setMod1(false);
     setMod2(false);
     setMod3(false);
     setMod4(false);
+    setMod5(!mod5);
+    setMod6(false);
+    setMod7(false);
+    setMod8(false);
+    setMod9(false);
   }
   const handlemodule6 = () => {
-    setMod6(!mod6);
     setMod1(false);
     setMod2(false);
     setMod3(false);
     setMod4(false);
+    setMod5(false);
+    setMod6(!mod6);
+    setMod7(false);
+    setMod8(false);
+    setMod9(false);
   }
   const handlemodule7 = () => {
-    setMod7(!mod7);
     setMod1(false);
     setMod2(false);
     setMod3(false);
     setMod4(false);
+    setMod5(false);
+    setMod6(false);
+    setMod7(!mod7);
+    setMod8(false);
+    setMod9(false);
+  }
+  const handlemodule8 = () => {
+    setMod1(false);
+    setMod2(false);
+    setMod3(false);
+    setMod4(false);
+    setMod5(false);
+    setMod6(false);
+    setMod7(false);
+    setMod8(!mod8);
+    setMod9(false);
+  }
+  const handlemodule9 = () => {
+    setMod1(false);
+    setMod2(false);
+    setMod3(false);
+    setMod4(false);
+    setMod5(false);
+    setMod6(false);
+    setMod7(false);
+    setMod8(false);
+    setMod9(!mod9);
   }
 
 
 
-  useEffect(() => {
-    // Check if enrollment status exists in local storage
-    // const storedEnrollmentStatus = localStorage.getItem('enrollmentStatus');
+  // useEffect(() => {
+  // Check if enrollment status exists in local storage
+  // const storedEnrollmentStatus = localStorage.getItem('enrollmentStatus');
 
-    // if (storedEnrollmentStatus) {
-    //   setSubmitted(JSON.parse(storedEnrollmentStatus));
-    // }
+  // if (storedEnrollmentStatus) {
+  //   setSubmitted(JSON.parse(storedEnrollmentStatus));
+  // }
 
-    // Retrieve enrollment status from Firestore
-    projectFirestore.collection('student_enrollment_young_forest_ambassdor').get().then((doc) => {
-      if (doc.exists) {
-        const uid = doc.uid;
-        setSubmitted(true);
-        console.log('Document uid:', uid);
-        console.log("i entered this block")
-      }
-      else {
-        console.log("doesnt exist")
-      }
-      if (doc.empty) {
-        console.log("no data found")
-        setSubmitted(false)
-      }
-      else {
-        doc.docs.forEach(doc => {
-          if ((doc.data().uid) === projectAuth.currentUser.uid) {
-            setSubmitted(true)
-            // nav_to('/event/modules')
-            return
-          }
-          // console.log((doc.data().uid))
-          // console.log(projectAuth.currentUser.uid)
-        })
-      }
-      // console.log(doc)
-    })
-      .catch((error) => {
-        console.error('Error retrieving enrollment status:', error);
-      });
-  }, []);
+  // Retrieve enrollment status from Firestore
+  // projectFirestore.collection('student_enrollment_young_forest_ambassdor').get().then((doc) => {
+  //   if (doc.exists) {
+  //     const uid = doc.uid;
+  //     setSubmitted(true);
+  //     console.log('Document uid:', uid);
+  //     console.log("i entered this block")
+  //   }
+  //   else {
+  //     console.log("doesnt exist")
+  //   }
+  //   if (doc.empty) {
+  //     console.log("no data found")
+  //     setSubmitted(false)
+  //   }
+  //   else {
+  //     doc.docs.forEach(doc => {
+  //       if ((doc.data().uid) === projectAuth.currentUser.uid) {
+  //         setSubmitted(true)
+  //         // nav_to('/event/modules')
+  //         return
+  //       }
+  //       // console.log((doc.data().uid))
+  //       // console.log(projectAuth.currentUser.uid)
+  //     })
+  //   }
+  //   // console.log(doc)
+  // })
+  //   .catch((error) => {
+  //     console.error('Error retrieving enrollment status:', error);
+  //   });
+  // }, []);
 
 
 
@@ -182,48 +275,6 @@ export default function Ylpa() {
 
   };
 
-  const [paymentError, setPaymentError] = useState(null);
-
-  const handlePayment = async () => {
-    const razorpay = new Razorpay({
-      key_id: 'rzp_test_a7Khb1IXh1hjJH',
-      key_secret: '86XaH14MecQFTtaSuwgzYHk1',
-    });
-
-    const options = {
-      key: 'rzp_test_a7Khb1IXh1hjJH',
-      amount: '400000',
-      currency: "INR",
-      name: "INDIA MUN",
-      description: "Tutorial of RazorPay",
-      image: "http://localhost:3000/static/media/logo%20left.548aa3eb.webp",
-      callback_url: "http://localhost:3000/",
-      prefill: {
-        name: "Gaurav Kumar",
-        email: "gaurav.kumar@example.com",
-        contact: "9999999999"
-      },
-      notes: {
-        "address": "Razorpay Corporate Office"
-      },
-      theme: {
-        "color": "#121212"
-      }
-    };
-
-    try {
-      const response = await razorpay.createPaymentOrder(options);
-      // Handle success
-      console.log(response);
-    } catch (error) {
-      // Handle error
-      console.log(error);
-    }
-
-    const razorpayCheckout = new window.Razorpay(options);
-    razorpayCheckout.open();
-  };
-
 
   return (
     <>
@@ -243,223 +294,59 @@ export default function Ylpa() {
 
       <div className='forest-am2'>
         <div className='ylp_img'>
+          <img src={hero} alt="hero" />
           {/* <a href='https://gaiatheearthfoundation.org/' target={'_blank'}><button>SEE OUR WORK AREA</button></a> */}
         </div>
-        <div className='forestam_ylp'>
-          <img src={hero2} />
+        <div className='stat_banner_ylp'>
+          <img src={hero2} className='hero2' />
         </div>
       </div>
 
 
-
-
-
-
-      {/* <div className='enroll-main'>
-        <div className='enroll-div first-enroll'>
-          <div className='enroll-status'>Current Status</div>
-          {!submitted && <button onClick={() => setMod(!mod)}>Enroll NOW</button>}
-          {submitted && <button disabled onClick={() => setMod(!mod)}>Enrolled</button>}
-        </div>
-        <div className='enroll-div'>
-          <div className='enroll-status'>Price</div>
-          <div className='enroll-free'>Free</div>
-        </div>
-        <div>
-          {submitted && <a href='/event/modules'><button>Go to Course</button></a>}
-        </div>
-      </div> */}
-      {/* <p className='date-and-timeline'>Dates And Timelines :</p>
-<ul className='ul-type'>
-  <li>Registrations Open - 24th May 2023 | 12:00 PM</li>
-  <li>Event Starting - 2nd June 2023 | 11:59PM</li>
-</ul>
-<p className='date-and-timeline'>About India's Young Forest Ambassador :</p>
-<p className='am-content'>Welcome to India's Young Forest Ambassador Program, an initiative dedicated to inspiring and empowering India's youth to take action for forest conservation and regeneration. Our program is designed to ignite a sense of responsibility and drive positive change among young individuals.</p>
-<p className='am-content'>At India's Young Forest Ambassador Program, we firmly believe that the youth hold the key to shaping a sustainable future. Our mission is to equip them with the knowledge, tools, and practical skills needed to make a tangible impact. Through immersive education, hands-on experiences, and community engagement, we aim to create a generation of passionate environmental leaders.
-</p>
-<p className='am-content'>Join us on this exciting journey of exploration, learning from experts, and collaborating with like-minded individuals. Together, we can make a lasting difference and build a greener, healthier, and more sustainable future.</p>
-<p className='am-content am-who'  >Who can Participate: class 6th - class 12th.</p>
-<p className='am-content'>Join India's Young Forest Ambassador Program and unleash your potential to create positive environmental action.</p>
-<p className='date-and-timeline'>Modules India's Young Forest Ambassador :</p>
-<p className='intro-mod'>Introduction Module:</p>
-<ul className='ul-type'>
-  <li>Module 1: Embracing the Forests</li>
-  <li>Module 2: Regeneration and Conservation</li>
-  <li>Module 3: Taking Action</li>
-  <li>Module 4: Becoming a Young Forest Ambassador</li>
-</ul>
-<p className='intro-mod'>Activity Module:</p>
-<ul className='ul-type'>
-  <li>Module 5: Fundraising for Forest Conservation</li>
-</ul>
-<p className='am-content'>Key Topics Covered:</p>
-<ul className='topics'>
-  <li>Fundraising Strategies</li>
-  <li>Builiding Donor Relationships</li>
-  <li>Personal Fundraising Goals</li>
-  <li>Fundraising Ethics</li>
-</ul>
-<p className='am-content'>Each participant will be expected to raise a minimum of INR 2000 or bring in five donors who could contribute INR 100 per month. </p>
-<p className='am-content'>By the end of this module, you will have developed a comprehensive fundraising plan, identified potential donors or sponsors, and acquired the skills and confidence to effectively raise funds for forest conservation projects.
-</p>
-<p className='am-content'>Remember, every contribution counts, and your efforts will directly contribute to the success of our collective mission. Together, we can make a significant impact and secure the necessary resources to conserve and regenerate our precious forests.
-Get ready to unleash your fundraising potential and become a passionate advocate for financial support in our quest for a greener, healthier, and more sustainable future.</p>
-<p className='date-and-timeline'>Rewards & Benefits:</p>
-<ul className='topics'>
-  <li>Get goodies like eco- friendly stationery , T-shirts and water bottle</li>
-  <li>Get access to some of the most beautiful nature camps</li>
-  <li>Get a certificate and badge as India’s Young Forest Ambassador</li>
-  <li>The top 20 students get a free trip and nature trek to one of our forest sites </li>
-  <li>Be a part of India’s youth task force on Ecosystem Restoration and connect with the UN Youth Task force</li>
-  <li>Become a young influencer for climate action and regeneration</li>
-</ul> */}
-
-
-
-
-
-      {/* <div className='info-strip'>
-        <img src={infostrip} style={{ width: '100%', height: 'auto' }}></img>
-      </div> */}
-
-      {/* <div className='overview'>
-  <h1>PROGRAM OVERVIEW:</h1>
-  <p>BuzzOnEarth and India MUN, in collaboration with the UN Decade on Ecosystem Restoration (UNEP + FAO) and United Nations Framework Convention on Climate Change (UNFCCC), is proud to introduce India's Young Forest Ambassador Program (IYFA) . This program aims to empower young individuals to become ambassadors of change in their communities, specifically in the realm of environmental conservation and ecological restoration.</p>
-  <p>Gain a deep understanding of environmental issues and the tools to take effective action. As ambassadors you
- will be empowered to drive positive change within your communities and inspire others to join the cause of environmental stewardship.</p>
-<p>A life-changing opportunity to become catalysts for change, leaving a positive impact on your communities and the environment.</p>
-</div> */}
-
-      <div className="ylp_line">
+      {/* <div className="ylp_line">
         <p>We believe in unlocking the boundless potential within every young person. Our flagship initiative, the Youth Leadership Program, is not just a program; it's a transformative journey designed to empower young leaders with the skills, mindset, and purpose needed to shape a better future</p>
-      </div>
+      </div> */}
 
 
       <h1 className='proover'>PROGRAM OVERVIEW:</h1>
 
-      {/* <div className='pro-strip'>
-        <div className='img-item'>
-          <img src={pic1}></img>
-        </div>
-        <div className='img-item'>
-          <img src={pic2}></img>
-        </div>
-        <div className='img-item'>
-          <img src={pic3}></img>
-        </div>
-        <div className='img-item'>
-          <img src={pic4}></img>
-        </div>
-        <div className='img-item'>
-          <img src={pic5}></img>
-        </div>
-      </div> */}
-
-      {/* <div className='grey-text'>BuzzOnEarth Youth and India MUN, in collaboration with the UN Decade on Ecosystem Restoration (UNEP + FAO), is proud to introduce India's Young Forest Ambassador Program (IYFA), where passion meets purpose.
-      </div> */}
-
-      {/* <div className='text1'>
-        Our compelling vision is to grow
-      </div>
-      <div className='text2'>
-        1 Million hectares of forests,
-      </div>
-      <div className='text3'>
-        Restore ecosystems, and leave a lasting legacy for future generations.
+      <div className='ylpa-overview-container'>
+        <p className="ylpa-overview-text-1">The entrepreneurial ecosystem needs young minds who bring a different mindset and learnings.</p>
+        <p className="ylpa-overview-text-2">We believe in unlocking the boundless potential within every young person. Our flagship initiative, the Youth Leadership Program, is not just a program; it's a transformative journey designed to empower young leaders with the skills, mindset, and purpose needed to shape a better future.</p>
       </div>
 
-      <div className='grey-text'>As a Young Forest Ambassador, you'll become a change-maker, igniting your passion for nature and championing the importance of forests. Through hands-on experiences, educational workshops, and meaningful conservation projects, you'll develop the skills and knowledge needed to create positive change.
-      </div>
-      <div className='grey-text'>AJoin our community of like-minded young leaders, united in our mission to protect and restore the wonders of our natural world.</div>
-      <div className='grey-text'> Together, let's create a world where nature thrives and future generations flourish.</div>
-
-
-      <div className='prakriti'>
-        <img src={prakritidp} style={{ width: '100%', height: 'auto' }} ></img>
-      </div> */}
-
-
-
-      {/* <h1 className='high-head'>PROGRAM HIGHLIGHTS:</h1>
-      <div className='pro-heig'>
-        <div className='pro-item'>
-          <p><i class="fa-solid fa-video fa-2xl"></i><i class="fa-solid fa-video fa-lg"></i></p>
-          <p className='pro-head'>Pre-Recorded</p>
-          <p className='pro-des'>Video Lectures from UN Decade ON
-            Ecosystem Restoration.
-          </p>
-        </div>
-        <div className='pro-item'>
-          <p><i class="fa-solid fa-list fa-2xl"></i><i class="fa-solid fa-list fa-lg"></i></p>
-          <p className='pro-head'>Modules</p>
-          <p className='pro-des'>4 Introduction Modules And 1 Activity module
-          </p>
-        </div>
-        <div className='pro-item'>
-          <p><i class="fa-solid fa-tree fa-2xl"></i><i class="fa-solid fa-tree fa-lg"></i></p>
-          <p className='pro-head'> Nature trek
-            Fully Sponsored</p>
-          <p className='pro-des'>top 5 performing participants
-          </p>
-        </div>
-        <div className='pro-item'>
-          <p><i class="fa-solid fa-award fa-2xl"></i><i class="fa-solid fa-award fa-lg"></i></p>
-          <p><i class="fa-duotone fa-file-certificate"></i></p>
-          <p className='pro-head'>Certificate of Recognition</p>
-          <p className='pro-des'>that acknowledges your commitment and contribution to environment conservation
-          </p>
-        </div>
-        <div className='pro-item'>
-          <p><i class="fa-solid fa-people-group fa-2xl"></i><i class="fa-solid fa-people-group fa-lg"></i></p>
-          <p className='pro-head'>Global Networking Opportunities</p>
-          <p className='pro-des'>be the part of the Global UN community of #GenerationRestoration
-          </p>
-        </div>
-        <div className='pro-item'>
-          <i class="fa-solid fa-sheet-plastic fa-2xl"></i>
-          <i class="fa-solid fa-sheet-plastic fa-lg"></i>
-          <p className='pro-head'>Internship Opportunities</p>
-          <p className='pro-des'>with Gaia The Earth Foundation, a partner af the UN Decade on Ecosystem Restoration.
-          </p>
-        </div>
-      </div> */}
-
-      {/* <div className='am-go'>
-        <div className='pro-item'>
-          <i class="fa-solid fa-hand-holding-heart fa-2xl"></i>
-          <i class="fa-solid fa-hand-holding-heart fa-lg"></i>
-          <p className='pro-head'>Amazing Goodies</p>
-          <p className='pro-des'>Get eco-friendly stationery and a T-shirts on successfully completing the program
-          </p>
-        </div>
-        <div className='pro-item'>
-          <i class="fa-solid fa-globe fa-2xl"></i>
-          <i class="fa-solid fa-globe fa-lg"></i>
-          <p className='pro-head'>Global Recognition</p>
-          <p className='pro-des'>get featured in publications  & websites and Social Media handles
-          </p>
-        </div>
-      </div> */}
 
       <div className="am-go"></div>
 
-      <h1 className='high-head'>KEY TOPICS YOU WILL LEARN IN THIS PROGRAMME</h1>
+
+      <h1 className='high-head'>KEY TOPICS YOU WILL LEARN IN THIS PROGRAM</h1>
       <div className='key-ler'>
         <div className='key-item'>
-          <p>Effective Communication</p>
+          <p>Self-Awareness and Emotional Intelligence</p>
         </div>
         <div className='key-item'>
-          <p>Personal Growth</p>
+          <p>Goal Setting and Time Management</p>
         </div>
         <div className='key-item'>
-          <p>Sustainable Leadership</p>
+          <p>Effective Communication Skills</p>
         </div>
         <div className='key-item'>
-          <p>Goal Setting & Holistic Development</p>
+          <p>Team Dynamics and Collaboration</p>
         </div>
         <div className='key-item'>
-          <p>Public Speaking & Network Building</p>
+          <p>Conflict Resolution and Negotiation</p>
+        </div>
+        <div className='key-item'>
+          <p>Critical Thinking and Problem Solving</p>
+        </div>
+        <div className='key-item'>
+          <p>Ethical Leadership</p>
+        </div>
+        <div className='key-item'>
+          <p>Risk-Taking and Resilience</p>
+        </div>
+        <div className='key-item'>
+          <p>Leadership in Action</p>
         </div>
       </div>
 
@@ -473,123 +360,58 @@ Get ready to unleash your fundraising potential and become a passionate advocate
       {/* <p className='intro-am'>Introduction Module: India's Young Forest Ambassador Program</p> */}
       <div className='mod_item_div'>
         <div className='mod_item_div1'>
-          <p className='mod-item'><span>Module 1: Self-Discovery and Purpose Clarity</span><i onClick={handlemodule1} class="fa-solid fa-chevron-down fa-2xl"></i><i onClick={handlemodule1} class="fa-solid fa-chevron-down fa-lg"></i></p>
+          <p className='mod-item' onClick={handlemodule1}><span>Module 1: Self-Discovery and Purpose Clarity</span><i onClick={handlemodule1} class="fa-solid fa-chevron-down fa-2xl"></i><i class="fa-solid fa-chevron-down fa-lg"></i></p>
           {mod1 && <p className='mod-item1'>Discover your unique strengths, values, and purpose. <br />
             Craft a personal mission statement that aligns with your aspirations. </p>}
         </div>
 
         <div className='mod_item_div1'>
-          <p className='mod-item'><span>Module 2: Emotional Intelligence and Self-Mastery</span><i onClick={handlemodule2} class="fa-solid fa-chevron-down fa-2xl"></i><i onClick={handlemodule2} class="fa-solid fa-chevron-down fa-lg"></i></p>
+          <p className='mod-item' onClick={handlemodule2}><span>Module 2: Emotional Intelligence and Self-Mastery</span><i onClick={handlemodule2} class="fa-solid fa-chevron-down fa-2xl"></i><i class="fa-solid fa-chevron-down fa-lg"></i></p>
           {mod2 && <p className='mod-item1'>Develop emotional intelligence for effective leadership. <br /> Master communication and conflict resolution skills.</p>}
         </div>
 
         <div className='mod_item_div1'>
-          <p className='mod-item'><span>Module 3: Goal Setting and Time Management</span><i onClick={handlemodule3} class="fa-solid fa-chevron-down fa-2xl"></i><i onClick={handlemodule3} class="fa-solid fa-chevron-down fa-lg"></i></p>
+          <p className='mod-item' onClick={handlemodule3}><span>Module 3: Goal Setting and Time Management</span><i onClick={handlemodule3} class="fa-solid fa-chevron-down fa-2xl"></i><i class="fa-solid fa-chevron-down fa-lg"></i></p>
           {mod3 && <p className='mod-item1'>Set ambitious yet achievable goals for personal and professional growth. <br /> Master time management and overcome procrastination </p>}
         </div>
 
         <div className='mod_item_div1'>
-          <p className='mod-item'><span>Module 4: Leveraging Technology for leadership</span><i onClick={handlemodule4} class="fa-solid fa-chevron-down fa-2xl"></i><i onClick={handlemodule4} class="fa-solid fa-chevron-down fa-lg"></i></p>
-          {mod4 && <p className='mod-item1'>AI- powered leadership revolution redefining the way we work, communicate and live. <br /> Data driven decision making, continuous learning, innovation and adaptation.</p>}
+          <p className='mod-item' onClick={handlemodule4}><span>Module 4: Leveraging Technology for leadership</span><i onClick={handlemodule4} class="fa-solid fa-chevron-down fa-2xl"></i><i class="fa-solid fa-chevron-down fa-lg"></i></p>
+          {mod4 && <p className='mod-item1'>Leverage technology (including AI) to redefine the way we lead, work, communicate and live. <br /> Data backed decision making, continuous learning, innovation and adaptation.</p>}
         </div>
 
         <div className='mod_item_div1'>
-          <p className='mod-item'><span>Module 5: Sustainability Leadership and Climate Action</span><i onClick={handlemodule5} class="fa-solid fa-chevron-down fa-2xl"></i><i onClick={handlemodule5} class="fa-solid fa-chevron-down fa-lg"></i></p>
-          {mod5 && <p className='mod-item1'>Understand environmental challenges and climate change. <br /> Initiate community projects for positive environmental impact.</p>}
+          <p className='mod-item' onClick={handlemodule5}><span>Module 5: Sustainability Leadership and Climate Action</span><i onClick={handlemodule5} class="fa-solid fa-chevron-down fa-2xl"></i><i class="fa-solid fa-chevron-down fa-lg"></i></p>
+          {mod5 && <p className='mod-item1'>Understand environmental challenges, climate change and SDGs. <br /> Learn to apply sustainability and climate change understanding in your chosen pathways.</p>}
         </div>
 
         <div className='mod_item_div1'>
-          <p className='mod-item'><span>Module 6: Career Development and Networking</span><i onClick={handlemodule6} class="fa-solid fa-chevron-down fa-2xl"></i><i onClick={handlemodule6} class="fa-solid fa-chevron-down fa-lg"></i></p>
-          {mod6 && <p className='mod-item1'>Explore diverse career paths aligned with your passions. <br /> Build a network through effective networking and mentorship.</p>}
+          <p className='mod-item' onClick={handlemodule6}><span>Module 6: Career Development and Networking</span><i onClick={handlemodule6} class="fa-solid fa-chevron-down fa-2xl"></i><i class="fa-solid fa-chevron-down fa-lg"></i></p>
+          {mod6 && <p className='mod-item1'>Explore diverse career paths aligned with your interests and gifts. <br /> Build a network through effective relationships and mentorships.</p>}
         </div>
 
         <div className='mod_item_div1'>
-          <p className='mod-item'><span>Module 7: Capstone Leadership Project and Graduation</span><i onClick={handlemodule7} class="fa-solid fa-chevron-down fa-2xl"></i><i onClick={handlemodule7} class="fa-solid fa-chevron-down fa-lg"></i></p>
-          {mod7 && <p className='mod-item1'>Showcase your leadership journey through a capstone project. <br /> Celebrate your achievements at the graduation ceremony.</p>}
+          <p className='mod-item' onClick={handlemodule7}><span>Module 7: Developing an entrepreneurial mindset</span><i onClick={handlemodule7} class="fa-solid fa-chevron-down fa-2xl"></i><i class="fa-solid fa-chevron-down fa-lg"></i></p>
+          {mod7 && <p className='mod-item1'>Creative thinking and innovative problem-solving for identifying opportunities. <br />
+          Cultivating a resilient mindset that embraces risks while managing expectations.
+          </p>}
+        </div>
+
+        <div className='mod_item_div1'>
+          <p className='mod-item' onClick={handlemodule8}><span>Module 8: Drawing inspiration from nature</span><i onClick={handlemodule8} class="fa-solid fa-chevron-down fa-2xl"></i><i class="fa-solid fa-chevron-down fa-lg"></i></p>
+          {mod8 && <p className='mod-item1'>Learning from nature to lead with adaptability, flexibility and balance. <br />
+            Recognizing the power of collaborative, interconnected leadership for effective outcomes.</p>}
+        </div>
+
+        <div className='mod_item_div1'>
+          <p className='mod-item' onClick={handlemodule9}><span>Module 9: Capstone Leadership Project and Graduation</span><i onClick={handlemodule9} class="fa-solid fa-chevron-down fa-2xl"></i><i class="fa-solid fa-chevron-down fa-lg"></i></p>
+          {mod9 && <p className='mod-item1'>Showcase your leadership journey through a capstone project. <br /> Celebrate your achievements at the graduation ceremony.</p>}
         </div>
 
       </div>
 
+
       <div className="am-go"></div>
-
-
-      {/* <div className='t-main'>
-        <p className='t-note'>Note:</p>
-        <p className='t-note'>The Introduction Module will be followed by interactive workshops, field visits, and mentorship sessions to deepen your knowledge and empower you to make a tangible difference as a Young Forest Ambassador.</p>
-      </div> */}
-
-      {/* <p className='intro-am'>Activity Module: India's Young Forest Ambassador Program</p>
-      <div className='mod_item_div'>
-        <div className='mod_item_div1'>
-          <p className='mod-item_new'><span>Module 5: Fundraising for Forest Conservation</span><i onClick={handlemodule5} class="fa-solid fa-chevron-down fa-2xl"></i><i onClick={handlemodule5} class="fa-solid fa-chevron-down fa-lg"></i></p>
-          {mod5 && <p className='mod-item1'>In Module 5, we will explore the crucial aspect of fundraising to support our collective efforts in forest conservation. As Young Forest Ambassadors, we understand that financial resources are essential to implement impactful projects and initiatives. This module will equip you with the necessary skills and strategies to raise funds effectively.
-            Your invaluable contributions and the resulting funds raised will be utilized for developing forests and restoring ecosystems of nature as part of the national mission - Mission Prakriti to grow 1 million hectares of forest by 2030.</p>}
-        </div>
-      </div> */}
-
-
-
-      {/* 
-
-
-<p className='IYFA'>About IYFA 2023 :</p>
-<p className='Be-india'>Be India’s Young Forest Ambassadors | Live Now | No Cost | Online</p>
-<p className='intro-mod'>All that you need to know about India's Young Forest Ambassador 2023</p>
-<p className='am-content'>BuzzOnEarth and India MUN, in collaboration with the UN Decade on Ecosystem Restoration (UNEP + FAO) and United Nations Framework Convention on Climate Change (UNFCCC), is proud to introduce India's Young Forest Ambassador Program (IYFA) . This program aims to empower young individuals to become ambassadors of change in their communities, specifically in the realm of environmental conservation and ecological restoration.
-</p>
-<p className='date-and-timeline'>Dates And Timelines :</p>
-<ul className='ul-type'>
-  <li>Registrations Open - 1st June 2023 | 10:00 AM</li>
-  <li>Event Starting - 5th June 2023 | 11:59PM</li>
-</ul>
-<p className='date-and-timeline'>Eligibility:</p>
-<p className='am-content'>College students from any field, as long as you are committed to work for Mother Nature, are welcome to participate.
-If you are ready to make a difference in the world and want to meet the best version of yourself, then India's Young Forest Ambassador 2023 is for you! 
-</p>
-<p className='date-and-timeline'>College Track-</p>
-<ul className='topics'>
-  <li>You are eligible for this track if you:</li>
-  <li>You are a college-going student (undergraduate or postgraduate) from any stream in any part of India.</li>
-  <li>You are currently a full-time student</li>
-  <li>You have completed 10+2 schooling or equivalent. </li>
-  <li>You are enrolled in a regular or full-time course, undergraduate (UG) or postgraduate (PG), in a university/college in India</li>
-  <li>You are pursuing courses approved by AICTE or UGC or 1-year management courses by business schools.</li>
-  <li>Your classes have begun for the current academic year. </li>
-</ul>
-<p className='date-and-timeline'>Competition Structure:</p>
-<p className='intro-mod'>1. Complete Module-1 at the earliest:</p>
-<p className='am-content'>We are thrilled to have you join us on this transformative journey of becoming environmental leaders and catalysts for change. This introduction module will provide you with an overview of the program, its objectives, and the incredible opportunities that lie ahead.</p>
-<p className='am-content'>There are 4 sub-modules in this section</p>
-<p className='am-content'>Rules:</p>
-<ul className='topics'>
-  <li>You need to watch the videos mentioned in the course</li>
-  <li>Participate in the quiz and answer the questions based on the video that you watched.</li>
-  <li>Submit the answers at the earliest.</li>
-  <li>Complete all 4 sub-modules. </li>
-</ul>
-<p className='intro-mod'>2. Taking Action: Fundraising for Forest Conservation</p>
-<p className='am-content'>Rules:</p>
-<ul className='topics'>
-  <li>Each student needs to raise a minimum of INR 2000 for the ‘Forest Regeneration cause’.</li>
-  <li>Find 5 subscribers who would subscribe INR 100 per month (annually) for the cause.</li>
-  <li>Students who will complete Rules 1 & 2 will be eligible for Rewards as mentioned in the Rewards and Prizes section (except Rewards 1 & 2).</li>
-  <li>Students who will raise the maximum amount will be declared the Top Performers and will be eligible for the Scholarships and Nature Trip.  </li>
-  <li>The top 5 performers will be eligible for Nature Trip.  </li>
-  <li>The top 10 performers will be eligible for the scholarship. </li>
-</ul>
-<p className='intro-mod'>Sub-Module 5: Fundraising for Forest Conservation</p>
-<p className='am-content'>In Module 5, we will explore the crucial aspect of fundraising to support our collective efforts in forest conservation. As Young Forest Ambassadors, we understand that financial resources are essential to implement impactful projects and initiatives. This module will equip you with the necessary skills and strategies to raise funds effectively.</p>
-<p className='date-and-timeline'>Key Topics Covered:</p>
-<p className='am-content'>
-Explore fundraising techniques, engage donors and sponsors, and emphasise forest conservation's importance. Learn relationship building, effective communication, and transparent reporting for long-term partnerships. Set personal fundraising goals, engage supporters, and utilize social media to inspire contributions. Prioritize ethical practices, accountability, and efficient fund utilization. Develop a comprehensive fundraising plan and secure resources for forest conservation. Unleash your fundraising potential and advocate for a greener future. Guest speakers share insights and success stories.
-</p> */}
-      {/* <p className='date-and-timeline'>Rewards and Prizes for India's Young Forest Ambassador Program (IYFA) for college students:</p> */}
-
-
-
-
-
-
 
 
       <h1 className='high-head'>WHAT YOU WILL GAIN</h1>
@@ -632,22 +454,21 @@ Explore fundraising techniques, engage donors and sponsors, and emphasise forest
           Impact: They apply their skills in a real-world project, gaining confidence and showcasing their ability to drive meaningful change.
         </p>
       </div>
-      {/* <p className='am-content'>Please note that the specific rewards and prizes may vary depending on the program's sponsors, partners, and available resources. Detailed information about rewards and prizes will be provided to the participants during the program.</p> */}
 
 
 
 
-      {/* <h1 className='high-head' style={{ borderTop: '2px solid black' }}>Program Certificate</h1>
+      <h1 className='high-head' style={{ borderTop: '2px solid black' }}>Program Certificate</h1>
       <div className='main-cer'>
         <div className='left-cer'>
-          <p>Upon successfully completing the program within 15 days you will be awarded a certificate of INDIA'S YOUNG FOREST AMBASSADOR from India Model United Nations signed by UN dignitaries.</p>
+          <p>Upon successfully completing the program within 10 days you will be awarded a certificate of Youth Leadership Program  from India Model United Nations signed by UN dignitaries.</p>
           <p><i>Note:</i><br></br><i>All certificate images are for illustrative purposes only and may be subject to change.</i></p>
         </div>
         <div className='right-cer'>
           <img src={tempcertificate} style={{ width: '100%', height: 'auto' }}></img>
         </div>
       </div>
-      <div className='last-strip'>
+      {/* <div className='last-strip'>
         <span>
           <div className='movile'>
             <span>View Guidelines:</span>
@@ -658,141 +479,33 @@ Explore fundraising techniques, engage donors and sponsors, and emphasise forest
           </div>
         </span>{!submitted && <button className='big-enroll main-button' onClick={() => setMod(!mod)}>Enroll NOW</button>}
         {submitted && <span><button className='big-enroll main-button' disabled onClick={() => setMod(!mod)}>Enrolled</button><a href='/event/modules'><button className='big-enroll main-button'>Go to Course</button></a></span>}
+      </div> */}
 
+      <div className="am-go"></div>
+
+      <h2 className="ylp-registeration-heading">We Aspire To Build A World Class School <br /> For Entrepreneurship</h2>
+      <div className="ylp-registeration-container">
+        <h2 className="ylp-registeration-text">Ready To Accelerate Your Scale Journey?</h2>
+        <button className="ylp-registeration-btn" onClick={handleClick}>Enroll Now</button>
+      </div>
+      {/* <div className='ylp-registeration-note'>
+        <p><i>Note:</i><br></br><i>We are delighted to inform you that the Youth Leadership Program (YLP) is scheduled to commence on January 12th, 2024 on National Youth Day. This is a self-paced program, and you will have  access to the program for a duration of six months.  <br /><br />
+
+        Upon successful registration, a confirmation email will be sent to your registered email ID with India MUN. To seamlessly access the program modules, please ensure that you log in using the same email ID on India MUN. The modules will be visible in your India MUN Profile starting from January 12, 2024.</i></p>
       </div> */}
 
 
+      <div className="ylp-discount-container">
+        <h2 className="ylp-discount-heading">India MUN affiliate School Students - 50% discount</h2>
+        <p className="ylp-discount-p">If Your school is affiliated with India MUN , you can avail a 50% discount. As we offer Students from our Affiliated Schools to Unlock a 50% Discount on all Youth Programs – YLP, IYFA, and the India MUN Conference. Please contact your school India MUN coordinator faculty or Principal for the same.</p>
+      </div>
 
 
 
-      {/* <div className='certificate'>
-  <div className='img-cer'><img src={banner}></img></div>
-  <div className='con-cer'>
-    <div>Registrations Open</div>
-    <div>
-        {!submitted && <button onClick={()=>setMod(!mod)}>Enroll NOW</button>}
-        {submitted && <button disabled onClick={()=>setMod(!mod)}>Enrolled</button>} 
-        <div><a href='https://docs.google.com/document/d/14kSRQNqwUzG6-YpA-eNBNkB6-ssiBJeaimc9C3C4A-I/edit?usp=sharing' target={'_blank'}><button>IYFA FAQ'S</button></a></div>
-    </div>
-  </div> */}
-
-
-      {/* {mod && !submitted &&
-        <div className="modal">
-          <div className="modal-content">
-            <div className="model_div">
-              <h2>FILL IN YOUR DETAILS</h2>
-              <button className='model_div_lap' onClick={() => setMod(false)}><i class="fa-solid fa-xmark fa-2xl"></i></button>
-              <button className='model_div_mob' onClick={() => setMod(false)}><i class="fa-solid fa-xmark fa-lg"></i></button>
-            </div>
-            <form onSubmit={handleSubmit}>
-              <div className='form-row'>
-                <label>
-                  <span>Full Name:</span>
-                  <input
-                    type="text"
-                    required
-                    value={st_name}
-                    onChange={(e) => setstName(e.target.value)}
-                  />
-                </label>
-              </div>
-              <div className='form-row'>
-                <label>
-                  <span>College/University Name:</span>
-                  <input
-                    type="text"
-                    required
-                    value={sch_name}
-                    onChange={(e) => setSchname(e.target.value)}
-                  />
-                </label>
-              </div>
-              <div className='form-row'>
-                <label>
-                  <span>Program of Study:</span>
-                  <input
-                    type="text"
-                    required
-                    value={program_of_study}
-                    onChange={(e) => setprogram_of_study(e.target.value)}
-                  />
-                </label>
-              </div>
-              <div className='form-row'>
-                <label>
-                  <span>Year of Study:</span>
-                  <input
-                    type="number"
-                    required
-                    value={classS}
-                    onChange={(e) => setClassS(e.target.value)}
-                  />
-                </label>
-              </div>
-              <div className='form-row'>
-                <label>
-                  <span>State:</span>
-                  <input
-                    type="text"
-                    required
-                    value={stateS}
-                    onChange={(e) => setState(e.target.value)}
-                  />
-                </label>
-              </div>
-              <div className='form-row'>
-                <label>
-                  <span>City:</span>
-                  <input
-                    type="text"
-                    required
-                    value={city}
-                    onChange={(e) => setCity(e.target.value)}
-                  />
-                </label>
-              </div>
-              <div className='form-row'>
-                <label>
-                  <span>Email:</span>
-                  <input
-                    type="email"
-                    required
-                    value={emailS}
-                    onChange={(e) => setEmailS(e.target.value)}
-                  />
-                </label>
-              </div>
-              <div className='form-row'>
-                <label>
-                  <span>Phone No:</span>
-                  <input
-                    type="number"
-                    required
-                    value={phone}
-                    onChange={(e) => setPhone(e.target.value)}
-                  />
-                </label>
-              </div>
-              <div className='submit-div'>
-                <button className='submit_event' type="submit">Submit</button>
-              </div>
-            </form>
-          </div>
-        </div>
-
-
-
-
-
-
-
-      } */}
-
-      <div className="am-go"></div>
+      {/* <div className="am-go"></div>
       <div className="ending-ylp">
         <p><i>Registrations Opening on 6th Dec, 2023</i></p>
-      </div>
+      </div> */}
 
 
 

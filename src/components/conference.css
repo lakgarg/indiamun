@@ -4,16 +4,47 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 50px;
+  gap: 30px;
 }
 .indiamun-logo {
-  width: 10%;
+  width: 8%;
 }
 .conference-heading {
-  font-weight: 900;
+  font-weight: 400;
+  color: rgb(0, 120, 225);
 }
 .conference-p {
   font-size: 20px;
   margin: 0 30px 0 30px;
+  font-weight: 700;
+}
+
+.imcc-hero-img-container {
+  width: 100vw;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.imcc-hero-img-container img{
+  width: 100%;
+}
+
+.imcc-invitation {
+  width: 100vw;
+  background-color: #252524;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-bottom: 30px;
+}
+
+.imcc-invitation p{
+  text-align: center;
+  /* margin: 20px 20px 0 20px; */
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 0;
 }
 
 .registrations-line {
@@ -27,13 +58,6 @@
 	margin: 20px 0 0 0;
 }
 
-.conference-invitation {
-  text-align: center;
-  margin: 20px 20px 0 20px;
-  font-size: 24px;
-  font-weight: 900;
-}
-
 .indiamun-2021-recap {
   width: 100%;
   display: flex;
@@ -42,4 +66,80 @@
 
 .indiamun-2021-recap img {
   width: 100%;
+}
+
+.imcc-registeration-heading {
+  font-family: anton;
+	padding: 0 20px 5px 20px;
+  margin-top: 50px;
+  margin-bottom: 0;
+  font-size: 2.5rem;
+  font-style: italic;
+}
+
+.imcc-registeration-container {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  /* gap: 30px; */
+}
+
+.imcc-registeration-text {
+  font-weight: 600;
+  color: rgb(0, 120, 225);
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+}
+
+.more-than-an-event {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.imcc-registeration-btn {
+  padding: 5px;
+	padding-right: 25px;
+	padding-left: 25px;
+	border: none;
+	font-weight: 700;
+	border-radius: 10px;
+	background-color: rgb(0, 120, 225);
+	color: #fff;
+  font-size: 1.2rem;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .indiamun-logo {
+    width: 20%;
+  }
+  .high-head {
+    font-size: 40px;
+  }
+  .imcc-invitation {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .imcc-invitation p{
+    font-size: 18px;
+  }
+  .imcc-registeration-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* Ipad */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .high-head {
+    font-size: 40px;
+  }
+  .imcc-invitation {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }

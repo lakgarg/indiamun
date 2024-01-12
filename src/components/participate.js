@@ -84,28 +84,40 @@ export default function Participate() {
       <div className='participate'>
         <div className='participate-item'>
           <img src={p1}></img>
-          <a href='/events'><button>IYFA Season 1</button></a>
-          <p>Live Now</p>
+          <a href='/events'><button>Registrations Open</button></a>
+          <p>
+            Program Fee: <strike>₹1000</strike> <br />
+            ₹500
+          </p>
         </div>
         <div className='participate-item'>
           <img src={p2}></img>
-          <a href='/ylpa'><button >Registrations Opening on</button></a>
-          <p>1st Dec, 2023</p>
+          <a href='/ylpa'><button >Registrations Open</button></a>
+          <p>
+            Program Fee: <strike>₹4000</strike> <br />
+            ₹2500
+          </p>
         </div>
         <div className='participate-item'>
           <img src={p3}></img>
-          <a href='/conference'><button >(April 24th, 2024)</button></a>
-          <p>Annual Conference 2024</p>
+          <a href='/conference'><button >Registrations Open</button></a>
+          <p>
+            Program Fee: <strike>₹1400</strike> <br />
+            ₹700
+          </p>
         </div>
         <div className='participate-item'>
           <img src={p4}></img>
           <a target='_blank' href='https://buzzonearth-climatehackathon.in/'><button>Season 1 Concluded</button></a>
-          <p>Season 2 Coming Soon</p>
+          <p>
+            Season 2  <br />
+            Coming Soon
+          </p>
         </div>
         <div className='participate-item'>
           <img src={p5}></img>
-          <button onClick={() => handleClick1(targetRef5)}>Reel Making Competition</button>
-          <p>Live Now</p>
+          <button onClick={() => handleClick1(targetRef5)}>Competitions</button>
+          <p>Coming <br />Soon </p> 
         </div>
       </div>
       <p className='Participate-head'>The Next Generation of Leaders</p>
@@ -141,8 +153,8 @@ export default function Participate() {
           <p>Given the need to restore our degraded lands and forest ecosystems India needs to build a youth-led initiative to fund on ground regenerative action that will have enormous ecological and social impact. </p>
           <img src={forestam} ></img>
           <div className='reg_school_clg_fa'>
-            <span>Season 1 Live</span>
-            <a href='/events'><button className='lm-btn'>Learn More</button></a>
+            <span>Registrations Open</span>
+            <a href='/events'><button className='lm-btn'>Enroll Now</button></a>
             {/* <a><button onClick={handleSignIN} >Colleges</button></a> */}
           </div>
         </div>
@@ -244,8 +256,8 @@ Get ready to unleash your fundraising potential and become a passionate advocate
           <div className='ylp-right'><img src={ylpright}></img></div>
         </div>
         <div className="reg-info">
-          <h2>Registrations Opening on 1st Dec, 2023</h2>
-          <button>Learn More</button>
+          <h2>Registrations Open</h2>
+          <a href="/ylpa"><button>Enroll Now</button></a>
         </div>
       </div>
       {/* <div className='ylp-school-pic'> */}
@@ -286,14 +298,14 @@ Get ready to unleash your fundraising potential and become a passionate advocate
         <h1>STEP UP YOUTH'S GOT TALENT</h1>
         {/* <p>(Coming Soon)</p> */}
       </div>
-      <p className='youth_p'>Step Up Youth's Got Talent is an initiative to bridge the gap between awareness and action. The programme focuses on the holistic development of the students, inculcating in them various skills ranging from graphic designing and video editing to public speaking and management. Insightful work done by any student shall be featured on our websites and social media handles. Learners of the programme will also be given the opportunity for cash prizes and various awards.</p>
+      <p className='youth_p'>Step Up Youth's Got Talent is an initiative to bridge the gap between awareness and action. The program focuses on the holistic development of the students, inculcating in them various skills ranging from graphic designing and video editing to public speaking and management. Insightful work done by any student shall be featured on our websites and social media handles. Learners of the program will also be given the opportunity for cash prizes and various awards.</p>
       <div className='youth_img'>
         <img src={step1} alt="" />
         <img src={step2} alt="" />
       </div>
       <div className="reg-info">
-        <h2>Reel Making (Reel it in!!) Competition live</h2>
-        <button>Learn More</button>
+        <h2>Competitions (Coming Soon)</h2>
+        {/* <button>Coming Soon</button> */}
       </div>
 
 
@@ -302,7 +314,7 @@ Get ready to unleash your fundraising potential and become a passionate advocate
       <div className='youth_full' ref={targetRef3}>
         <div className='youth_got_talent'>
           <h1>INDIA MUN CLIMATE CONFERENCE</h1>
-          <p>(Dec 21st-24th, 2023)</p>
+          <p>(April 24, 2024)</p>
         </div>
         <div className='cli-conf'>
           <div className='cli-conf1'>
@@ -314,8 +326,8 @@ Get ready to unleash your fundraising potential and become a passionate advocate
           </div>
         </div>
         <div className="reg-info">
-          <h2>India MUN Climate Conference 2024 (Annual Event)</h2>
-          <button>Learn More</button>
+          <h2>India MUN Climate Conference (Registrations Open)</h2>
+          <a href="/conference"><button>Enroll Now</button></a>
         </div>
       </div>
 

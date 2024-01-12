@@ -280,6 +280,8 @@ input {
 	padding-left: 40px;
 }
 .mod-item {
+	user-select: none;
+	cursor: pointer;
 	text-align: left;
 
 	/* padding-right: 40px;
@@ -489,7 +491,7 @@ input {
 		font-size: 20px;
 	}
 	.info-strip img {
-		content: url(./images/mun/phone\ strip.webp);
+		content: url(./images/iyfa/IYFA\ mob\ banner.webp);
 	}
 	.overview h1 {
 		font-size: 30px;

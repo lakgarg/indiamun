@@ -11,7 +11,7 @@ import './events.css'
 import Footer from './footer'
 import { projectAuth, projectFirestore, storeRegisteredUsersIYFAInfo } from './firebase/config'
 import { useParams } from 'react-router-dom'
-import infostrip from './images/mun/strip desk.webp'
+import infostrip from './images/iyfa/IYFA desk banner.webp'
 import tempcertificate from './images/newimages/template Certificate.webp'
 import { useNavigate } from 'react-router-dom';
 import pic1 from './images/pics/1.webp'
@@ -19,6 +19,7 @@ import pic2 from './images/pics/2.webp'
 import pic3 from './images/pics/3.webp'
 import pic4 from './images/pics/5.webp'
 import pic5 from './images/pics/4.webp'
+import IYFA_Main_Image from './images/iyfa/IYFA image .webp'
 import prakritidp from './images/pics/pc.webp'
 import { firebaseAuth, firebaseT, storeUserInfo } from './firebase/config';
 import { useLogin } from './hooks/useLogin';
@@ -98,131 +99,93 @@ export default function Events() {
     setMod4(false);
   }
 
-  function generateOrderId() {
-    // Use a prefix (optional) and add a timestamp to make the order ID more unique
-    const prefix = 'ORD';
-    const timestamp = Date.now();
+  // function generateOrderId() {
+  //   // Use a prefix (optional) and add a timestamp to make the order ID more unique
+  //   const prefix = 'ORD';
+  //   const timestamp = Date.now();
 
-    // Generate a random number or use another unique identifier (such as user ID)
-    const uniqueId = Math.floor(Math.random() * 1000000);
+  //   // Generate a random number or use another unique identifier (such as user ID)
+  //   const uniqueId = Math.floor(Math.random() * 1000000);
 
-    // Combine all parts to create the final order ID
-    const orderId = `${prefix}_${timestamp}_${uniqueId}`;
+  //   // Combine all parts to create the final order ID
+  //   const orderId = `${prefix}_${timestamp}_${uniqueId}`;
 
-    return orderId;
-  }
+  //   return orderId;
+  // }
 
-  const [paymentError, setPaymentError] = useState(null);
+  // const [paymentError, setPaymentError] = useState(null);
 
 
-  const razorpay = new Razorpay({
-    key_id: 'rzp_live_H30xpgmxzhTAaN',
-    key_secret: 'RNg0ePo0yxJC42Gbk6LHGCZs',
-  });
+  // const razorpay = new Razorpay({
+  //   key_id: 'rzp_live_H30xpgmxzhTAaN',
+  //   key_secret: 'RNg0ePo0yxJC42Gbk6LHGCZs',
+  // });
 
-  const [orderId, setOrderId] = useState(null);
-  const [paymentId, setPaymentId] = useState(null);
+  // const [orderId, setOrderId] = useState(null);
+  // const [paymentId, setPaymentId] = useState(null);
 
-  const handlePayment = async () => {
-    try {
-      const razorpayKey = 'rzp_live_H30xpgmxzhTAaN';
+  // const handlePayment = async () => {
+  //   try {
+  //     const razorpayKey = 'rzp_live_H30xpgmxzhTAaN';
 
-      // Initialize Razorpay on the client side
-      const options = {
-        key: razorpayKey,
-        amount: 100, // Amount in paise
-        currency: 'INR',
-        order_id: orderId,
-        name: 'INDIA MUN',
-        description: 'IYFA Course',
-        callback_url: "https://indiamun.org/after_payment",
-        prefill: {
-          name: "", 
-          email: "",  
-          contact: ""
-        },
-        notes: {
-          address: 'Razorpay Corporate Office',
-        },
-        theme: {
-          color: '#121212',
-        },
-      };
+  //     // Initialize Razorpay on the client side
+  //     const options = {
+  //       key: razorpayKey,
+  //       amount: 100, // Amount in paise
+  //       currency: 'INR',
+  //       order_id: orderId,
+  //       name: 'INDIA MUN',
+  //       description: 'IYFA Course',
+  //       callback_url: "https://indiamun.org/after_payment",
+  //       prefill: {
+  //         name: "",
+  //         email: "",
+  //         contact: ""
+  //       },
+  //       notes: {
+  //         address: 'Razorpay Corporate Office',
+  //       },
+  //       theme: {
+  //         color: '#121212',
+  //       },
+  //     };
 
-      const rzp = new window.Razorpay(options);
-      rzp.open();
-      
-    } catch (error) {
-      console.error('Error handling payment:', error);
-    }
-  };
+  //     const rzp = new window.Razorpay(options);
+  //     rzp.open();
 
-  const userlogin = async (e) => {
-    try {
-      await signInWithGoogle();
-  
-      // Listen for changes in the authentication state
-      firebaseAuth.onAuthStateChanged((user) => {
-        if (user) {
-          // Access user information
-          const { uid, displayName, email } = user;
-  
-          // Store user information in Firestore
-          storeUserInfo(uid, displayName, email);
-  
-          // Now you can do other actions after sign-in and data storage
-          // For example, you can navigate to a different page using React Router
-          // history.push('/events');
-        } else {
-          console.log('User not found!');
-        }
-      });
-  
-    } catch (err) {
-      console.log(err);
-    }
-  };
+  //   } catch (error) {
+  //     console.error('Error handling payment:', error);
+  //   }
+  // };
 
-  const handleClick = async () => {
-    if (!user) {
-      try {
-        await signInWithGoogle();
+  // const userlogin = async (e) => {
+  //   try {
+  //     await signInWithGoogle();
 
-        // Listen for changes in the authentication state
-        firebaseAuth.onAuthStateChanged((user) => {
-          if (user) {
-            // Access user information
-            const { uid, displayName, email } = user;
+  //     // Listen for changes in the authentication state
+  //     firebaseAuth.onAuthStateChanged((user) => {
+  //       if (user) {
+  //         // Access user information
+  //         const { uid, displayName, email } = user;
 
-            // Store user information in Firestore
-            storeRegisteredUsersIYFAInfo(uid, displayName, email);
+  //         // Store user information in Firestore
+  //         storeUserInfo(uid, displayName, email);
 
-            // history.push('/events');
-          } else {
-            console.log('User not found!');
-          }
-        });
-      } catch (err) {
-        console.log(err);
-      }
-      try {
-        userlogin()
-        handlePayment()
-      } catch (error) {
-        console.log(error);
-      }
-    } else {
-      try {
-        userlogin()
-        handlePayment()
-      } catch (error) {
-        console.log(error);
-      }
+  //         // Now you can do other actions after sign-in and data storage
+  //         // For example, you can navigate to a different page using React Router
+  //         // history.push('/events');
+  //       } else {
+  //         console.log('User not found!');
+  //       }
+  //     });
 
-    }
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // };
 
-  }
-  
+
+
 
 
 
@@ -268,6 +231,54 @@ export default function Events() {
   // }, []);
 
 
+  const goToRazorpayPayment = () => {
+    const url = 'https://rzp.io/l/DUH6H90';
+
+    // Open the URL in a new tab
+    window.open(url, '_blank');
+  }
+
+  const handleClick = async () => {
+    if (!user) {
+      try {
+        await signInWithGoogle();
+
+        // Listen for changes in the authentication state
+        firebaseAuth.onAuthStateChanged((user) => {
+          if (user) {
+            // Access user information
+            const { uid, displayName, email } = user;
+
+            // Store user information in Firestore
+            storeRegisteredUsersIYFAInfo(uid, displayName, email);
+
+            // history.push('/events');
+          } else {
+            console.log('User not found!');
+          }
+        });
+      } catch (err) {
+        console.log(err);
+      }
+      try {
+        // userlogin()
+        goToRazorpayPayment()
+      } catch (error) {
+        console.log(error);
+      }
+    } else {
+      try {
+        // userlogin()
+        const { uid, displayName, email } = user;
+        storeRegisteredUsersIYFAInfo(uid, displayName, email);
+        goToRazorpayPayment()
+      } catch (error) {
+        console.log(error);
+      }
+
+    }
+
+  }
 
 
   // get data from firebase
@@ -345,11 +356,11 @@ export default function Events() {
       <p className='con-mind2'>Given the need to restore our degraded lands and forest ecosystems India needs to build a youth-led initiative to fund on ground regenerative action that will have enormous ecological and social impact. </p>
 
       <div className='forest-am2'>
-        <div className='forest_img'>
+        {/* <div className='forest_img'>
           <a href='https://gaiatheearthfoundation.org/' target={'_blank'}><button>SEE OUR WORK AREA</button></a>
-        </div>
+        </div> */}
         <div className='forestam'>
-          <img src={forestam} ></img>
+          <img src={IYFA_Main_Image} ></img>
         </div>
       </div>
 
@@ -669,11 +680,11 @@ Explore fundraising techniques, engage donors and sponsors, and emphasise forest
 
 
       <h1 className='high-head'>Rewards and Prizes</h1>
-      <p className='sub-mod'>(for India's Young Forest Ambassador Program for college students)</p>
+      <p className='sub-mod'>(for India's Young Forest Ambassador Program for School students)</p>
       <div className='com-perk-eli2'>
         <p><span className='perk-head'>Fully Sponsored Nature Trek:<br></br>  </span> The top 5 performing participants will be chosen for a fully sponsored Nature Camp trip in India. This exciting opportunity allows participants to immerse themselves in nature, experience forest life, trekking in the woods, night camp, learn wildlife photography, and be one with the forest.
         </p>
-        <p><span className='perk-head'>Scholarships:<br></br> </span> Top 10 outstanding participants who demonstrate exceptional dedication, innovation, and leadership throughout the program may have the opportunity to receive scholarships or grants to support your further studies or environmental initiatives.</p>
+        {/* <p><span className='perk-head'>Scholarships:<br></br> </span> Top 10 outstanding participants who demonstrate exceptional dedication, innovation, and leadership throughout the program may have the opportunity to receive scholarships or grants to support your further studies or environmental initiatives.</p> */}
         <p><span className='perk-head'>Certificate of Recognition:<br></br> </span> All participants who successfully complete the IYFA program will receive a certificate of recognition as a Young Forest Ambassador. This certificate acknowledges your commitment and contribution to environmental conservation and will be a valuable addition to your academic and professional portfolios.</p>
         <p><span className='perk-head'>Internship Opportunities:<br></br> </span> Select participants may be eligible for internship opportunities with Gaia The Earth Foundation, a partner of the UN Decade on Ecosystem Restoration.</p>
         <p><span className='perk-head'>Global Recognition:<br></br> </span> Your active engagement and impactful initiatives may be featured in publications, websites, and social media platforms, showcasing their commitment to environmental stewardship. </p>
@@ -709,8 +720,8 @@ Explore fundraising techniques, engage donors and sponsors, and emphasise forest
             </a>
           </div>
         </span>
-        {!submitted && <button className='big-enroll main-button' onClick={() => setMod(!mod)}>Enroll NOW</button>}
-        {submitted && <button className='big-enroll main-button' onClick={handleClick}>Payment</button>}
+        {!submitted && <button className='big-enroll main-button' onClick={handleClick}>Enroll NOW</button>}
+        {/* {submitted && <button className='big-enroll main-button' onClick={handleClick}>Payment</button>} */}
         {/* {submitted && <span><button className='big-enroll main-button' disabled onClick={() => setMod(!mod)}>Enrolled</button><a href='/event/modules'><button className='big-enroll main-button'>Go to Course</button></a></span>} */}
       </div>
 
@@ -730,7 +741,7 @@ Explore fundraising techniques, engage donors and sponsors, and emphasise forest
   </div> */}
 
 
-      {mod && !submitted &&
+      {/* {mod && !submitted &&
         <div className="modal">
           <div className="modal-content">
             <div className="model_div">
@@ -822,13 +833,16 @@ Explore fundraising techniques, engage donors and sponsors, and emphasise forest
             </form>
           </div>
         </div>
-      }
+      } */}
+
+
+      <div className="ylp-discount-container">
+        <h2 className="ylp-discount-heading">India MUN affiliate School Students - 50% discount</h2>
+        <p className="ylp-discount-p">If Your school is affiliated with India MUN , you can avail a 50% discount. As we offer Students from our Affiliated Schools to Unlock a 50% Discount on all Youth Programs – YLP, IYFA, and the India MUN Conference. Please contact your school India MUN coordinator faculty or Principal for the same.</p>
+      </div>
 
 
 
-
-
-      {/* </div> */}
       <Footer />
     </>
   )

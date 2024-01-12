@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap"); */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
 body {
 	overflow-x: hidden;
 }
@@ -410,9 +412,12 @@ body {
 	color: #fff;
 	margin-bottom: 15px;
 }
+.annual-conference-logo {
+	width: 100px;
+}
 .con_div {
 	margin-top: 20px;
-	background-image: url("./images/INDIAMUN/bg.png");
+	/* background-image: url("./images/INDIAMUN/bg.png"); */
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -725,6 +730,7 @@ body {
 }
 .twitter_feed {
 	margin-bottom: 40px;
+	max-width: 100vw;
 }
 .twitter_feed p {
 	font-family: "Quicksand";
@@ -984,8 +990,8 @@ body {
 	font-weight: 700;
 }
 .reg_open {
-	font-size: 20px;
-	font-weight: 600;
+	font-size: 16px;
+	font-weight: 400;
 	/* animation: flicker 0.6s infinite; */
 	padding-bottom: 5px;
 }
@@ -1085,6 +1091,10 @@ body {
 		min-width: none; */
 	}
 
+	.twitter_feed {
+		display: none;
+	}
+
 	/* .youtube_gal {
 		display: flex;
 		flex-direction: column;
@@ -1105,6 +1115,9 @@ body {
 }
 
 @media (max-width: 768px) {
+	.twitter_feed {
+		display: none;
+	}
 	.top_comp {
 		padding: 5px 20px;
 	}
@@ -1241,7 +1254,7 @@ body {
 		font-size: 22px;
 	}
 	.text-container p {
-		font-size: 10px;
+		font-size: 20px;
 	}
 	.image-container {
 		width: 80%;
@@ -1452,10 +1465,13 @@ body {
 
 @media screen and (max-width: 576px) {
 	.text-container span {
-		font-size: 15px;
+		font-size: 22px;
+	}
+	.twitter_feed {
+		display: none;
 	}
 	.text-container p {
-		font-size: 7px;
+		font-size: 20px;
 	}
 	.underline-small::after {
 		left: calc(8% - 10%);

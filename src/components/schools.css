@@ -1,5 +1,5 @@
 .head-am2 {
-	font-size: 55px;
+	font-size: 45px;
 	text-align: center;
 	font-family: "Quicksand", sans-serif;
 	color: rgb(43, 143, 66);
@@ -7,11 +7,15 @@
 .part_d1 {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: space-between;
+	padding-left: 30px;
+	padding-right: 30px;
 	align-items: center;
 	padding-top: 15px;
 }
 .part_d1 p {
+	max-width: 99%;
+	overflow: hidden;
 	font-size: 33px;
 	color: rgb(61, 133, 214);
 }
@@ -27,7 +31,10 @@
 	color: white;
 }
 .con-mind2 {
-  margin-left: 20px;
+  /* margin-left: 20px; */
+	padding-left: 30px;
+	padding-right: 30px;
+	text-align: left;
   margin-right: 20px;
 	font-size: 22px;
 	padding-bottom: 5px;
@@ -41,12 +48,13 @@
 }
 .part_d1_ylp {
 	width: 100%;
+	max-width: 95vw;
 	display: flex;
 	flex-direction: row;
 	/* justify-content: space-around; */
 	align-items: start;
 	padding-top: 15px;
-	margin-left: 50px;
+	padding-left: 50px;
 }
 .forest-am2 {
 	display: flex;
@@ -64,8 +72,8 @@
 	align-items: center;
 	justify-content: center;
 }
-.ylp_img {
-	background-image: url("./images/ylp/YLP\ image\ 1\ desk.png");
+/* .ylp_img {
+	background-image: url("./images/ylp/YLP\ image\ 1\ desk.webp");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -74,7 +82,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-}
+} */
 .forest_img button {
 	margin-top: 430px;
 	background-color: black;
@@ -84,15 +92,16 @@
 	font-weight: 600;
 }
 .forestam {
+	width: 100vw;
 	align-items: center;
-	padding: 40px 0 40px 0;
+	padding: 10px 0 10px 0;
 }
 .forestam_ylp {
 	align-items: center;
 	padding: 40px 0 40px 0;
 }
 .forestam img {
-	width: 60%;
+	width: 100%;
 	height: auto;
 }
 .forestam_ylp img {
@@ -151,7 +160,7 @@
 	padding-right: 40px;
 	font-size: 40px;
 	font-weight: 650;
-	text-align: left;
+	text-align: center;
 }
 .text2 {
 	padding-left: 40px;
@@ -160,7 +169,7 @@
 	color: rgb(51, 168, 82);
 	font-weight: 300;
 	font-family: "Anton", sans-serif;
-	text-align: left;
+	text-align: center;
 }
 .text3 {
 	padding-left: 40px;
@@ -168,7 +177,7 @@
 	font-size: 38px;
 	font-weight: 650;
 	margin-bottom: 40px;
-	text-align: left;
+	text-align: center;
 }
 .prakriti {
 	margin-top: 20px;
@@ -190,6 +199,9 @@
 }
 
 @media (max-width: 768px) {
+	.head-am2_ylp {
+		font-size: 40px;
+	}
 	.pro-strip {
 		display: flex;
 		padding-left: 0px;
@@ -206,6 +218,7 @@
 	}
 	.part_d1_ylp {
 		margin-left: 20px;
+		padding-left: 0px;
 	}
 	.forest-am2 {
 		display: flex;
@@ -256,23 +269,30 @@
 	.forest_img {
 		height: 250px;
 	}
-	.ylp_img {
+	/* .ylp_img {
 		height: 250px;
-	}
+	} */
 	.forest_img button {
 		margin-top: 125px;
 		font-size: 20px;
 	}
 	.head-am2 {
-		font-size: 22px;
+		font-size: 20px;
+		text-align: left;
+	}
+	.part_d1 {
+		padding-left: 10px;
+		padding-right: 10px;
 	}
 	.part_d1 p {
 		font-size: 16px;
 	}
 	.con-mind2 {
 		font-size: 12px;
-    margin-left: 10px;
-    margin-right: 10px;
+    /* margin-left: 10px;
+    margin-right: 10px; */
+		padding-left: 10px;
+		padding-right: 10px;
 	}
 	.proover {
 		padding-bottom: 0;
@@ -293,9 +313,9 @@
 		width: 100%;
 		content: url('./images/ylp/YLP\ image\ 2\ \(mobi\).png');
 	}
-	.ylp_img {
+	/* .ylp_img {
 		height: 500px;
-	}
+	} */
 	.forest_img button {
 		margin-top: 300px;
 		font-size: 30px;

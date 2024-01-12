@@ -11,6 +11,10 @@ import buzzi from './images/logos strip/buzzon copy.webp'
 import giaa from './images/logos strip/gaia copy.webp'
 import end_img_about from './images/About/about us 2.webp'
 import Footer from './footer'
+import vision from './images/About/Abouts us desk 1.webp'
+import visionMobile from './images/About/About us mob 1.webp'
+import mission from './images/About/about us desk 2 .webp'
+import missionMobile from './images/About/about us mob 2 (1).webp'
 
 export default function About() {
   return (
@@ -21,31 +25,88 @@ export default function About() {
         <img className='right_img' src={right_img} alt="" />
       </div>
       <Navbar />
+
       <h2 className='ab'>ABOUT INDIA MUN</h2>
-      <p className='ap'><br />
+      <div className="main-about-imgs">
+        <img className='vision-about desktop-img' src={vision} alt="vision" />
+        <img className='mission-about desktop-img' src={mission} alt="mission" />
 
-        Welcome to India MUN, a movement dedicated to uniting and empowering the world's largest youth constituency. It’s a place where every voice matters, and every action counts.
-        <br /><br />
+        {/* Mobile view */}
+        <img className='vision-about mobile-img' src={visionMobile} alt="vision" />
+        <img className='mission-about mobile-img' src={missionMobile} alt="mission" />
+      </div>
 
-        <span className='text-bold ab'>MISSION</span>
-        <br />
-        At the core of India MUN is a mission to transform young minds into dynamic sustainability leaders. We go beyond activism, offering climate-positive programs that empower students to be catalysts for real-world change.
-        <br /><br />
 
-        <span className='text-bold ab'>VISION</span>
-        <br />
-        India MUN envisions a world where every student becomes a powerful force for positive change. Aligned with the UN Decade Climate Action and Ecosystem Restoration, we redefine education to empower youth as architects of a sustainable future.
-        <br /><br />
+      <div className="about-values">
+        <div className="about-values-title-container">
+          <h2 className="about-values-title">Values</h2>
+          <div className="about-values-title-underline"></div>
+        </div>
+        <div className="about-values-points-container">
+          <div className="about-values-point">
+            <div className="about-values-icon">
+              <p><i class="fa-solid fa-people-group" /></p>
+            </div>
+            <div className="about-values-text">
+              <p><span>Youth Empowerment: </span>Placing the empowerment of young individuals at the forefront, encouraging leadership, innovation, and proactive engagement in climate action.</p>
+            </div>
+          </div>
 
-        <span className='text-bold ab'>VALUES</span>
-        <br />
-        <p className="values-text">Youth Empowerment: Placing the empowerment of young individuals at the forefront, encouraging leadership, innovation, and proactive engagement in climate action.</p>
-        <p className="values-text">Sustainability Commitment: Integrating sustainable practices into all aspects of our work, fostering environmental responsibility, and promoting a culture of eco-consciousness.</p>
-        <p className="values-text">Global Collaboration: Prioritizing partnerships and collaborations on a global scale, creating a diverse and inclusive network dedicated to addressing climate challenges collectively.</p>
-        <p className="values-text">Integrity and Transparency: Upholding the highest ethical standards, ensuring transparency in organizational activities, and fostering trust within the community.</p>
-        <p className="values-text">Educational Excellence: Striving for excellence in climate education, providing impactful learning experiences that equip individuals with the knowledge and skills needed for effective climate action.</p>
-        <p className="values-text">Innovation and Adaptability: Encouraging innovative solutions and an adaptive mindset to address evolving challenges in the realm of climate change.</p>
-      </p>
+          <div className="about-values-point">
+            <div className="about-values-icon">
+              <p><i class="fa-solid fa-hand-fist" /></p>
+            </div>
+            <div className="about-values-text">
+              <p><span>Sustainability Commitment: </span>Integrating sustainable practices into all aspects of our work, fostering environmental
+                responsibility, and promoting a culture of eco-consciousness.
+              </p>
+            </div>
+          </div>
+
+          <div className="about-values-point">
+            <div className="about-values-icon">
+              <p><i class="fa-solid fa-globe" /></p>
+            </div>
+            <div className="about-values-text">
+              <p><span>Global Collaboration: </span>Prioritizing partnerships and collaborations on a global scale, creating a diverse and inclusive
+                network dedicated to addressing climate challenges collectively.</p>
+            </div>
+          </div>
+
+          <div className="about-values-point">
+            <div className="about-values-icon">
+              <p><i class="fa-solid fa-heart" /></p>
+            </div>
+            <div className="about-values-text">
+              <p><span>Integrity and Transparency: </span>Upholding the highest ethical standards, ensuring transparency in organizational
+                activities, and fostering trust within the community.</p>
+            </div>
+          </div>
+
+          <div className="about-values-point">
+            <div className="about-values-icon">
+              <p><i class="fa-solid fa-star" /></p>
+            </div>
+            <div className="about-values-text">
+              <p><span>Educational Excellence: </span>Striving for excellence in climate education, providing impactful learning experiences that
+                equip individuals with the knowledge and skills needed for effective climate action.
+              </p>
+            </div>
+          </div>
+
+          <div className="about-values-point">
+            <div className="about-values-icon">
+              <p><i class="fa-solid fa-lightbulb" /></p>
+            </div>
+            <div className="about-values-text">
+              <p><span>Innovation and Adaptability: </span>Encouraging innovative solutions and an adaptive mindset to address evolving
+                challenges in the realm of climate change.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className='read'>
         <p>Join us in creating a legacy of positive change!</p>
       </div>
@@ -71,6 +132,7 @@ export default function About() {
           <p>India's Youth for Climate</p>
         </div>
       </div>
+
       {/* <div className='sus-eco'>
         <h1>Embedding the Youth into the Sustainability Ecosystem</h1>
         <p>India MUN seeks to increase awareness on Sustainable Development Goals (SDGs) and fosters students’ innate creativity and passion for finding innovative solutions to climate change in particular.</p>

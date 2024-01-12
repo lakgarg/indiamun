@@ -43,6 +43,7 @@ import Aff1 from '../components/images/affiliate/Ovais Sarmad.png'
 import Aff2 from '../components/images/affiliate/Suresh prabhu.png'
 import Aff3 from '../components/images/affiliate/Ramananramnathan.png'
 import Aff4 from '../components/images/affiliate/Jagdish seth.png'
+import indiaMunLogo from './images/INDIAMUN/india mun blue logo.png';
 
 import { useNavigate } from 'react-router-dom';
 import { useLogin } from './hooks/useLogin'
@@ -203,12 +204,13 @@ export default function Home() {
 
       <div className="con">
         <div className='con_div'>
+          <img className='annual-conference-logo' src={indiaMunLogo} alt="indiaMunLogo" />
           <h1 className="h-con underline-small">INDIA MUN ANNUAL CONFERENCE </h1>
         </div>
         <div className="p-con-div">
           <p className="p-con">India’s first Model United Nations conference on Climate is a challenging and competitive platform for students to debate and analyse some of the world’s most pressing climate problems. As delegates representing different countries and agencies, students will gain practical insight into the challenges and opportunities posed by the urgent need for more sustainable growth models.</p>
         </div>
-        <div className="f-con"><button className="right-button"><a href='/conference' style={{ textDecoration: 'none', color: 'white' }}>Learn More</a></button></div>
+        <div className="f-con"><button className="right-button"><a href='/conference' style={{ textDecoration: 'none', color: 'white' }}>Enroll Now</a></button></div>
       </div>
 
 
@@ -268,20 +270,20 @@ export default function Home() {
           <div className='ylp-homepage'>
             <h3>YOUTH LEADERSHIP PROGRAM</h3>
             {/* <button className='right-button'>Coming Soon</button> */}
-            <span>Registrations Opening on December 1, 2023</span>
+            <span>Registrations Open!</span>
             <div className='button_div_climate'>
               <div className='button_div_climate1'> 
-                <a href='/ylpa'><button className='ylp-homepage-btn right-button'>Learn More</button></a>
+                <a href='/ylpa'><button className='ylp-homepage-btn right-button'>Enroll Now</button></a>
               </div>
             </div>
             {/* <p style={{padding:'5px',color:'rgb(190, 49, 174)'}}>July 2023</p> */}
           </div>
           <div className='cli_phone'>
             <h3>INDIA'S YOUNG FOREST AMBASSADOR</h3>
-            <p className='reg_open'>IYFA Season 1 LIVE NOW!</p>
+            <p className='reg_open'>Registrations Open!</p>
             <div className='button_div_climate'>
               <div className='button_div_climate1'> 
-                <a href='/events'><button className='right-button'>Learn More</button></a>
+                <a href='/events'><button className='right-button'>Enroll Now</button></a>
               </div>
             </div>
           </div>
@@ -357,7 +359,7 @@ export default function Home() {
 
       <div className="image-card">
         <div className="text-container">
-          <p><span>Join </span>to Combatf climate change.</p>
+          <p><span>Join </span>to Combat climate change.</p>
           <p><span>Create </span>solutions to solve problems that affect the environment.</p>
           <p><span>Network </span>connect with like-minded friends who care about the planet.</p>
           <p><span>Become </span>a  future sustainability leader. </p>
@@ -505,7 +507,7 @@ export default function Home() {
           <div className='news_td'>
             <p className='news_p'>
               <b>India Model United Nations set to unite the Youth towards Climate Action</b></p>
-            <p className='news_pc'>To enable India’s youth of over 356 million and counting to drive the biggest sustainability agenda for a climate-resilient world, our country’s very first pan India Model United Nations (India MUN) is rolling out an extensive 4-day virtual event for students placed across the nation in December. Focusing on climate action-based agenda to sensitize the youth around climate crisis, the programme is backed by the UNFCCC, UNEP, CBSE board, universities, and corporates.
+            <p className='news_pc'>To enable India’s youth of over 356 million and counting to drive the biggest sustainability agenda for a climate-resilient world, our country’s very first pan India Model United Nations (India MUN) is rolling out an extensive 4-day virtual event for students placed across the nation in December. Focusing on climate action-based agenda to sensitize the youth around climate crisis, the program is backed by the UNFCCC, UNEP, CBSE board, universities, and corporates.
             </p>
             <button className='right-button' style={{ marginBottom: '20px' }}><a style={{ textDecoration: 'none', color: 'white' }} href='https://indiaeducationdiary.in/india-model-united-nations-set-to-unite-the-youth-towards-climate-action/' target={'_blank'}>Read More</a></button>
           </div> */}

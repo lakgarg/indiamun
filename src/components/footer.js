@@ -29,13 +29,17 @@ export default function Footer() {
         <h6>Quick Links</h6>
         <ul className="footer-links">
           <li><a href="/">Home</a></li>
-          <li><a href="/about">About Us</a></li>
+          {/* <li><a href="/about">About Us</a></li> */}
           <li><a href="/partners">Partners</a></li>
           <li><a href="/participate">Programs</a></li>
           <li><a href="/affiliates">Affiliate</a></li>
           {/* <li><a href="https://buzzonearth.com/">Blog</a></li> */}
           <li><a href="https://docs.google.com/forms/d/1b0eHt7na2wlxRoL43oCgaG01jSG_XwV64pFI1ULxPWc/viewform?edit_requested=true" target='_blank'>Volunteer</a></li>
           <li><a href="/team">The Team</a></li>
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+          <li><a href="/terms-policy">Terms And Conditions</a></li>
+          <li><a href="/refund-policy">Refund Policy</a></li>
+          <li><a href="/contact-us">Contact Us</a></li>
         </ul>
       </div>
     </div>
