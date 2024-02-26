@@ -15,6 +15,7 @@ import hero from './images/ylp/YLP image 1 desk.webp'
 import hero2 from './images/ylp/YLP desk banner.webp'
 import { useLogin } from './hooks/useLogin';
 import { firebaseAuth, storeRegisteredUsersIYFAInfo, storeRegisteredUsersYLPInfo } from './firebase/config'
+import Cookies from 'js-cookie';
 
 export default function Ylpa() {
   const { user } = useAuthContext()
@@ -28,7 +29,6 @@ export default function Ylpa() {
 
   // firestore me ye data add
   const { addDocument, response } = useFirestore('student_enrollment_young_forest_ambassdor')
-
 
   // modal ke content
   const [st_name, setstName] = useState('')
@@ -89,8 +89,6 @@ export default function Ylpa() {
     }
 
   }
-
-
 
   // module show
   const [mod1, setMod1] = useState(false);
@@ -203,6 +201,27 @@ export default function Ylpa() {
     setMod9(!mod9);
   }
 
+  const [error, setError] = useState('');
+
+  const handleMakeYLPPayment = async () => {
+    try {
+      const token = Cookies.get('token');
+      console.log(`Token: ${token}`)
+      const response = await fetch('/api/v1/payments/payment-ylp', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Cookie': `token=${token}`,
+        },
+      });
+      const data = await response.json();
+      console.log(data);
+      alert(data.message);
+    } catch (error) {
+      console.error('Error:', error);
+      setError('An error occurred, please try again.');
+    }
+  };
 
 
   // useEffect(() => {
@@ -486,7 +505,7 @@ export default function Ylpa() {
       <h2 className="ylp-registeration-heading">We Aspire To Build A World Class School <br /> For Entrepreneurship</h2>
       <div className="ylp-registeration-container">
         <h2 className="ylp-registeration-text">Ready To Accelerate Your Scale Journey?</h2>
-        <button className="ylp-registeration-btn" onClick={handleClick}>Enroll Now</button>
+        <button className="ylp-registeration-btn" onClick={handleMakeYLPPayment}>Enroll Now</button>
       </div>
       {/* <div className='ylp-registeration-note'>
         <p><i>Note:</i><br></br><i>We are delighted to inform you that the Youth Leadership Program (YLP) is scheduled to commence on January 12th, 2024 on National Youth Day. This is a self-paced program, and you will have  access to the program for a duration of six months.  <br /><br />

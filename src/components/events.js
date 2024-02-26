@@ -28,6 +28,7 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore'
 import 'firebase/compat/auth'
 import 'firebase/compat/storage'
+import Cookies from 'js-cookie';
 
 export default function Events() {
   const { user } = useAuthContext()
@@ -307,6 +308,28 @@ export default function Events() {
     setMod(!mod)
 
   };
+
+  const [error, setError] = useState('');
+
+  const handleMakeIYFAPayment = async () => {
+    try {
+      const token = Cookies.get('token'); // Retrieve token from cookies
+      const response = await fetch('http://localhost:5010/api/v1/payments/paymentIYFA', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}` // Include the authorization token
+        }
+      });
+      const data = await response.json();
+      console.log(data);
+      alert(data.message);
+    } catch (error) {
+      console.error('Error:', error);
+      setError('An error occurred, please try again.');
+    }
+  };
+
 
 
   return (

@@ -91,6 +91,7 @@ const Navigation = () => {
                 <Nav.Link className='nav_items' href='/participate'>India MUN Programs</Nav.Link>
                 <Nav.Link className='nav_items' href='/affiliates'>Affiliate Now</Nav.Link>
                 <Nav.Link className='nav_items' href='/partners'>Partners and Affilates</Nav.Link>
+                <Nav.Link className='nav_items' href='/mylearning'>My Learning</Nav.Link>
                 <Nav.Link className='nav_items' href='/conference'>India MUN Climate Conference</Nav.Link>
                 <Nav.Link className='nav_items' href="https://buzzonearth.com/" target={'_blank'} style={{ color: 'white' }}>Blog</Nav.Link>
                 {/* <Nav.Link className='nav_items' href='/team'>The Team</Nav.Link> */}

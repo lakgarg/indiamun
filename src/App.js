@@ -24,6 +24,10 @@ import Privacy_Policy from './components/Privacy_Policy';
 import TandC from './components/TandC';
 import Refund_Policy from './components/Refund_Policy';
 import ContactUs from './components/ContactUs';
+import MyLearning from './components/myLearning';
+import Login from './components/Login';
+import Register from './components/Register';
+import OnDemand from './components/OnDemand';
 const cors = require('cors')({ origin: true });
 
 
@@ -39,13 +43,14 @@ function App() {
         <Route path='/participate' element={<Participate />} />
         {/* <Route path='/join' element={<JoinUs/>}/> */}
         <Route path='/team' element={<Team />} />
+        <Route path='/mylearning' element={<MyLearning />} />
         <Route path='/affiliates' element={<Affiliates />} />
         <Route path='/colleges' element={<Collges />} />
         <Route path='/schools' element={<Schools />} />
         <Route path='/event/modules' element={<Modules />} />
         <Route path='donor' element={<Donor />} />
         <Route path='/events' element={<Events />} />
-        <Route path='/ylpa' element={<Ylpa />} />
+        <Route path='/ylp' element={<Ylpa />} />
         <Route path='/conference' element={<Conference />} />
         <Route path='/privacy-policy' element={<Privacy_Policy />} />
         <Route path='/terms-policy' element={<TandC />} />
@@ -55,6 +60,11 @@ function App() {
         {/* {user && <Route path='/events' element={<Events/>}/>}  */}
         {user && <Route path='/eventSchools' element={<EventsSchools />} />}
         {user && <Route path='/donorSubs' element={<DonorSubs />} />}
+
+        {/* Testing Routes */}
+        <Route path='/login' element={<Login />} /> 
+        <Route path='/register' element={<Register />} /> 
+        <Route path='/ondemand' element={<OnDemand />} /> 
       </Routes>
     </div>
   );
