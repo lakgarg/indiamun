@@ -1,0 +1,41 @@
+.myLearning-main-container {
+
+}
+
+.myLearning-enrolled-courses-heading {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.myLearning-enrolled-courses {
+  
+}
+
+.myLearning-enrolled-courses ul {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-left: 0 !important;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+.myLearning-enrolled-courses ul li{
+  width: 500px;
+}
+
+.ml-main-course-img {
+  width: 100%;
+}
+
+.ml-main-course-info {
+
+}
+
+.ml-main-course-heading {
+
+}
+
+.ml-main-course-p {
+
+}

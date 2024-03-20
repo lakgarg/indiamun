@@ -44,7 +44,6 @@
   background-color: white;
   padding: 60px;
   border-radius: 20px;
-  
 }
 
 .login-semi-1{
@@ -124,4 +123,80 @@
 .login-forgot-password{
   text-decoration: underline;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .login-main-container{
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .login-left-box{
+    margin-top: 0px;
+    width: 80%;
+    padding-left: 10px;
+  }
+
+  .login-heading{
+    font-size: 30px;
+  }  
+
+  .login-img-container{
+    width: 30%;
+  }
+  
+  .login-img-container img{
+    width: 100%;
+  }
+
+  .login-right-box{
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+    background-color: white;
+    padding: 60px;
+    border-radius: 20px;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .login-main-container{
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .login-left-box{
+    margin-top: 0px;
+    width: 80%;
+    padding-left: 100px;
+  }
+
+  .login-heading{
+    font-size: 50px;
+  }  
+
+  .login-img-container{
+    width: 30%;
+  }
+  
+  .login-img-container img{
+    width: 100%;
+  }
+
+  .login-right-box{
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+    background-color: white;
+    padding: 60px;
+    border-radius: 20px;
+  }
 }

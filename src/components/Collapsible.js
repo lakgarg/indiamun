@@ -12,7 +12,7 @@ const Collapsible = (props) => {
 
 	return (
 		<div className="main-container">
-			<button className="Aff-button" onClick={toggle}>{props.label}</button>
+			<button className="Coll-button" onClick={toggle}>{props.label}</button>
 			<div
 				className="content-parent"
 				ref={contentRef}

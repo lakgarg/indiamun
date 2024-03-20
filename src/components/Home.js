@@ -36,6 +36,9 @@ import png11 from './images/logos strip 2/11.png'
 import png12 from './images/logos strip 2/12.png'
 import buzzi from './images/logos strip/buzzon copy.webp'
 import giaa from './images/logos strip/gaia copy.webp'
+import indiaMunChapter from '../components/images/affiliate/india chapter logo.webp'
+import indiaMunNewLogo from '../components/images/affiliate/india MUn new logo.webp'
+import GSCAPlaque from '../components/images/affiliate/GSCA plaque.webp'
 import plaque from './images/INDIAMUN/plaque.png'
 import forestam from './images/About/Forrest-right.webp'
 import Footer from './footer'
@@ -66,6 +69,10 @@ export default function Home() {
   const { login, error, isPending, signInWithGoogle } = useLogin()
   const history = useNavigate()
   const { user } = useAuthContext()
+
+  const handleSendDetailsClick = () => {
+    window.open('https://forms.gle/GVsnHqJ4gKBzGf2H6', '_blank');
+  }
 
   const handleSignIN = async (e) => {
     try {
@@ -154,11 +161,31 @@ export default function Home() {
       </div>
 
       {/* <h1 className='aff'>AFFILIATIONS OPEN</h1> */}
-      <h1 className='aff-black'>AFFILIATE YOUR SCHOOL TODAY</h1>
+      {/* <h1 className='aff-black'>AFFILIATE YOUR SCHOOL TODAY</h1>
 
       <img className='mobile_photo' src='GSCA mobile.webp' width='100%'></img>
       <div className='program_mun_content4'>
         <img src="GSCA.webp" width='100%' alt="" />
+      </div> */}
+      <h1 className='aff-h1-home'>GLOBAL SCHOOLS FOR CLIMATE ACTION</h1>
+      <div className="aff-p-1-container">
+        <p className='aff-p-1'>Building India's largest youth network for climate action, leadership and innovation.</p>
+      </div>
+
+      <div className="aff-hero">
+        <div className="aff-hero-left">
+          <h3 className='aff-hero-subheading'>Registrations open for</h3>
+          <div className="aff-hero-img">
+            <img src={indiaMunChapter} alt="indiaMunChapter" />
+          </div>
+          <h3 className="aff-hero-subheading-2">Want to Affiliate Your School with India MUN?</h3>
+          <button className='aff-hero-btn' onClick={handleSendDetailsClick}>Request a callback</button>
+        </div>
+        <div className="aff-hero-right">
+          <div className="aff-hero-right-img">
+            <img src={GSCAPlaque} alt="GSCAPlaque" />
+          </div>
+        </div>
       </div>
       <div className="custom-bg">
         {/* <div className="my-container">

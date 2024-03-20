@@ -48,7 +48,7 @@ export default function Footer() {
   <div className="container">
     <div className="row">
       <div className="col-md-8 col-sm-6 col-xs-12">
-        <p className="copyright-text">Copyright © 2020 All Rights Reserved by 
+        <p className="copyright-text">Copyright © 2024 All Rights Reserved by 
           <a href="/"> IndiaMUN</a>.
         </p>
       </div>

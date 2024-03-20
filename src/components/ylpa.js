@@ -8,6 +8,7 @@ import { useLogout } from './hooks/useLogout'
 import './events.css'
 import './ylpa.css'
 import Footer from './footer'
+import axios from 'axios'
 import { useParams } from 'react-router-dom'
 import tempcertificate from './images/ylp/YLP certificate (1).webp'
 import { useNavigate } from 'react-router-dom';
@@ -16,6 +17,7 @@ import hero2 from './images/ylp/YLP desk banner.webp'
 import { useLogin } from './hooks/useLogin';
 import { firebaseAuth, storeRegisteredUsersIYFAInfo, storeRegisteredUsersYLPInfo } from './firebase/config'
 import Cookies from 'js-cookie';
+import Razorpay from 'razorpay'
 
 export default function Ylpa() {
   const { user } = useAuthContext()
@@ -203,11 +205,11 @@ export default function Ylpa() {
 
   const [error, setError] = useState('');
 
-  const handleMakeYLPPayment = async () => {
+  const handleMakeYLPPaymentx = async () => {
     try {
       const token = Cookies.get('token');
       console.log(`Token: ${token}`)
-      const response = await fetch('/api/v1/payments/payment-ylp', {
+      const response = await fetch('http://localhost:5010/api/v1/payments/payment-ylp', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -217,6 +219,64 @@ export default function Ylpa() {
       const data = await response.json();
       console.log(data);
       alert(data.message);
+    } catch (error) {
+      console.error('Error:', error);
+      setError('An error occurred, please try again.');
+    }
+  };
+
+  // const handleMakeYLPPaymentx = async(amount) => {
+
+  //   const { data: { key } } = await axios.get("http://localhost:5010/api/v1/payments/razorpay-key") 
+  //   const { data: { order } } = await axios.get("http://localhost:5010/api/v1/payments/checkout")
+
+  //   const options = {
+  //     key,
+  //     amount: 100,
+  //     currency: "INR",
+  //     name: "IndiaMUN",
+  //     description: "Payment for YLP Course",
+  //     order_id: order.id,
+  //     callback_url: "http://localhost:5010/api/v1/payments/paymentverification",
+  //     theme: {
+  //       "color": "#121212"
+  //     },
+  //   }
+  //   const razor = new window.Razorpay(options);
+  //   razor.open()
+  // }
+
+  const handleMakeYLPPayment = async (amount) => {
+    try {
+      const token = localStorage.getItem('token');
+      console.log('Token in Frontend: ', token);
+      const headers = {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`,
+      };
+
+      console.log(headers)
+  
+      const { data: { key } } = await axios.get("http://localhost:5010/api/v1/payments/razorpay-key", { headers });
+      // const { data: { order } } = await axios.post("http://localhost:5010/api/v1/payments/payment-iyfa", { token }, { headers });
+      const { data } = await axios.post("http://localhost:5010/api/v1/payments/payment-iyfa", { token }, { headers });
+  
+      console.log("data:" ,data)
+      
+      const options = {
+        key,
+        amount: 100,
+        currency: "INR",
+        name: "IndiaMUN",
+        description: "Payment for YLP Course",
+        order_id: data.order_id,
+        callback_url: "http://localhost:5010/api/v1/payments/paymentverification",
+        theme: {
+          "color": "#121212"
+        },
+      }
+      const razor = new window.Razorpay(options);
+      razor.open()
     } catch (error) {
       console.error('Error:', error);
       setError('An error occurred, please try again.');
@@ -291,7 +351,6 @@ export default function Ylpa() {
     })
 
     setMod(!mod)
-
   };
 
 
@@ -505,6 +564,7 @@ export default function Ylpa() {
       <h2 className="ylp-registeration-heading">We Aspire To Build A World Class School <br /> For Entrepreneurship</h2>
       <div className="ylp-registeration-container">
         <h2 className="ylp-registeration-text">Ready To Accelerate Your Scale Journey?</h2>
+        {/* <button className="ylp-registeration-btn" onClick={() => handleMakeYLPPayment()}>Enroll Now</button> */}
         <button className="ylp-registeration-btn" onClick={handleMakeYLPPayment}>Enroll Now</button>
       </div>
       {/* <div className='ylp-registeration-note'>

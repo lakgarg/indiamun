@@ -26,8 +26,10 @@ import Refund_Policy from './components/Refund_Policy';
 import ContactUs from './components/ContactUs';
 import MyLearning from './components/myLearning';
 import Login from './components/Login';
+import Register2 from './components/Register2';
 import Register from './components/Register';
 import OnDemand from './components/OnDemand';
+import PaymentSucces from './components/PaymentSuccess';
 const cors = require('cors')({ origin: true });
 
 
@@ -64,7 +66,10 @@ function App() {
         {/* Testing Routes */}
         <Route path='/login' element={<Login />} /> 
         <Route path='/register' element={<Register />} /> 
+        <Route path='/register-otp' element={<Register2 />} /> 
+        <Route path='/paymentsuccess' element={<PaymentSucces />} /> 
         <Route path='/ondemand' element={<OnDemand />} /> 
+
       </Routes>
     </div>
   );

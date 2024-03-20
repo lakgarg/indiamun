@@ -1,34 +1,35 @@
-import React from 'react'
-import './team.css'
-import council0 from './images/mun/Mr Ovais Sarmad, Deputy Executive Secretary United Nations Framework Convention on Climate Change (UFCCC).png'
-import council1 from './images/mun/council-1.webp'
-import council2 from './images/mun/council-2.webp'
-import council3 from './images/mun/council-3.webp'
-import council4 from './images/mun/council-4.webp'
-import council5 from './images/mun/council-5.webp'
-import council6 from './images/mun/council-6.webp'
-import council7 from './images/mun/council-7.webp'
-import council8 from './images/mun/council-8.webp'
-import org1 from './images/mun/org1.webp'
-import moulika from './images/mun/moulika.jpg'
-import Vainkatesh from './images/mun/Vainkatesh.jpg'
-import org3 from './images/mun/org3.webp'
-import org4 from './images/mun/org4.webp'
-import org5 from './images/mun/org5.webp'
-import org6 from './images/mun/org6.webp'
-import org7 from './images/mun/org7.webp'
-import org8 from './images/mun/org8.webp'
-import org9 from './images/mun/org9.webp'
-import org10 from './images/mun/org10.webp'
-import org11 from './images/mun/org11.webp'
-import org12 from './images/mun/org12.webp'
-import org13 from './images/mun/org13.webp'
-import org14 from './images/mun/org14.webp'
-import Shresth from './images/mun/Shresth.jpeg'
-import left_img from './images/INDIAMUN/logo left.webp'
-import right_img from './images/INDIAMUN/logo right.webp'
-import Navigation from './navbar'
-import Footer from './footer'
+import React from 'react';
+import './team.css';
+import council0 from './images/mun/Mr Ovais Sarmad, Deputy Executive Secretary United Nations Framework Convention on Climate Change (UFCCC).png';
+import council1 from './images/mun/council-1.webp';
+import council2 from './images/mun/council-2.webp';
+import council3 from './images/mun/council-3.webp';
+import council3dot5 from './images/mun/s-2.png';
+import council4 from './images/mun/council-4.webp';
+import council5 from './images/mun/council-5.webp';
+import council6 from './images/mun/council-6.webp';
+import council7 from './images/mun/council-7.webp';
+import council8 from './images/mun/council-8.webp';
+import org1 from './images/mun/org1.webp';
+import moulika from './images/mun/moulika.jpg';
+import Vainkatesh from './images/mun/Vainkatesh.jpg';
+import org3 from './images/mun/org3.webp';
+import org4 from './images/mun/org4.webp';
+import org5 from './images/mun/org5.webp';
+import org6 from './images/mun/org6.webp';
+import org7 from './images/mun/org7.webp';
+import org8 from './images/mun/org8.webp';
+import org9 from './images/mun/org9.webp';
+import org10 from './images/mun/org10.webp';
+import org11 from './images/mun/org11.webp';
+import org12 from './images/mun/org12.webp';
+import org13 from './images/mun/org13.webp';
+import org14 from './images/mun/org14.webp';
+import Shresth from './images/mun/Shresth.jpeg';
+import left_img from './images/INDIAMUN/logo left.webp';
+import right_img from './images/INDIAMUN/logo right.webp';
+import Navigation from './navbar';
+import Footer from './footer';  
 
 export default function Team() {
   return (
@@ -46,7 +47,7 @@ export default function Team() {
           <img src={council0} ></img>
           <p className='card-name'> Mr Ovais Sarmad</p>
           <p className='card-des'>Former Deputy Executive Secretary <br /> United Nations Framework Convention on Climate Change
-(UFCCC)</p>
+            (UFCCC)</p>
         </div>
         <div className='card-item'>
           <img src={council1} ></img>
@@ -62,6 +63,11 @@ export default function Team() {
           <img src={council3} ></img>
           <p className='card-name'> Prof. V Ramgopal Rao</p>
           <p className='card-des'>Pillay Chair Professor & Former Director of IIT Delhi</p>
+        </div>
+        <div className='card-item'>
+          <img src={council3dot5} ></img>
+          <p className='card-name'> Dr. BABU PADMANABHAN</p>
+          <p className='card-des'>Managing Director at STEER</p>
         </div>
         <div className='card-item'>
           <img src={council4} ></img>

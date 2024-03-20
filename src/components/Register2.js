@@ -4,11 +4,10 @@ import backgroundImage from './images/INDIAMUN/login backdrop.png';
 import Navbar from './navbar'
 import left_img from './images/INDIAMUN/logo left.webp'
 import right_img from './images/INDIAMUN/logo right.webp'
-import './Login.css'
+import './Register.css'
 import Footer from './footer';
 
-const Login = () => {
-
+const Register = () => {
   const [formData, setFormData] = useState({
     email: '',
     password: ''
@@ -26,37 +25,47 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch('http://localhost:5010/api/v1/user/login', {
+    fetch('http://localhost:5010/api/v1/user/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(formData),
-      
     })
       .then(response => {
         if (!response.ok) {
-          throw new Error('Failed to login!');
+          throw new Error('Failed to Register!');
         }
         return response.json();
       })
       .then(data => {
-        setSuccessMessage('Login successful!');
+        setSuccessMessage('OTP Sent to your email!');
         setErrorMessage('');
-
-        localStorage.setItem('token', data.token);
-
-        console.log('Login successful:', data); 
-        // Optionally, you can redirect the user or perform other actions after successful login
+        console.log('OTP Sent to your email:', data);
+        // Redirect user to OnDemand page with text and next link
+        window.location.href = `/ondemand?text=OTP+Sent+to+your+email!&nextLink=https://www.youtube.com/`;
       })
       .catch(error => {
-        setErrorMessage('Invalid email or password!');
+
+
+
+        
         setSuccessMessage('');
         console.error('Error logging in:', error);
-        // Handle errors, such as displaying an error message to the user
+        if (error.message) {
+          console.log('Response:', error.message);
+          const { status, data } = error; // Assuming your error response contains data field with error message 
+          const { message, statusCode } = error;
+          if (message) {
+            setErrorMessage(message); // Set the error message received from the backend
+          } else {
+            setErrorMessage('An error occurred while signing up. Please try again later.');
+          }
+        } else {
+          setErrorMessage('An error occurred while signing up. Please try again later.');
+        }
       });
   };
-
 
   return (
     <>
@@ -77,14 +86,13 @@ const Login = () => {
         </div>
 
         <div className="login-right-box">
-          <div className="login-semi-1">
-            <h3 className="login-subheading">Login to your India MUN account</h3>
+          <div className="register-semi-1">
+            <h3 className="login-subheading">Register for your India MUN account</h3>
           </div>
           {errorMessage && <div className="login-error-message">{errorMessage}</div>}
           {successMessage && <div className="login-success-message">{successMessage}</div>}
-          <div className="login-semi-2">
+          <div className="register-semi-2">
             <form onSubmit={handleSubmit}>
-              
               <div className='login-email'>
                 <label>Email</label> <br />
                 <input
@@ -96,23 +104,12 @@ const Login = () => {
                   required
                 />
               </div>
-              <div className='login-password'>
-                <label>Password</label> <br />
-                <input
-                  type="password"
-                  name="password"
-                  value={formData.password}
-                  onChange={handleChange}
-                  placeholder="Enter your password"
-                  required
-                />
-              </div>
-              <button className='login-main-button' type="submit">Login</button>
+              <button className='login-main-button' type="submit">Register</button>
             </form>
           </div>
           <div className="login-semi-3">
-            <p className="login-forgot-password">Forgot Password?</p>
-            <p className="login-forgot-password">Didn't made your account?</p>
+            {/* <p className="login-forgot-password">Forgot Password?</p> */}
+            <p className="login-forgot-password">Already have an account? Login</p>
           </div>
         </div>
       </div>
@@ -122,4 +119,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default Register

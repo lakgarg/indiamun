@@ -376,7 +376,7 @@ export default function Events() {
         <h1 className='head-am2' >INDIA'S YOUNG FOREST AMBASSADOR</h1>
         <p>( Registrations Open )</p>
       </div>
-      <p className='con-mind2'>Given the need to restore our degraded lands and forest ecosystems India needs to build a youth-led initiative to fund on ground regenerative action that will have enormous ecological and social impact. </p>
+      <p className='con-mind2'>Given the need to restore our degraded lands and forest ecosystems India needs to build a youth-led initiative to support on ground regenerative action that will have enormous ecological and social impact. </p>
 
       <div className='forest-am2'>
         {/* <div className='forest_img'>

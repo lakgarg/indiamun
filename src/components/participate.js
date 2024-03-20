@@ -92,7 +92,7 @@ export default function Participate() {
         </div>
         <div className='participate-item'>
           <img src={p2}></img>
-          <a href='/ylpa'><button >Registrations Open</button></a>
+          <a href='/ylp'><button >Registrations Open</button></a>
           <p>
             Program Fee: <strike>₹4000</strike> <br />
             ₹2500

@@ -39,3 +39,10 @@
 	height: 80vh;
 }
 
+@media (max-width: 768px) {
+	/* .content-parent {
+    height: auto !important; 
+    max-height: 200px !important; 
+    overflow-y: auto !important;
+  } */
+}
