@@ -29,6 +29,7 @@ import 'firebase/compat/firestore'
 import 'firebase/compat/auth'
 import 'firebase/compat/storage'
 import Cookies from 'js-cookie';
+import axios from 'axios'
 
 export default function Events() {
   const { user } = useAuthContext()
@@ -99,137 +100,6 @@ export default function Events() {
     setMod3(false);
     setMod4(false);
   }
-
-  // function generateOrderId() {
-  //   // Use a prefix (optional) and add a timestamp to make the order ID more unique
-  //   const prefix = 'ORD';
-  //   const timestamp = Date.now();
-
-  //   // Generate a random number or use another unique identifier (such as user ID)
-  //   const uniqueId = Math.floor(Math.random() * 1000000);
-
-  //   // Combine all parts to create the final order ID
-  //   const orderId = `${prefix}_${timestamp}_${uniqueId}`;
-
-  //   return orderId;
-  // }
-
-  // const [paymentError, setPaymentError] = useState(null);
-
-
-  // const razorpay = new Razorpay({
-  //   key_id: 'rzp_live_H30xpgmxzhTAaN',
-  //   key_secret: 'RNg0ePo0yxJC42Gbk6LHGCZs',
-  // });
-
-  // const [orderId, setOrderId] = useState(null);
-  // const [paymentId, setPaymentId] = useState(null);
-
-  // const handlePayment = async () => {
-  //   try {
-  //     const razorpayKey = 'rzp_live_H30xpgmxzhTAaN';
-
-  //     // Initialize Razorpay on the client side
-  //     const options = {
-  //       key: razorpayKey,
-  //       amount: 100, // Amount in paise
-  //       currency: 'INR',
-  //       order_id: orderId,
-  //       name: 'INDIA MUN',
-  //       description: 'IYFA Course',
-  //       callback_url: "https://indiamun.org/after_payment",
-  //       prefill: {
-  //         name: "",
-  //         email: "",
-  //         contact: ""
-  //       },
-  //       notes: {
-  //         address: 'Razorpay Corporate Office',
-  //       },
-  //       theme: {
-  //         color: '#121212',
-  //       },
-  //     };
-
-  //     const rzp = new window.Razorpay(options);
-  //     rzp.open();
-
-  //   } catch (error) {
-  //     console.error('Error handling payment:', error);
-  //   }
-  // };
-
-  // const userlogin = async (e) => {
-  //   try {
-  //     await signInWithGoogle();
-
-  //     // Listen for changes in the authentication state
-  //     firebaseAuth.onAuthStateChanged((user) => {
-  //       if (user) {
-  //         // Access user information
-  //         const { uid, displayName, email } = user;
-
-  //         // Store user information in Firestore
-  //         storeUserInfo(uid, displayName, email);
-
-  //         // Now you can do other actions after sign-in and data storage
-  //         // For example, you can navigate to a different page using React Router
-  //         // history.push('/events');
-  //       } else {
-  //         console.log('User not found!');
-  //       }
-  //     });
-
-  //   } catch (err) {
-  //     console.log(err);
-  //   }
-  // };
-
-
-
-
-
-
-  // useEffect(() => {
-  //   // Check if enrollment status exists in local storage
-  //   // const storedEnrollmentStatus = localStorage.getItem('enrollmentStatus');
-
-  //   // if (storedEnrollmentStatus) {
-  //   //   setSubmitted(JSON.parse(storedEnrollmentStatus));
-  //   // }
-
-  //   // Retrieve enrollment status from Firestore
-  //   projectFirestore.collection('student_enrollment_young_forest_ambassdor').get().then((doc) => {
-  //     // if (doc.exists) {
-  //     //   const uid = doc.uid;
-  //     //   setSubmitted(true);
-  //     //   console.log('Document uid:', uid);
-  //     //   console.log("i entered this block")
-  //     // }
-  //     // else{
-  //     //   console.log("doesnt exist")
-  //     // }
-  //     if (doc.empty) {
-  //       console.log("no data found")
-  //       setSubmitted(false)
-  //     }
-  //     else {
-  //       doc.docs.forEach(doc => {
-  //         if ((doc.data().uid) === projectAuth.currentUser.uid) {
-  //           setSubmitted(true)
-  //           // nav_to('/event/modules')
-  //           return
-  //         }
-  //         // console.log((doc.data().uid))
-  //         // console.log(projectAuth.currentUser.uid)
-  //       })
-  //     }
-  //     // console.log(doc)
-  //   })
-  //     .catch((error) => {
-  //       console.error('Error retrieving enrollment status:', error);
-  //     });
-  // }, []);
 
 
   const goToRazorpayPayment = () => {
@@ -313,23 +183,42 @@ export default function Events() {
 
   const handleMakeIYFAPayment = async () => {
     try {
-      const token = Cookies.get('token'); // Retrieve token from cookies
-      const response = await fetch('http://localhost:5010/api/v1/payments/paymentIYFA', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}` // Include the authorization token
-        }
-      });
-      const data = await response.json();
-      console.log(data);
-      alert(data.message);
+      const token = localStorage.getItem('token');
+
+      if(!token){
+        window.location.href = '/login';
+      }
+
+      console.log('Token in Frontend: ', token);
+      const headers = {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`,
+      };
+
+      console.log(headers)
+
+      const { data: { key } } = await axios.get("http://localhost:5010/api/v1/payments/razorpay-key", { headers });
+      const { data } = await axios.post("http://localhost:5010/api/v1/payments/payment-iyfa", { token }, { headers });
+
+      const options = {
+        key,
+        amount: 100,
+        currency: "INR",
+        name: "IndiaMUN",
+        description: "Payment for IYFA Course",
+        order_id: data.order_id,
+        callback_url: "http://localhost:5010/api/v1/payments/paymentverification",
+        theme: {
+          "color": "#121212"
+        },
+      }
+      const razor = new window.Razorpay(options);
+      razor.open()
     } catch (error) {
       console.error('Error:', error);
       setError('An error occurred, please try again.');
     }
   };
-
 
 
   return (
@@ -743,7 +632,7 @@ Explore fundraising techniques, engage donors and sponsors, and emphasise forest
             </a>
           </div>
         </span>
-        {!submitted && <button className='big-enroll main-button' onClick={handleClick}>Enroll NOW</button>}
+        {!submitted && <button className='big-enroll main-button' onClick={handleMakeIYFAPayment}>Enroll NOW</button>}
         {/* {submitted && <button className='big-enroll main-button' onClick={handleClick}>Payment</button>} */}
         {/* {submitted && <span><button className='big-enroll main-button' disabled onClick={() => setMod(!mod)}>Enrolled</button><a href='/event/modules'><button className='big-enroll main-button'>Go to Course</button></a></span>} */}
       </div>

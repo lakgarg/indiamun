@@ -26,7 +26,7 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch('http://localhost:5010/api/v1/user/login', {
+    fetch(`http://localhost:5010/api/v1/user/login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -45,8 +45,10 @@ const Login = () => {
         setErrorMessage('');
 
         localStorage.setItem('token', data.token);
+        localStorage.setItem('userData', JSON.stringify(data.user));
 
         console.log('Login successful:', data); 
+        window.location.href = '/';
         // Optionally, you can redirect the user or perform other actions after successful login
       })
       .catch(error => {
@@ -56,6 +58,16 @@ const Login = () => {
         // Handle errors, such as displaying an error message to the user
       });
   };
+
+  const handleForgetPass = (e) => {
+    e.preventDefault();
+    window.location.href = '/forgot-password';
+  }
+
+  const handleSignup = (e) => {
+    e.preventDefault();
+    window.location.href = '/register';
+  }
 
 
   return (
@@ -84,7 +96,6 @@ const Login = () => {
           {successMessage && <div className="login-success-message">{successMessage}</div>}
           <div className="login-semi-2">
             <form onSubmit={handleSubmit}>
-              
               <div className='login-email'>
                 <label>Email</label> <br />
                 <input
@@ -111,8 +122,8 @@ const Login = () => {
             </form>
           </div>
           <div className="login-semi-3">
-            <p className="login-forgot-password">Forgot Password?</p>
-            <p className="login-forgot-password">Didn't made your account?</p>
+            <p onClick={handleForgetPass} className="login-forgot-password">Forgot Password?</p>
+            <p onClick={handleSignup} className="login-forgot-password">Didn't made your account?</p>
           </div>
         </div>
       </div>

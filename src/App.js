@@ -30,14 +30,18 @@ import Register2 from './components/Register2';
 import Register from './components/Register';
 import OnDemand from './components/OnDemand';
 import PaymentSucces from './components/PaymentSuccess';
+import Forgot from './components/Forgot';
+import ResetPassword from './components/ResetPassword';
+import YlpCourse from './components/YlpCourse';
+import { Toaster } from 'react-hot-toast';
 const cors = require('cors')({ origin: true });
-
 
 
 function App() {
   const { user } = useAuthContext();
   return (
     <div className="App">
+      <Toaster />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
@@ -69,7 +73,9 @@ function App() {
         <Route path='/register-otp' element={<Register2 />} /> 
         <Route path='/paymentsuccess' element={<PaymentSucces />} /> 
         <Route path='/ondemand' element={<OnDemand />} /> 
-
+        <Route path='/forgot-password' element={<Forgot />} /> 
+        <Route path='/reset-password/:resetToken' element={<ResetPassword />} /> 
+        <Route path='/ylp-course' element={<YlpCourse />} /> 
       </Routes>
     </div>
   );

@@ -86,7 +86,7 @@ export default function Participate() {
           <img src={p1}></img>
           <a href='/events'><button>Registrations Open</button></a>
           <p>
-            Program Fee: <strike>₹1000</strike> <br />
+            Program Fee: 
             ₹500
           </p>
         </div>
@@ -94,7 +94,7 @@ export default function Participate() {
           <img src={p2}></img>
           <a href='/ylp'><button >Registrations Open</button></a>
           <p>
-            Program Fee: <strike>₹4000</strike> <br />
+            Program Fee:
             ₹2500
           </p>
         </div>
@@ -102,7 +102,7 @@ export default function Participate() {
           <img src={p3}></img>
           <a href='/conference'><button >Registrations Open</button></a>
           <p>
-            Program Fee: <strike>₹1400</strike> <br />
+            Program Fee:
             ₹700
           </p>
         </div>
@@ -110,14 +110,14 @@ export default function Participate() {
           <img src={p4}></img>
           <a target='_blank' href='https://buzzonearth-climatehackathon.in/'><button>Season 1 Concluded</button></a>
           <p>
-            Season 2  <br />
+            Season 2 
             Coming Soon
           </p>
         </div>
         <div className='participate-item'>
           <img src={p5}></img>
           <button onClick={() => handleClick1(targetRef5)}>Competitions</button>
-          <p>Coming <br />Soon </p> 
+          <p>Coming Soon </p> 
         </div>
       </div>
       <p className='Participate-head'>The Next Generation of Leaders</p>

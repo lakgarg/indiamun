@@ -6,11 +6,11 @@ import left_img from './images/INDIAMUN/logo left.webp'
 import right_img from './images/INDIAMUN/logo right.webp'
 import './Login.css'
 import Footer from './footer';
+import toast from 'react-hot-toast';
 
 const Register = () => {
   const [formData, setFormData] = useState({
-    email: '',
-    password: ''
+    email: ''
   });
 
   const [errorMessage, setErrorMessage] = useState('');
@@ -25,7 +25,13 @@ const Register = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch('http://localhost:5010/api/v1/user/register', {
+
+    if (!formData.email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+      toast.error("Invalid email id");
+      return;
+    }
+
+    fetch(`http://localhost:5010/api/v1/user/register`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -34,35 +40,31 @@ const Register = () => {
     })
       .then(response => {
         if (!response.ok) {
-          throw new Error('Failed to Register!');
+          toast.error('Failed to Register!');
         }
         return response.json();
       })
       .then(data => {
-        setSuccessMessage('OTP Sent to your email!');
+        toast.success('OTP Sent to your email!');
         setErrorMessage('');
         console.log('OTP Sent to your email:', data);
         // Redirect user to OnDemand page with text and next link
-        window.location.href = `/ondemand?text=OTP+Sent+to+your+email!&nextLink=https://www.youtube.com/`;
+        window.location.href = `http://localhost:3000/register-otp`;
       })
       .catch(error => {
-
-
-
-        
         setSuccessMessage('');
         console.error('Error logging in:', error);
         if (error.message) {
           console.log('Response:', error.message);
-          const { status, data } = error; // Assuming your error response contains data field with error message 
+          const { status, data } = error; 
           const { message, statusCode } = error;
           if (message) {
-            setErrorMessage(message); // Set the error message received from the backend
+            toast.error(message); // Set the error message received from the backend
           } else {
-            setErrorMessage('An error occurred while signing up. Please try again later.');
+            toast.error('An error occurred while signing up. Please try again later.');
           }
         } else {
-          setErrorMessage('An error occurred while signing up. Please try again later.');
+          toast.error('An error occurred while signing up. Please try again later.');
         }
       });
   };
@@ -92,7 +94,7 @@ const Register = () => {
           {errorMessage && <div className="login-error-message">{errorMessage}</div>}
           {successMessage && <div className="login-success-message">{successMessage}</div>}
           <div className="register-semi-2">
-            <form onSubmit={handleSubmit}>
+            <form noValidate onSubmit={handleSubmit}>
               <div className='login-email'>
                 <label>Email</label> <br />
                 <input

@@ -3,6 +3,11 @@
 	background-color: rgb(37, 37, 36);
 	margin-bottom: 0px;
 }
+.login-btn-main {
+	height: 100%;
+	text-align: center;
+	padding-top: 8px;
+}
 .nav_items {
 	text-decoration: none;
 	color: white;
@@ -22,7 +27,7 @@
 	color: white;
 }
 .big_nav {
-	width: 100%;
+	width: 100vw;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -32,8 +37,15 @@
 	display: flex;
 }
 .user_pic {
-	width: 30px;
+	width: 20px;
 	border-radius: 50%;
+}
+.dropdown-menu[data-bs-popper] {
+	left: -250% !important;
+}
+.dropdown-item {
+	display: flex;	
+	justify-content: center;
 }
 .logout_btn {
 	padding: 2px;
@@ -47,6 +59,9 @@
 	/* margin-top: 20px;
 	margin-bottom: 20px; */
 }
+.logout-btn {
+	border: none;
+}
 .user_pic_container {
 	margin-right: 0px !important;
 }
@@ -57,8 +72,12 @@
 	width: 80vw;
 	/* justify-content: space-around; */
 }
-.right {
-	width: 20vw;
+.right-nav {
+	height: 100%;
+	margin-right: 140px;
+	display: flex;
+	align-items: center;
+	justify-content: end;
 }
 @media (max-width: 900px) {
 	.nav_items {
@@ -74,5 +93,8 @@
 		display: flex;
 		flex-direction: column;
 		width: 100%;
+	}
+	.right-nav {
+		justify-content: start;
 	}
 }

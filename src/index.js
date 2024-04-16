@@ -5,16 +5,18 @@ import App from './App';
 import { BrowserRouter } from "react-router-dom";
 import { UserAuthContextProvider } from './components/context/AuthContext';
 import { createPlan, createSubs } from './api/api1';
+import { Toaster } from 'react-hot-toast';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
-  {/* <React.StrictMode> */}
-  <UserAuthContextProvider>
-    <App createPlan={createPlan} createSubs={createSubs}/>
-  {/* </React.StrictMode> */}
-  </UserAuthContextProvider>
+    {/* <React.StrictMode> */}
+    <UserAuthContextProvider>
+      <App createPlan={createPlan} createSubs={createSubs} />
+      <Toaster />
+      {/* </React.StrictMode> */}
+    </UserAuthContextProvider>
   </BrowserRouter>
 );
 

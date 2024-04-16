@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './OnDemand.css';
 
 const OnDemand = () => {
@@ -7,20 +7,27 @@ const OnDemand = () => {
   const text = urlParams.get('text') || 'Default Text';
   const nextLink = urlParams.get('nextLink') || '/';
 
+  const [timeLeft, setTimeLeft] = useState(5);
+
   useEffect(() => {
-    // Redirect after 5 seconds (5000 milliseconds)
     const redirectTimeout = setTimeout(() => {
       window.location.href = nextLink;
-    }, 3000);
+    }, 5000);
 
-    // Clear timeout if the component is unmounted before redirection
-    return () => clearTimeout(redirectTimeout);
+    const intervalId = setInterval(() => {
+      setTimeLeft((prevTimeLeft) => prevTimeLeft - 1);
+    }, 1000);
+
+    return () => {
+      clearTimeout(redirectTimeout);
+      clearInterval(intervalId);
+    };
   }, [nextLink]);
 
   return (
     <div className='OnDemand-container'>
       <h1>{text}</h1>
-      <p>Redirecting to next page in 5 seconds...</p>
+      <p>Redirecting to next page in {timeLeft} seconds...</p>
     </div>
   );
 };

@@ -249,6 +249,11 @@ export default function Ylpa() {
   const handleMakeYLPPayment = async (amount) => {
     try {
       const token = localStorage.getItem('token');
+
+      if(!token){
+        window.location.href = '/login';
+      }
+
       console.log('Token in Frontend: ', token);
       const headers = {
         'Content-Type': 'application/json',
@@ -259,7 +264,7 @@ export default function Ylpa() {
   
       const { data: { key } } = await axios.get("http://localhost:5010/api/v1/payments/razorpay-key", { headers });
       // const { data: { order } } = await axios.post("http://localhost:5010/api/v1/payments/payment-iyfa", { token }, { headers });
-      const { data } = await axios.post("http://localhost:5010/api/v1/payments/payment-iyfa", { token }, { headers });
+      const { data } = await axios.post("http://localhost:5010/api/v1/payments/payment-ylp", { token }, { headers });
   
       console.log("data:" ,data)
       

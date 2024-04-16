@@ -14,6 +14,20 @@
   padding-bottom: 70px;
 }
 
+.register2-main-container{
+  width: 100vw;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: space-between;
+  background-image: url('./images/INDIAMUN/login\ backdrop.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 750px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
 .login-left-box{
   margin-top: 120px;
   width: 50%;
@@ -46,12 +60,24 @@
   border-radius: 20px;
 }
 
+.forgot-right-box{
+  margin-right: 160px;
+  height: 350px;
+  background-color: white;
+  padding: 60px;
+  border-radius: 20px;
+}
+
 .login-semi-1{
   padding-bottom: 20px;
 }
 
 .register-semi-1{
   padding-bottom: 60px;
+}
+
+.register2-semi-1{
+  padding-bottom: 50px;
 }
 
 .login-subheading{
@@ -68,6 +94,11 @@
 
 .register-semi-2{
   padding-top: 50px;
+  text-align: left;
+}
+
+.register2-semi-2{
+  padding-top: 0px;
   text-align: left;
 }
 
@@ -135,6 +166,15 @@
     padding-bottom: 70px;
   }
 
+  .register2-main-container{
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
   .login-left-box{
     margin-top: 0px;
     width: 80%;
@@ -158,13 +198,36 @@
     margin-left: 20px;
     margin-top: 20px;
     background-color: white;
-    padding: 60px;
+    padding: 40px;
     border-radius: 20px;
+  }
+  
+  .forgot-right-box{
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    height: 300px;
+  }
+
+  .login-email input {
+    width: 100%;
   }
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .login-main-container{
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .register2-main-container{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -198,5 +261,9 @@
     background-color: white;
     padding: 60px;
     border-radius: 20px;
+  }
+
+  .login-email input {
+    width: 100%;
   }
 }

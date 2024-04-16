@@ -23,7 +23,7 @@ const MyLearning = () => {
           'Authorization': `Bearer ${token}`,
         };
         const response = await axios.post('http://localhost:5010/api/v1/user/my-learning', { token }, { headers });
-        console.log('Response: ', response);
+        console.log('MY LEARNING Response: ', response);
 
         if (response.data.success) {
           setEnrolledCourses(response.data.data);
