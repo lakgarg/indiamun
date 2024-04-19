@@ -1082,7 +1082,7 @@ export default function Affiliates() {
           <img src={indiaMunChapter} alt="indiaMunChapter" />
         </div>
       </div>
-      <p className="aff-impc-p">Principals from the affiliated schools avail an exclusive invitation to participate in India MUN Principals' Conclave, 2024, with UN dignitaries on 24th April 2024</p>
+      <p className="aff-impc-p">Principals from the affiliated schools avail an exclusive invitation to participate in India MUN Principals' Conclave, 2024, with UN dignitaries.</p>
       <button className='aff-impc-btn' onClick={handleSendDetailsClick}>Affiliate your school</button>
     </div>
 
