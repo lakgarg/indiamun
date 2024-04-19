@@ -181,44 +181,44 @@ export default function Events() {
 
   const [error, setError] = useState('');
 
-  const handleMakeIYFAPayment = async () => {
-    try {
-      const token = localStorage.getItem('token');
+  // const handleMakeIYFAPayment = async () => {
+  //   try {
+  //     const token = localStorage.getItem('token');
 
-      if(!token){
-        window.location.href = '/login';
-      }
+  //     if(!token){
+  //       window.location.href = '/login';
+  //     }
 
-      console.log('Token in Frontend: ', token);
-      const headers = {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${token}`,
-      };
+  //     console.log('Token in Frontend: ', token);
+  //     const headers = {
+  //       'Content-Type': 'application/json',
+  //       'Authorization': `Bearer ${token}`,
+  //     };
 
-      console.log(headers)
+  //     console.log(headers)
 
-      const { data: { key } } = await axios.get("http://localhost:5010/api/v1/payments/razorpay-key", { headers });
-      const { data } = await axios.post("http://localhost:5010/api/v1/payments/payment-iyfa", { token }, { headers });
+  //     const { data: { key } } = await axios.get("http://localhost:5010/api/v1/payments/razorpay-key", { headers });
+  //     const { data } = await axios.post("http://localhost:5010/api/v1/payments/payment-iyfa", { token }, { headers });
 
-      const options = {
-        key,
-        amount: 100,
-        currency: "INR",
-        name: "IndiaMUN",
-        description: "Payment for IYFA Course",
-        order_id: data.order_id,
-        callback_url: "http://localhost:5010/api/v1/payments/paymentverification",
-        theme: {
-          "color": "#121212"
-        },
-      }
-      const razor = new window.Razorpay(options);
-      razor.open()
-    } catch (error) {
-      console.error('Error:', error);
-      setError('An error occurred, please try again.');
-    }
-  };
+  //     const options = {
+  //       key,
+  //       amount: 100,
+  //       currency: "INR",
+  //       name: "IndiaMUN",
+  //       description: "Payment for IYFA Course",
+  //       order_id: data.order_id,
+  //       callback_url: "http://localhost:5010/api/v1/payments/paymentverification",
+  //       theme: {
+  //         "color": "#121212"
+  //       },
+  //     }
+  //     const razor = new window.Razorpay(options);
+  //     razor.open()
+  //   } catch (error) {
+  //     console.error('Error:', error);
+  //     setError('An error occurred, please try again.');
+  //   }
+  // };
 
 
   return (
@@ -632,7 +632,7 @@ Explore fundraising techniques, engage donors and sponsors, and emphasise forest
             </a>
           </div>
         </span>
-        {!submitted && <button className='big-enroll main-button' onClick={handleMakeIYFAPayment}>Enroll NOW</button>}
+        {!submitted && <button className='big-enroll main-button' onClick={handleClick}>Enroll NOW</button>}
         {/* {submitted && <button className='big-enroll main-button' onClick={handleClick}>Payment</button>} */}
         {/* {submitted && <span><button className='big-enroll main-button' disabled onClick={() => setMod(!mod)}>Enrolled</button><a href='/event/modules'><button className='big-enroll main-button'>Go to Course</button></a></span>} */}
       </div>

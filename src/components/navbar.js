@@ -42,30 +42,30 @@ const Navigation = () => {
 
   // }, []);
 
-  useEffect(() => {
-    const storedUserData = localStorage.getItem('userData');
-    const token = localStorage.getItem('token');
+  // useEffect(() => {
+  //   const storedUserData = localStorage.getItem('userData');
+  //   const token = localStorage.getItem('token');
 
-    console.log('Stored User Data:', storedUserData);
-    console.log('Token:', token);
+  //   console.log('Stored User Data:', storedUserData);
+  //   console.log('Token:', token);
 
-    if (storedUserData && token) {
-      try {
-        const parsedUserData = JSON.parse(storedUserData);
-        setUserInfo(parsedUserData);
-        console.log('User Data: ', parsedUserData);
-      } catch (error) {
-        console.error('Error parsing user data:', error);
-        setUserInfo(null);
-      }
-    } else {
-      setUserInfo(null);
-    }
-  }, []);
+  //   if (storedUserData && token) {
+  //     try {
+  //       const parsedUserData = JSON.parse(storedUserData);
+  //       setUserInfo(parsedUserData);
+  //       console.log('User Data: ', parsedUserData);
+  //     } catch (error) {
+  //       console.error('Error parsing user data:', error);
+  //       setUserInfo(null);
+  //     }
+  //   } else {
+  //     setUserInfo(null);
+  //   }
+  // }, []);
 
-  useEffect(() => {
-    console.log('State User Data: ', userInfo);
-  }, [userInfo]);
+  // useEffect(() => {
+  //   console.log('State User Data: ', userInfo);
+  // }, [userInfo]);
 
 
 
@@ -96,30 +96,30 @@ const Navigation = () => {
   };
 
 
-  // const handleLogout = async () => {
-  //   try {
-  //     await logout();
-  //     // Redirect to the login page after logout
-  //     history('/login');
-  //   } catch (err) {
-  //     console.log(err);
-  //   }
-  // };
-
-  const handleLogout = () => {
-    // Clear the token and user data from the local storage
-    localStorage.removeItem('token');
-    localStorage.removeItem('userData');
-
-    // Clear the entire local storage
-    localStorage.clear();
-
-    // Reset any other user-related state or perform additional cleanup
-    setUserInfo(null); // Reset the user data state if you're using it
-
-    // You may also want to redirect the user to the login page or another appropriate page
-    window.location.href = '/login';
+  const handleLogout = async () => {
+    try {
+      await logout();
+      // Redirect to the login page after logout
+      // history('/login');
+    } catch (err) {
+      console.log(err);
+    }
   };
+
+  // const handleLogout = () => {
+  //   // Clear the token and user data from the local storage
+  //   localStorage.removeItem('token');
+  //   localStorage.removeItem('userData');
+
+  //   // Clear the entire local storage
+  //   localStorage.clear();
+
+  //   // Reset any other user-related state or perform additional cleanup
+  //   setUserInfo(null); // Reset the user data state if you're using it
+
+  //   // You may also want to redirect the user to the login page or another appropriate page
+  //   window.location.href = '/login';
+  // };
 
 
   return (
@@ -149,11 +149,11 @@ const Navigation = () => {
                 {/* <Nav.Link className='nav_items' href='/mylearning'>My Learning</Nav.Link> */}
                 <Nav.Link className='nav_items' href='/conference'>India MUN Climate Conference</Nav.Link>
                 <Nav.Link className='nav_items' href="https://buzzonearth.com/" target={'_blank'} style={{ color: 'white' }}>Blog</Nav.Link>
-                {userInfo ? (
+                {/* {userInfo ? (
                   <Nav.Link className='nav_items' href='/mylearning'>My Learning</Nav.Link>
                 ): (
                   <div></div>
-                )}
+                )} */}
                 {/* <Nav.Link className='nav_items' href='/team'>The Team</Nav.Link> */}
                 {/* <NavDropdown
                   title="Student login"
@@ -191,23 +191,23 @@ const Navigation = () => {
             </NavDropdown> */}
                 {/* <Nav.Link className='nav_items' href='/donor'>Donor</Nav.Link>  */}
               </div>
-              <div className="right-nav">
+              {/* <div className="right-nav">
                 {userInfo ? (
                   // If user is authenticated, show user's name, profile picture, and logout button
                   <div className='user_pic'>
-                    {/* <Nav.Link className='nav_items user_pic_container'>
+                    <Nav.Link className='nav_items user_pic_container'>
                       <img
-                        src={userData.avatar}
+                        src={user.avatar}
                         alt='Profile'
                         className='user_pic'
                       />
-                    </Nav.Link> */}
+                    </Nav.Link>  */}
                     {/* <Nav.Link className='nav_items'>{user.displayName}</Nav.Link>
                     <button className='logout_btn' onClick={handleLogout}>
                       Logout
-                    </button> */}
+                    </button>
 
-                    <NavDropdown
+                    {/* <NavDropdown
                       title={
                         <img
                           src={RandomImg}
@@ -223,19 +223,41 @@ const Navigation = () => {
                       <NavDropdown.Item href="#">
                         <button className='logout-btn' onClick={handleLogout}>Logout</button>
                       </NavDropdown.Item>
-                    </NavDropdown>
+                    </NavDropdown> */}
+                  {/* </div>
+                ) : (
+                  // If user is not authenticated, show the "Student Login" link
+                  <Nav.Link className='nav_items' onClick={handleClick}>
+                    Login
+                  </Nav.Link>
+                  // <div className="login-btn-main">
+                  //   <NavDropdown.Item className='nav_items' href="/login">Student Login</NavDropdown.Item>
+                  // </div>
+                )}
+              </div> */}
+              <div className="right">
+                {user ? (
+                  // If user is authenticated, show user's name, profile picture, and logout button
+                  <div className='user_main'>
+                    <Nav.Link className='nav_items user_pic_container'>
+                      <img
+                        src={user.photoURL}
+                        alt='Profile'
+                        className='user_pic'
+                      />
+                    </Nav.Link>
+                    <Nav.Link className='nav_items'>{user.displayName}</Nav.Link>
+                    <button className='logout_btn' onClick={handleLogout}>
+                      Logout
+                    </button>
                   </div>
                 ) : (
                   // If user is not authenticated, show the "Student Login" link
-                  // <Nav.Link className='nav_items' onClick={handleClick}>
-                  //   Login
-                  // </Nav.Link>
-                  <div className="login-btn-main">
-                    <NavDropdown.Item className='nav_items' href="/login">Student Login</NavDropdown.Item>
-                  </div>
+                  <Nav.Link className='nav_items' onClick={handleClick}>
+                    Student Login
+                  </Nav.Link>
                 )}
               </div>
-
             </Nav>
           </Navbar.Collapse>
         </Container>

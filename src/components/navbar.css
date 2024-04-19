@@ -40,13 +40,13 @@
 	width: 20px;
 	border-radius: 50%;
 }
-.dropdown-menu[data-bs-popper] {
+/* .dropdown-menu[data-bs-popper] {
 	left: -250% !important;
-}
-.dropdown-item {
+} */
+/* .dropdown-item {
 	display: flex;	
 	justify-content: center;
-}
+} */
 .logout_btn {
 	padding: 2px;
 	padding-right: 15px;
@@ -71,6 +71,9 @@
 	align-items: flex-start;
 	width: 80vw;
 	/* justify-content: space-around; */
+}
+.right {
+	width: 20vw;
 }
 .right-nav {
 	height: 100%;

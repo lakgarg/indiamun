@@ -205,25 +205,25 @@ export default function Ylpa() {
 
   const [error, setError] = useState('');
 
-  const handleMakeYLPPaymentx = async () => {
-    try {
-      const token = Cookies.get('token');
-      console.log(`Token: ${token}`)
-      const response = await fetch('http://localhost:5010/api/v1/payments/payment-ylp', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Cookie': `token=${token}`,
-        },
-      });
-      const data = await response.json();
-      console.log(data);
-      alert(data.message);
-    } catch (error) {
-      console.error('Error:', error);
-      setError('An error occurred, please try again.');
-    }
-  };
+  // const handleMakeYLPPaymentx = async () => {
+  //   try {
+  //     const token = Cookies.get('token');
+  //     console.log(`Token: ${token}`)
+  //     const response = await fetch('http://localhost:5010/api/v1/payments/payment-ylp', {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //         'Cookie': `token=${token}`,
+  //       },
+  //     });
+  //     const data = await response.json();
+  //     console.log(data);
+  //     alert(data.message);
+  //   } catch (error) {
+  //     console.error('Error:', error);
+  //     setError('An error occurred, please try again.');
+  //   }
+  // };
 
   // const handleMakeYLPPaymentx = async(amount) => {
 
@@ -246,47 +246,47 @@ export default function Ylpa() {
   //   razor.open()
   // }
 
-  const handleMakeYLPPayment = async (amount) => {
-    try {
-      const token = localStorage.getItem('token');
+  // const handleMakeYLPPayment = async (amount) => {
+  //   try {
+  //     const token = localStorage.getItem('token');
 
-      if(!token){
-        window.location.href = '/login';
-      }
+  //     if(!token){
+  //       window.location.href = '/login';
+  //     }
 
-      console.log('Token in Frontend: ', token);
-      const headers = {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${token}`,
-      };
+  //     console.log('Token in Frontend: ', token);
+  //     const headers = {
+  //       'Content-Type': 'application/json',
+  //       'Authorization': `Bearer ${token}`,
+  //     };
 
-      console.log(headers)
+  //     console.log(headers)
   
-      const { data: { key } } = await axios.get("http://localhost:5010/api/v1/payments/razorpay-key", { headers });
-      // const { data: { order } } = await axios.post("http://localhost:5010/api/v1/payments/payment-iyfa", { token }, { headers });
-      const { data } = await axios.post("http://localhost:5010/api/v1/payments/payment-ylp", { token }, { headers });
+  //     const { data: { key } } = await axios.get("http://localhost:5010/api/v1/payments/razorpay-key", { headers });
+  //     // const { data: { order } } = await axios.post("http://localhost:5010/api/v1/payments/payment-iyfa", { token }, { headers });
+  //     const { data } = await axios.post("http://localhost:5010/api/v1/payments/payment-ylp", { token }, { headers });
   
-      console.log("data:" ,data)
+  //     console.log("data:" ,data)
       
-      const options = {
-        key,
-        amount: 100,
-        currency: "INR",
-        name: "IndiaMUN",
-        description: "Payment for YLP Course",
-        order_id: data.order_id,
-        callback_url: "http://localhost:5010/api/v1/payments/paymentverification",
-        theme: {
-          "color": "#121212"
-        },
-      }
-      const razor = new window.Razorpay(options);
-      razor.open()
-    } catch (error) {
-      console.error('Error:', error);
-      setError('An error occurred, please try again.');
-    }
-  };
+  //     const options = {
+  //       key,
+  //       amount: 100,
+  //       currency: "INR",
+  //       name: "IndiaMUN",
+  //       description: "Payment for YLP Course",
+  //       order_id: data.order_id,
+  //       callback_url: "http://localhost:5010/api/v1/payments/paymentverification",
+  //       theme: {
+  //         "color": "#121212"
+  //       },
+  //     }
+  //     const razor = new window.Razorpay(options);
+  //     razor.open()
+  //   } catch (error) {
+  //     console.error('Error:', error);
+  //     setError('An error occurred, please try again.');
+  //   }
+  // };
 
 
   // useEffect(() => {
@@ -570,7 +570,7 @@ export default function Ylpa() {
       <div className="ylp-registeration-container">
         <h2 className="ylp-registeration-text">Ready To Accelerate Your Scale Journey?</h2>
         {/* <button className="ylp-registeration-btn" onClick={() => handleMakeYLPPayment()}>Enroll Now</button> */}
-        <button className="ylp-registeration-btn" onClick={handleMakeYLPPayment}>Enroll Now</button>
+        <button className="ylp-registeration-btn" onClick={handleClick}>Enroll Now</button>
       </div>
       {/* <div className='ylp-registeration-note'>
         <p><i>Note:</i><br></br><i>We are delighted to inform you that the Youth Leadership Program (YLP) is scheduled to commence on January 12th, 2024 on National Youth Day. This is a self-paced program, and you will have  access to the program for a duration of six months.  <br /><br />

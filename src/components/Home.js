@@ -300,7 +300,7 @@ export default function Home() {
             <span>Registrations Open!</span>
             <div className='button_div_climate'>
               <div className='button_div_climate1'> 
-                <a href='/ylpa'><button className='ylp-homepage-btn right-button'>Enroll Now</button></a>
+                <a href='/ylp'><button className='ylp-homepage-btn right-button'>Enroll Now</button></a>
               </div>
             </div>
             {/* <p style={{padding:'5px',color:'rgb(190, 49, 174)'}}>July 2023</p> */}
@@ -440,7 +440,7 @@ export default function Home() {
             <div>
               <p>INDIA MUN PROGRAMS</p>
               <a href='/events' target='_blank'><button>IYFA</button></a>
-              <a href='/ylpa' target='_blank'><button>YLP</button></a>
+              <a href='/ylp' target='_blank'><button>YLP</button></a>
             </div>
           }
         </div>

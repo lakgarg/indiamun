@@ -257,7 +257,7 @@ Get ready to unleash your fundraising potential and become a passionate advocate
         </div>
         <div className="reg-info">
           <h2>Registrations Open</h2>
-          <a href="/ylpa"><button>Enroll Now</button></a>
+          <a href="/ylp"><button>Enroll Now</button></a>
         </div>
       </div>
       {/* <div className='ylp-school-pic'> */}

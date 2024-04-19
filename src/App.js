@@ -68,14 +68,14 @@ function App() {
         {user && <Route path='/donorSubs' element={<DonorSubs />} />}
 
         {/* Testing Routes */}
-        <Route path='/login' element={<Login />} /> 
+        {/* <Route path='/login' element={<Login />} /> 
         <Route path='/register' element={<Register />} /> 
         <Route path='/register-otp' element={<Register2 />} /> 
         <Route path='/paymentsuccess' element={<PaymentSucces />} /> 
         <Route path='/ondemand' element={<OnDemand />} /> 
         <Route path='/forgot-password' element={<Forgot />} /> 
         <Route path='/reset-password/:resetToken' element={<ResetPassword />} /> 
-        <Route path='/ylp-course' element={<YlpCourse />} /> 
+        <Route path='/ylp-course' element={<YlpCourse />} />  */}
       </Routes>
     </div>
   );
