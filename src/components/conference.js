@@ -3,6 +3,8 @@ import Navbar from './navbar'
 import './conference.css'
 import left_img from './images/INDIAMUN/logo left.webp'
 import right_img from './images/INDIAMUN/logo right.webp'
+import left_image from './images/INDIAMUN/left_image.webp'
+import right_image from './images/INDIAMUN/right_image.webp'
 import indiaMunLogo from './images/INDIAMUN/india mun blue logo.png';
 import Footer from './footer'
 import { useAuthContext } from './hooks/useAuthContext'
@@ -40,6 +42,9 @@ import indiaMunNewRecap13 from './images/conference/2021 13.webp';
 import indiaMunNewRecap14 from './images/conference/2021 14.webp';
 import indiaMunNewRecap15 from './images/conference/2021 15.webp';
 import hero from './images/conference/Conf image.webp'
+import Agenda from './images/conference/Agenda.webp'
+import fest from './images/conference/fest.webp'
+import conf from './images/conference/Conf open.webp'
 import imcc_certificate from './images/conference/MUN conf Certificate.webp'
 import { useLogin } from './hooks/useLogin'
 import { firebaseAuth, storeRegisteredUsersIMCCInfo, storeRegisteredUsersIYFAInfo } from './firebase/config'
@@ -110,8 +115,8 @@ export default function Conference() {
 
       <div className="conference-hero">
         <img className='indiamun-logo' src={indiaMunLogo} alt="indiaMunLogo" />
-        <h2 className='conference-heading'>INDIA MUN ANNUAL CLIMATE CONFERENCE</h2>
-        <p className='conference-p'>Join us at the India MUN Annual Climate Conference, where passion meets purpose, and the youth lead the charge for climate action. This flagship event gathers visionaries, activists, and change-makers to drive meaningful discussions and innovative solutions.</p>
+        <h2 className='conference-heading'>INDIA MUN NATIONAL CONFERENCE 2024</h2>
+        <p className='conference-p'>Join us at the India MUN National Conference 2024, where passion meets purpose, and the youth lead the charge for climate action. This flagship event gathers visionaries, activists, and change-makers to drive meaningful discussions and innovative solutions.</p>
       </div>
 
       {/* <div className="am-go"></div> */}
@@ -128,7 +133,64 @@ export default function Conference() {
         <img src={hero} alt="hero" />
       </div>
 
+      <div className="conference-hero">
 
+      <div className="aff-hero">
+      <div className="aff-hero-right">
+          <div className="aff-hero-right-img">
+            <img src={fest} alt="GSCAPlaque" />
+          </div>
+        </div>
+        <div className="aff-hero-right">
+          <div className="aff-hero-right-img">
+            <img src={conf} alt="GSCAPlaque" />
+          </div>
+        </div>
+      </div>
+  
+        
+        <div>
+        <h1 className='high-head'>AGENDA</h1>
+        <p className='pro-head'>India MUN National Conference & “Youth for Earth” Fest 2024</p>
+        <img src={Agenda} alt="hero" height={300}/>
+        </div>
+      </div>
+
+      <div>
+        <h1 className='high-head'></h1>
+      </div>
+
+      <div className="aff-hero">
+      <div className="aff-hero-right">
+          <div className="aff-hero-right-img">
+          <h3 className='aff-hero-subheading'>24th April, 2024</h3>
+            <img src={left_image} alt="GSCAPlaque" />
+          </div>
+        </div>
+        <div className="aff-hero-right">
+          <div className="aff-hero-right-img">
+          <h3 className='aff-hero-subheading'>25th April, 2024</h3>
+            <img src={right_image} alt="GSCAPlaque" />
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h1 className='high-head'></h1>
+      </div>
+      
+      <div className="imcc-registeration-container">
+        <h2 className="imcc-registeration-heading">Get READY to redefine IMPACT</h2>
+        <h2 className="imcc-registeration-text">India MUN Climate Conference 2024 is here!</h2>
+        <p className="more-than-an-event">This is more than an event; it's the essence of India MUN – a platform that defines leadership, impact, and unity!</p>
+        <button className="imcc-registeration-btn" onClick={handleClick}>Enroll Now</button>
+      </div>
+
+      <div className="am-go"></div>
+
+      <div>
+        <h1 className='high-head'></h1>
+      </div>
       <h1 className='high-head'>KEY HIGHLIGHTS:</h1>
       <div className='pro-heig'>
         <div className='pro-item'>
@@ -162,6 +224,8 @@ export default function Conference() {
           </p>
         </div>
       </div>
+
+      
 
       {/* <div className="am-go"></div> */}
 
@@ -205,21 +269,26 @@ export default function Conference() {
 
       <div className="am-go"></div>
 
-      <h2 className="imcc-registeration-heading">Get READY to redefine IMPACT</h2>
+      
+      <h2 className="imcc-registeration-heading">Reserve your slot now!</h2>
+      <p className="more-than-an-event">The only MUN which is India’s MUN and represents India internationally</p>
       <div className="imcc-registeration-container">
-        <h2 className="imcc-registeration-text">India MUN Climate Conference 2024 is here!</h2>
-        <p className="more-than-an-event">This is more than an event; it's the essence of India MUN – a platform that defines leadership, impact, and unity!</p>
-        <button className="imcc-registeration-btn" onClick={handleClick}>Enroll Now</button>
+        
+        <button className="imcc-registeration-btn" onClick={handleClick}  >Enroll Now</button>
+        
       </div>
+      <h2 className="imcc-registeration-text">Registrations Closing on 24th May, 2024</h2>
 
 
 
       <div className="ylp-discount-container">
-        <h2 className="ylp-discount-heading">India MUN affiliate School Students - 50% discount</h2>
-        <p className="ylp-discount-p">If Your school is affiliated with India MUN , you can avail a 50% discount. As we offer Students from our Affiliated Schools to Unlock a 50% Discount on all Youth Programs – YLP, IYFA, and the India MUN Conference. Please contact your school India MUN coordinator faculty or Principal for the same.</p>
+        <h2 className="ylp-discount-heading">50% Discount</h2>
+        <h2 className="ylp-discount-heading_2">India MUN affiliate school students</h2>
+        <p className="ylp-discount-p">We offer students from India MUN affiliated schools to unlock a 50% discount on all youth programs – YLP, IYFA, and the India
+MUN Climate Conference. Please contact your school India MUN coordinator faculty or Principal for the same.</p>
       </div>
 
-      <div className="indiamun-2021-recap">
+      {/* <div className="indiamun-2021-recap">
         <img src={indiaMunNewRecap1} alt="indiaMunNewRecap1" />
         <img src={indiaMunNewRecap2} alt="indiaMunNewRecap2" />
         <img src={indiaMunNewRecap3} alt="indiaMunNewRecap3" />
@@ -235,7 +304,7 @@ export default function Conference() {
         <img src={indiaMunNewRecap13} alt="indiaMunNewRecap13" />
         <img src={indiaMunNewRecap14} alt="indiaMunNewRecap14" />
         <img src={indiaMunNewRecap15} alt="indiaMunNewRecap15" onClick={handleClick} style={{cursor: 'pointer'}} />
-      </div>
+      </div> */}
 
 
       <Footer />
