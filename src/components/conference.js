@@ -196,6 +196,9 @@ export default function Conference() {
           This is more than an event; it's the essence of India MUN – a platform
           that defines leadership, impact, and unity!
         </p>
+        <h2 className="imcc-registeration-text">
+        29th-30th June, 2024
+        </h2>
         <button className="imcc-registeration-btn" onClick={goToRazorpayPayment}>
           Enroll Now
         </button>
@@ -318,7 +321,7 @@ export default function Conference() {
         </button>
       </div>
       <h2 className="imcc-registeration-text">
-        Registrations Closing on 24th May, 2024
+      29th-30th June, 2024
       </h2>
 
       <div className="ylp-discount-container">
