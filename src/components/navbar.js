@@ -68,8 +68,14 @@ const Navigation = () => {
   // }, [userInfo]);
 
 
+  const goToStudentCorner = () => {
+    const url = "https://courses.indiamun.org/";
 
-  const handleClick = async (e) => {
+    // Open the URL in a new tab
+    window.open(url, "_blank");
+  };
+
+/*   const handleClick = async (e) => {
     try {
       await signInWithGoogle();
 
@@ -93,7 +99,7 @@ const Navigation = () => {
     } catch (err) {
       console.log(err);
     }
-  };
+  }; */
 
 
   const handleLogout = async () => {
@@ -253,8 +259,8 @@ const Navigation = () => {
                   </div>
                 ) : (
                   // If user is not authenticated, show the "Student Login" link
-                  <Nav.Link className='nav_items' onClick={handleClick}>
-                    Student Login
+                  <Nav.Link className='nav_items' onClick={goToStudentCorner}>
+                    Students' Corner
                   </Nav.Link>
                 )}
               </div>

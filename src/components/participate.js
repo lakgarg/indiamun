@@ -22,7 +22,7 @@ import cli_hack from './images/participate/hack logo.webp'
 import first_prize from './images/participate/first-prize.webp'
 import sec_prize from './images/participate/second-prize.webp'
 import cli_hack_main from './images/participate/climate-hack-logo.webp'
-import model_img from './images/participate/india mun text.webp'
+import model_img from './images/participate/2024.jpg'
 import step1 from './images/newimages/step 1.webp'
 import step2 from './images/newimages/step 2.webp'
 import conf from './images/newimages/conf left.webp'
@@ -87,7 +87,7 @@ export default function Participate() {
           <a href='/events'><button>Registrations Open</button></a>
           <p>
             Program Fee: 
-            ₹500
+            ₹999
           </p>
         </div>
         <div className='participate-item'>
@@ -95,7 +95,7 @@ export default function Participate() {
           <a href='/ylp'><button >Registrations Open</button></a>
           <p>
             Program Fee:
-            ₹2500
+            ₹2999
           </p>
         </div>
         <div className='participate-item'>
@@ -103,7 +103,7 @@ export default function Participate() {
           <a href='/conference'><button >Registrations Open</button></a>
           <p>
             Program Fee:
-            ₹700
+            ₹999
           </p>
         </div>
         <div className='participate-item'>

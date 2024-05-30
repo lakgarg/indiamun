@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './home.css'
-import left_img from './images/INDIAMUN/logo left.webp'
+import left_img from './images/INDIAMUN/new logo mun.WEBP'
 import right_img from './images/INDIAMUN/logo right.webp'
 import logo1 from './images/INDIAMUN/grid left.webp'
 import logo2 from './images/INDIAMUN/grid right.webp'
