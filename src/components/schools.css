@@ -58,6 +58,7 @@
 }
 .forest-am2 {
 	display: flex;
+	padding-bottom: 20px;
 	flex-direction: column;
 	opacity: 0.02px;
 }
@@ -124,7 +125,7 @@
 .proover {
 	font-family: anton;
 	padding: 20px;
-	border-top: 1.5px solid black;
+	/* border-top: 1.5px solid black; */
 }
 .info-strip1 {
 	padding-top: 25px;

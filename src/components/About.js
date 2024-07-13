@@ -45,7 +45,7 @@ export default function About() {
         <div className="about-values-points-container">
           <div className="about-values-point">
             <div className="about-values-icon">
-              <p><i class="fa-solid fa-people-group" /></p>
+              <p><i className="fa-solid fa-people-group" /></p>
             </div>
             <div className="about-values-text">
               <p><span>Youth Empowerment: </span>Placing the empowerment of young individuals at the forefront, encouraging leadership, innovation, and proactive engagement in climate action.</p>
@@ -54,7 +54,7 @@ export default function About() {
 
           <div className="about-values-point">
             <div className="about-values-icon">
-              <p><i class="fa-solid fa-hand-fist" /></p>
+              <p><i className="fa-solid fa-hand-fist" /></p>
             </div>
             <div className="about-values-text">
               <p><span>Sustainability Commitment: </span>Integrating sustainable practices into all aspects of our work, fostering environmental
@@ -65,7 +65,7 @@ export default function About() {
 
           <div className="about-values-point">
             <div className="about-values-icon">
-              <p><i class="fa-solid fa-globe" /></p>
+              <p><i className="fa-solid fa-globe" /></p>
             </div>
             <div className="about-values-text">
               <p><span>Global Collaboration: </span>Prioritizing partnerships and collaborations on a global scale, creating a diverse and inclusive
@@ -75,7 +75,7 @@ export default function About() {
 
           <div className="about-values-point">
             <div className="about-values-icon">
-              <p><i class="fa-solid fa-heart" /></p>
+              <p><i className="fa-solid fa-heart" /></p>
             </div>
             <div className="about-values-text">
               <p><span>Integrity and Transparency: </span>Upholding the highest ethical standards, ensuring transparency in organizational
@@ -85,7 +85,7 @@ export default function About() {
 
           <div className="about-values-point">
             <div className="about-values-icon">
-              <p><i class="fa-solid fa-star" /></p>
+              <p><i className="fa-solid fa-star" /></p>
             </div>
             <div className="about-values-text">
               <p><span>Educational Excellence: </span>Striving for excellence in climate education, providing impactful learning experiences that
@@ -96,7 +96,7 @@ export default function About() {
 
           <div className="about-values-point">
             <div className="about-values-icon">
-              <p><i class="fa-solid fa-lightbulb" /></p>
+              <p><i className="fa-solid fa-lightbulb" /></p>
             </div>
             <div className="about-values-text">
               <p><span>Innovation and Adaptability: </span>Encouraging innovative solutions and an adaptive mindset to address evolving
@@ -144,7 +144,7 @@ export default function About() {
         </div>
       </div> */}
       {/* <div className='voice'>
-        <p><span><i class="fa-solid fa-quote-left fa-lg"></i></span> We need your voice, your support, and your active involvement for a climate-resilient India. Let us help you share your ideas for climate action to the world.</p>
+        <p><span><i className="fa-solid fa-quote-left fa-lg"></i></span> We need your voice, your support, and your active involvement for a climate-resilient India. Let us help you share your ideas for climate action to the world.</p>
       </div> */}
       <div className='wh-youth'>
         <div className='wh-youth-div'>
@@ -178,10 +178,10 @@ export default function About() {
                <p className='copy_footer'> ©2002</p>
             </div>
             <div className='footer_flex_item'>
-            <a href='https://www.instagram.com/buzzonearth/' target={'_blank'}><i class="fa-brands fa-instagram"></i></a>
-            <a href='https://twitter.com/BuzzOnEarth' target={'_blank'}><i class="fa-brands fa-twitter"></i></a>
-            <a href='https://www.facebook.com/buzzonearth/' target={'_blank'}><i class="fa-brands fa-facebook"></i></a>
-            <a href='https://www.youtube.com/@buzzonearth2959' target={'_blank'}><i class="fa-brands fa-youtube"></i></a>
+            <a href='https://www.instagram.com/buzzonearth/' target={'_blank'}><i className="fa-brands fa-instagram"></i></a>
+            <a href='https://twitter.com/BuzzOnEarth' target={'_blank'}><i className="fa-brands fa-twitter"></i></a>
+            <a href='https://www.facebook.com/buzzonearth/' target={'_blank'}><i className="fa-brands fa-facebook"></i></a>
+            <a href='https://www.youtube.com/@buzzonearth2959' target={'_blank'}><i className="fa-brands fa-youtube"></i></a>
             </div>
         </div>
       </div> */}

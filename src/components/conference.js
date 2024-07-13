@@ -197,7 +197,7 @@ export default function Conference() {
           that defines leadership, impact, and unity!
         </p>
         <h2 className="imcc-registeration-text">
-        29th-30th June, 2024
+        27th-28th July, 2024
         </h2>
         <button className="imcc-registeration-btn" onClick={goToRazorpayPayment}>
           Enroll Now
@@ -321,7 +321,7 @@ export default function Conference() {
         </button>
       </div>
       <h2 className="imcc-registeration-text">
-      29th-30th June, 2024
+      27th-28th July, 2024
       </h2>
 
       <div className="ylp-discount-container">

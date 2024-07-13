@@ -342,9 +342,9 @@ export default function Ylpa() {
           <img src={hero} alt="hero" />
           {/* <a href='https://gaiatheearthfoundation.org/' target={'_blank'}><button>SEE OUR WORK AREA</button></a> */}
         </div>
-        <div className="stat_banner_ylp">
+        {/* <div className="stat_banner_ylp">
           <img src={hero2} className="hero2" />
-        </div>
+        </div> */}
       </div>
 
       {/* <div className="ylp_line">
@@ -409,9 +409,9 @@ export default function Ylpa() {
             <span>Module 1: Self-Discovery and Purpose Clarity</span>
             <i
               onClick={handlemodule1}
-              class="fa-solid fa-chevron-down fa-2xl"
+              className="fa-solid fa-chevron-down fa-2xl"
             ></i>
-            <i class="fa-solid fa-chevron-down fa-lg"></i>
+            <i className="fa-solid fa-chevron-down fa-lg"></i>
           </p>
           {mod1 && (
             <p className="mod-item1">
@@ -427,9 +427,9 @@ export default function Ylpa() {
             <span>Module 2: Emotional Intelligence and Self-Mastery</span>
             <i
               onClick={handlemodule2}
-              class="fa-solid fa-chevron-down fa-2xl"
+              className="fa-solid fa-chevron-down fa-2xl"
             ></i>
-            <i class="fa-solid fa-chevron-down fa-lg"></i>
+            <i className="fa-solid fa-chevron-down fa-lg"></i>
           </p>
           {mod2 && (
             <p className="mod-item1">
@@ -444,9 +444,9 @@ export default function Ylpa() {
             <span>Module 3: Goal Setting and Time Management</span>
             <i
               onClick={handlemodule3}
-              class="fa-solid fa-chevron-down fa-2xl"
+              className="fa-solid fa-chevron-down fa-2xl"
             ></i>
-            <i class="fa-solid fa-chevron-down fa-lg"></i>
+            <i className="fa-solid fa-chevron-down fa-lg"></i>
           </p>
           {mod3 && (
             <p className="mod-item1">
@@ -461,9 +461,9 @@ export default function Ylpa() {
             <span>Module 4: Leveraging Technology for leadership</span>
             <i
               onClick={handlemodule4}
-              class="fa-solid fa-chevron-down fa-2xl"
+              className="fa-solid fa-chevron-down fa-2xl"
             ></i>
-            <i class="fa-solid fa-chevron-down fa-lg"></i>
+            <i className="fa-solid fa-chevron-down fa-lg"></i>
           </p>
           {mod4 && (
             <p className="mod-item1">
@@ -479,9 +479,9 @@ export default function Ylpa() {
             <span>Module 5: Sustainability Leadership and Climate Action</span>
             <i
               onClick={handlemodule5}
-              class="fa-solid fa-chevron-down fa-2xl"
+              className="fa-solid fa-chevron-down fa-2xl"
             ></i>
-            <i class="fa-solid fa-chevron-down fa-lg"></i>
+            <i className="fa-solid fa-chevron-down fa-lg"></i>
           </p>
           {mod5 && (
             <p className="mod-item1">
@@ -497,9 +497,9 @@ export default function Ylpa() {
             <span>Module 6: Career Development and Networking</span>
             <i
               onClick={handlemodule6}
-              class="fa-solid fa-chevron-down fa-2xl"
+              className="fa-solid fa-chevron-down fa-2xl"
             ></i>
-            <i class="fa-solid fa-chevron-down fa-lg"></i>
+            <i className="fa-solid fa-chevron-down fa-lg"></i>
           </p>
           {mod6 && (
             <p className="mod-item1">
@@ -515,9 +515,9 @@ export default function Ylpa() {
             <span>Module 7: Developing an entrepreneurial mindset</span>
             <i
               onClick={handlemodule7}
-              class="fa-solid fa-chevron-down fa-2xl"
+              className="fa-solid fa-chevron-down fa-2xl"
             ></i>
-            <i class="fa-solid fa-chevron-down fa-lg"></i>
+            <i className="fa-solid fa-chevron-down fa-lg"></i>
           </p>
           {mod7 && (
             <p className="mod-item1">
@@ -534,9 +534,9 @@ export default function Ylpa() {
             <span>Module 8: Drawing inspiration from nature</span>
             <i
               onClick={handlemodule8}
-              class="fa-solid fa-chevron-down fa-2xl"
+              className="fa-solid fa-chevron-down fa-2xl"
             ></i>
-            <i class="fa-solid fa-chevron-down fa-lg"></i>
+            <i className="fa-solid fa-chevron-down fa-lg"></i>
           </p>
           {mod8 && (
             <p className="mod-item1">
@@ -553,9 +553,9 @@ export default function Ylpa() {
             <span>Module 9: Capstone Leadership Project and Graduation</span>
             <i
               onClick={handlemodule9}
-              class="fa-solid fa-chevron-down fa-2xl"
+              className="fa-solid fa-chevron-down fa-2xl"
             ></i>
-            <i class="fa-solid fa-chevron-down fa-lg"></i>
+            <i className="fa-solid fa-chevron-down fa-lg"></i>
           </p>
           {mod9 && (
             <p className="mod-item1">

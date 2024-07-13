@@ -286,41 +286,41 @@ export default function EventsSchools() {
       <h1 className='high-head'>PROGRAM HIGHLIGHTS:</h1>
       <div className='pro-heig'>
         <div className='pro-item'>
-          <p><i class="fa-solid fa-video fa-2xl"></i><i class="fa-solid fa-video fa-lg"></i></p>
+          <p><i className="fa-solid fa-video fa-2xl"></i><i className="fa-solid fa-video fa-lg"></i></p>
           <p className='pro-head'>Pre-Recorded</p>
           <p className='pro-des'>Video Lectures from UN Decade ON
             Ecosystem Restoration.
           </p>
         </div>
         <div className='pro-item'>
-          <p><i class="fa-solid fa-list fa-2xl"></i><i class="fa-solid fa-list fa-lg"></i></p>
+          <p><i className="fa-solid fa-list fa-2xl"></i><i className="fa-solid fa-list fa-lg"></i></p>
           <p className='pro-head'>Modules</p>
           <p className='pro-des'>4 Introduction Modules And 1 Activity module
           </p>
         </div>
         <div className='pro-item'>
-          <p><i class="fa-solid fa-tree fa-2xl"></i><i class="fa-solid fa-tree fa-lg"></i></p>
+          <p><i className="fa-solid fa-tree fa-2xl"></i><i className="fa-solid fa-tree fa-lg"></i></p>
           <p className='pro-head'> Nature trek
             Fully Sponsored</p>
           <p className='pro-des'>top 5 performing participants
           </p>
         </div>
         <div className='pro-item'>
-          <p><i class="fa-solid fa-award fa-2xl"></i><i class="fa-solid fa-award fa-lg"></i></p>
-          <p><i class="fa-duotone fa-file-certificate"></i></p>
+          <p><i className="fa-solid fa-award fa-2xl"></i><i className="fa-solid fa-award fa-lg"></i></p>
+          <p><i className="fa-duotone fa-file-certificate"></i></p>
           <p className='pro-head'>Certificate of Recognition</p>
           <p className='pro-des'>that acknowledges your commitment and contribution to environment conservation
           </p>
         </div>
         <div className='pro-item'>
-          <p><i class="fa-solid fa-people-group fa-2xl"></i><i class="fa-solid fa-people-group fa-lg"></i></p>
+          <p><i className="fa-solid fa-people-group fa-2xl"></i><i className="fa-solid fa-people-group fa-lg"></i></p>
           <p className='pro-head'>Global Networking Opportunities</p>
           <p className='pro-des'>be the part of the Global UN community of #GenerationRestoration
           </p>
         </div>
         <div className='pro-item'>
-          <i class="fa-solid fa-sheet-plastic fa-2xl"></i>
-          <i class="fa-solid fa-sheet-plastic fa-lg"></i>
+          <i className="fa-solid fa-sheet-plastic fa-2xl"></i>
+          <i className="fa-solid fa-sheet-plastic fa-lg"></i>
           <p className='pro-head'>Internship Opportunities</p>
           <p className='pro-des'>with Gaia The Earth Foundation, a partner af the UN Decade on Ecosystem Restoration.
           </p>
@@ -329,15 +329,15 @@ export default function EventsSchools() {
 
       <div className='am-go'>
         <div className='pro-item'>
-          <i class="fa-solid fa-hand-holding-heart fa-2xl"></i>
-          <i class="fa-solid fa-hand-holding-heart fa-lg"></i>
+          <i className="fa-solid fa-hand-holding-heart fa-2xl"></i>
+          <i className="fa-solid fa-hand-holding-heart fa-lg"></i>
           <p className='pro-head'>Amazing Goodies</p>
           <p className='pro-des'>Get eco-friendly stationery and a T-shirts on successfully completing the program
           </p>
         </div>
         <div className='pro-item'>
-          <i class="fa-solid fa-globe fa-2xl"></i>
-          <i class="fa-solid fa-globe fa-lg"></i>
+          <i className="fa-solid fa-globe fa-2xl"></i>
+          <i className="fa-solid fa-globe fa-lg"></i>
           <p className='pro-head'>Global Recognition</p>
           <p className='pro-des'>get featured in publications  & websites and Social Media handles
           </p>
@@ -373,19 +373,19 @@ export default function EventsSchools() {
       <p className='intro-am'>Introduction Module: India's Young Forest Ambassador Program</p>
       <div className='mod_item_div'>
         <div className='mod_item_div1'>
-          <p className='mod-item'><span>Module 1: Embracing the Forests</span><i onClick={handlemodule1} class="fa-solid fa-chevron-down fa-2xl"></i><i onClick={handlemodule1} class="fa-solid fa-chevron-down fa-lg"></i></p>
+          <p className='mod-item'><span>Module 1: Embracing the Forests</span><i onClick={handlemodule1} className="fa-solid fa-chevron-down fa-2xl"></i><i onClick={handlemodule1} className="fa-solid fa-chevron-down fa-lg"></i></p>
           {mod1 && <p className='mod-item1'>In this module, we will dive deep into the captivating world of forests. Discover the awe-inspiring beauty and incredible biodiversity that these ecosystems hold. Learn about their vital role in climate regulation, the significance of healthy forest ecosystems, and the challenges they face in the wake of environmental degradation. Gain a profound understanding of the interconnectedness between forests, biodiversity, and human well-being.</p>}
         </div>
         <div className='mod_item_div1'>
-          <p className='mod-item'><span>Module 2: Regeneration and Conservation</span><i onClick={handlemodule2} class="fa-solid fa-chevron-down fa-2xl"></i><i onClick={handlemodule2} class="fa-solid fa-chevron-down fa-lg"></i></p>
+          <p className='mod-item'><span>Module 2: Regeneration and Conservation</span><i onClick={handlemodule2} className="fa-solid fa-chevron-down fa-2xl"></i><i onClick={handlemodule2} className="fa-solid fa-chevron-down fa-lg"></i></p>
           {mod2 && <p className='mod-item1'>Explore the concept of ecosystem regeneration and its pivotal role in combating climate change. Uncover innovative approaches to sustainable forestry practices, reforestation, and habitat preservation. Engage in discussions and activities that highlight the importance of conservation efforts and community involvement in nurturing and protecting our forests.</p>}
         </div>
         <div className='mod_item_div1'>
-          <p className='mod-item'><span>Module 3: Taking Action</span><i onClick={handlemodule3} class="fa-solid fa-chevron-down fa-2xl"></i><i onClick={handlemodule3} class="fa-solid fa-chevron-down fa-lg"></i></p>
+          <p className='mod-item'><span>Module 3: Taking Action</span><i onClick={handlemodule3} className="fa-solid fa-chevron-down fa-2xl"></i><i onClick={handlemodule3} className="fa-solid fa-chevron-down fa-lg"></i></p>
           {mod3 && <p className='mod-item1'>Equip yourself with the tools and knowledge to take effective action. Discover practical strategies for creating impactful projects and initiatives within your communities. Learn about successful case studies and inspiring stories of individuals who have made a tangible difference in forest conservation and regeneration. Develop your skills in project planning, resource mobilization, stakeholder engagement, and effective communication for driving positive change.</p>}
         </div>
         <div className='mod_item_div1'>
-          <p className='mod-item'><span>Module 4: Becoming a Young Forest Ambassador</span><i onClick={handlemodule4} class="fa-solid fa-chevron-down fa-2xl"></i><i onClick={handlemodule4} class="fa-solid fa-chevron-down fa-lg"></i></p>
+          <p className='mod-item'><span>Module 4: Becoming a Young Forest Ambassador</span><i onClick={handlemodule4} className="fa-solid fa-chevron-down fa-2xl"></i><i onClick={handlemodule4} className="fa-solid fa-chevron-down fa-lg"></i></p>
           {mod4 && <p className='mod-item1'>In the final module, embrace the role of a Young Forest Ambassador. Explore the qualities and attributes that make an effective environmental leader. Discover the power of advocacy and communication in influencing others and creating a ripple effect of change. Gain insights from experts and mentors who will guide you on your path as you prepare to embark on your own environmental journey.
             Get ready to unleash your potential, ignite your passion, and become a force to be reckoned with in the realm of environmental conservation. India's Young Forest Ambassador Program is your platform to create a lasting impact and shape a sustainable future.</p>}
         </div>
@@ -400,7 +400,7 @@ export default function EventsSchools() {
       <p className='intro-am'>Activity Module: India's Young Forest Ambassador Program</p>
       <div className='mod_item_div'>
         <div className='mod_item_div1'>
-          <p className='mod-item_new'><span>Module 5: Fundraising for Forest Conservation</span><i onClick={handlemodule5} class="fa-solid fa-chevron-down fa-2xl"></i><i onClick={handlemodule5} class="fa-solid fa-chevron-down fa-lg"></i></p>
+          <p className='mod-item_new'><span>Module 5: Fundraising for Forest Conservation</span><i onClick={handlemodule5} className="fa-solid fa-chevron-down fa-2xl"></i><i onClick={handlemodule5} className="fa-solid fa-chevron-down fa-lg"></i></p>
           {mod5 && <p className='mod-item1'>In Module 5, we will explore the crucial aspect of fundraising to support our collective efforts in forest conservation. As Young Forest Ambassadors, we understand that financial resources are essential to implement impactful projects and initiatives. This module will equip you with the necessary skills and strategies to raise funds effectively.
             Your invaluable contributions and the resulting funds raised will be utilized for developing forests and restoring ecosystems of nature as part of the national mission - Mission Prakriti to grow 1 million hectares of forest by 2030.</p>}
         </div>
@@ -466,8 +466,8 @@ export default function EventsSchools() {
           <div className="modal-content">
             <div className="model_div">
               <h2>FILL IN YOUR DETAILS</h2>
-              <button className='model_div_lap' onClick={() => setMod(false)}><i class="fa-solid fa-xmark fa-2xl"></i></button>
-              <button className='model_div_mob' onClick={() => setMod(false)}><i class="fa-solid fa-xmark fa-lg"></i></button>
+              <button className='model_div_lap' onClick={() => setMod(false)}><i className="fa-solid fa-xmark fa-2xl"></i></button>
+              <button className='model_div_mob' onClick={() => setMod(false)}><i className="fa-solid fa-xmark fa-lg"></i></button>
             </div>
             <form onSubmit={handleSubmit}>
               <div className='form-row'>

@@ -291,9 +291,9 @@ Get ready to unleash your fundraising potential and become a passionate advocate
   <li>Become a young influencer for climate action and regeneration</li>
 </ul> */}
 
-      <div className="info-strip">
+      {/* <div className="info-strip">
         <img src={infostrip} style={{ width: "100%", height: "auto" }}></img>
-      </div>
+      </div> */}
 
       {/* <div className='overview'>
   <h1>PROGRAM OVERVIEW:</h1>
@@ -359,8 +359,8 @@ Get ready to unleash your fundraising potential and become a passionate advocate
       <div className="pro-heig">
         <div className="pro-item">
           <p>
-            <i class="fa-solid fa-video fa-2xl"></i>
-            <i class="fa-solid fa-video fa-lg"></i>
+            <i className="fa-solid fa-video fa-2xl"></i>
+            <i className="fa-solid fa-video fa-lg"></i>
           </p>
           <p className="pro-head">Pre-Recorded</p>
           <p className="pro-des">
@@ -369,8 +369,8 @@ Get ready to unleash your fundraising potential and become a passionate advocate
         </div>
         <div className="pro-item">
           <p>
-            <i class="fa-solid fa-list fa-2xl"></i>
-            <i class="fa-solid fa-list fa-lg"></i>
+            <i className="fa-solid fa-list fa-2xl"></i>
+            <i className="fa-solid fa-list fa-lg"></i>
           </p>
           <p className="pro-head">Modules</p>
           <p className="pro-des">
@@ -379,19 +379,19 @@ Get ready to unleash your fundraising potential and become a passionate advocate
         </div>
         <div className="pro-item">
           <p>
-            <i class="fa-solid fa-tree fa-2xl"></i>
-            <i class="fa-solid fa-tree fa-lg"></i>
+            <i className="fa-solid fa-tree fa-2xl"></i>
+            <i className="fa-solid fa-tree fa-lg"></i>
           </p>
           <p className="pro-head"> Nature trek Fully Sponsored</p>
           <p className="pro-des">top 5 performing participants</p>
         </div>
         <div className="pro-item">
           <p>
-            <i class="fa-solid fa-award fa-2xl"></i>
-            <i class="fa-solid fa-award fa-lg"></i>
+            <i className="fa-solid fa-award fa-2xl"></i>
+            <i className="fa-solid fa-award fa-lg"></i>
           </p>
           <p>
-            <i class="fa-duotone fa-file-certificate"></i>
+            <i className="fa-duotone fa-file-certificate"></i>
           </p>
           <p className="pro-head">Certificate of Recognition</p>
           <p className="pro-des">
@@ -401,8 +401,8 @@ Get ready to unleash your fundraising potential and become a passionate advocate
         </div>
         <div className="pro-item">
           <p>
-            <i class="fa-solid fa-people-group fa-2xl"></i>
-            <i class="fa-solid fa-people-group fa-lg"></i>
+            <i className="fa-solid fa-people-group fa-2xl"></i>
+            <i className="fa-solid fa-people-group fa-lg"></i>
           </p>
           <p className="pro-head">Global Networking Opportunities</p>
           <p className="pro-des">
@@ -410,8 +410,8 @@ Get ready to unleash your fundraising potential and become a passionate advocate
           </p>
         </div>
         <div className="pro-item">
-          <i class="fa-solid fa-sheet-plastic fa-2xl"></i>
-          <i class="fa-solid fa-sheet-plastic fa-lg"></i>
+          <i className="fa-solid fa-sheet-plastic fa-2xl"></i>
+          <i className="fa-solid fa-sheet-plastic fa-lg"></i>
           <p className="pro-head">Internship Opportunities</p>
           <p className="pro-des">
             with Gaia The Earth Foundation, a partner af the UN Decade on
@@ -422,8 +422,8 @@ Get ready to unleash your fundraising potential and become a passionate advocate
 
       <div className="am-go">
         <div className="pro-item">
-          <i class="fa-solid fa-hand-holding-heart fa-2xl"></i>
-          <i class="fa-solid fa-hand-holding-heart fa-lg"></i>
+          <i className="fa-solid fa-hand-holding-heart fa-2xl"></i>
+          <i className="fa-solid fa-hand-holding-heart fa-lg"></i>
           <p className="pro-head">Amazing Goodies</p>
           <p className="pro-des">
             Get eco-friendly stationery and a T-shirts on successfully
@@ -431,8 +431,8 @@ Get ready to unleash your fundraising potential and become a passionate advocate
           </p>
         </div>
         <div className="pro-item">
-          <i class="fa-solid fa-globe fa-2xl"></i>
-          <i class="fa-solid fa-globe fa-lg"></i>
+          <i className="fa-solid fa-globe fa-2xl"></i>
+          <i className="fa-solid fa-globe fa-lg"></i>
           <p className="pro-head">Global Recognition</p>
           <p className="pro-des">
             get featured in publications & websites and Social Media handles
@@ -470,11 +470,11 @@ Get ready to unleash your fundraising potential and become a passionate advocate
             <span>Module 1: Embracing the Forests</span>
             <i
               onClick={handlemodule1}
-              class="fa-solid fa-chevron-down fa-2xl"
+              className="fa-solid fa-chevron-down fa-2xl"
             ></i>
             <i
               onClick={handlemodule1}
-              class="fa-solid fa-chevron-down fa-lg"
+              className="fa-solid fa-chevron-down fa-lg"
             ></i>
           </p>
           {mod1 && (
@@ -495,11 +495,11 @@ Get ready to unleash your fundraising potential and become a passionate advocate
             <span>Module 2: Regeneration and Conservation</span>
             <i
               onClick={handlemodule2}
-              class="fa-solid fa-chevron-down fa-2xl"
+              className="fa-solid fa-chevron-down fa-2xl"
             ></i>
             <i
               onClick={handlemodule2}
-              class="fa-solid fa-chevron-down fa-lg"
+              className="fa-solid fa-chevron-down fa-lg"
             ></i>
           </p>
           {mod2 && (
@@ -518,11 +518,11 @@ Get ready to unleash your fundraising potential and become a passionate advocate
             <span>Module 3: Taking Action</span>
             <i
               onClick={handlemodule3}
-              class="fa-solid fa-chevron-down fa-2xl"
+              className="fa-solid fa-chevron-down fa-2xl"
             ></i>
             <i
               onClick={handlemodule3}
-              class="fa-solid fa-chevron-down fa-lg"
+              className="fa-solid fa-chevron-down fa-lg"
             ></i>
           </p>
           {mod3 && (
@@ -543,11 +543,11 @@ Get ready to unleash your fundraising potential and become a passionate advocate
             <span>Module 4: Becoming a Young Forest Ambassador</span>
             <i
               onClick={handlemodule4}
-              class="fa-solid fa-chevron-down fa-2xl"
+              className="fa-solid fa-chevron-down fa-2xl"
             ></i>
             <i
               onClick={handlemodule4}
-              class="fa-solid fa-chevron-down fa-lg"
+              className="fa-solid fa-chevron-down fa-lg"
             ></i>
           </p>
           {mod4 && (
@@ -587,11 +587,11 @@ Get ready to unleash your fundraising potential and become a passionate advocate
             <span>Module 5: Fundraising for Forest Conservation</span>
             <i
               onClick={handlemodule5}
-              class="fa-solid fa-chevron-down fa-2xl"
+              className="fa-solid fa-chevron-down fa-2xl"
             ></i>
             <i
               onClick={handlemodule5}
-              class="fa-solid fa-chevron-down fa-lg"
+              className="fa-solid fa-chevron-down fa-lg"
             ></i>
           </p>
           {mod5 && (
@@ -831,8 +831,8 @@ Explore fundraising techniques, engage donors and sponsors, and emphasise forest
           <div className="modal-content">
             <div className="model_div">
               <h2>FILL IN YOUR DETAILS</h2>
-              <button className='model_div_lap' onClick={() => setMod(false)}><i class="fa-solid fa-xmark fa-2xl"></i></button>
-              <button className='model_div_mob' onClick={() => setMod(false)}><i class="fa-solid fa-xmark fa-lg"></i></button>
+              <button className='model_div_lap' onClick={() => setMod(false)}><i className="fa-solid fa-xmark fa-2xl"></i></button>
+              <button className='model_div_mob' onClick={() => setMod(false)}><i className="fa-solid fa-xmark fa-lg"></i></button>
             </div>
             <form onSubmit={handleSubmit}>
               <div className='form-row'>

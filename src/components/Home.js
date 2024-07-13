@@ -47,6 +47,14 @@ import Aff2 from '../components/images/affiliate/Suresh prabhu.png'
 import Aff3 from '../components/images/affiliate/Ramananramnathan.png'
 import Aff4 from '../components/images/affiliate/Jagdish seth.png'
 import indiaMunLogo from './images/INDIAMUN/india mun blue logo.png';
+import studentSubmitted1 from '../components/images/submitted/1717568287249470500748834549932 - ROHAN DEBNATH.jpg';
+import studentSubmitted2 from '../components/images/submitted/17180050557961577507493304723060 - PEARL 15410.jpg';
+import studentSubmitted3 from '../components/images/submitted/Causes_20240605_093233_0000 - Rani Kumari.png';
+import studentSubmitted4 from '../components/images/submitted/Nature Picture  - Shreya Pati.jpg';
+import studentSubmitted5 from '../components/images/submitted/Pics - Shrishti Singh.jpg';
+import studentSubmitted6 from '../components/images/submitted/Screenshot_20240605_112653_DuckDuckGo - Derick Star.jpg';
+import studentSubmitted7 from '../components/images/submitted/winner.png';
+import studentSubmitted8 from '../components/images/submitted/winner 2.png';
 
 import { useNavigate } from 'react-router-dom';
 import { useLogin } from './hooks/useLogin'
@@ -130,14 +138,14 @@ export default function Home() {
         <h1>FROM ACTIVISM TO ACTION</h1>
         <p className='nur'>Nurturing future sustainability leaders</p>
         <div className='roller'>
-          <button onClick={handlePrev} style={{ background: 'none', border: 'none', color: 'white' }}><i class="fa-solid fa-chevron-left"></i></button>
+          <button onClick={handlePrev} style={{ background: 'none', border: 'none', color: 'white' }}><i className="fa-solid fa-chevron-left"></i></button>
           <h3 className='main-act'>{slides[currentIndex]}</h3>
-          <button onClick={handleNext} style={{ background: 'none', border: 'none', color: 'white' }}><i class="fa-solid fa-chevron-right"></i></button>
+          <button onClick={handleNext} style={{ background: 'none', border: 'none', color: 'white' }}><i className="fa-solid fa-chevron-right"></i></button>
         </div>
 
         <div className="join-ind">
           <p>JOIN INDIA MUN</p>
-          {/* <button class="join-but"><a href='/affiliates' style={{textDecoration:'none',color:'white'}}>Affiliate Your School</a></button> */}
+          {/* <button className="join-but"><a href='/affiliates' style={{textDecoration:'none',color:'white'}}>Affiliate Your School</a></button> */}
         </div>
         <p className='up'> Where the world's 365 MILLION* young people</p>
         <p className='mid'>MEET | LEARN | BRAINSTORM | ACT</p>
@@ -341,6 +349,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+
       <h1 className="habout" style={{ marginBottom: '30px' }}>OUR ASSOCIATES & PARTNERS</h1>
       <div className='img-slide-car'>
         <Carousel cols={4} rows={1} gap={0} loop showDots={true} autoplay={2000}>
@@ -402,20 +411,20 @@ export default function Home() {
         <div className='col-new-div'>
             <img src={col1} alt=""/>
             <p>INDIVIDUALS</p>
-            <i onClick={handledropClick1} class="fa-solid fa-circle-chevron-down fa-2xl"></i>
-            <i onClick={handledropClick1} class="fa-solid fa-circle-chevron-down fa-lg"></i>
+            <i onClick={handledropClick1} className="fa-solid fa-circle-chevron-down fa-2xl"></i>
+            <i onClick={handledropClick1} className="fa-solid fa-circle-chevron-down fa-lg"></i>
         </div>
         <div className='col-new-div sc2'>
             <img src={col2} alt=""/>
             <p>SCHOOLS/COLLEGES</p>
-            <i onClick={handledropClick2} class="fa-solid fa-circle-chevron-down fa-2xl"></i>
-           <i onClick={handledropClick2} class="fa-solid fa-circle-chevron-down fa-lg"></i>
+            <i onClick={handledropClick2} className="fa-solid fa-circle-chevron-down fa-2xl"></i>
+           <i onClick={handledropClick2} className="fa-solid fa-circle-chevron-down fa-lg"></i>
         </div>
         <div className='col-mob col-new-div'>
             <img src={col3} alt=""/>
             <p>CORPORATES</p>
-            <i onClick={handledropClick3} class="fa-solid fa-circle-chevron-down fa-2xl"></i>
-            <i onClick={handledropClick3} class="fa-solid fa-circle-chevron-down fa-lg"></i>
+            <i onClick={handledropClick3} className="fa-solid fa-circle-chevron-down fa-2xl"></i>
+            <i onClick={handledropClick3} className="fa-solid fa-circle-chevron-down fa-lg"></i>
         </div>
     </div> */}
 
@@ -433,8 +442,8 @@ export default function Home() {
           <div className='img-cola'>
             <img src={col1}></img>
             <span>INDIVIDUALS</span>
-            <i onClick={handledropClick1} class="fa-solid fa-circle-chevron-down fa-2xl"></i>
-            <i onClick={handledropClick1} class="fa-solid fa-circle-chevron-down fa-lg"></i>
+            <i onClick={handledropClick1} className="fa-solid fa-circle-chevron-down fa-2xl"></i>
+            <i onClick={handledropClick1} className="fa-solid fa-circle-chevron-down fa-lg"></i>
           </div>
           {dropcol1 &&
             <div>
@@ -449,8 +458,8 @@ export default function Home() {
           <div className='img-cola'>
             <img src={col2}></img>
             <span>SCHOOLS/COLLEGES</span>
-            <i onClick={handledropClick2} class="fa-solid fa-circle-chevron-down fa-2xl"></i>
-            <i onClick={handledropClick2} class="fa-solid fa-circle-chevron-down fa-lg"></i>
+            <i onClick={handledropClick2} className="fa-solid fa-circle-chevron-down fa-2xl"></i>
+            <i onClick={handledropClick2} className="fa-solid fa-circle-chevron-down fa-lg"></i>
           </div>
           {dropcol2 &&
             <div>
@@ -464,8 +473,8 @@ export default function Home() {
           <div className='img-cola'>
             <img src={col3}></img>
             <span>CORPORATES</span>
-            <i onClick={handledropClick3} class="fa-solid fa-circle-chevron-down fa-2xl"></i>
-            <i onClick={handledropClick3} class="fa-solid fa-circle-chevron-down fa-lg"></i>
+            <i onClick={handledropClick3} className="fa-solid fa-circle-chevron-down fa-2xl"></i>
+            <i onClick={handledropClick3} className="fa-solid fa-circle-chevron-down fa-lg"></i>
           </div>
           {dropcol3 &&
             <div>
@@ -553,6 +562,64 @@ export default function Home() {
           </div>
         </div>
       </div>
+      
+      <h2 className="blogs-main-heading">BLOGS</h2>
+      <div className="blogs">
+        <div className="blog" onClick={() => window.open('https://courses.indiamun.org/blog/climate-chronicles-2', '_blank')}>
+            <h3 className="blog-title">Climate Chronicles</h3>
+            <p className="blog-desc">
+              Hello everyone!
+              We all know about climate change and how our environment is being affected by our actions, but what can we do to stop this from happening and maybe even reverse it? In this post, I'll be sharing practical steps you can take on a personal level to help our planet, along with some actions I've taken myself I’m Aanyaa ... <span className='readmore-span'>Read More</span>  
+            </p>
+        </div>
+        <div className="blog" onClick={() => window.open('https://courses.indiamun.org/blog/understanding-climate-action-causes-effects-and-solutions', '_blank')}>
+            <h3 className="blog-title">Understanding Climate...</h3>
+            <p className="blog-desc">
+            So, first of all, we should know what climate action is: 
+            Climate action refers to efforts and initiatives taken to mitigate the effects of climate change and adapt to its impacts. Here’s a comprehensive overview of climate action, including its importance, key strategies, global agreements, and ways individuals can contribute 
+            Now that we ... <span className='readmore-span'>Read More</span>  
+            </p>
+        </div>
+        <div className="blog" onClick={() => window.open('https://courses.indiamun.org/blog/the-importance-of-climate-action-in-our-modern-world', '_blank')}>
+            <h3 className="blog-title">The Importance of Climate ...</h3>
+            <p className="blog-desc">
+            In our modern world, one of the most important resources is that of nature, as elements such as fossil fuels, agriculture, and other components derived from nature make up a major part of the world. In 2023, despite all the deforestation and destruction of nature, agriculture still held a 4% share of global GDP, and fossil fuels held an 8% share. However... <span className='readmore-span'>Read More</span>  
+            </p>
+        </div>
+      </div>
+
+      
+      <h2 className="blogs-main-heading">GALLERY</h2>
+      <div className='img-slide-car' style={{ marginBottom: '50px'}}>
+        <Carousel cols={2} rows={1} gap={1} loop showDots={true} autoplay={2000}>
+          <Carousel.Item>
+            <img width="100%" src={studentSubmitted1} />
+          </Carousel.Item>
+          <Carousel.Item>
+            <img width="100%" src={studentSubmitted2} />
+          </Carousel.Item>
+          <Carousel.Item>
+            <img width="100%" src={studentSubmitted3} />
+          </Carousel.Item>
+          <Carousel.Item>
+            <img width="100%" src={studentSubmitted4} />
+          </Carousel.Item>
+          <Carousel.Item>
+            <img width="100%" src={studentSubmitted5} />
+          </Carousel.Item>
+          <Carousel.Item>
+            <img width="100%" src={studentSubmitted6} />
+          </Carousel.Item>
+          <Carousel.Item>
+            <img width="100%" src={studentSubmitted7} />
+          </Carousel.Item>
+          <Carousel.Item>
+            <img width="100%" src={studentSubmitted8} />
+          </Carousel.Item>
+        </Carousel>
+
+      </div>
+
       <div className='twitter_feed'>
         <p>TWITTER FEED</p>
         <div className='twit'>
@@ -617,10 +684,10 @@ export default function Home() {
                <p className='copy_footer'> ©2002</p>
             </div>
             <div className='footer_flex_item'>
-            <a href='https://www.instagram.com/buzzonearth/' target={'_blank'}><i class="fa-brands fa-instagram"></i></a>
-            <a href='https://twitter.com/BuzzOnEarth' target={'_blank'}><i class="fa-brands fa-twitter"></i></a>
-            <a href='https://www.facebook.com/buzzonearth/' target={'_blank'}><i class="fa-brands fa-facebook"></i></a>
-            <a href='https://www.youtube.com/@buzzonearth2959' target={'_blank'}><i class="fa-brands fa-youtube"></i></a>
+            <a href='https://www.instagram.com/buzzonearth/' target={'_blank'}><i className="fa-brands fa-instagram"></i></a>
+            <a href='https://twitter.com/BuzzOnEarth' target={'_blank'}><i className="fa-brands fa-twitter"></i></a>
+            <a href='https://www.facebook.com/buzzonearth/' target={'_blank'}><i className="fa-brands fa-facebook"></i></a>
+            <a href='https://www.youtube.com/@buzzonearth2959' target={'_blank'}><i className="fa-brands fa-youtube"></i></a>
             </div>
         </div>
     </div> */}

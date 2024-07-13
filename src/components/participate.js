@@ -314,7 +314,7 @@ Get ready to unleash your fundraising potential and become a passionate advocate
       <div className='youth_full' ref={targetRef3}>
         <div className='youth_got_talent'>
           <h1>INDIA MUN CLIMATE CONFERENCE</h1>
-          <p>(April 24, 2024)</p>
+          <p>(27th-28th July, 2024)</p>
         </div>
         <div className='cli-conf'>
           <div className='cli-conf1'>
@@ -627,10 +627,10 @@ Get ready to unleash your fundraising potential and become a passionate advocate
                <p className='copy_footer'> ©2002</p>
             </div>
             <div className='footer_flex_item'>
-            <a href='https://www.instagram.com/buzzonearth/' target={'_blank'}><i class="fa-brands fa-instagram"></i></a>
-            <a href='https://twitter.com/BuzzOnEarth' target={'_blank'}><i class="fa-brands fa-twitter"></i></a>
-            <a href='https://www.facebook.com/buzzonearth/' target={'_blank'}><i class="fa-brands fa-facebook"></i></a>
-            <a href='https://www.youtube.com/@buzzonearth2959' target={'_blank'}><i class="fa-brands fa-youtube"></i></a>
+            <a href='https://www.instagram.com/buzzonearth/' target={'_blank'}><i className="fa-brands fa-instagram"></i></a>
+            <a href='https://twitter.com/BuzzOnEarth' target={'_blank'}><i className="fa-brands fa-twitter"></i></a>
+            <a href='https://www.facebook.com/buzzonearth/' target={'_blank'}><i className="fa-brands fa-facebook"></i></a>
+            <a href='https://www.youtube.com/@buzzonearth2959' target={'_blank'}><i className="fa-brands fa-youtube"></i></a>
             </div>
         </div>
 </div> */}

@@ -75,31 +75,31 @@ const Navigation = () => {
     window.open(url, "_blank");
   };
 
-/*   const handleClick = async (e) => {
-    try {
-      await signInWithGoogle();
-
-      // Listen for changes in the authentication state
-      firebaseAuth.onAuthStateChanged((user) => {
-        if (user) {
-          // Access user information
-          const { uid, displayName, email } = user;
-
-          // Store user information in Firestore
-          storeUserInfo(uid, displayName, email);
-
-          // Now you can do other actions after sign-in and data storage
-          // For example, you can navigate to a different page using React Router
-          // history.push('/events');
-        } else {
-          console.log('User not found!');
-        }
-      });
-
-    } catch (err) {
-      console.log(err);
-    }
-  }; */
+  /*   const handleClick = async (e) => {
+      try {
+        await signInWithGoogle();
+  
+        // Listen for changes in the authentication state
+        firebaseAuth.onAuthStateChanged((user) => {
+          if (user) {
+            // Access user information
+            const { uid, displayName, email } = user;
+  
+            // Store user information in Firestore
+            storeUserInfo(uid, displayName, email);
+  
+            // Now you can do other actions after sign-in and data storage
+            // For example, you can navigate to a different page using React Router
+            // history.push('/events');
+          } else {
+            console.log('User not found!');
+          }
+        });
+  
+      } catch (err) {
+        console.log(err);
+      }
+    }; */
 
 
   const handleLogout = async () => {
@@ -154,7 +154,7 @@ const Navigation = () => {
                 <Nav.Link className='nav_items' href='/partners'>Partners and Affilates</Nav.Link>
                 {/* <Nav.Link className='nav_items' href='/mylearning'>My Learning</Nav.Link> */}
                 <Nav.Link className='nav_items' href='/conference'>India MUN Climate Conference</Nav.Link>
-                <Nav.Link className='nav_items' href="https://buzzonearth.com/" target={'_blank'} style={{ color: 'white' }}>Blog</Nav.Link>
+                <Nav.Link className='nav_items' href="https://courses.indiamun.org/blog" target={'_blank'} style={{ color: 'white' }}>Blog</Nav.Link>
                 {/* {userInfo ? (
                   <Nav.Link className='nav_items' href='/mylearning'>My Learning</Nav.Link>
                 ): (
@@ -208,7 +208,7 @@ const Navigation = () => {
                         className='user_pic'
                       />
                     </Nav.Link>  */}
-                    {/* <Nav.Link className='nav_items'>{user.displayName}</Nav.Link>
+              {/* <Nav.Link className='nav_items'>{user.displayName}</Nav.Link>
                     <button className='logout_btn' onClick={handleLogout}>
                       Logout
                     </button>
@@ -230,7 +230,7 @@ const Navigation = () => {
                         <button className='logout-btn' onClick={handleLogout}>Logout</button>
                       </NavDropdown.Item>
                     </NavDropdown> */}
-                  {/* </div>
+              {/* </div>
                 ) : (
                   // If user is not authenticated, show the "Student Login" link
                   <Nav.Link className='nav_items' onClick={handleClick}>
