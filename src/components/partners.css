@@ -5,6 +5,11 @@
     /* background: linear-gradient(90deg, rgba(45,181,252,1) 0%, rgba(158,174,236,1) 50%, rgba(255,164,215,1) 100%); */
     padding: 5px 60px;
     border-radius: 30px;
+    /* color: rgb(0, 120, 225); */
+	font-family: anton;
+    letter-spacing: 1px;
+	font-weight: 400;
+	/* font-size: 48px; */
 }
 .headname1 span{
     /* background: rgb(77,189,132);
@@ -13,6 +18,9 @@
     color: white;
     padding: 5px 60px;
     border-radius: 30px;
+    font-family: anton;
+	font-weight: 400;
+    letter-spacing: 1px;
 }
 .headname1{
     text-align: center;

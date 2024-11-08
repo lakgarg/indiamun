@@ -1,7 +1,7 @@
 .head-am2 {
 	font-size: 45px;
 	text-align: center;
-	font-family: "Quicksand", sans-serif;
+	font-family: "anton", sans-serif;
 	color: rgb(43, 143, 66);
 }
 .part_d1 {
@@ -20,9 +20,9 @@
 	color: rgb(61, 133, 214);
 }
 .head-am2_ylp {
-	font-size: 55px;
+	font-size: 48px;
 	text-align: start;
-	font-family: "Quicksand", sans-serif;
+	font-family: "anton", sans-serif;
 	color: rgb(34, 96, 205);
 }
 
@@ -125,6 +125,7 @@
 .proover {
 	font-family: anton;
 	padding: 20px;
+	color: rgb(0, 120, 225);
 	/* border-top: 1.5px solid black; */
 }
 .info-strip1 {

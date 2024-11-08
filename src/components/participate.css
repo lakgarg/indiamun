@@ -203,9 +203,11 @@
 	color: rgb(43, 143, 66);
 }
 .head-am1_fa {
-	font-size: 50px;
+	font-size: 48px;
 	text-align: start;
-	font-family: "Quicksand", sans-serif;
+	/* color: rgb(0, 120, 225); */
+	font-family: anton;
+	font-weight: 400;
 	color: rgb(32, 136, 55);
 }
 .part_d {
@@ -222,7 +224,7 @@
 	align-items: start;
 	padding-top: 15px;
 	text-align: start;
-	padding-left: 80px;
+	padding-left: 55px;
 }
 .part_d p {
 	font-size: 25px;
@@ -324,7 +326,7 @@
 	/* margin-right: -5px; */
 }
 .ylp {
-	padding: 40px;
+	padding: 20px 40px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -346,13 +348,24 @@
 	align-items: center;
 }
 .ylp span {
-	font-size: 50px;
+	font-size: 48px;
+	color: rgb(0, 120, 225);
+	font-family: anton;
+	font-weight: 400;
 	padding-right: 10px;
 	padding-left: 10px;
 }
 .ylp-pic {
 	display: flex;
 	padding: 25px;
+}
+.ylp-sec {
+	padding-left: 50px;
+}
+.ylp-left {
+	display: flex;
+	align-items: start;
+	padding-left: 20px;
 }
 .ylp-left img {
 	width: 90%;
@@ -373,15 +386,17 @@
 
 .cli-hack {
 	margin-top: 50px;
-	padding-left: 40px;
-	padding-right: 40px;
+	padding-left: 100px;
+	padding-right: 75px;
 	display: flex;
 	justify-content: space-between;
 }
 .cli-hack span {
-	font-family: "Quicksand", sans-serif;
-	font-size: 50px;
-	font-weight: 600;
+	/* color: rgb(0, 120, 225); */
+	font-family: anton;
+	font-weight: 400;
+	font-size: 48px;
+	/* font-weight: 600; */
 }
 .cli-hack button {
 	padding: 5px;
@@ -414,9 +429,10 @@
 }
 .prev-ev {
 	text-align: center;
-	font-size: 35px;
-	font-family: "Quicksand", sans-serif;
-	font-weight: 600;
+	/* color: rgb(0, 120, 225); */
+	font-family: anton;
+	font-weight: 400;
+	font-size: 48px;
 	color: black;
 	margin-top: 20px;
 	margin-bottom: 20px;
@@ -531,11 +547,15 @@
 	align-items: center;
 }
 .youth_got_talent h1 {
-	font-weight: 500;
+	/* color: rgb(0, 120, 225); */
+	font-family: anton;
+	font-weight: 400;
+	font-size: 48px;
 }
 .youth_got_talent p {
 	color: black;
 	font-size: 20px;
+	padding-right: 18px;
 	font-weight: 700;
 }
 .youth_p {

@@ -87,6 +87,23 @@
     width: 100%;
     height: 150px;
 }
+
+.social-icons .x-twitter {
+  color: #1DA1F2; /* Twitter Blue */
+}
+.social-icons .facebook {
+  color: #3b5998; /* Facebook Blue */
+}
+.social-icons .instagram {
+  color: #e4405f; /* Instagram Pink/Red */
+}
+.social-icons .linkedin {
+  color: #0077b5; /* LinkedIn Blue */
+}
+.social-icons .youtube {
+  color: #FF0000; /* YouTube Red */
+}
+
 @media (max-width:991px)
 {
   .site-footer [class^=col-]

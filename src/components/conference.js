@@ -41,6 +41,11 @@ import indiaMunNewRecap12 from "./images/conference/2021 12.webp";
 import indiaMunNewRecap13 from "./images/conference/2021 13.webp";
 import indiaMunNewRecap14 from "./images/conference/2021 14.webp";
 import indiaMunNewRecap15 from "./images/conference/2021 15.webp";
+import imccImg from "./images/conference/India MUN dates.png";
+import July27 from "./images/conference/agenda day 1.webp";
+import July28 from "./images/conference/Agedna day 2.webp";
+import owaisSamrad from './images/conference/owais samrad.png';
+import gayatriChauhan from './images/conference/gayatri chauhan.webp';
 import hero from "./images/conference/Conf image.webp";
 import Agenda from "./images/conference/Agenda.webp";
 import fest from "./images/conference/fest.webp";
@@ -140,7 +145,7 @@ export default function Conference() {
       </div>
 
       <div className="conference-hero">
-        <div className="aff-hero">
+        {/* <div className="aff-hero">
           <div className="aff-hero-right">
             <div className="aff-hero-right-img">
               <img src={fest} alt="GSCAPlaque" />
@@ -151,14 +156,102 @@ export default function Conference() {
               <img src={conf} alt="GSCAPlaque" />
             </div>
           </div>
+        </div> */}
+
+        <div className="imcc-img-container">
+          <img src={imccImg} alt="imccImg" />
         </div>
 
-        <div>
+        <div className="welcome-letter-main-container">
+          <div className="welcome-letter-sub-container">
+            <div className="welcome-letter-center">
+              <h3 className="welcome-letter-title">WELCOME LETTER BY THE SECRETARY-GENERAL, INDIAMUN 2024</h3>
+              <div className="welcome-letter-img">
+                <img src={owaisSamrad} alt="owaisSamrad" />
+              </div>
+            </div>
+            <p className="welcome-letter-p">
+              <span className="bold-span">Dear Delegates, Advisors, and Honored Guests,</span><br /><br />
+
+              It is with immense pride and great pleasure that I welcome you to the National India Model United Nations Conference 2024. As the Secretary-General of India MUN 2024, I am thrilled to see the convergence of bright young minds from across our diverse nation, united by a common purpose: to address and take action on the critical issues surrounding climate change and sustainability.<br /><br />
+
+              India MUN stands as the only pan-India Model United Nations conference dedicated to moving beyond activism and towards tangible action. This year, our theme, "Loss and Damage Fund: Addressing Climate Justice through Financial Support from Developed to Developing Countries" and "Climate Innovations: Exploring Innovative Solutions that Empower Communities to Build Resilience against Climate Change Effects," underscores our commitment to not only raising awareness but also fostering real-world solutions and initiatives that can make a difference. Over the next two days, you will engage in rigorous debates, collaborate on innovative ideas, and develop resolutions that can influence policy and drive meaningful change.<br /><br />
+
+              Your participation in this conference is a testament to your dedication to the cause and your willingness to step up as leaders of tomorrow. As you navigate through various committees, discussing topics that range from renewable energy and sustainable development to climate justice and conservation, I encourage you to think creatively, challenge assumptions, and work collaboratively. The world needs passionate, informed, and proactive individuals like you to lead the charge against climate change.<br /><br />
+
+              To our esteemed advisors, teachers, principles and parents, thank you for supporting and guiding these young delegates. Your mentorship and insights are invaluable in shaping the next generation of leaders.
+              As we embark on this journey together, let us remember that every discussion, every debate, and every decision made here has the potential to impact our planet positively. Let us be bold in our aspirations, decisive in our actions, and unwavering in our commitment to a sustainable future.<br /><br />
+
+              Welcome to the National India MUN Conference 2024. Let us make these days memorable and impactful.<br /><br />
+
+              Yours sincerely,<br /><br />
+
+              <span className="bold-span">
+                Ovais Sarmad<br />
+                Secretary-General<br />
+                India Model United Nations 2024
+              </span>
+            </p>
+          </div>
+          <div className="welcome-letter-sub-container">
+            <div className="welcome-letter-center">
+              <h3 className="welcome-letter-title">WELCOME LETTER BY THE PRESIDENT, INDIAMUN</h3>
+              <div className="welcome-letter-img">
+                <img src={gayatriChauhan} alt="gayatriChauhan" />
+              </div>
+            </div>
+            <p className="welcome-letter-p">
+              <span className="bold-span">Dear Young Leaders, Esteemed Educators, and Honored Guests,</span><br /><br />
+
+              It is with immense joy and great anticipation that I welcome you to the National India Model United Nations Conference 2024. As the Founder and Executive President of India MUN, I am deeply inspired by the bright young minds gathering from all corners of our diverse nation. Your enthusiasm and dedication to addressing and taking action on the critical issues surrounding climate change and sustainability fill me with hope and confidence for our future.<br /><br />
+
+              India is a young country, with more than 50% of our population under the age of 25. This youthful demographic is our greatest asset. I firmly believe in the power of youth to drive change, innovate, and lead with passion and purpose. The energy, creativity, and resilience that you bring to the table are exactly what we need to tackle the pressing challenges of our time.<br /><br />
+
+              I envision the youth of our country as torchbearers in solving global challenges. Instead of adopting a victim mindset, I urge you to embrace an action mindset. Rise above the challenges not only for your own good but for the betterment of society, nature, and our planet at large. Your participation in this conference is a testament to your dedication to the cause and your willingness to step up as leaders of tomorrow.<br /><br />
+
+              Our theme this year, "Climate Action and Innovation: Financing a Sustainable Future," underscores our commitment to not only raising awareness but also fostering real-world solutions and initiatives that can make a difference. Over the two days on 27th and 28th July 2024, you will engage in rigorous debates, collaborate on innovative ideas, and develop resolutions that can influence policy and drive meaningful change.<br /><br />
+
+              Our focus this year is twofold:<br /><br />
+
+              1. Loss and Damage Fund: Addressing the financial support from developed to developing countries for climate impacts.<br />
+              2. Climate Innovations: Exploring innovative solutions that empower communities to build resilience against climate change effects.<br /><br />
+
+              You will be participating in discussions within our carefully structured councils and committees:<br /><br />
+
+              • Loss and Damage Fund Council:<br />
+              &nbsp;&nbsp;  ○ UNFCCC: Financing Mechanisms for the Loss and Damage Fund<br />
+              &nbsp;&nbsp;  ○ IPCC: Scientific Assessments and Reports on Climate Impacts<br />
+              &nbsp;&nbsp;  ○ GCF: Allocation and Distribution of Funds to Vulnerable Nations<br />
+              • Climate Innovation Council:<br />
+              &nbsp;&nbsp;  ○ UNEP: Promoting Innovative Climate Technologies<br />
+              &nbsp;&nbsp;  ○ World Bank Group: Financing Climate Innovation Projects<br />
+              &nbsp;&nbsp;  ○ UNDP: Empowering Communities through Climate Innovations<br /><br />
+
+              To our esteemed advisors and guests, thank you for supporting and guiding these young delegates. Your mentorship and insights are invaluable in shaping the next generation of leaders.<br /><br />
+
+              As we move closer to the conference dates, let us remember that every discussion, every debate, and every decision made here has the potential to impact our planet positively. Let us be bold in our aspirations, decisive in our actions, and unwavering in our commitment to a sustainable future.<br /><br />
+
+              Welcome to the National India MUN Conference 2024. Let us make these days memorable and impactful.<br /><br />
+
+              Yours sincerely,<br /><br />
+              <span className="bold-span">
+                Gayatri Chauhan<br />
+                Founder and Executive President<br />
+                India Model United Nations<br />
+              </span>
+
+            </p>
+          </div>
+        </div>
+
+        <div className="agenda-main-container">
           <h1 className="high-head">AGENDA</h1>
           <p className="pro-head">
-            India MUN National Conference & “Youth for Earth” Fest 2024
+            India MUN National Climate Conference 2024
           </p>
-          <img src={Agenda} alt="hero" height="50%" width="50%" />
+          <div className="agenda-img-container">
+            <img src={Agenda} alt="hero" />
+          </div>
         </div>
       </div>
 
@@ -166,17 +259,19 @@ export default function Conference() {
         <h1 className="high-head"></h1>
       </div>
 
+
+
       <div className="aff-hero">
         <div className="aff-hero-right">
           <div className="aff-hero-right-img">
-            <h3 className="aff-hero-subheading">24th April, 2024</h3>
-            <img src={left_image} alt="GSCAPlaque" />
+            <h3 className="aff-hero-subheading">27th July, 2024</h3>
+            <img src={July27} alt="GSCAPlaque" />
           </div>
         </div>
         <div className="aff-hero-right">
           <div className="aff-hero-right-img">
-            <h3 className="aff-hero-subheading">25th April, 2024</h3>
-            <img src={right_image} alt="GSCAPlaque" />
+            <h3 className="aff-hero-subheading">28th July, 2024</h3>
+            <img src={July28} alt="GSCAPlaque" />
           </div>
         </div>
       </div>
@@ -193,15 +288,14 @@ export default function Conference() {
           India MUN Climate Conference 2024 is here!
         </h2>
         <p className="more-than-an-event">
-          This is more than an event; it's the essence of India MUN – a platform
-          that defines leadership, impact, and unity!
+          The only MUN which is India’s MUN and represents India internationally
         </p>
-        <h2 className="imcc-registeration-text">
-        27th-28th July, 2024
-        </h2>
-        <button className="imcc-registeration-btn" onClick={goToRazorpayPayment}>
-          Enroll Now
+        <button className="imcc-registeration-btn" onClick={() => window.open('https://www.youtube.com/watch?v=zQNjt7ZSox8', '_blank')}>
+          Concluded - View Results
         </button>
+        <h2 className="imcc-registeration-text">
+          Conference Dates: 27th - 28th July, 2024
+        </h2>
       </div>
 
       <div className="am-go"></div>
@@ -309,9 +403,9 @@ export default function Conference() {
         </div>
       </div>
 
-      <div className="am-go"></div>
+      {/* <div className="am-go"></div> */}
 
-      <h2 className="imcc-registeration-heading">Reserve your slot now!</h2>
+      {/* <h2 className="imcc-registeration-heading">Reserve your slot now!</h2>
       <p className="more-than-an-event">
         The only MUN which is India’s MUN and represents India internationally
       </p>
@@ -321,8 +415,8 @@ export default function Conference() {
         </button>
       </div>
       <h2 className="imcc-registeration-text">
-      27th-28th July, 2024
-      </h2>
+        27th-28th July, 2024
+      </h2> */}
 
       <div className="ylp-discount-container">
         <h2 className="ylp-discount-heading">50% Discount</h2>

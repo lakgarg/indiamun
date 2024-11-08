@@ -10,7 +10,7 @@
 	font-family: anton;
 	font-weight: 400;
 	color: #1875d1;
-	font-size: 64px;
+	font-size: 48px;
 	margin-top: 30px;
 	/* letter-spacing: -2px; */
 }
@@ -107,8 +107,8 @@
 .aff-unite-h1{
 	font-family: anton;
 	font-weight: 400;
-	color: black;
-	font-size: 55px;
+	color: rgb(0, 120, 225);
+	font-size: 48px;
 	margin-top: 30px;
 	margin-bottom: 10px;
 }
@@ -144,10 +144,10 @@
 }
 
 .aff-partners-and-affiliates-heading{
+	color: rgb(0, 120, 225);
 	font-family: anton;
 	font-weight: 400;
-	color: black;
-	font-size: 55px;
+	font-size: 48px;
 	margin-top: 30px;
 	margin-bottom: 10px;
 }
@@ -276,7 +276,7 @@
 	font-family: anton;
 	font-weight: 400;
 	color: rgb(0, 120, 225);
-	font-size: 55px;
+	font-size: 48px;
 	margin-top: 30px;
 	margin-bottom: 10px;
 	flex-wrap: wrap;
@@ -296,7 +296,7 @@
 	font-family: anton;
 	font-weight: 400;
 	color: black;
-	font-size: 57px;
+	font-size: 45px;
 	margin-top: 30px;
 	margin-bottom: 15px;
 }
@@ -306,7 +306,7 @@
 	padding-right: 25px;
 	padding-left: 25px;
 	border: none;
-	font-size: 23px;
+	font-size: 20px;
 	font-weight: 600;
 	border-radius: 6px;
 	background-color: rgb(0, 120, 225);
@@ -326,25 +326,25 @@
 .aff-impc-container {
 	display: flex;
 	flex-direction: column;
-	margin: 70px 0;
+	margin: 50px 0;
 	background-color: #ececec;
 }
 
 .aff-impc-heading {
+	color: rgb(0, 120, 225);
 	font-family: anton;
 	font-weight: 400;
-	color: black;
-	font-size: 55px;
-	margin-top: 30px;
-	margin-bottom: 10px;
+	font-size: 48px;
+	margin-top: 40px;
+	margin-bottom: 40px;
 }
 
 .aff-impc-heading-blue {
 	font-family: anton;
 	font-weight: 400;
 	color: rgb(0, 120, 225);
-	font-size: 55px;
-	margin-top: 70px;
+	font-size: 48px;
+	margin-top: 50px;
 	margin-bottom: 20px;
 }
 
@@ -360,7 +360,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-top: 30px;
+	margin-top: 10px;
 }
 
 .aff-impc-subcontainer-left{
@@ -396,7 +396,7 @@
 	font-weight: 600;
 	font-size: 20px;
 	align-self: center;
-	margin-top: 40px;
+	margin-top: 10px;
 	margin-bottom: 40px;
 }
 

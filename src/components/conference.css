@@ -11,8 +11,10 @@
   width: 8%;
 }
 .conference-heading {
-  font-weight: 400;
   color: rgb(0, 120, 225);
+	font-family: anton;
+	font-weight: 400;
+	font-size: 48px;
 }
 .conference-p {
   font-size: 20px;
@@ -35,6 +37,7 @@
   background-color: #252524;
   padding-top: 40px;
   padding-bottom: 40px;
+  margin-top: 30px;
   margin-bottom: 30px;
 }
 
@@ -70,10 +73,12 @@
 
 .imcc-registeration-heading {
   font-family: anton;
-	padding: 0 20px 5px 20px;
-  margin-top: 50px;
+	padding: 0 10px 5px 10px;
+  margin-top: 40px;
   margin-bottom: 0;
-  font-size: 2.5rem;
+  color: rgb(0, 120, 225);
+	font-weight: 400;
+	font-size: 48px;
   font-style: italic;
 }
 
@@ -83,20 +88,45 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   /* gap: 30px; */
 }
 
 .imcc-registeration-text {
   font-weight: 600;
   color: rgb(0, 120, 225);
-  font-size: 1.5rem;
-  margin-bottom: 40px;
+  font-size: 28px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.agenda-img-container {
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+}
+
+.agenda-img-container img {
+  width: 50%;
+  height: 50%;
 }
 
 .more-than-an-event {
   font-weight: 500;
   font-size: 1.5rem;
+}
+
+.imcc-img-container {
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imcc-img-container img{
+  width: 60vw;
 }
 
 .imcc-registeration-btn {
@@ -108,7 +138,71 @@
 	border-radius: 10px;
 	background-color: rgb(0, 120, 225);
 	color: #fff;
+  margin-top: 20px;
   font-size: 1.2rem;
+}
+
+.welcome-letter-main-container {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  width: 100vw;
+  overflow: hidden;
+  justify-content: space-around;
+}
+
+.welcome-letter-sub-container {
+  width: 45vw !important;
+  /* max-width: 40vw; */
+  padding: 12px 15px;
+  text-align: left;
+  overflow: hidden;
+  border: 1.5px solid black;
+  border-radius: 10px;
+}
+
+.welcome-letter-img {
+  width: 10vw;
+  border-radius: 50%;
+  height: auto;
+  overflow: hidden;
+}
+
+.welcome-letter-img img{
+  width: 100%;
+  object-fit: contain;
+}
+
+.welcome-letter-title {
+  font-family: anton;
+	padding-bottom: 10px;
+}
+
+.welcome-letter-p {
+  text-align: justify;
+  padding-top: 20px;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.welcome-letter-center {
+  width: 100%;
+  text-align: center;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center ;
+}
+
+.bold-span {
+  font-weight: 900;
+}
+
+.high-head {
+  color: rgb(0, 120, 225);
+	font-family: anton;
+	font-weight: 400;
+	font-size: 48px;
 }
 
 /* Mobile */
@@ -127,9 +221,57 @@
   .imcc-invitation p{
     font-size: 18px;
   }
+
+  .imcc-img-container img{
+    width: 95vw;
+  }
+
   .imcc-registeration-container {
     padding-left: 20px;
     padding-right: 20px;
+  }
+
+  .imcc-registeration-heading {
+    font-size: 2rem;
+  }
+
+  .imcc-registeration-text {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  .imcc-registeration-btn {
+    margin-top: 10px;
+    font-size: 1.2rem;
+  }
+
+  .more-than-an-event {
+    font-size: 1rem;
+  }
+
+  .welcome-letter-main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .welcome-letter-sub-container {
+    width: 90vw !important;
+    margin-bottom: 20px;
+  }
+
+  .welcome-letter-img {
+    width: 150px;
+  }
+  
+  .welcome-letter-title {
+    font-size: 20px;
+  }
+
+  .welcome-letter-p {
+    font-size: 13px;
   }
 }
 

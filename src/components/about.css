@@ -1,7 +1,10 @@
 .ab {
-	font-size: 45px;
-	padding: 30px;
+	font-size: 48px;
+	padding: 40px;
 	color: rgb(50, 92, 155);
+	color: rgb(0, 120, 225);
+	font-family: anton;
+	font-weight: 400;
 }
 .main-about-imgs {
 	width: 100vw;

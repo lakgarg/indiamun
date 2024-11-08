@@ -41,7 +41,8 @@ export default function Team() {
       </div>
       <Navigation />
 
-      <h1 style={{ fontSize: '40px', textAlign: 'center', fontWeight: '550', }}>Governing Council</h1>
+
+      <h1 style={{ fontSize: '48px', textAlign: 'center', fontWeight: '400', color: 'rgb(0, 120, 225)', fontFamily: 'anton', margin: '40px' }}>Governing Council</h1>
       <div className='img-card'>
         <div className='card-item'>
           <img src={council0} ></img>
@@ -108,7 +109,7 @@ export default function Team() {
       </div>
 
 
-      <h1 style={{ fontSize: '40px', textAlign: 'center', }}>Organizing Team</h1>
+      <h1 style={{ fontSize: '48px', textAlign: 'center', fontWeight: '400', color: 'rgb(0, 120, 225)', fontFamily: 'anton', marginTop: '10px', marginBottom: '40px' }}>Organizing Team</h1>
 
 
       <div className='img-card'>

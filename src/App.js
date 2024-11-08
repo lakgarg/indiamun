@@ -34,6 +34,8 @@ import Forgot from './components/Forgot';
 import ResetPassword from './components/ResetPassword';
 import YlpCourse from './components/YlpCourse';
 import { Toaster } from 'react-hot-toast';
+import WorkWithUs from './components/WorkWithUs';
+import IM2024Winners from './components/IM2024Winners';
 const cors = require('cors')({ origin: true });
 
 
@@ -49,7 +51,7 @@ function App() {
         <Route path='/participate' element={<Participate />} />
         {/* <Route path='/join' element={<JoinUs/>}/> */}
         <Route path='/team' element={<Team />} />
-        <Route path='/mylearning' element={<MyLearning />} />
+        {/* <Route path='/mylearning' element={<MyLearning />} /> */}
         <Route path='/affiliates' element={<Affiliates />} />
         <Route path='/colleges' element={<Collges />} />
         <Route path='/schools' element={<Schools />} />
@@ -62,6 +64,8 @@ function App() {
         <Route path='/terms-policy' element={<TandC />} />
         <Route path='/refund-policy' element={<Refund_Policy />} />
         <Route path='/contact-us' element={<ContactUs />} />
+        <Route path='/work' element={<WorkWithUs />} />
+        <Route path='/2024-winners' element={<IM2024Winners />} />
         {/* <Route path='/after_payment' element={<After_payment/>}/> */}
         {/* {user && <Route path='/events' element={<Events/>}/>}  */}
         {user && <Route path='/eventSchools' element={<EventsSchools />} />}

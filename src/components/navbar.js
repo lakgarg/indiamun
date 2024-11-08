@@ -69,7 +69,7 @@ const Navigation = () => {
 
 
   const goToStudentCorner = () => {
-    const url = "https://courses.indiamun.org/";
+    const url = "https://earthgeeks.indiamun.org/";
 
     // Open the URL in a new tab
     window.open(url, "_blank");
@@ -144,17 +144,24 @@ const Navigation = () => {
                   id="nav_custom"
                 >
                   <NavDropdown.Item href="/about">Vision And Mission</NavDropdown.Item>
-                  <NavDropdown.Item href="/team">
-                    The Team
-                  </NavDropdown.Item>
-
+                  <NavDropdown.Item href="/team">The Team</NavDropdown.Item>
                 </NavDropdown>
+                
                 <Nav.Link className='nav_items' href='/participate'>India MUN Programs</Nav.Link>
                 <Nav.Link className='nav_items' href='/affiliates'>Affiliate Now</Nav.Link>
                 <Nav.Link className='nav_items' href='/partners'>Partners and Affilates</Nav.Link>
                 {/* <Nav.Link className='nav_items' href='/mylearning'>My Learning</Nav.Link> */}
-                <Nav.Link className='nav_items' href='/conference'>India MUN Climate Conference</Nav.Link>
-                <Nav.Link className='nav_items' href="https://courses.indiamun.org/blog" target={'_blank'} style={{ color: 'white' }}>Blog</Nav.Link>
+                {/* <Nav.Link className='nav_items' href='/conference'>National Climate Conference</Nav.Link> */}
+                <NavDropdown
+                  title="National Climate Conference"
+                  className='nav_items'
+                  id="nav_custom"
+                >
+                  <NavDropdown.Item href="/conference">India MUN National Climate Conference</NavDropdown.Item>
+                  <NavDropdown.Item href="/2024-winners">India MUN 2024 Winners</NavDropdown.Item>
+                </NavDropdown>
+                <Nav.Link className='nav_items' href='/work'>Work With Us</Nav.Link>
+                <Nav.Link className='nav_items' href="https://earthgeeks.indiamun.org/blog" target={'_blank'} style={{ color: 'white' }}>Blog</Nav.Link>
                 {/* {userInfo ? (
                   <Nav.Link className='nav_items' href='/mylearning'>My Learning</Nav.Link>
                 ): (

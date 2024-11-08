@@ -50,7 +50,7 @@ export default function Ylpa() {
   const [program_of_study, setprogram_of_study] = useState("");
 
   const goToCourse = () => {
-    const url = "https://courses.indiamun.org/courses/Youth-Leadership-Program-66347e4fa2ec48292c1cd88c";
+    const url = "https://earthgeeks.indiamun.org/courses/Youth-Leadership-Program-66347e4fa2ec48292c1cd88c";
 
     // Open the URL in a new tab
     window.open(url, "_blank");

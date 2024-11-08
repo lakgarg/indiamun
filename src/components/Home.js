@@ -245,7 +245,7 @@ export default function Home() {
         <div className="p-con-div">
           <p className="p-con">India’s first Model United Nations conference on Climate is a challenging and competitive platform for students to debate and analyse some of the world’s most pressing climate problems. As delegates representing different countries and agencies, students will gain practical insight into the challenges and opportunities posed by the urgent need for more sustainable growth models.</p>
         </div>
-        <div className="f-con"><button className="right-button"><a href='/conference' style={{ textDecoration: 'none', color: 'white' }}>Enroll Now</a></button></div>
+        <div className="f-con"><button className="right-button" onClick={() => window.open('https://www.youtube.com/watch?v=zQNjt7ZSox8', '_blank')}><a href='/conference' style={{ textDecoration: 'none', color: 'white' }}>Concluded - View Results</a></button></div>
       </div>
 
 
@@ -325,13 +325,14 @@ export default function Home() {
           <div>
             <h3>CLIMATE HACKATHON</h3>
             <div className='button_div_climate'>
-              <div className='climate-hack-container button_div_climate1'>
-                <p className='climate-hack-p-1'>Season 2</p>
-                <span className='climate-hack-span'>(Coming Soon)</span>
-              </div>
+              
               <div className='button_div_climate2'>
                 <p className='climate-hack-p'>Season 1</p>
                 <button className='climate-hack-button right-button'><a style={{ textDecoration: 'none', color: 'white' }} href='https://www.instagram.com/p/Cr0xk4OP1Om/' target={'_blank'}>View Results</a></button>
+              </div>
+              <div className='climate-hack-container button_div_climate1'>
+                <p className='climate-hack-p-1'>Season 2</p>
+                <button className='climate-hack-button right-button'><a style={{ textDecoration: 'none', color: 'white' }} href='https://indiamun.graphy.com/courses/BuzzOnEarth-India-Hackathon-66af575915fe3441179b4c0c' target={'_blank'}>Register Now</a></button>
               </div>
 
             </div>
@@ -565,14 +566,14 @@ export default function Home() {
       
       <h2 className="blogs-main-heading">BLOGS</h2>
       <div className="blogs">
-        <div className="blog" onClick={() => window.open('https://courses.indiamun.org/blog/climate-chronicles-2', '_blank')}>
+        <div className="blog" onClick={() => window.open('https://earthgeeks.indiamun.org/blog/climate-chronicles-2', '_blank')}>
             <h3 className="blog-title">Climate Chronicles</h3>
             <p className="blog-desc">
               Hello everyone!
               We all know about climate change and how our environment is being affected by our actions, but what can we do to stop this from happening and maybe even reverse it? In this post, I'll be sharing practical steps you can take on a personal level to help our planet, along with some actions I've taken myself I’m Aanyaa ... <span className='readmore-span'>Read More</span>  
             </p>
         </div>
-        <div className="blog" onClick={() => window.open('https://courses.indiamun.org/blog/understanding-climate-action-causes-effects-and-solutions', '_blank')}>
+        <div className="blog" onClick={() => window.open('https://earthgeeks.indiamun.org/blog/understanding-climate-action-causes-effects-and-solutions', '_blank')}>
             <h3 className="blog-title">Understanding Climate...</h3>
             <p className="blog-desc">
             So, first of all, we should know what climate action is: 
@@ -580,7 +581,7 @@ export default function Home() {
             Now that we ... <span className='readmore-span'>Read More</span>  
             </p>
         </div>
-        <div className="blog" onClick={() => window.open('https://courses.indiamun.org/blog/the-importance-of-climate-action-in-our-modern-world', '_blank')}>
+        <div className="blog" onClick={() => window.open('https://earthgeeks.indiamun.org/blog/the-importance-of-climate-action-in-our-modern-world', '_blank')}>
             <h3 className="blog-title">The Importance of Climate ...</h3>
             <p className="blog-desc">
             In our modern world, one of the most important resources is that of nature, as elements such as fossil fuels, agriculture, and other components derived from nature make up a major part of the world. In 2023, despite all the deforestation and destruction of nature, agriculture still held a 4% share of global GDP, and fossil fuels held an 8% share. However... <span className='readmore-span'>Read More</span>  

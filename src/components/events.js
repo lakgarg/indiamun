@@ -103,7 +103,7 @@ export default function Events() {
   };
 
   const goToCourse = () => {
-    const url = "https://courses.indiamun.org/courses/Indias-Young-Forest-Ambassador-Program-6630115c6dd46552c99d8120";
+    const url = "https://earthgeeks.indiamun.org/courses/Indias-Young-Forest-Ambassador-Program-6630115c6dd46552c99d8120";
 
     // Open the URL in a new tab
     window.open(url, "_blank");

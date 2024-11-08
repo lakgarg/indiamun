@@ -100,7 +100,7 @@ export default function Participate() {
         </div>
         <div className='participate-item'>
           <img src={p3}></img>
-          <a href='/conference'><button >Registrations Open</button></a>
+          <a href=''><button onClick={() => window.open('https://www.youtube.com/watch?v=zQNjt7ZSox8', '_blank')} >Concluded - View Results</button></a>
           <p>
             Program Fee:
             ₹999
@@ -108,11 +108,8 @@ export default function Participate() {
         </div>
         <div className='participate-item'>
           <img src={p4}></img>
-          <a target='_blank' href='https://buzzonearth-climatehackathon.in/'><button>Season 1 Concluded</button></a>
-          <p>
-            Season 2 
-            Coming Soon
-          </p>
+          <a target='_blank' href='https://www.instagram.com/p/Cr0xk4OP1Om/'><button>Season 1 Concluded - View Results</button></a>
+          <a href=''><button onClick={() => window.open('https://earthgeeks.indiamun.org/courses/BuzzOnEarth-India-Hackathon-66af575915fe3441179b4c0c', '_blank')} >Season 2 - Registrations Open</button></a>
         </div>
         <div className='participate-item'>
           <img src={p5}></img>
@@ -270,13 +267,14 @@ Get ready to unleash your fundraising potential and become a passionate advocate
             <img src={cli_hack} alt="" />
             <h3>CLIMATE HACKATHON</h3>
             <div className='button_div_climate'>
-              <div className='climate-hack-container-part button_div_climate1'>
-                <p className='climate-hack-p-part'>Season 2</p>
-                <button className='climate-hack-btn-part coming_soon'>Coming Soon</button>
-              </div>
+              
               <div className='button_div_climate2'>
                 <p>Season 1</p>
                 <button className='right-button'><a style={{ textDecoration: 'none', color: 'white' }} href='https://www.instagram.com/p/Cr0xk4OP1Om/' target={'_blank'}>View Results</a></button>
+              </div>
+              <div className='button_div_climate2'>
+                <p className=''>Season 2</p>
+                <button className='right-button-1'><a style={{ textDecoration: 'none', color: 'white' }} href='https://earthgeeks.indiamun.org/courses/BuzzOnEarth-India-Hackathon-66af575915fe3441179b4c0c' target={'_blank'}>View Results</a></button>
               </div>
             </div>
           </div>
