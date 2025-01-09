@@ -251,7 +251,8 @@ export default function Affiliates() {
   };
 
   const handleSendDetailsClick = () => {
-    window.open('https://forms.gle/GVsnHqJ4gKBzGf2H6', '_blank');
+    //window.open('https://forms.gle/GVsnHqJ4gKBzGf2H6', '_blank');
+    window.open('https://forms.gle/5zKETUPNbzvpfezE9', '_blank');
   }
 
   const handleInvitationClick = () => {
@@ -589,7 +590,7 @@ export default function Affiliates() {
             <img src={indiaMunChapter} alt="indiaMunChapter" />
           </div>
           <h3 className="aff-hero-subheading-2">Want to Affiliate Your School with India MUN?</h3>
-          <button className='aff-hero-btn' onClick={handleSendDetailsClick}>Request a callback</button>
+          <button className='aff-hero-btn' onClick={handleSendDetailsClick}>Apply Now</button>
         </div>
         <div className="aff-hero-right">
           <div className="aff-hero-right-img">
@@ -933,21 +934,15 @@ export default function Affiliates() {
     
     
     
-    <h1 className='wasi-container'>Want To Affiliate Your School with India MUN ?</h1>
-
+        <h1 className='wasi-container'>Want To Affiliate Your School with India MUN ?</h1>
+    
     {/* TODO: ADD VIDEO */}
-
+    
     <div className="wasi-2-btns-container">
       <div className="wasi-2-btns">
-        <div className="wasi-2-btns-heading">Request a callback</div>
         <button className='wasi-2-btns-btn' onClick={handleSendDetailsClick}>Apply Now</button>
       </div>
-      <div className="wasi-2-btns">
-        <div className="wasi-2-btns-heading">Got an Invitation?</div>
-        <button className='wasi-2-btns-btn' onClick={handleInvitationClick}>Affiliate Now</button>
-      </div>
     </div>
-
     <p className='aff-wasi-p'>At India MUN, we firmly believe in moving beyond mere activism and encouraging tangible action to address pressing environmental challenges. Your affiliation with us signifies your dedication to fostering a culture of environmental consciousness within your campus and among your students.</p>
 
     {/* Collapible Component Goes Here */}
@@ -1259,7 +1254,7 @@ export default function Affiliates() {
 
 
     <div className="wtayswim">
-      <p className="wtayswim-p">Request a callback</p>
+      <p className="wtayswim-p">Get your school affiliated</p>
       <button className="wtayswimi-btn" onClick={handleSendDetailsClick}>Apply Now</button>
     </div>
 

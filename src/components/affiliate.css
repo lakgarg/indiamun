@@ -46,7 +46,8 @@
 	font-size: 23px;
 	font-weight: 600;
 	border-radius: 6px;
-	background-color: rgb(0, 120, 225);
+	background-color: rgb(29, 29, 29);
+	;
 	color: #fff;
 }
 
@@ -282,15 +283,16 @@
 	flex-wrap: wrap;
 }
 
+
+
+
 .wasi-2-btns-container {
 	display: flex;
 	justify-content: space-evenly;
 	margin-bottom: 50px;
 }
 
-.wasi-2-btns {
 
-}
 
 .wasi-2-btns-heading {
 	font-family: anton;
@@ -309,7 +311,7 @@
 	font-size: 20px;
 	font-weight: 600;
 	border-radius: 6px;
-	background-color: rgb(0, 120, 225);
+	background-color: rgb(29, 29, 29);
 	color: #fff;
 }
 
@@ -409,7 +411,7 @@
 	font-size: 20px;
 	font-weight: 600;
 	border-radius: 6px;
-	background-color: rgb(0, 120, 225);
+	background-color: rgb(29, 29, 29);
 	color: #fff;
 	align-self: center;
 	justify-self: center;
@@ -432,7 +434,7 @@
 	font-size: 20px;
 	font-weight: 600;
 	border-radius: 6px;
-	background-color: rgb(0, 120, 225);
+	background-color: rgb(29, 29, 29);
 	color: #fff;
 	align-self: center;
 	justify-self: center;
@@ -903,7 +905,7 @@
 		font-size: 15px;
 		font-weight: 600;
 		border-radius: 6px;
-		background-color: rgb(0, 120, 225);
+		background-color: rgb(29, 29, 29);
 		color: #fff;
 	}
 	
@@ -1157,7 +1159,7 @@
 		font-size: 15px;
 		font-weight: 600;
 		border-radius: 6px;
-		background-color: rgb(0, 120, 225);
+		background-color: rgb(29, 29, 29);
 		color: #fff;
 		align-self: center;
 		justify-self: center;
@@ -1331,7 +1333,7 @@
 		font-size: 23px;
 		font-weight: 600;
 		border-radius: 6px;
-		background-color: rgb(0, 120, 225);
+		background-color: rgb(29, 29, 29);
 		color: #fff;
 	}
 	

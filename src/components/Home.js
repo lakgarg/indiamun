@@ -79,7 +79,8 @@ export default function Home() {
   const { user } = useAuthContext()
 
   const handleSendDetailsClick = () => {
-    window.open('https://forms.gle/GVsnHqJ4gKBzGf2H6', '_blank');
+    //window.open('https://forms.gle/GVsnHqJ4gKBzGf2H6', '_blank');
+    window.open('https://forms.gle/5zKETUPNbzvpfezE9', '_blank');
   }
 
   const handleSignIN = async (e) => {
@@ -187,7 +188,7 @@ export default function Home() {
             <img src={indiaMunChapter} alt="indiaMunChapter" />
           </div>
           <h3 className="aff-hero-subheading-2">Want to Affiliate Your School with India MUN?</h3>
-          <button className='aff-hero-btn' onClick={handleSendDetailsClick}>Request a callback</button>
+          <button className='aff-hero-btn' onClick={handleSendDetailsClick}>Apply Now</button>
         </div>
         <div className="aff-hero-right">
           <div className="aff-hero-right-img">
