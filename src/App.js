@@ -6,6 +6,8 @@ import About from './components/About'
 import Partnership from './components/Partnership'
 import Participate from './components/participate'
 import Schools from './components/Schools';
+import AffiliationForm from './components/affiliationForm';
+import Certificate from './components/Certificate.js'
 
 import Team from './components/Team'
 import Affiliates from './components/affiliates';
@@ -66,6 +68,10 @@ function App() {
         <Route path='/contact-us' element={<ContactUs />} />
         <Route path='/work' element={<WorkWithUs />} />
         <Route path='/2024-winners' element={<IM2024Winners />} />
+        <Route path='/affiliationForm' element={<AffiliationForm/>}/>
+        <Route path='/affiliation_certificate' element={<Certificate/>}/>
+
+
         {/* <Route path='/after_payment' element={<After_payment/>}/> */}
         {/* {user && <Route path='/events' element={<Events/>}/>}  */}
         {user && <Route path='/eventSchools' element={<EventsSchools />} />}

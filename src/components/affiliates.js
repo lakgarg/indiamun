@@ -926,8 +926,8 @@ export default function Affiliates() {
       </div>
       <div className="aff-youth-program-3">
         <h3 className='aff-youth-program-heading-3'>Exclusive Representation at</h3>
-        <p className='aff-youth-program-3-big-text'>COP29</p>
-        <p className="aff-youth-program-2-p">Your school will have the prestigious opportunity to represent India at COP29, showcasing your commitment to climate leadership on a global platform.</p>
+        <p className='aff-youth-program-3-big-text'>COP30</p>
+        <p className="aff-youth-program-2-p">Your school will have the prestigious opportunity to represent India at COP30, showcasing your commitment to climate leadership on a global platform.</p>
       </div>
     </div>
 
@@ -1066,7 +1066,7 @@ export default function Affiliates() {
 
 
     <div className="aff-impc-container">
-      <h2 className="aff-impc-heading">India MUN Principals' Conclave 2024</h2>
+      <h2 className="aff-impc-heading">India MUN Principals' Conclave 2025</h2>
       <p className="aff-impc-ahp">with UN dignitaries</p>
       <div className="aff-impc-subcontainer">
         <div className="aff-impc-subcontainer-left">
@@ -1077,7 +1077,7 @@ export default function Affiliates() {
           <img src={indiaMunChapter} alt="indiaMunChapter" />
         </div>
       </div>
-      <p className="aff-impc-p">Principals from the affiliated schools avail an exclusive invitation to participate in India MUN Principals' Conclave, 2024, with UN dignitaries.</p>
+      <p className="aff-impc-p">Principals from the affiliated schools avail an exclusive invitation to participate in India MUN Principals' Conclave, 2025, with UN dignitaries.</p>
       <button className='aff-impc-btn' onClick={handleSendDetailsClick}>Affiliate your school</button>
     </div>
 

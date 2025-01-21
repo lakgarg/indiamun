@@ -1,0 +1,219 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  padding: 20px;
+  gap: 20px;
+}
+
+.left-part {
+  flex: 0 0 60%;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.right-part {
+  flex: 0 0 40%;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.form-group input[type="checkbox"],
+.form-group input[type="radio"] {
+	display: flex;
+	align-items: top;
+  margin-right: 10px;
+  margin-bottom: 2px;
+	width: auto !important;
+
+
+}
+
+.form-group .checkbox-group,
+.form-group .radio-group {
+  display: flex;
+  align-items: center;
+}
+
+.submit-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+}
+
+.top_comp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  text-align: left;
+}
+
+.left_img,
+.right_img {
+  height: 50px;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left-part,
+  .right-part {
+    flex: 1 1 100%;
+  }
+}
+
+.inline-flex-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: right;
+}
+
+.otp-section {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.otp-section input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.otp_input{
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+}
+.otp-section button {
+  padding: 10px 20px;
+  margin: 0 5 5 5;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.otp-continue{
+  background-color: #4caf50 !important;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  
+}
+.otp-section button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.success-message {
+  color: green;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+
+.aff-benifit-container {
+	width: 220px;
+	padding-left: 10px;
+	padding-right: 10px;
+	display: flex;
+	border: 1px solid black;
+	border-radius: 20px;
+	flex-direction: column;
+	align-items: center;
+	flex-wrap: wrap;
+	height: 400px; /* Set a fixed height of 400px */
+  box-sizing: border-box;
+	/* text-align: start; */
+}
+.aff-benifit-container img {
+	width: 130px;
+	margin-bottom: 10px;
+	/* text-align: center; */
+}
+.aff-benifit-container-title {
+	font-weight: bolder;
+	color: #1875d1;
+	font-size: 18px;
+	/* margin-top: 10px; */
+	font-family: "Quicksand";
+	margin-bottom: 20px;
+}
+
+.aff-benifit-container-button {
+	border: 1px solid black;
+	border-radius: 50%;
+	color: white;
+	background-color: black;
+}
+
+.aff-benifit-container-p {
+	font-size: 15px;
+	font-weight: 600;
+	margin-top: 20px;
+	/* text-align: start; */
+}
+
+.ben-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: top;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+
+/* <div className="scroll-right"> */
+.scroll-right {
+  justify-content: space-between;
+  max-height: 1140px; /* Set the maximum height */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
