@@ -221,8 +221,8 @@ export default function Affiliation() {
       if (paymentState) {
         // load the the json string named feesData from local storage
         // load razor pay key from the env
-        const RAZORPAY_KEY_ID = process.env.RAZORPAY_KEY_ID;
-        const COMPANY_NAME = process.env.COMPANY_NAME;
+        const RAZORPAY_KEY_ID = process.env.REACT_APP_RAZORPAY_KEY_ID;
+        const COMPANY_NAME = process.env.REACT_APP_COMPANY_NAME;
         //const storedFeesData = localStorage.getItem('feesData');
         const options = {
 
@@ -320,13 +320,6 @@ export default function Affiliation() {
   useEffect(() => {
     const fetchFeesData = async () => {
       try {
-        const storedFeesData = localStorage.getItem('feesData');
-        if (storedFeesData) {
-          const parsedData = JSON.parse(storedFeesData);
-          setFeesData(parsedData);
-          setLoading(false);
-          console.log("Fetched data from local storage:", parsedData);
-        } else {
           console.log("Fetching fees data from:", `${backendBaseURI}/affiliation/getfees`);
           const response = await fetch(`${backendBaseURI}/affiliation/getfees`, {
             method: 'POST',
@@ -348,7 +341,7 @@ export default function Affiliation() {
           localStorage.setItem('feesData', JSON.stringify(fetchedData));
           setFeesData(fetchedData);
           setLoading(false);
-        }
+
       } catch (error) {
         console.error("Error fetching fees data:", error);
         setLoading(false);
