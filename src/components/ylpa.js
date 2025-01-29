@@ -354,10 +354,6 @@ export default function Ylpa() {
       <h1 className="proover">PROGRAM OVERVIEW:</h1>
 
       <div className="ylpa-overview-container">
-        <p className="ylpa-overview-text-1">
-          The entrepreneurial ecosystem needs young minds who bring a different
-          mindset and learnings.
-        </p>
         <p className="ylpa-overview-text-2">
           We believe in unlocking the boundless potential within every young
           person. Our flagship initiative, the Youth Leadership Program, is not
@@ -401,7 +397,7 @@ export default function Ylpa() {
       </div>
 
       <h1 className="high-head">Program Modules</h1>
-      <p className="sub-mod">(7 MODULES)</p>
+      <p className="sub-mod">(8 MODULES)</p>
       {/* <p className='intro-am'>Introduction Module: India's Young Forest Ambassador Program</p> */}
       <div className="mod_item_div">
         <div className="mod_item_div1">
@@ -548,22 +544,7 @@ export default function Ylpa() {
           )}
         </div>
 
-        <div className="mod_item_div1">
-          <p className="mod-item" onClick={handlemodule9}>
-            <span>Module 9: Capstone Leadership Project and Graduation</span>
-            <i
-              onClick={handlemodule9}
-              className="fa-solid fa-chevron-down fa-2xl"
-            ></i>
-            <i className="fa-solid fa-chevron-down fa-lg"></i>
-          </p>
-          {mod9 && (
-            <p className="mod-item1">
-              Showcase your leadership journey through a capstone project.{" "}
-              <br /> Celebrate your achievements at the graduation ceremony.
-            </p>
-          )}
-        </div>
+        
       </div>
 
       <div className="am-go"></div>
@@ -619,16 +600,6 @@ export default function Ylpa() {
           fostering a proactive and results-oriented mindset.
         </p>
 
-        <p>
-          <span className="perk-head">
-            Community Impact Initiatives:
-            <br></br>{" "}
-          </span>{" "}
-          Outcome: Participants initiate and lead community impact projects.{" "}
-          <br />
-          Impact: They contribute positively to their communities, applying
-          leadership skills to address real-world challenges.
-        </p>
 
         <p>
           <span className="perk-head">
@@ -654,11 +625,10 @@ export default function Ylpa() {
 
         <p>
           <span className="perk-head">
-            Become a youth icon:
+            Become a YLP graduate:
             <br></br>{" "}
           </span>{" "}
-          Outcome: Participants successfully complete a capstone leadership
-          project. <br />
+          Outcome: Participants unleash the leader within them. <br />
           Impact: They apply their skills in a real-world project, gaining
           confidence and showcasing their ability to drive meaningful change.
         </p>

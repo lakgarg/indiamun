@@ -22,7 +22,7 @@ import cli_hack from './images/participate/hack logo.webp'
 import first_prize from './images/participate/first-prize.webp'
 import sec_prize from './images/participate/second-prize.webp'
 import cli_hack_main from './images/participate/climate-hack-logo.webp'
-import model_img from './images/participate/2024.jpg'
+import model_img from './images/participate/2025.png'
 import step1 from './images/newimages/step 1.webp'
 import step2 from './images/newimages/step 2.webp'
 import conf from './images/newimages/conf left.webp'
@@ -87,7 +87,7 @@ export default function Participate() {
           <a href='/events'><button>Registrations Open</button></a>
           <p>
             Program Fee: 
-            ₹999
+            ₹3,999
           </p>
         </div>
         <div className='participate-item'>
@@ -95,7 +95,7 @@ export default function Participate() {
           <a href='/ylp'><button >Registrations Open</button></a>
           <p>
             Program Fee:
-            ₹2999
+            ₹5,999
           </p>
         </div>
         <div className='participate-item'>
@@ -103,13 +103,13 @@ export default function Participate() {
           <a href=''><button onClick={() => window.open('https://www.youtube.com/watch?v=zQNjt7ZSox8', '_blank')} >Concluded - View Results</button></a>
           <p>
             Program Fee:
-            ₹999
+            ₹1,999
           </p>
         </div>
         <div className='participate-item'>
           <img src={p4}></img>
           <a target='_blank' href='https://www.instagram.com/p/Cr0xk4OP1Om/'><button>Season 1 Concluded - View Results</button></a>
-          <a href=''><button onClick={() => window.open('https://earthgeeks.indiamun.org/courses/BuzzOnEarth-India-Hackathon-66af575915fe3441179b4c0c', '_blank')} >Season 2 - Registrations Open</button></a>
+          <a href=''><button onClick={() => window.open('https://earthgeeks.indiamun.org/courses/BuzzOnEarth-India-Hackathon-66af575915fe3441179b4c0c', '_blank')} >Season 2 Concluded - View Results</button></a>
         </div>
         <div className='participate-item'>
           <img src={p5}></img>
@@ -324,8 +324,8 @@ Get ready to unleash your fundraising potential and become a passionate advocate
           </div>
         </div>
         <div className="reg-info">
-          <h2>India MUN Climate Conference (Registrations Open)</h2>
-          <a href="/conference"><button>Enroll Now</button></a>
+          <h2>India MUN Climate Conference (Concluded)</h2>
+          <a href=""><button onClick={() => window.open('https://www.youtube.com/watch?v=zQNjt7ZSox8', '_blank')}>View Results</button></a>
         </div>
       </div>
 
